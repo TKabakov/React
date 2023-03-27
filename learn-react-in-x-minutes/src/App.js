@@ -7,7 +7,7 @@ const BASE_URL = 'https://api.exchangeratesapi.io/latest'
 function App() {
   useEffect(() => {
   
-  }, )
+  }, [])
   return (
     <>
     <h1>Convert</h1>
