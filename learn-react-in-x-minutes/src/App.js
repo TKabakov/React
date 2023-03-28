@@ -1,20 +1,17 @@
-import React, { useEffect } from 'react';
+import Header from './Header'
+import Main from './Main'
+import Sidebar from './Sidebar'
 import './App.css';
-import CurrencyRow from './CurrencyRow';
 
-const BASE_URL = 'https://api.exchangeratesapi.io/latest'
+
 
 function App() {
-  useEffect(() => {
-  
-  }, [])
   return (
-    <>
-    <h1>Convert</h1>
-    <CurrencyRow/>
-    <div class="equals">=</div>
-    <CurrencyRow/>
-    </>
+    <div>
+      <Header name="Anna" color="purple"/>
+      <Main greet="Howdy" />
+      <Sidebar greet="Hi"/>
+    </div>
   );
 }
 
