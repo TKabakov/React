@@ -1,6 +1,7 @@
 
 import './App.css';
-import Greet from './components/Greet';
+import { Greet } from './components/Greet';
+//named import
 
 function App() {
   return (
