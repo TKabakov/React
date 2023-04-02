@@ -1,6 +1,7 @@
-import Header from './Header'
-import Main from './Main'
-import Sidebar from './Sidebar'
+import Header from './Header';
+import Main from './Main';
+import Sidebar from './Sidebar';
+import Hello from "./components/Hello";
 import './App.css';
 
 
@@ -11,6 +12,7 @@ function App() {
       <Header name="Anna" color="purple"/>
       <Main greet="Howdy" />
       <Sidebar greet="Hi"/>
+      <Hello />
     </div>
   );
 }
