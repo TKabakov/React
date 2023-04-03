@@ -1,11 +1,24 @@
 function Promo (props) {
+
+    const styles = {
+        color: "green",
+        fontSize: "30px"
+    }
+
     return (
         <div className="promo-section">
             <div>
-                <h1>{props.heading}</h1>
+                <h1 style={
+                    {
+                        color:"tomato",
+                        fontSize:"40px",
+                        fontWeight:"bold"
+                    }
+                    }>{props.heading}</h1>
             </div>
             <div>
-                <h2>{props.promoSubHeading}</h2>
+                <h2 style={styles}>
+                    {props.promoSubHeading}</h2>
             </div>
         </div>
     );
