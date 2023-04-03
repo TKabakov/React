@@ -1,6 +1,8 @@
 
 import './App.css';
 import { Greet } from './components/Greet';
+import Promo from './components/Promo';
+
 //named import
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
         <button>Action</button>
         </Greet>
       <Greet name="Joe" heroName="Superman"/>
+      <Promo heading="Don't miss this deal!" promoSubHeading="Subscibe to my newletter and get all the shop items at 50% off!"></Promo>
     </div>
   );
 }

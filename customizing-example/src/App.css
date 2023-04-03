@@ -1,3 +1,9 @@
+.promo-section {
+  font-weight: bold;
+  line-height: 20px;
+  color: red;
+}
+
 .App {
   text-align: center;
 }
