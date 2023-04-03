@@ -6,6 +6,9 @@ import { Greet } from './components/Greet';
 function App() {
   return (
     <div className="App">
+      <Greet name="Bruce"/>
+      <Greet name="Marry"/>
+      <Greet name="Joe"/>
       <Greet />
     </div>
   );
