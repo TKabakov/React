@@ -6,10 +6,13 @@ import { Greet } from './components/Greet';
 function App() {
   return (
     <div className="App">
-      <Greet name="Bruce" heroName="Batman"/>
-      <Greet name="Marry" heroName="Wonder Woman"/>
+      <Greet name="Bruce" heroName="Batman">
+        <p>This is children props </p>
+        </Greet>
+      <Greet name="Marry" heroName="Wonder Woman">
+        <button>Action</button>
+        </Greet>
       <Greet name="Joe" heroName="Superman"/>
-      <Greet />
     </div>
   );
 }
