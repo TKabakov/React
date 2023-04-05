@@ -1,3 +1,6 @@
+//The math prop is there to show that you can add arithmetic operators and numbers inside JSX, and it will be evaluated just like it does in plain JavaScript. 
+//The str prop is there to show that you can concatenate strings, as well as strings and variables – which is shown by adding string literals of “ another ” and “string” to the str1 variable.
+
 function Expression2 (props) {
     return (
         <div>
