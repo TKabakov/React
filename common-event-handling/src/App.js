@@ -10,7 +10,10 @@ function App() {
           An inline anonymus ES5 function event handler
         </button>
 
-        
+        <button onClick={() => console.log("second example")}>
+          An inline anonymus ES6 function event handler
+        </button>
+
       </div>
   );
 }
