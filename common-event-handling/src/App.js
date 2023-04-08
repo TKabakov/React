@@ -4,7 +4,10 @@ import './App.css';
 function App() {
   function thirdExample() {
     console.log("third example");
-  }
+  };
+
+  const fourthExample = () => console.log("fourth example");
+  
   return (
       <div>
         <Btn />
@@ -17,13 +20,18 @@ function App() {
           An inline anonymus ES6 function event handler
         </button>
 
-        <div className="thurd example">
-        <button onClick={thirdExample}>
-          using a separate function declaration
-        </button>
+        <div className="third example">
+          <button onClick={thirdExample}>
+            using a separate function declaration
+          </button>
+        </div>
+
+        <div className="fourth example">
+          <button onClick={fourthExample}>
+            using a separate function expression
+          </button>
         </div>
       </div>
-
   );
 }
 
