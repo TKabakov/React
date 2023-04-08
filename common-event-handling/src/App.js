@@ -2,6 +2,9 @@ import Btn from "./Btn";
 import './App.css';
 
 function App() {
+  function thirdExample() {
+    console.log("third example");
+  }
   return (
       <div>
         <Btn />
@@ -14,7 +17,13 @@ function App() {
           An inline anonymus ES6 function event handler
         </button>
 
+        <div className="thurd example">
+        <button onClick={thirdExample}>
+          using a separate function declaration
+        </button>
+        </div>
       </div>
+
   );
 }
 
