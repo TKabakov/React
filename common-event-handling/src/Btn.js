@@ -15,7 +15,6 @@ function Btn () {
     <button onMouseOver={clickHandler}>
         Click me
         </button>
-
    )
 }    
 

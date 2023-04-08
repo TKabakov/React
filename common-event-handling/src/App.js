@@ -3,7 +3,15 @@ import './App.css';
 
 function App() {
   return (
-      <Btn />
+      <div>
+        <Btn />
+
+        <button onClick={function(){console.log("first example")}}>
+          An inline anonymus ES5 function event handler
+        </button>
+
+        
+      </div>
   );
 }
 

@@ -1,0 +1,3 @@
+function FirstExample () {
+    return onClick
+}
