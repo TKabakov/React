@@ -6,7 +6,7 @@ function App() {
     console.log("third example");
   };
 
-  const fourthExample = () => console.log("fourth example");
+  const fourthExample = () =>  console.log("fourth example");
   
   return (
       <div>
