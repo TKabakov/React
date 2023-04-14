@@ -9,6 +9,7 @@ function App() {
     <div>
       <Puppy name="Teo" bowlShape="square" bowlStatus="full"/>
     </div>
+  //Check the bowlShape and bowlStatus props in the child Puppy component
   );
 }
 
