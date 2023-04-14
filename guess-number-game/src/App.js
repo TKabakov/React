@@ -1,5 +1,6 @@
 
 import './App.css';
+import Puppy from './components/Puppy';
 
 function App() {
   function handleClick() {
@@ -13,9 +14,7 @@ function App() {
     <div>
       <h1>Task: Add a button and handle a click event</h1>
       <button onClick ={handleClick}>Guess the number between 1 and 3</button>
-    </div>
-    <div className="DataFlowInReact">
-      <Puppy name="Max" bowlHSape="Square" bowlStatus="full"/>
+      <Puppy name="Max" bowlShape="Square" bowlStatus="full"/>
     </div>
   );
 }
