@@ -1,7 +1,9 @@
 function Puppy (props) {
     return (
         <div>
-            {props.name} has <Bowl bowlShape="square" bowlStatus="full"
+            {props.name} has <Bowl bowlShape="square" bowlStatus="full"/>
         </div>
-    )
-}
+    );
+};
+
+export default Puppy;
