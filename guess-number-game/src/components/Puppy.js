@@ -1,3 +1,5 @@
+import Bowl from './Bowl'
+
 function Puppy (props) {
     return (
         <div>
