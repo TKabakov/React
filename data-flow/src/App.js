@@ -3,16 +3,20 @@ import Puppy from './components/Puppy';
 import Child from './components/Child';
 import React, { useState } from 'react';
 
+function countInitial () {
+  console.log('run function')
+  return 4
+}
+
 function App() {
-  const [count, setCount] = useState (4);
+  const [count, setCount] = useState(() => countInitial());
 
   function decrementCount () {
-    setCount (prevCount => prevCount - 1 )
     setCount (prevCount => prevCount - 1 )
   }
 
   function incrementCount (){
-    setCount (count + 1)
+    setCount (prevCount => prevCount + 1 )
   }
   const date = new Date();
 
