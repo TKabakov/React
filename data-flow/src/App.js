@@ -6,9 +6,9 @@ function App() {
   const date = new Date();
   return (
     <div>
-      <div>
+      <h1>
         <Child message={date.toLocaleTimeString()}/>
-      </div>
+      </h1>
       <Puppy name="Teo" bowlShape bowlStatus/>
     </div>
   //Check the bowlShape and bowlStatus props in the child Puppy component
