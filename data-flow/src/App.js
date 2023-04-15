@@ -1,15 +1,32 @@
 import './App.css';
 import Puppy from './components/Puppy';
 import Child from './components/Child';
+import React, { useState } from 'react';
 
 function App() {
+  const [count, setCount] = useState (4);
+
+  function decrementCount () {
+    setCount (count - 1 )
+    setCount (count - 1 )
+  }
+
+  function incrementCount (){
+    setCount (count + 1)
+  }
   const date = new Date();
+
   return (
     <div>
       <h1>
         <Child message={date.toLocaleTimeString()}/>
       </h1>
-      <Puppy name="Teo" bowlShape bowlStatus/>
+      <Puppy name="Max" bowlShape bowlStatus/>
+      <div className="hooks">
+        <button onClick={decrementCount}>-</button>
+        <span>{count}</span>
+        <button onClick={incrementCount}>+</button>
+      </div>
     </div>
   //Check the bowlShape and bowlStatus props in the child Puppy component
   );
