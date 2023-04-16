@@ -32,6 +32,9 @@ function App() {
         <span>{count}</span>
         <button onClick={incrementCount}>+</button>
       </div>
+      <div>
+        <InputComponent/>
+      </div>
     </div>
   //Check the bowlShape and bowlStatus props in the child Puppy component
   );
