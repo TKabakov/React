@@ -2,6 +2,7 @@ import './App.css';
 import Puppy from './components/Puppy';
 import Child from './components/Child';
 import InputComponent from './components/InputComponent';
+import RegistrationForm from './components/RegistrationForm';
 import React, { useState } from 'react';
 
 function countInitial () {
@@ -34,6 +35,9 @@ function App() {
       </div>
       <div>
         <InputComponent/>
+      </div>
+      <div>
+        <RegistrationForm/>
       </div>
     </div>
   //Check the bowlShape and bowlStatus props in the child Puppy component

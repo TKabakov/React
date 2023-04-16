@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-function RegistationForm () {
-    const [form, setFrom ] = useState (
+function RegistrationForm () {
+    const [form, setForm ] = useState (
         {
             firstName: "Luke",
             lastName: "Jones",
@@ -11,9 +11,22 @@ function RegistationForm () {
 
     return (
         <>
-            <input type="text "value></input>
+            <lable for="firstName">First name:</lable>
+            <input 
+                type="text"
+                id="firstName"
+                value={form.firstName}
+                onChange={e => {
+                    setForm({
+                        ...form,
+                        firstName: e.target.value
+                    });
+                }}
+                ></input>
             <input type="text" value></input>
             <input type="email"></input>
         </>
     )
 }
+
+export default RegistrationForm;
