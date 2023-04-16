@@ -1,7 +1,13 @@
 import { useState } from "react";
 
 function RegistationForm () {
-    const [] = useState ();
+    const [form, setFrom ] = useState (
+        {
+            firstName: "Luke",
+            lastName: "Jones",
+            email: "lukeJones@sculpure.com"
+        }
+    );
 
     return (
         <>
