@@ -1,6 +1,7 @@
 import './App.css';
 import Puppy from './components/Puppy';
 import Child from './components/Child';
+import InputComponent from './components/InputComponent';
 import React, { useState } from 'react';
 
 function countInitial () {
