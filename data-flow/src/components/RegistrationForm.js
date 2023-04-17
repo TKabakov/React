@@ -21,10 +21,19 @@ function RegistrationForm () {
                         ...form,
                         firstName: e.target.value
                     });
-                }}
-                ></input>
-            <input type="text" value></input>
-            <input type="email"></input>
+                }}></input>
+            <lable for="lasttName">Last name:</lable>
+            <input 
+                type="text"
+                id="lastName"
+                value={form.lastName}
+                onChange={e => {
+                    setForm({
+                        ...form,
+                        lasttName: e.target.value
+                    });
+                }}></input>
+
         </>
     )
 }
