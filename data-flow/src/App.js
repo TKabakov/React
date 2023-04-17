@@ -3,6 +3,7 @@ import Puppy from './components/Puppy';
 import Child from './components/Child';
 import InputComponent from './components/InputComponent';
 import RegistrationForm from './components/RegistrationForm';
+import TextInputWithFocusButton from './components/TextInputWithFocusButton'
 import React, { useState } from 'react';
 
 function countInitial () {
@@ -38,6 +39,9 @@ function App() {
       </div>
       <div>
         <RegistrationForm/>
+      </div>
+      <div>
+        <TextInputWithFocusButton/>
       </div>
     </div>
   //Check the bowlShape and bowlStatus props in the child Puppy component

@@ -22,7 +22,7 @@ function RegistrationForm () {
                         firstName: e.target.value
                     });
                 }}></input>
-            <lable for="lasttName">Last name:</lable>
+            <lable for="lastName">Last name:</lable>
             <input 
                 type="text"
                 id="lastName"
@@ -30,7 +30,7 @@ function RegistrationForm () {
                 onChange={e => {
                     setForm({
                         ...form,
-                        lasttName: e.target.value
+                        lastName: e.target.value
                     });
                 }}></input>
             <lable for="email">e-mail:</lable>
