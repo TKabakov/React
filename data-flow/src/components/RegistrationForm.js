@@ -33,7 +33,17 @@ function RegistrationForm () {
                         lasttName: e.target.value
                     });
                 }}></input>
-
+            <lable for="email">e-mail:</lable>
+            <input 
+                type="email"
+                id="email"
+                value={form.email}
+                onChange={e => {
+                    setForm({
+                        ...form,
+                        email: e.target.value
+                    });
+                }}></input>
         </>
     )
 }
