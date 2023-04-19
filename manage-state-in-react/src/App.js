@@ -1,8 +1,7 @@
-
+import React from 'react';
 import './App.css';
 import Fruits from "./Fruits";
 import FruitsCounter from "./FruitsCounter";
-import React, { useState} from 'react'
 
 function App() {
       const [fruits] = React.useState([
