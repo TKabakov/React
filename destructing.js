@@ -19,7 +19,7 @@ displayMessage(person)
 function displayMessage({ 
 address:{state}
  }) {
-  const message = 'I live in ' + state + '.';
+  const massage = 'I live in ' + state + '.';
 }
 
 console.log(massage);
