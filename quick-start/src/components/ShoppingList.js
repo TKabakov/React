@@ -1,7 +1,7 @@
 const products = [
-{title:'Cabbage', id:'1'},
-{title:'Garlic', id:'2'},
-{title:'Apple', id:'1'},
+{title:'Cabbage', isFruit: false, id:'1'},
+{title:'Garlic', isFruit: false, id:'2'},
+{title:'Apple', isFruit: true, id:'3'},
   ];
   
 function ShoppingList (){
@@ -11,7 +11,7 @@ const listItems = products.map (
   <li 
     key={products.id} 
     style={{
-      color: product.isFruit? 'magenta' : 'darkgreen'
+      color: products.isFruit? 'magenta' : 'darkgreen'
     }}>
     {products.title}
   </li>
