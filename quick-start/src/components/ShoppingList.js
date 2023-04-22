@@ -9,7 +9,10 @@ function ShoppingList (){
 const listItems = products.map (
   products =>
   <li 
-    key={products.id} >
+    key={products.id} 
+    style={{
+      color: product.isFruit? 'magenta' : 'darkgreen'
+    }}>
     {products.title}
   </li>
   );
@@ -17,6 +20,8 @@ const listItems = products.map (
   return (
     <ul>
      {listItems}
-     </li>
-    )
-}
+     </ul>
+    );
+};
+
+export default ShoppingList;

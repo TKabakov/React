@@ -2,6 +2,7 @@ import './App.css';
 import AboutPage from './components/AboutPage';
 import MyButton from './components/MyButton';
 import Profile from './components/Profile';
+import ShoppingList from './components/ShoppingList';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <MyButton />
       <AboutPage />
       <Profile />
+      <ShoppingList />
     </div>
   );
 }
