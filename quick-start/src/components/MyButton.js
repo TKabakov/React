@@ -15,5 +15,7 @@ function MyButton(){
             </button>
     );
 };
+//If you render the same componnet multiple times in App.js,
+//each will get its own state.
 
 export default MyButton;

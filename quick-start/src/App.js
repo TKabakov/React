@@ -12,6 +12,7 @@ function App() {
       <AboutPage />
       <Profile />
       <ShoppingList />
+      <MyButton />
     </div>
   );
 }
