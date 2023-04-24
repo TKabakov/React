@@ -16,6 +16,6 @@ function MyButton(){
     );
 };
 //If you render the same componnet multiple times in App.js,
-//each will get its own state.
+//each will get its own state and doesn't affect other bottons.
 
 export default MyButton;
