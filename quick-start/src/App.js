@@ -6,13 +6,13 @@ import ShoppingList from './components/ShoppingList';
 import MyButton2 from './components/MyButton2';
 import { useState } from 'react';
 
+function App() {
 const[count,setCount]= useState(0);
 
 function handleClick () {
   setCount (count + 1);
 }
 
-function App() {
   return (
     <div className="App">
       <h1>Werlcome to my app</h1>
