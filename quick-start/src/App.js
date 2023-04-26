@@ -4,6 +4,7 @@ import MyButton from './components/MyButton';
 import Profile from './components/Profile';
 import ShoppingList from './components/ShoppingList';
 import MyButton2 from './components/MyButton2';
+import { useState } from 'react';
 
 const[count,setCount]= useState(0);
 
@@ -21,8 +22,8 @@ function App() {
       <Profile />
       <ShoppingList />
       <h1>Counters that update separately</h1>
-      <MyButton2/>
-      <MyButton/>
+      <MyButton2 count={count} onClick={handleClick}/>
+      <MyButton2 count={count} onClick={handleClick}/>
     </div>
   );
 }
