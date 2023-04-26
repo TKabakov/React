@@ -7,6 +7,7 @@ import Example2 from "./components/Example2";
 import Example3 from "./components/Example3";
 import './App.css';
 import CurrentMessage from './components/CurrentMessage';
+import LogicalAndExample from './components/LogicalAndExample';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Example2></Example2>
       <Example3></Example3>
       <CurrentMessage />
+      <LogicalAndExample />
     </div>
   );
 }
