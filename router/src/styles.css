@@ -33,11 +33,13 @@ body {
     text-decoration: none;
 }
 
-.nav li:hover {
-    background-color: #777;
+.nav li.active {
+    background-color: green;
 }
 
-.nav li.active {
-    background-color: #555;
+.nav li:hover {
+    background-color: red;
 }
+
+
 
