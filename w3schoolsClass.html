@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Class Method</h1>
+<p>Pass a parameter into the "age()" method.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age(x) {
+    return (x - this.year);
+  }
+}
+
+let year = new Date().getFullYear();
+
+const myCar = new Car("Ford", 2012);
+document.getElementById("demo").innerHTML=
+"My car is " + myCar.age(year) + " years old." + myCar.year + " " + myCar.name + year;
+
+class CAR {
+  constructor(name) {
+    this.brand = name;
+  }
+
+  present() {
+    return 'I have a ' + this.brand;
+  }
+}
+
+class Model extends CAR {
+  constructor( mod, name) {
+    super(name);
+    this.model = mod;
+  }  
+  show() {
+    return this.present() + ', it is a ' + this.model
+  }
+}
+
+const mycar = new Model("Ford", "Mustang");
+document.write(mycar.show());
+</script>
+
+</body>
+</html>
