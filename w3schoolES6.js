@@ -50,5 +50,27 @@ function myVehicle({type, brand, color, model}) {
   console.log(message);
 }
 
+//Destructing a nested object
+const vehicleTwo = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021,
+  color: 'red',
+  registration: {
+    city: 'Houston',
+    state: 'Texas',
+    country: 'USA'
+  }
+}
+
+vehicle(vehicleTwo);
+
+function vehicle({type, registration: {state}}) {
+  const message2 = 'My ' + type + ' has a ' + state + ' registration . '; 
+  console.log(message2);
+}
+
+
 
 
