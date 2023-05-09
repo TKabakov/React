@@ -34,4 +34,21 @@ console.log("Substarct: " + substract);
 console.log("Multiplay: " + multiplay);
 console.log("Divide: "+ divide);
 
+//Destructing objects
+const vehicleOne = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021,
+  color: 'red'
+}
+
+myVehicle(vehicleOne);
+
+function myVehicle({type, brand, color, model}) {
+  const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + ' . '; 
+  console.log(message);
+}
+
+
 
