@@ -1,0 +1,15 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+/* stylelint-disable font-family-name-quotes */
+@font-face {
+    font-family: 'MyFont';
+    src: url('./branda-yolq-webfont.woff2') format('woff2'),
+    url('./branda-yolq-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hello {
+    color: red;
+    font-family: 'MyFont';
+    background: url('./icon.png');
+}

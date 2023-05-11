@@ -5,8 +5,10 @@ import Hello from "./components/Hello";
 import Example from "./components/Example";
 import Example2 from "./components/Example2";
 import Example3 from "./components/Example3";
-
 import './App.css';
+import CurrentMessage from './components/CurrentMessage';
+import LogicalAndExample from './components/LogicalAndExample';
+
 
 function App() {
   return (
@@ -18,7 +20,8 @@ function App() {
       <Example></Example>
       <Example2></Example2>
       <Example3></Example3>
-
+      <CurrentMessage />
+      <LogicalAndExample />
     </div>
   );
 }
