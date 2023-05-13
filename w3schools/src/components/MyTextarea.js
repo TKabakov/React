@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 function MyTextarea() {
-    const [textarea, steTextarea] = useState(
+    const [textarea, setTextarea] = useState(
         "The content of  atext area goes in the value attribute"
     );
 
     const handleChange = (event) => {
-        steTextarea(event.target.value)
+        setTextarea(event.target.value)
     };
 
     return (
