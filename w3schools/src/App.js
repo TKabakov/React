@@ -5,6 +5,7 @@ import Goal2 from './components/Goal2';
 import GarageCar from './components/GarageCar';
 import GarageCar2 from './components/GarageCar2';
 import MyForm from './components/MyForm';
+import MyTextarea from './components/MyTextarea';
 
 const myCars = ["Ford", "BMW", "Audi", "Toyota"];
 
@@ -18,6 +19,7 @@ function App() {
       <GarageCar myCars={ myCars } />
       <GarageCar2 />
       <MyForm />
+      <MyTextarea />
     </div>
     )
 }
