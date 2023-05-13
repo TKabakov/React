@@ -4,6 +4,7 @@ import Garage from './components/Garage';
 import Goal2 from './components/Goal2';
 import GarageCar from './components/GarageCar';
 import GarageCar2 from './components/GarageCar2';
+import MyForm from './components/MyForm';
 
 const myCars = ["Ford", "BMW", "Audi", "Toyota"];
 
@@ -16,6 +17,7 @@ function App() {
       <Garage myCars={ myCars } />
       <GarageCar myCars={ myCars } />
       <GarageCar2 />
+      <MyForm />
     </div>
     )
 }
