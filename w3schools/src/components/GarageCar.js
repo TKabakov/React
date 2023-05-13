@@ -6,7 +6,7 @@ export default function Garage (props){
         <>
         <h1>Who lives in my garage?</h1>
         <ul>
-            {cars.map((carCar) => <Car brand = {carCar}/>)}
+            {cars.map((carCar) => <Car make = {carCar}/>)}
         </ul>
         </>
     );
