@@ -6,31 +6,25 @@ const Layout = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/Goal">Goal</Link>
           </li>
           <li>
-            <Link to="/blogs">Blogs</Link>
+            <Link to="/Garage">GarageGarage</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/GarageCar">GarageCar</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/GarageCar2">GarageCar2</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/MyForm">MyForm</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/MyTextarea">MyTextarea</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/MySelect">MySelect</Link>
           </li>
         </ul>
       </nav>
