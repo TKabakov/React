@@ -1,4 +1,5 @@
 import './App.css';
+
 import Goal from './components/Goal';
 import Garage from './components/Garage';
 import Goal2 from './components/Goal2';
@@ -8,16 +9,14 @@ import MyForm from './components/MyForm';
 import MyTextarea from './components/MyTextarea';
 import MySelect from './components/MySelect';
 
-const myCars = ["Ford", "BMW", "Audi", "Toyota"];
-
 function App() {
   return (
     <div className="App">
       <h1>Hello!</h1>
-      <Goal isGoal={""}/>
-      <Goal2 isGoal={""}/>
-      <Garage myCars={ myCars } />
-      <GarageCar myCars={ myCars } />
+      <Goal />
+      <Goal2 />
+      <Garage />
+      <GarageCar />
       <GarageCar2 />
       <MyForm />
       <MyTextarea />
