@@ -1,5 +1,7 @@
-export default function Garage(props) {
-    const cars = props.myCars;
+export default function Garage() {
+
+    const cars = ["Ford", "BMW", "Audi", "Toyota"];
+
     return (
         <>
         <h1>Garage: { cars }</h1>

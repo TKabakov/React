@@ -1,10 +1,11 @@
-import MadeGoal from "./MadeGoal"
-import MissedGoal from "./MissedGoal";
+import MadeGoal from "./components2/MadeGoal"
+import MissedGoal from "./components2/MissedGoal";
 
-export default function Goal(props) {
+export default function Goal() {
+    const isGoal="0";
     return (
         <>
-        {props.isGoal ? 
+        {isGoal ? 
         <MadeGoal />:
         <MissedGoal />}
         </>
