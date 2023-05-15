@@ -30,12 +30,14 @@ function App() {
   };
  
   function resetInput(e) {
+    e.preventDefault(); 
     inputRef.current.value = 0;
     
   };
  
   function resetResult(e) {
-    setResult((result) => result);
+    e.preventDefault(); 
+    setResult((result) => 0);
   }; 
  
   return ( 
