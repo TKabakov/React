@@ -10,9 +10,11 @@ import GarageCar2 from './components/GarageCar2';
 import MyForm from './components/MyForm';
 import MyTextarea from './components/MyTextarea';
 import MySelect from './components/MySelect';
+import MyCar from './components/CarObject';
 
 function App() {
   return (
+    <>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
@@ -28,6 +30,8 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    < MyCar />
+    </>
     )
 }
 
