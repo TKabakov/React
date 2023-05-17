@@ -12,6 +12,7 @@ import MyTextarea from './components/MyTextarea';
 import MySelect from './components/MySelect';
 import MyCar from './components/CarObject';
 import Timer from './components/Timer';
+import Counter from './components/Counter';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
     </BrowserRouter>
     < MyCar />
     <Timer />
+    <Counter />
     </>
     )
 }
