@@ -11,6 +11,7 @@ import MyForm from './components/MyForm';
 import MyTextarea from './components/MyTextarea';
 import MySelect from './components/MySelect';
 import MyCar from './components/CarObject';
+import Timer from './components/Timer';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       </Routes>
     </BrowserRouter>
     < MyCar />
+    <Timer />
     </>
     )
 }
