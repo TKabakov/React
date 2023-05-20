@@ -13,11 +13,15 @@ function DessertsList(props) {
     })
     
     //map chained
-    
+
     return (
-      <ul>
-       { filterAndSort }
-      </ul>
+      <div>
+        <h2>List of low calories desserts:</h2>
+        <ul>
+            { filterAndSort }
+        </ul>
+      </div>
+  
     );
   }
   
