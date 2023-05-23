@@ -14,6 +14,6 @@ function MyTextarea() {
             <textarea value={textarea} onChange={handleChange} />
         </form>
     );
-};
+}
 
 export default MyTextarea;
