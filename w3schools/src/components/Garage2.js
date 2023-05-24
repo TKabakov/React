@@ -12,4 +12,4 @@ function Garage2() {
       </ul>
     </>
   );
-};
+}
