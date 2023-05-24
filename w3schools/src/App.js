@@ -60,7 +60,7 @@ function App() {
     < MyCar />
     <Timer />
     <Counter />
-    <DessertsList key={desserts.name} data={desserts} />
+    <DessertsList data={desserts} />
     <NameList />
     </>
     )

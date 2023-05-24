@@ -8,8 +8,7 @@ function DessertsList(props) {
     const filterAndSort = props.data.filter(item => item.calories < 400)
     .sort((a,b) => a.calories-b.calories)
     .map((dessert) => {
-    
-      return <li>{`${dessert.name} - ${dessert.calories} cal` }</li>
+      return <li key={dessert.name}>  {`${dessert.name} - ${dessert.calories} cal` }</li>
     })
     
     //map chained
