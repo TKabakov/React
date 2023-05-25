@@ -2,11 +2,8 @@ import { people } from './components2/data.js';
 import { getImageUrl } from './components2/utils.js';
 
 export default function List() {
-  const Chemists = people.filter(person => person.profession === "chemist");
-
-  const EveryoneElse = people.filter(person => person.profession !== "chemist");
-  
-  const Chem = Chemists.map(person =>
+  const Chemists = people.filter(person => person.profession === "chemist")
+    .map(person =>
     <li key={person.id}>
       <img
         src={getImageUrl(person)}
@@ -21,7 +18,8 @@ export default function List() {
     </li>
   );
 
-  const Else = EveryoneElse.map(person =>
+  const EveryoneElse = people.filter(person => person.profession !== "chemist")
+    .map(person =>
     <li key={person.id}>
       <img
         src={getImageUrl(person)}
@@ -40,9 +38,9 @@ export default function List() {
     <article>
       <h1>Scientists</h1>
       <h2>Chemists</h2>
-        <ul>{Chem}</ul>
+        <ul>{Chemists}</ul>
       <h2>Everyone Else</h2>
-        <ul>{Else}</ul>
+        <ul>{EveryoneElse}</ul>
     </article>
   );
 }
