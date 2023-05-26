@@ -12,4 +12,4 @@ export default function Garage (){
         </ul>
         </>
     );
-};
+}

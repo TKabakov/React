@@ -35,6 +35,6 @@ function MyForm() {
             <input type="submit" />
         </form>
     );
-};
+}
 
 export default MyForm;

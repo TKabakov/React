@@ -18,6 +18,6 @@ function MySelect() {
             </select>
         </form>
     );
-};
+}
 
 export default MySelect;

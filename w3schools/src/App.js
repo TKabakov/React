@@ -14,6 +14,8 @@ import MyCar from './components/CarObject';
 import Timer from './components/Timer';
 import Counter from './components/Counter';
 import DessertsList from './components/DessertList';
+import NameList from './components/NameList';
+import List from './components/Scientists';
 
 function App() {
   const desserts = [
@@ -60,7 +62,8 @@ function App() {
     <Timer />
     <Counter />
     <DessertsList data={desserts} />
-  
+    <NameList />
+    <List />
     </>
     )
 }
