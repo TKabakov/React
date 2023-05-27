@@ -11,3 +11,34 @@ export const recipes = [{
   name: 'Hummus',
   ingredients: ['chickpeas', 'olive oil', 'garlic cloves', 'lemon', 'tahini']
 }];
+
+//Nested Array of Object
+
+export const  testData = [{
+
+    SectionName: "Product", items: [
+      { "id": 1, "Name": "MacBook" },
+      { "id": 2, "Name": "iPhone" },
+      { "id": 3, "Name": "iPad" },
+      { "id": 4, "Name": "iWatch" }
+    ]
+  },
+  {
+    SectionName: "Company", items: [
+      { "id": 1, "Name": "Google" },
+      { "id": 2, "Name": "FaceBook" },
+      { "id": 3, "Name": "IBM" },
+      { "id": 4, "Name": "Cisco" }
+
+    ]
+  }
+];
+
+{testJson.map((item) => {
+      return (
+        <ul>{item.SectionName}
+        {item.items.map(child => (
+         <li>{child.Name}</li>
+        ))}
+       </ul>
+    );})}
