@@ -16,7 +16,7 @@ export default function Recipes (){
   recipes.map((item) => {
   return (
     <ul>{item.name}
-    {item.items.map(child => (
+    {item.ingredients.map(child => (
      <li>{child.ingrediants}</li>
     ))}
    </ul>
