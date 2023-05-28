@@ -16,6 +16,7 @@ import Counter from './components/Counter';
 import DessertsList from './components/DessertList';
 import NameList from './components/NameList';
 import List from './components/Scientists';
+import Recipes from './components/components2/Salads';
 
 function App() {
   const desserts = [
@@ -64,6 +65,7 @@ function App() {
     <DessertsList data={desserts} />
     <NameList />
     <List />
+    <Recipes />
     </>
     )
 }

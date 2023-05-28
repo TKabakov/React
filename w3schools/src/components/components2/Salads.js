@@ -12,8 +12,18 @@ export const recipes = [{
   ingredients: ['chickpeas', 'olive oil', 'garlic cloves', 'lemon', 'tahini']
 }];
 
-//Nested Array of Object
+export default function Recipes (){
+  recipes.map((item) => {
+  return (
+    <ul>{item.name}
+    {item.items.map(child => (
+     <li>{child.ingrediants}</li>
+    ))}
+   </ul>
+);})}
 
+//Nested Array of Object
+/*
 export const  testData = [{
 
     SectionName: "Product", items: [
@@ -33,12 +43,7 @@ export const  testData = [{
     ]
   }
 ];
+*/
 
-{testJson.map((item) => {
-      return (
-        <ul>{item.SectionName}
-        {item.items.map(child => (
-         <li>{child.Name}</li>
-        ))}
-       </ul>
-    );})}
+
+
