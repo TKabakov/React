@@ -1,11 +1,15 @@
 import { recipes } from "./SaladsData";
 
 export default function Recipes (){
-  const recipeNames = recipes.map(
+  const recipe = recipes.map(
   (recipe) => {
     return(
       <li key={recipe.id}>
-        {recipe.name}
+        {recipe.name} recipe.ingrediants.map((ingrediant) => {
+          return(
+          <li> { ingrediant.ingediants} </li>
+          )
+        }
       </li>
     )
   }
@@ -14,10 +18,9 @@ export default function Recipes (){
   return(
     <div>
       <ul>
-          {recipeNames}
+          {recipe}
       </ul>
     </div>
-
   )
 }
 
