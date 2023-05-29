@@ -5,20 +5,25 @@ export default function Recipes (){
   (recipe) => {
     return(
       <li key={recipe.id}>
-        {recipe.name}.ingrediants.map((ingrediant) => {
-          return(
-          <li> { ingrediant.ingediants} </li>
-          )
-        }
+        {recipe.name}
       </li>
     )
-  }
-  )
+  });
+
+  const ingredient = recipe.map(
+    (ingredient) => {
+    return(
+      <li>{ingredient.ingredients}</li>
+    )
+});
 
   return(
     <div>
       <ul>
           {recipe}
+          <ul>
+            {ingredient}
+          </ul>
       </ul>
     </div>
   )
