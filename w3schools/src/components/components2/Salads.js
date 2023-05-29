@@ -5,7 +5,7 @@ export default function Recipes (){
   (recipe) => {
     return(
       <li key={recipe.id}>
-        {recipe.name} recipe.ingrediants.map((ingrediant) => {
+        {recipe.name}.ingrediants.map((ingrediant) => {
           return(
           <li> { ingrediant.ingediants} </li>
           )
