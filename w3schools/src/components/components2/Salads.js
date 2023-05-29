@@ -1,17 +1,45 @@
-export const recipes = [{
-  id: 'greek-salad',
-  name: 'Greek Salad',
-  ingredients: ['tomatoes', 'cucumber', 'onion', 'olives', 'feta']
-}, {
-  id: 'hawaiian-pizza',
-  name: 'Hawaiian Pizza',
-  ingredients: ['pizza crust', 'pizza sauce', 'mozzarella', 'ham', 'pineapple']
-}, {
-  id: 'hummus',
-  name: 'Hummus',
-  ingredients: ['chickpeas', 'olive oil', 'garlic cloves', 'lemon', 'tahini']
-}];
+import { recipes } from "./SaladsData";
 
+export default function Recipes (){
+  const recipeNames = recipes.map(
+  (recipe) => {
+    return(
+      <li key={recipe.id}>
+        {recipe.name}
+      </li>
+    )
+  }
+  )
+
+  return(
+    <div>
+      <ul>
+          {recipeNames}
+      </ul>
+    </div>
+
+  )
+}
+
+/*
+export default Recipes (){
+const Names = recipes.map((name) => {
+  return <li key={name.id}>{name.name}</li>
+})
+
+return (
+  <div>
+    <h2>List of low calories desserts:</h2>
+    <ul>
+        { Names }
+    </ul>
+  </div>
+
+);
+}
+*/
+
+/*
 export default function Recipes (){
   recipes.map((item) => {
   return (
@@ -21,7 +49,7 @@ export default function Recipes (){
     ))}
    </ul>
 );})}
-
+*/
 //Nested Array of Object
 /*
 export const  testData = [{
