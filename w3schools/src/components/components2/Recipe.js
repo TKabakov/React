@@ -14,8 +14,9 @@ export default function RecipeList(){
                             </li>
                             )}
                     </ul>
-                    )}
+                    
                 </div>
+            )}
         </div>
     );
 }
