@@ -17,6 +17,7 @@ import DessertsList from './components/DessertList';
 import NameList from './components/NameList';
 import List from './components/Scientists';
 import Recipes from './components/components2/Salads';
+import RecipeList from './components/components2/Recipe';
 
 function App() {
   const desserts = [
@@ -66,6 +67,7 @@ function App() {
     <NameList />
     <List />
     <Recipes />
+    <RecipeList />
     </>
     )
 }

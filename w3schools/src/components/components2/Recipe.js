@@ -9,12 +9,11 @@ export default function RecipeList(){
                     <h2>{recipe.name}</h2>
                     <ul>
                         {recipe.ingredients.map(ingredient =>
-                            <li key={ingrediant}>
+                            <li key={ingredient}>
                                 {ingredient}
                             </li>
                             )}
                     </ul>
-                    
                 </div>
             )}
         </div>
