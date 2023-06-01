@@ -15,7 +15,7 @@ function RecipeList({ name, ingredients }){
                     </ul>
         </div>
     );
-}git 
+}
 
 export default function Recipe (){
     return (
