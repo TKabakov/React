@@ -15,7 +15,7 @@ import Timer from './components/Timer';
 import Counter from './components/Counter';
 import DessertsList from './components/DessertList';
 import NameList from './components/NameList';
-import List from './components/Scientists';
+import List from '../../rendering-lists/src/components/Scientists';
 
 function App() {
   const desserts = [

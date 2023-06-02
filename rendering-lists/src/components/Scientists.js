@@ -1,5 +1,5 @@
-import { people } from './components2/data.js';
-import { getImageUrl } from './components2/utils.js';
+import { people } from '../../../w3schools/src/components/components2/data.js';
+import { getImageUrl } from '../../../w3schools/src/components/components2/utils.js';
 
 export default function List() {
   const Chemists = people.filter(person => person.profession === "chemist")
