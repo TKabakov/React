@@ -1,6 +1,7 @@
 import Recipes from "./components/Salads"; 
 import RecipeList from "./components/Recipe";
-import Recipe from "./components/Recipe2"; 
+import Recipe from "./components/Recipe2";
+import List from "./components/Scientists";
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <Recipes />
     <RecipeList />
     <Recipe />
+    <List />
     </div>
   );
 }
