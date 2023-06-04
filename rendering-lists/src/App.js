@@ -15,6 +15,12 @@ function App() {
     <List />
     <Form />
     <FormControlled />
+    <form>
+      <fieldset>
+        <h2>Feedback form:</h2>
+         <button type='submit'>Submit</button>
+      </fieldset>
+    </form>
     </div>
   );
 }
