@@ -17,8 +17,12 @@ function App() {
     <FormControlled />
     <form>
       <fieldset>
+        <div className='Field'>
         <h2>Feedback form:</h2>
+          <label>Score</label>
+          <input type="range" min="0" max="10" />
          <button type='submit'>Submit</button>
+         </div>
       </fieldset>
     </form>
     </div>
