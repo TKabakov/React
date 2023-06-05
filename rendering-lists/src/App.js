@@ -4,6 +4,7 @@ import Recipe from "./components/Recipe2";
 import List from "./components/Scientists";
 import Form from "./components/Form";
 import FormControlled from "./components/FormControlled";
+import Feedback from "./components/Feedback";
 import './App.css';
 
 function App() {
@@ -15,16 +16,7 @@ function App() {
     <List />
     <Form />
     <FormControlled />
-    <form>
-      <fieldset>
-        <div className='Field'>
-        <h2>Feedback form:</h2>
-          <label>Score</label>
-          <input type="range" min="0" max="10" />
-         <button type='submit'>Submit</button>
-         </div>
-      </fieldset>
-    </form>
+    <Feedback />
     </div>
   );
 }
