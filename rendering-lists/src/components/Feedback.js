@@ -17,8 +17,6 @@ function Feedback() {
     setScore("10");
     }
 
-
-
   return (
     <div>
         <form onSubmit={handleSubmit}>

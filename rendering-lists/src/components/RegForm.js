@@ -8,7 +8,7 @@ const PasswordErrorMessage = () => {
   );
 };
 
-function RegForm() {
+function App() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -19,7 +19,7 @@ function RegForm() {
   const [role, setRole] = useState("role");
 
   const getIsFormValid = () => {
-    // Implement this function
+ 
     return true;
   };
 
@@ -94,4 +94,4 @@ function RegForm() {
   );
 }
 
-export default RegForm;
+export default App;
