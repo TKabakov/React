@@ -75,6 +75,9 @@ function App() {
               onChange = { e => setPassword(e.target.value)}
             />
           </div>
+          <div>
+            <PasswordErrorMessage />
+          </div>
           <div className="Field">
             <label>
               Role <sup>*</sup>
