@@ -5,6 +5,7 @@ import List from "./components/Scientists";
 import Form from "./components/Form";
 import FormControlled from "./components/FormControlled";
 import Feedback from "./components/Feedback";
+import RegForm from "./components/RegForm";
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <Form />
     <FormControlled />
     <Feedback />
+    <RegForm />
     </div>
   );
 }
