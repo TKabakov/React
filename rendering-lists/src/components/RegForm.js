@@ -2,11 +2,12 @@
 import { useState } from "react";
 import { validateEmail } from "./utils2";
 
-const PasswordErrorMessage = (password) => {
-  if(Number(password.value) >7){
+const PasswordErrorMessage = () => {
   return (
+    <div>
     <p className="FieldError">Password should have at least 8 characters</p>
-  );}
+    </div>
+  );
 };
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
   const [role, setRole] = useState("role");
 
   const getIsFormValid = (e) => {
-    if (Number(firstName) >= 1
+    if (Number(firstName) >= 1 
       && validateEmail(email)
       && Number(password.value) >= 8
     && role == 'individual' || 'business'
@@ -29,7 +30,14 @@ function App() {
   };
 
   const clearForm = () => {
-    // Implement this function
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword({
+        value: "",
+        isTouched: false,
+    });
+    setRole("role");
   };
 
   const handleSubmit = (e) => {
@@ -48,9 +56,11 @@ function App() {
               First name <sup>*</sup>
             </label>
             <input
-              placeholder="First name"
-              value={firstName}
-              onChange = { e => setFirstName(e.target.value)}
+                placeholder="Last name"
+                value={firstName}
+                onChange = { (e) => {
+                    setFirstName(e.target.value);
+            }}
             />
           </div>
           <div className="Field">
@@ -58,7 +68,8 @@ function App() {
             <input
               placeholder="Last name"
               value={lastName}
-              onChange = { e => setLastName(e.target.value)}
+              onChange = { (e) => {
+                setLastName(e.target.value);}}
             />
           </div>
           <div className="Field">
@@ -68,7 +79,8 @@ function App() {
             <input
               placeholder="Email address"
               value={email}
-              onChange = { e => setEmail(e.target.value)}
+              onChange = { (e) => {
+                setEmail(e.target.value);}}
             />
           </div>
           <div className="Field">
@@ -78,17 +90,22 @@ function App() {
             <input
               placeholder="Password"
               value={password.value}
-              onChange = { e => setPassword(e.target.value)}
+              type="password"
+              onChange = { (e) => {
+                setPassword(e.target.value);}}
+            onBlur={() => {
+                setPassword({...password, isTouched: true});
+            }}
             />
-            <div>
-              <PasswordErrorMessage />
-            </div>
+            {password.isTouched && password.value.length < 8 ? (
+                <PasswordErrorMessage />
+            ) : null}
           </div>
           <div className="Field">
             <label>
               Role <sup>*</sup>
             </label>
-            <select value={ role } onChange={e => setRole(e.target.value)}>
+            <select value={ role } onChange={ (e) => setRole(e.target.value)}>
               <option value="role">Role</option>
               <option value="individual">Individual</option>
               <option value="business">Business</option>
