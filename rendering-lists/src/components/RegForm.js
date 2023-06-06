@@ -1,11 +1,12 @@
 
 import { useState } from "react";
-import { validateEmail } from "./utils";
+import { validateEmail } from "./utils2";
 
-const PasswordErrorMessage = () => {
+const PasswordErrorMessage = (password) => {
+  if(Number(password.value) >7){
   return (
     <p className="FieldError">Password should have at least 8 characters</p>
-  );
+  );}
 };
 
 function App() {
@@ -18,8 +19,12 @@ function App() {
   });
   const [role, setRole] = useState("role");
 
-  const getIsFormValid = () => {
- 
+  const getIsFormValid = (e) => {
+    if (Number(firstName) >= 1
+      && validateEmail(email)
+      && Number(password.value) >= 8
+    && role == 'individual' || 'business'
+    )
     return true;
   };
 
@@ -27,7 +32,8 @@ function App() {
     // Implement this function
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDfault();
     alert("Account created!");
     clearForm();
   };
@@ -74,9 +80,9 @@ function App() {
               value={password.value}
               onChange = { e => setPassword(e.target.value)}
             />
-          </div>
-          <div>
-            <PasswordErrorMessage />
+            <div>
+              <PasswordErrorMessage />
+            </div>
           </div>
           <div className="Field">
             <label>
