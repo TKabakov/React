@@ -20,13 +20,14 @@ function App() {
   });
   const [role, setRole] = useState("role");
 
-  const getIsFormValid = (e) => {
-    if (Number(firstName) >= 1 
-      && validateEmail(email)
-      && Number(password.value) >= 8
-    && role == 'individual' || 'business'
-    )
-    return true;
+  const getIsFormValid = () => {
+  
+    return (
+        firstName &&
+        validateEmail &&
+        password.value.length >= 8 &&
+        role !== 'role'
+    );
   };
 
   const clearForm = () => {
