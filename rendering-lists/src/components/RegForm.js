@@ -92,7 +92,7 @@ function App() {
               value={password.value}
               type="password"
               onChange = { (e) => {
-                setPassword(e.target.value);}}
+                setPassword({...password, value: e.target.value});}}
             onBlur={() => {
                 setPassword({...password, isTouched: true});
             }}
