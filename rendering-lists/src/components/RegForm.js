@@ -21,7 +21,6 @@ function App() {
   const [role, setRole] = useState("role");
 
   const getIsFormValid = () => {
-  
     return (
         firstName &&
         validateEmail &&
@@ -57,7 +56,7 @@ function App() {
               First name <sup>*</sup>
             </label>
             <input
-                placeholder="Last name"
+                placeholder="First name"
                 value={firstName}
                 onChange = { (e) => {
                     setFirstName(e.target.value);
@@ -93,7 +92,8 @@ function App() {
               value={password.value}
               type="password"
               onChange = { (e) => {
-                setPassword({...password, value: e.target.value});}}
+                setPassword({...password, value: e.target.value});
+            }}
             onBlur={() => {
                 setPassword({...password, isTouched: true});
             }}
