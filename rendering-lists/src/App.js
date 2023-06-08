@@ -6,6 +6,7 @@ import Form from "./components/Form";
 import FormControlled from "./components/FormControlled";
 import Feedback from "./components/Feedback";
 import RegForm from "./components/RegForm";
+import MyForm from "./components/MyForm";
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <FormControlled />
     <Feedback />
     <RegForm />
+    <MyForm />
     </div>
   );
 }
