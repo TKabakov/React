@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { useId } from 'react';
 
 function MyForm() {
+    const ageInputId = useId();
   return (
     <div>
       <label>
@@ -27,6 +29,14 @@ function MyForm() {
             Option2
         </label>        
       </p>
+      <hr />
+      <label>
+        Your first name:
+        <input name="firstName" />
+      </label>
+      <hr />
+        <label htmlFor={ageInputId}>Your age:</label>
+        <input id={ageInputId} name="age" type="number" />
     </div>
   )
 }
