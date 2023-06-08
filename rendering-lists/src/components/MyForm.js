@@ -7,11 +7,11 @@ function MyForm() {
     <div>
       <label>
         Text input:
-        <input name="myInput"/>
+        <input name="myInput" defaultValue="Some initial value"/>
       </label>
       <hr />
       <lablel>
-        Checkbox: <input type="checkbox" name="myChenckbox" />
+        Checkbox: <input type="checkbox" name="myChenckbox" defaultChecked={ true } />
       </lablel>
       <hr />
       <p>
@@ -25,8 +25,12 @@ function MyForm() {
             Option2
         </label>
         <label>
-        <input type="radio" name="myRadio" value="option2" />
-            Option2
+        <input 
+            type="radio" 
+            name="myRadio" 
+            value="option3"
+            defaultChecked={true} />
+            Option3
         </label>        
       </p>
       <hr />
