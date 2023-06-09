@@ -14,9 +14,7 @@ function Input(){
       onChange={e => setFirstName(e.target.value)}
       />
       </label>
-      {firstName !== "" && 
-        <p> Your name is {firstName}.</p>
-      }
+
       <label>
         Your age:
         <input
@@ -28,6 +26,12 @@ function Input(){
             Add 10 years
           </button>
       </label>
+      {firstName !== "" && 
+        <p> Your name is {firstName}.</p>
+      }
+      {ageAsNumber > 0 &&
+        <p>Your are is: {ageAsNumber}.</p>
+      }
      </> 
     );
 }
