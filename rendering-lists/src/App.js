@@ -8,6 +8,7 @@ import Feedback from "./components/Feedback";
 import RegForm from "./components/RegForm";
 import MyForm from "./components/MyForm";
 import Input from "./components/Input";
+import Sculpture from "./components/Sculpture";
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <RegForm />
     <MyForm />
     <Input />
+    <Sculpture />
     </div>
   );
 }
