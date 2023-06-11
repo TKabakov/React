@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { sculptureList } from './sculptureList';
 
-function Sculpture() {
+export default function Sculpture() {
 
   const [index, setIndex]=useState(0);
 
@@ -33,5 +33,3 @@ function Sculpture() {
     </div>
   )
 }
-
-export default Sculpture
