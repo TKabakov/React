@@ -6,16 +6,17 @@ export const ThemeProvider = ({ children }) => {
 
     const [theme, setTheme] = useState("light");
 
-    return <ThemeContext.Provider
+    return (<ThemeContext.Provider
         value={{
             theme,
-            toggleTheme 
+            toggleTheme: () => setTheme(theme === "light" ? "dark" : "light"),
         }
             }>
          { children }
-    </ThemeContext.Provider>;
+    </ThemeContext.Provider>
+    );
 }
    
 
-export const useTheme = () => ({ theme: "light" });
+export const useTheme = () => useContext(ThemeContext);
 
