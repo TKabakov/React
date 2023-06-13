@@ -30,15 +30,59 @@ const Paragraph = ({ children }) => {
   );
 }
 
-
-
-}
-
-function App() {
+const Content = () =>{
   return (
-    <div className="App">
+    <div>
+      <Paragraph>
+      We are a pizza loving family. And for years, I searched and searched and
+        searched for the perfect pizza dough recipe. I tried dozens, or more.
+        And while some were good, none of them were that recipe that would
+        make me stop trying all of the others.
+      </Paragraph>
     </div>
   );
 }
 
-export default App;
+const Header = () => {
+  return (
+    <header>
+      <Title>Little Lemon</Title>
+      <Switch />
+    </header>
+  );
+}
+
+const Page = () => {
+  return (
+    <div className="Page">
+      <Title>When it comes to dough</Title>
+      <Content />
+    </div>
+  )
+}
+
+function App() {
+  const { theme } = useTheme();
+
+  return (
+    <div 
+      className="App"
+      style={{
+        backgroundColor: theme === "light" ? "white" : "dark",
+      }}
+      >
+        <Header />
+        <Page />
+    </div>
+  );
+}
+
+function Root(){
+  return (
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  );
+}
+
+export default Root;
