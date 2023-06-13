@@ -1,56 +1,55 @@
-import './App.css';
-import { ThemeProvider, useTheme } from './ThemeContext';
+import "./App.css";
+import { ThemeProvider, useTheme } from "./ThemeContext";
 import Switch from "./Switch";
 
 const Title = ({ children }) => {
   const { theme } = useTheme();
-
   return (
     <h2
       style={{
         color: theme === "light" ? "black" : "white",
       }}
-      >
-        { children }
+    >
+      {children}
     </h2>
   );
 };
 
+
 const Paragraph = ({ children }) => {
   const { theme } = useTheme();
-
   return (
     <p
       style={{
-        color: theme === "light" ? "black" : "light",
+        color: theme === "light" ? "black" : "white",
       }}
-      >
-        { children }
-      </p>
+    >
+      {children}
+    </p>
   );
-}
+};
 
-const Content = () =>{
+const Content = () => {
   return (
     <div>
       <Paragraph>
-      We are a pizza loving family. And for years, I searched and searched and
+        We are a pizza loving family. And for years, I searched and searched and
         searched for the perfect pizza dough recipe. I tried dozens, or more.
         And while some were good, none of them were that recipe that would
         make me stop trying all of the others.
       </Paragraph>
     </div>
   );
-}
+};
 
 const Header = () => {
   return (
     <header>
-      <Title>Little Lemon</Title>
+      <Title>Little Lemon 🍕</Title>
       <Switch />
     </header>
   );
-}
+};
 
 const Page = () => {
   return (
@@ -58,8 +57,8 @@ const Page = () => {
       <Title>When it comes to dough</Title>
       <Content />
     </div>
-  )
-}
+  );
+};
 
 function App() {
   const { theme } = useTheme();
@@ -68,7 +67,7 @@ function App() {
     <div 
       className="App"
       style={{
-        backgroundColor: theme === "light" ? "white" : "dark",
+        backgroundColor: theme === "light" ? "white" : "black",
       }}
       >
         <Header />
