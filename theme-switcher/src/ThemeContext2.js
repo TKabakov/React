@@ -11,9 +11,9 @@ export default function myApp(){
       <label>
         <input
           type="checkbox"
-          checked={themr === 'dark'}
+          checked={theme === 'dark'}
           onChange={(e) => {
-          setTheme(e.terget.checked ? 'dark' : 'light')
+          setTheme(e.target.checked ? 'dark' : 'light')
           }}
         />
         Use dark mode
@@ -38,7 +38,7 @@ function Panel ({ title, children }) {
     <section className={className}>
       <h1>{title}</h1>
       {children}
-      </selection>
+      </section>
     );
 }
 
