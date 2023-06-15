@@ -53,6 +53,7 @@ ul {
   padding: 20px;
   margin-bottom: 10px;
 }
+
 .panel-light {
   color: #222;
   background: #fff;
@@ -60,6 +61,7 @@ ul {
 
 .panel-dark {
   color: #fff;
+  /* stylelint-disable-next-line color-function-notation */
   background: rgb(23, 32, 42);
 }
 
