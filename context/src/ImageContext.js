@@ -35,34 +35,40 @@ export default function Image() {
   )
 }
 
-function List({ imageSize }) {
+function List({ children }) {
+    const imageSize = useContext(ImageContext);
+
   const listItems = places.map(place =>
     <li key={place.id}>
       <Place
         place={place}
-        imageSize={imageSize}
       />
+      { children}
     </li>
   );
   return <ul>{listItems}</ul>;
 }
 
-function Place({ place, imageSize }) {
+function Place({place, children}) {
+    const imageSize = useContext(ImageContext);
+
   return (
     <>
       <PlaceImage
         place={place}
-        imageSize={imageSize}
       />
       <p>
         <b>{place.name}</b>
         {': ' + place.description}
+        { children }
       </p>
     </>
   );
 }
 
-function PlaceImage({ place, imageSize }) {
+function PlaceImage({ place, children }) {
+    const imageSize = useContext(ImageContext);
+    
   return (
     <img
       src={getImageUrl(place)}
