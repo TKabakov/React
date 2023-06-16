@@ -13,6 +13,11 @@ export default function Image() {
 
   return (
     <>
+    <ImageContext.Provider
+        value={
+            imageSize
+        }
+    >
       <label>
         <input
           type="checkbox"
@@ -24,7 +29,8 @@ export default function Image() {
         Use large images
       </label>
       <hr />
-      <List imageSize={imageSize} />
+      <List/>  
+    </ImageContext.Provider>
     </>
   )
 }
