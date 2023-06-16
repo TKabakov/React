@@ -9,13 +9,11 @@ const ImageContext = createContext(null);
 export default function Image() {
   const [isLarge, setIsLarge] = useState(false);
 
-  const imageSize = isLarge ? 150 : 100;
-
   return (
     <>
     <ImageContext.Provider
         value={
-            imageSize
+            isLarge
         }
     >
       <label>
@@ -23,7 +21,7 @@ export default function Image() {
           type="checkbox"
           checked={isLarge}
           onChange={e => {
-            setIsLarge(e.target.checked);
+            setIsLarge(e.target.checked ? 150 : 100) ;
           }}
         />
         Use large images
@@ -36,7 +34,6 @@ export default function Image() {
 }
 
 function List({ children }) {
-    const imageSize = useContext(ImageContext);
 
   const listItems = places.map(place =>
     <li key={place.id}>
@@ -50,7 +47,6 @@ function List({ children }) {
 }
 
 function Place({place, children}) {
-    const imageSize = useContext(ImageContext);
 
   return (
     <>
@@ -67,14 +63,14 @@ function Place({place, children}) {
 }
 
 function PlaceImage({ place, children }) {
-    const imageSize = useContext(ImageContext);
+    const isLarge= useContext(ImageContext);
     
   return (
     <img
       src={getImageUrl(place)}
       alt={place.name}
-      width={imageSize}
-      height={imageSize}
+      width={isLarge}
+      height={isLarge}
     />
   );
 }
