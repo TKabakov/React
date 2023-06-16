@@ -2,9 +2,15 @@ import { useState } from 'react';
 import { places } from './data.js';
 import { getImageUrl } from './utils.js';
 
-export default function App() {
+import { createContext, useContext } from 'react';
+
+const ImageContext = createContext(null);
+
+export default function Image() {
   const [isLarge, setIsLarge] = useState(false);
+
   const imageSize = isLarge ? 150 : 100;
+
   return (
     <>
       <label>
