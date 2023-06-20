@@ -33,12 +33,14 @@ export default function MultipleContexts(){
     )  
 }
         function WelcomePanel({ children }) {
+
             const {currentUser} = useContext(CurrentUserContext);
+
             return (
                 <Panel title="Welcome">
-                    {currentUser !== null?
-                    <Greeting/>:
-                    <LoginForm />
+                    {currentUser !== null
+                    ? <Greeting/>
+                    : <LoginForm />
                     }
                 </Panel>
             );
@@ -57,6 +59,7 @@ export default function MultipleContexts(){
             const [firstName, setFirstName] = useState('');
             const [lastName, setLastName] = useState('');
             const canLogin = firstName !== '' && lastName !== '';
+
             return(
                 <>
                 <label>
@@ -64,7 +67,7 @@ export default function MultipleContexts(){
                     <input
                         required
                         value={firstName}
-                        onChange={ setFirstName(e.target.value)}
+                        onChange={e => setFirstName(e.target.value)}
                     />
                 </label>
                 <label>
@@ -72,7 +75,7 @@ export default function MultipleContexts(){
                     <input
                         required
                         value={lastName}
-                        onChange={ setLastName(e.target.value)}
+                        onChange={e => setLastName(e.target.value)}
                     />
                 </label>
                 <Button
@@ -100,4 +103,20 @@ export default function MultipleContexts(){
                     {children}
                 </section>
             )
+        }
+
+        function Button({ children, disabled, onClick }){
+
+            const theme = useContext(ThemeContext);
+            const className = 'button-' + theme;
+
+            return(
+                <button
+                    className={className}
+                    disabled={disabled}
+                    onClick={onClick}
+                >
+                    {children}
+                </button>
+            );
         }
