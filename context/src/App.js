@@ -3,6 +3,7 @@ import './App.css';
 import MyApp from './ThemeContext';
 import User from './UpdatingObject'
 import Image from './ImageContext';
+import MultipleContexts from './MultipleContexts';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <MyApp />
       <User />
       <Image />
+      <MultipleContexts />
     </div>
   );
 }

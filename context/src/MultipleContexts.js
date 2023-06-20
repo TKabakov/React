@@ -30,5 +30,17 @@ export default function MultipleContexts(){
                     </label> 
                 </CurrentUserContext.Provider>
         </ThemeContext.Provider>
+
+        function WelcomePanel({ children }) {
+            const {currentUser} = useContext(CurrentUserContext);
+            return (
+                <Panel title="Welcome">
+                    {currentUser !== null?
+                    <Greeting/>:
+                    <LoginForm />
+                    }
+                </Panel>
+            );
+        }
     )  
 }
