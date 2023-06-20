@@ -77,13 +77,27 @@ export default function MultipleContexts(){
                 </label>
                 <Button
                     disabled={!canLogin}
-                    onClick={() =>
+                    onClick={() =>{
                         setCurrentUser({
                             name: firstName + " " + lastName
                         });
-                    }
+                    }}
                 >
-
+                    Log in
+                </Button>
+                    {!canLogin && <i>Fill in both fields.</i>}
                 </>
+            );
+        }
+
+        function Panel({title,children}){
+            const theme = useContext(ThemeContext);
+            const className = 'panel_' + theme;
+            
+            return(
+                <section className={className}>
+                    <h1>{title}</h1>
+                    {children}
+                </section>
             )
         }
