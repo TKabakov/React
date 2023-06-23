@@ -48,6 +48,7 @@ ul {
 
 label {
   display: block;
+  margin-top: 10px;
 }
 
 .button {
@@ -100,3 +101,14 @@ label {
   background: #fff;
   color: #222;
 }
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
