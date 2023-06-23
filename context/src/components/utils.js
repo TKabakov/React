@@ -10,3 +10,23 @@ export function createTodos(){
 
 return todos;
 }
+
+export function filterTodos(todos, tab){
+    console.log('[ARTIFICIIALLY SLOW] Filtering ' + todos.length + ' todoes for "' + tab + '" tab.');
+    let startTime = performance.now();
+    while (performance.now() - startTime < 500){
+      //Do nothing for 500 ms to emulate extremely slow code  
+    }
+
+    return todos.filter(todo => {
+        if (tab==='all'){
+            return true;
+        }
+        else if(tab==='active'){
+            return !todo.completed;
+        }
+        else if(tab==='completed'){
+            return todo.completed;
+        }
+    });
+}
