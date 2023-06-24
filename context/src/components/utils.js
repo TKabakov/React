@@ -4,7 +4,7 @@ export function createTodos(){
     todos.push({
         id: i,
         text: "Todo" + (i+1),
-        completed:Math.random()>0.5
+        completed: Math.random()>0.5
     });
 }
 
