@@ -18,9 +18,22 @@ export default function  Todo() {
             </button>
             <button onClick={() => setTab ('completed')}>
                 completed
-            </button>          
-
-
+            </button>
+            <br />
+            <label>
+                <input
+                    type="checkbox"
+                    checked={isDark}
+                    onChange={ e => setIsDark(e.target.checked)}
+                />
+                Dark mode
+            </label>
+            <hr />
+            <TodoList
+                todos={todos}
+                tab={tab}
+                theme={isDark ? 'dark' : 'light'}
+            />          
         </>
-    )
+    );
 }

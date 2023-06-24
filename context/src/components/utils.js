@@ -19,13 +19,13 @@ export function filterTodos(todos, tab){
     }
 
     return todos.filter(todo => {
-        if (tab==='all'){
+        if (tab === 'all') {
             return true;
         }
-        else if(tab==='active'){
+        else if(tab === 'active'){
             return !todo.completed;
         }
-        else if(tab==='completed'){
+        else if(tab === 'completed'){
             return todo.completed;
         }
     });
