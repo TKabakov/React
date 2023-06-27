@@ -3,7 +3,12 @@ import { useState } from 'react';
 
 
 function Objects() {
-    const [greeting, setGreeting] = useState({ greet: "Hello, World!"});
+    const [greeting, setGreeting] = useState(
+        { 
+            greet: "Hello",
+            place: "World"
+        }
+        );
     console.log(greeting, setGreeting);
     
     function updateGreeting(){
