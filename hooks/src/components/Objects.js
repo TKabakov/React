@@ -12,14 +12,14 @@ function Objects() {
     console.log(greeting, setGreeting);
     
     function updateGreeting(){
-        const newGreeting = {...greeting};
-        newGreeting.greet = "Hello, World-Wide Web";
-        setGreeting(newGreeting);
+        setGreeting(prevState => {
+          return { ...prevState, place:"World-Wide Web"}
+        });
     }   
   
     return (
     <div>
-      <h1>{greeting.greet}</h1>
+      <h1>{greeting.greet},{greeting.place}</h1>
       <button onClick={updateGreeting}>Update greeting</button>
     </div>
   );
