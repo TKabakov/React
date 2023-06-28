@@ -7,9 +7,11 @@ function GoalForm(props) {
         setFormData({ ...formData, [e.target.name]: e.target:value});
     }
 
-    function submitHandler(){
-
-    }
+    function submitHandler(r){
+        e.preventDefault();
+        props.onAdd(formData);
+        setFormData({ goal:"", by: ""});
+    };
 }
 
 function ListOfGoals(props) {
