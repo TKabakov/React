@@ -1,13 +1,14 @@
 import React from 'react';
+import { useState } from 'react';
 
 function GoalForm(props) {
     const [formData, setFormData] = useState({ goal:"", by:"" });
 
     function chageHandler(e){
-        setFormData({ ...formData, [e.target.name]: e.target:value});
+        setFormData({ ...formData, [e.target.name]: e.target.value});
     }
 
-    function submitHandler(r){
+    function submitHandler(e){
         e.preventDefault();
         props.onAdd(formData);
         setFormData({ goal:"", by: ""});
@@ -35,7 +36,7 @@ function ListOfGoals(props) {
     );
 }
 
-export default function App() {
+export default function Goals() {
 
     const [ allGoals, updateAllGoals] = useState([]);
 
@@ -45,9 +46,9 @@ export default function App() {
 
     return (
         <div className='App'>
-            <GoalForm onAdd={addGoal} />   
-        </div>
-        
-    )
+            <GoalForm onAdd={addGoal} />
+            <ListOfGoals allGoals={allGoals} />  
+        </div>      
+    );
 
 }
