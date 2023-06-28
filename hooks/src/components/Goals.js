@@ -12,6 +12,15 @@ function GoalForm(props) {
         props.onAdd(formData);
         setFormData({ goal:"", by: ""});
     };
+
+    return(
+        <>
+            <h1>My Little Lemon Goals</h1>
+            <form onSubmit={submitHandler}>
+                <input type='text' name='goal' placeholder='Goal' value={formData.goal} onChange={chageHandler}/>
+                <input type='text' name='by' placeholder='By' value={formData.by} onChange={chageHandler}/>            </form>
+        </>
+    )
 }
 
 function ListOfGoals(props) {
@@ -19,5 +28,18 @@ function ListOfGoals(props) {
 }
 
 export default function App() {
+
+    const [ allGoals, updateAllGoals] = useState([]);
+
+    function addGoal(goal) {
+        updateAllGoals ([...allGoals, goal]);
+    }
+
+    return (
+        <div className='App'>
+            <GoalForm onAdd={addGoal} />   
+        </div>
+        
+    )
 
 }
