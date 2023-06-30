@@ -18,8 +18,8 @@ export default function GiftCard() {
             ...prevState,
            // firstName: "Jennifer",
         //lastName: "Smith",
-        text: "Your couponhas been used",
-        valid: false,
+        text: "Your coupon has been used",
+        valid: false, //this makes the button to disappear after it is clicked
         instructions: "Please visit our restaurant to renew your gift card.",
         }
     });
