@@ -16,10 +16,9 @@ export default function GiftCard() {
 
         return{
             ...prevState,
-           // firstName: "Jennifer",
-        //lastName: "Smith",
+
         text: "Your coupon has been used",
-        valid: false, //this makes the button to disappear after it is clicked
+        valid: false, //this will make the button to disappear after it is clicked
         instructions: "Please visit our restaurant to renew your gift card.",
         }
     });
