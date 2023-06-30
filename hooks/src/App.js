@@ -2,7 +2,7 @@
 import './App.css';
 import Objects from './components/Objects';
 import Goals from './components/Goals';
-import GiftCards from './components/GiftCrads';
+import GiftCards from './components/GiftCards';
 
 function App() {
   return (
