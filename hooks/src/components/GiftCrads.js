@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function GiftCards() {
+export default function GiftCard() {
   const [giftCard, setGiftCard] = useState(
     {
         firstName: "Jennifer",
@@ -12,6 +12,17 @@ export default function GiftCards() {
   );
 
   function spendGiftCard() {
+    setGiftCard(prevState =>{
+
+        return{
+            ...prevState,
+           // firstName: "Jennifer",
+        //lastName: "Smith",
+        text: "Your couponhas been used",
+        //valid: true,
+        //instructions: "To use your coupon, click the button below.",
+        }
+    });
 
   }
 
