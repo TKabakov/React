@@ -19,8 +19,8 @@ export default function GiftCard() {
            // firstName: "Jennifer",
         //lastName: "Smith",
         text: "Your couponhas been used",
-        //valid: true,
-        //instructions: "To use your coupon, click the button below.",
+        valid: false,
+        instructions: "Please visit our restaurant to renew your gift card.",
         }
     });
 
