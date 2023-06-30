@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 export default function GiftCard() {
+
   const [giftCard, setGiftCard] = useState(
     {
         firstName: "Jennifer",
@@ -13,16 +14,13 @@ export default function GiftCard() {
 
   function spendGiftCard() {
     setGiftCard(prevState =>{
-
         return{
             ...prevState,
-
-        text: "Your coupon has been used",
-        valid: false, //this will make the button to disappear after it is clicked
-        instructions: "Please visit our restaurant to renew your gift card.",
+          text: "Your coupon has been used",
+          valid: false, //this will make the button to disappear after it is clicked
+          instructions: "Please visit our restaurant to renew your gift card.",
         }
     });
-
   }
 
   return (
@@ -39,13 +37,13 @@ export default function GiftCard() {
       <p>
         {giftCard.instructions}
       </p>
-      {
+        {
         giftCard.valid && (
           <button onClick={spendGiftCard}>
             Spend Gift Card
           </button>
-        )
-      }
+          )
+        }
     </div>
   );
 }
