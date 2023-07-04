@@ -10,23 +10,32 @@ export default function Form(){
       }  
     });
 
-   function handleNameChange(){
-
+   function handleNameChange(e){
+        setPerson({
+            ...person.artwork,
+            name: e.target.value
+        });
    } 
 
-   function handleTitleChange(){
-
+   function handleTitleChange(e){
+        setPerson({
+            ...person,
+            title: e.target.value
+        });     
    } 
    
-   function handleCityChange(){
-
+   function handleCityChange(e){
+        setPerson({
+            ...person.artwork,
+            city: e.target.value
+        });
    } 
 
-   function handleImageChange(){
-
+   function handleImageChange(e){
+        setPerson({
+            ...person.artwork,
+            image: e.target.value
+        });
    } 
 
-   function handleNameChange(){
-
-   } 
 }
