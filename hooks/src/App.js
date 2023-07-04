@@ -5,6 +5,7 @@ import Goals from './components/Goals';
 import GiftCards from './components/GiftCards';
 import MovingDot from './components/MovingDot';
 import Person from './components/Person';
+import Artwork from './components/Artwork';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <GiftCards />
       <MovingDot />
       <Person />
+      <Artwork />
     </div>
   );
 }

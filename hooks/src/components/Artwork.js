@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Form(){
+export default function Artwork(){
     const [person, setPerson] = useState({
       name: 'Niki de Saint Phalle',
       artwork: {
@@ -12,14 +12,14 @@ export default function Form(){
 
    function handleNameChange(e){
         setPerson({
-            ...person.artwork,
+            ...person,
             name: e.target.value
         });
    } 
 
    function handleTitleChange(e){
         setPerson({
-            ...person,
+            ...person.title,
             title: e.target.value
         });     
    } 
