@@ -38,4 +38,41 @@ export default function Form(){
         });
    } 
 
+   return (
+        <>
+            <label>
+                Name:
+                <input 
+                    type='text'
+                    value={person.name}
+                    onChange={handleNameChange}
+                /> 
+            </label>
+            <label>
+                Title:
+                <input 
+                    type='text'
+                    value={person.artwork.title}
+                    onChange={handleTitleChange}
+                /> 
+            </label>
+            <label>
+                City:
+                <input 
+                    type='text'
+                    value={person.artwork.city}
+                    onChange={handleCityChange}
+                /> 
+            </label>
+            <label>
+                Image:
+                <input 
+                    type='url'
+                    value={person.artwork.image}
+                    onChange={handleImageChange}
+                /> 
+            </label>
+
+        </>
+   )
 }
