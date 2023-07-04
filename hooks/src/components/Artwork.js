@@ -72,7 +72,17 @@ export default function Form(){
                     onChange={handleImageChange}
                 /> 
             </label>
-
+            <p>
+                {person.artwork.title} 
+                'by'
+                {person.artwork.name}
+                <br />
+                '(located in {person.artwork.city})'
+            </p>
+            <img
+                src={person.artwork.image}
+                alt={person.artwork.title}
+            />
         </>
-   )
+   );
 }
