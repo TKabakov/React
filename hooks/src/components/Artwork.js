@@ -74,10 +74,10 @@ export default function Artwork(){
             </label>
             <p>
                 {person.artwork.title} 
-                'by'
+                {' by '}
                 {person.artwork.name}
                 <br />
-                '(located in {person.artwork.city})'
+                (located in {person.artwork.city})
             </p>
             <img
                 src={person.artwork.image}
