@@ -10,5 +10,23 @@ export default function Form(){
       }  
     });
 
-    
+   function handleNameChange(){
+
+   } 
+
+   function handleTitleChange(){
+
+   } 
+   
+   function handleCityChange(){
+
+   } 
+
+   function handleImageChange(){
+
+   } 
+
+   function handleNameChange(){
+
+   } 
 }
