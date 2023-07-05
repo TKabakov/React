@@ -7,4 +7,7 @@ This usually involves using the spread operator (...).
 
 ![Initiall view](image-1.png)![The view after rendering, notice that the booton disappeares!](image-2.png)
 
-4. Updating nested objects (Artwork.js);
+4. Updating nested objects (./components/Artwork.js);
+
+5. useEffect component which is fetching data (./components/Bitcoin.js)
+![Alt text](image.png)
