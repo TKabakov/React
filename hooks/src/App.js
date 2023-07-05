@@ -6,6 +6,7 @@ import GiftCards from './components/GiftCards';
 import MovingDot from './components/MovingDot';
 import Person from './components/Person';
 import Artwork from './components/Artwork';
+import Bitcoin from './components/Bitcoin';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <MovingDot />
       <Person />
       <Artwork />
+      <Bitcoin />
     </div>
   );
 }
