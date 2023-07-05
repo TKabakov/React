@@ -6,3 +6,5 @@ This usually involves using the spread operator (...).
 3. Exercise: Managing state within a component(./GiftCards.js)
 
 ![Initiall view](image-1.png)![The view after rendering, notice that the booton disappeares!](image-2.png)
+
+4. Updating nested objects (Artwork.js);
