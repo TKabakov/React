@@ -1,9 +1,12 @@
 import React from "react";
 
-function App() {
+function CustomerData() {
   const [user, setUser] = React.useState([]);
 
   const fetchData = () => {
+    fetch("https://randomuser.me/api/?results=1")
+    .then(response => response.json())
+    .then(data => setUser(data))
 
   };
 
@@ -21,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default CustomerData;
