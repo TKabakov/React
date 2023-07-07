@@ -7,6 +7,7 @@ import MovingDot from './components/MovingDot';
 import Person from './components/Person';
 import Artwork from './components/Artwork';
 import Bitcoin from './components/Bitcoin';
+import CustomerData from './components/CustomerData';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Person />
       <Artwork />
       <Bitcoin />
+      <CustomerData />
     </div>
   );
 }
