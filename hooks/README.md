@@ -9,5 +9,5 @@ This usually involves using the spread operator (...).
 
 4. Updating nested objects (./components/Artwork.js);
 
-5. useEffect component which is fetching data (./components/Bitcoin.js)
+5. An useEffect hook component which is fetching data (./components/Bitcoin.js)
 ![Alt text](image.png)
