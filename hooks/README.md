@@ -12,5 +12,6 @@ This usually involves using the spread operator (...).
 5. useEffect component which is fetching data (./components/Bitcoin.js)
 ![Alt text](image.png)
 
-6. A practice fetching some data from the randomuser.me website's API(CustomerData.js)
-.
+6. A practice fetching some data from the randomuser.me website's API(CustomerData.js).
+![Alt text](image-3.png)
+![Alt text](image-4.png)
