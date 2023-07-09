@@ -16,3 +16,6 @@ This usually involves using the spread operator (...).
 6. A practice fetching some data from the randomuser.me website's API(CustomerData.js).
 ![Alt text](image-3.png)
 ![Alt text](image-4.png)
+
+7. useReducer implementation for keep track on expences and income in the Little Lemon restaurant(Track.js)
+![Alt text](image-5.png)
