@@ -8,6 +8,8 @@ import Person from './components/Person';
 import Artwork from './components/Artwork';
 import Bitcoin from './components/Bitcoin';
 import CustomerData from './components/CustomerData';
+import Track from './components/Track';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <Artwork />
       <Bitcoin />
       <CustomerData />
+      <Track />
     </div>
   );
 }
