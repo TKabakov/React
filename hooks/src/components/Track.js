@@ -17,9 +17,9 @@ function Track() {
     <div>
       <h1>Wallet: {state.money}</h1>
       <div>
-        <button onDoubleClick={() => dispatch({type: "buy ingradients"})}>Shopping for veggies!</button>
-        <button onDoubleClick={() => dispatch({type: "sell a meal"})}>Serve a meal to the customer!</button>
-        <button onDoubleClick={() => dispatch({type: "celebrity visit"})}>Celebrity visit</button>
+        <button onClick={() => dispatch({type: "buy ingradients"})}>Shopping for veggies!</button>
+        <button onClick={() => dispatch({type: "sell a meal"})}>Serve a meal to the customer!</button>
+        <button onClick={() => dispatch({type: "celebrity visit"})}>Celebrity visit</button>
       </div>
     </div>
   )
