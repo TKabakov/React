@@ -7,6 +7,7 @@ import MovingDot from './components/MovingDot';
 import Person from './components/Person';
 import Artwork from './components/Artwork';
 import Bitcoin from './components/Bitcoin';
+import Track from './components/Track';
 import CustomerData from './components/CustomerData';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Person />
       <Artwork />
       <Bitcoin />
+      <Track />
       <CustomerData />
     </div>
   );
