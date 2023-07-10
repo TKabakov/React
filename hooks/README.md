@@ -17,5 +17,5 @@ This usually involves using the spread operator (...).
 ![Alt text](image-3.png)
 ![Alt text](image-4.png)
 
-7. useReducer hook is used to track expences and revenue. (Track.js)
+7. useReducer implementation for keep track on expences and income in the Little Lemon restaurant(Track.js)
 ![Alt text](image-5.png)
