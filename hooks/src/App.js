@@ -9,6 +9,7 @@ import Artwork from './components/Artwork';
 import Bitcoin from './components/Bitcoin';
 import Track from './components/Track';
 import CustomerData from './components/CustomerData';
+import NextDay from './NextDay';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Bitcoin />
       <Track />
       <CustomerData />
+      <NextDay />
     </div>
   );
 }
