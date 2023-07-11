@@ -37,4 +37,6 @@ function usePrevious(val) {
     const ref = useRef();
     useEffect(() => { val = ref.current, [val]});
 
+    return ref.current;
 }
+
