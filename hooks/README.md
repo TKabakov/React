@@ -19,3 +19,8 @@ This usually involves using the spread operator (...).
 
 7. useReducer implementation for keep track on expences and income in the Little Lemon restaurant(Track.js)
 ![Alt text](image-5.png)
+
+8. useReducer component named Form is created(Form.js)
+![Alt text](image-6.png)
+After you type name "Teodor" and click on the button 4 times:
+![Alt text](image-7.png)
