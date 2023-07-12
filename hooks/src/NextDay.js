@@ -35,7 +35,9 @@ export default function NextDay() {
 
 function usePrevious(val) {
     const ref = useRef();
-    useEffect(() => { val = ref.current, [val]});
+    useEffect(() => {
+        ref.current = val;
+        }, [val]);
 
     return ref.current;
 }
