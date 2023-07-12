@@ -18,3 +18,10 @@ function reducer(state, action) {
     throw Error ('Unknown action: ' + action.type);
 }
 
+const initialState = { name: 'Taylor', age: 42 };
+
+export default function Form() {
+    const [state, dispatch] = useReducer(reducer, initialState);
+
+    
+}
