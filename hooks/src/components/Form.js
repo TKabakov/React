@@ -8,5 +8,13 @@ function reducer(state, action) {
                 age: state.age + 1
             };
         }
+        case 'changed_name': {
+            return {
+                name: action.nextName,
+                age: state.age
+            };
+        }
     }
+    throw Error ('Unknown action: ' + action.type);
 }
+
