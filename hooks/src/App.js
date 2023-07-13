@@ -10,6 +10,7 @@ import Bitcoin from './components/Bitcoin';
 import Track from './components/Track';
 import CustomerData from './components/CustomerData';
 import NextDay from './NextDay';
+import Form from './components/Form';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Track />
       <CustomerData />
       <NextDay />
+      <Form />
     </div>
   );
 }
