@@ -49,5 +49,12 @@ function reducer (tasks, action){
         });
     }
 
+    function handleDeleteTask(taskId) {
+        dispatch({
+            type: 'deleted',
+            id: taskId
+        });
+    }
+
     
  }
