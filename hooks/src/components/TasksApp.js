@@ -1,4 +1,5 @@
 import { useReducer  } from 'react';
+import AddTask from './ToDoList/AddTask';
 
 function reducer (tasks, action){
   switch( action.type) {
@@ -30,7 +31,7 @@ function reducer (tasks, action){
 
  export default function TaskApp() {
     const [tasks, dispatch] = useReducer(
-        taskReducer,
+        reducer,
         initialTasks
     );
 
