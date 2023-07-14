@@ -13,7 +13,7 @@ function reducer (tasks, action){
     }
     case 'changed': {
       return tasks.map(t => {
-        if(t.id === action.tasks.id) {
+        if(t.id === action.task.id) {
           return action.task;
         } else {
           return t;
@@ -78,13 +78,13 @@ function reducer (tasks, action){
  const initialTasks = [
     {   id: 0,
         text: 'Visit Kafka Museum', 
-        done: 'true'},
+        done: true},
     
     {   id: 1,
         text: 'Watch a pupet show',
-        done: 'false'},
+        done: false},
     
     {   id: 2,
         text: 'Lemmon Wall pic',
-        done: 'false'}
+        done: false}
  ];
