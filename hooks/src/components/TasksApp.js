@@ -42,5 +42,12 @@ function reducer (tasks, action){
         });
     }
 
+    function handleChangeTask(task) {
+        dispatch ({
+            type: 'changed',
+            task: task
+        });
+    }
+
     
  }
