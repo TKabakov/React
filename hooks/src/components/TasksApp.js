@@ -19,17 +19,11 @@ function reducer (tasks, action){
       });
     }
      case 'deleted': {
-       return tasks.filter(t => t.id !== action.id)
+       return tasks.filter(t => t.id !== action.id);
      }
-    
-        }
-      }) {
-        name: action.nextName,
-        age: state.age
-      };
+     
+     default: {
+       throw Error('Unknown action: ' + action.type);
+     }
     }
-      
-    }
-  }
-  }
-}
+ }
