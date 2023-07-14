@@ -56,5 +56,17 @@ function reducer (tasks, action){
         });
     }
 
-    
+    return(
+        <>
+           <h1>Prague intinerary</h1>
+           <AddTask
+            onAddTask={handleAddTask}
+            />
+            <TaskList
+                tasks={tasks}
+                onChangeTask={handleChangeTask}
+                onDeleteTask={handleDeleteTask}
+            />
+        </>
+    );
  }
