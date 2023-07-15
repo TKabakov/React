@@ -11,6 +11,7 @@ import Track from './components/Track';
 import CustomerData from './components/CustomerData';
 import NextDay from './NextDay';
 import Form from './components/Form';
+import TaskAppState from './components/TaskAppState';
 import TaskAppReducer from './components/TasksAppReducer';
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
       <CustomerData />
       <NextDay />
       <Form />
+      <h1>Using State for a complex task:</h1>
+        <TaskAppState />
+      <h1>Using reducer for the same complex task:</h1>
       <TaskAppReducer />
     </div>
   );
