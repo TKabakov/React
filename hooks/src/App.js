@@ -11,7 +11,7 @@ import Track from './components/Track';
 import CustomerData from './components/CustomerData';
 import NextDay from './NextDay';
 import Form from './components/Form';
-import TaskApp from './components/TasksApp';
+import TaskAppReducer from './components/TasksAppReducer';
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
       <CustomerData />
       <NextDay />
       <Form />
-      <TaskApp />
+      <TaskAppReducer />
     </div>
   );
 }

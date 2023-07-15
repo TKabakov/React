@@ -30,7 +30,7 @@ function reducer (tasks, action){
     }
  }
 
- export default function TaskApp() {
+ export default function TaskAppReducer() {
     const [tasks, dispatch] = useReducer(
         reducer,
         initialTasks
