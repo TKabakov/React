@@ -6,15 +6,28 @@ export default function TaskAppState() {
   const [tasks, setTasks] = useState(initialTasks);
 
   function handleAddTask(text) {
-    dispatchEvent({
+    dispatch({
         type: 'added',
         id: nextId++,
         text: text,
     });
+ /*   setTasks([
+      ...tasks,
+      {
+        id: nextId++,
+        text: text,
+        done: false,
+      },
+    ])*/
+  
   }
 
   function handleChangeTask(task) {
-    setTasks(
+    dispatch({
+        type: 'changed',
+        task: task
+    });
+/*    setTasks(
       tasks.map((t) => {
         if (t.id === task.id) {
           return task;
@@ -22,7 +35,8 @@ export default function TaskAppState() {
           return t;
         }
       })
-    );
+    )*/
+    
   }
 
   function handleDeleteTask(taskId) {
