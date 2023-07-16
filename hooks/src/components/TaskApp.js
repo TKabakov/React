@@ -2,7 +2,7 @@ import { useReducer } from 'react';
 import AddTask from './ToDoList/AddTask';
 import TaskList from './ToDoList/TaskList';
 
-export default function TaskAppState() {
+export default function TaskApp() {
   const [tasks, dispatch] = useReducer(taskReducer, initialTasks);
 
   function taskReducer (tasks, action){
@@ -52,7 +52,7 @@ export default function TaskAppState() {
 
   function handleDeleteTask(taskId) {
     dispatch({
-        tpe: 'deleted',
+        type: 'deleted',
         id: taskId,
     });
   }

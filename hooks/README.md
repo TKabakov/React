@@ -24,3 +24,8 @@ This usually involves using the spread operator (...).
 ![Alt text](image-6.png)
 After you type name "Teodor" and click on the button 4 times:
 ![Alt text](image-7.png)
+
+9. "Prague intinerary" is created with useReducer(TaskAppReducer.js) 
+![Alt text](image-8.png)
+![Alt text](image-9.png)
+![Alt text](image-10.png)
