@@ -25,7 +25,7 @@ export default function TaskAppState() {
   function handleChangeTask(task) {
     dispatch({
         type: 'changed',
-        task: task
+        task: task,
     });
 /*    setTasks(
       tasks.map((t) => {
@@ -40,7 +40,13 @@ export default function TaskAppState() {
   }
 
   function handleDeleteTask(taskId) {
-    setTasks(tasks.filter((t) => t.id !== taskId));
+    dispatch({
+        tpe: 'deleted',
+        id: taskId,
+    });
+
+/*    setTasks(tasks.filter((t) => t.id !== taskId));
+*/
   }
 
   return (
