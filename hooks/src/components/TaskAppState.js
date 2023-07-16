@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 import AddTask from './ToDoList/AddTask';
 import TaskList from './ToDoList/TaskList';
 
 export default function TaskAppState() {
-  const [tasks, setTasks] = useState(initialTasks);
+  const [tasks, dispatch] = useReducer(taskReducer, initialTasks);
 
   function taskReducer (tasks, action){
     switch (action.type){
@@ -15,7 +15,7 @@ export default function TaskAppState() {
                   text: action.text,
                   done: false,
                 },
-              ];
+            ];
         }
         case 'changed': {
             return tasks.map((t) => {
