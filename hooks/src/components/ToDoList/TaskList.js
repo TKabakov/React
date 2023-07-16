@@ -22,7 +22,9 @@ export default function TaskList({
 
 function Task({ task, onChange, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
+
   let taskContent;
+
   if (isEditing) {
     taskContent = (
       <>
@@ -39,6 +41,7 @@ function Task({ task, onChange, onDelete }) {
         </button>
       </>
     );
+
   } else {
     taskContent = (
       <>
@@ -49,6 +52,7 @@ function Task({ task, onChange, onDelete }) {
       </>
     );
   }
+  
   return (
     <label>
       <input

@@ -6,14 +6,11 @@ export default function TaskAppState() {
   const [tasks, setTasks] = useState(initialTasks);
 
   function handleAddTask(text) {
-    setTasks([
-      ...tasks,
-      {
+    dispatchEvent({
+        type: 'added',
         id: nextId++,
         text: text,
-        done: false,
-      },
-    ]);
+    });
   }
 
   function handleChangeTask(task) {
