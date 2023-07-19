@@ -2,6 +2,10 @@ import * as React from 'react';
 import './styles.css';
 
 export const RadioGroup =({ onChange, selected, children }) => {
+  
+  React.Children.map(children, { child, inxex}=> {
+    return child;
+  }
  // Use React.Children.map and React.cloneElement to clone the children
   // and pass the correct props to each RadioOption
   const RadioOptions = null;
