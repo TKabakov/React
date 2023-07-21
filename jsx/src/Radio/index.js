@@ -23,6 +23,7 @@ export const RadioOption = ({ value, checked, onChange, children}) => {
             id={value} 
             type='radio' 
             name={value}
+            value={value}
             checked={checked}
             onChange={(e) => {onChange(e.target.value)}}
             />
