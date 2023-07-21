@@ -14,8 +14,6 @@ export const RadioGroup =({ onChange, selected, children }) => {
 };
 
 export const RadioOption = ({ value, checked, onChange, children}) => {
-    // Hook up the onChange handler to call the onChange prop passed to RadioGroup
-  // Also, make sure to pass the correct checked prop to the input element
 
   return (
     <div className='RadioOption'>

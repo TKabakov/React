@@ -15,7 +15,8 @@ function App() {
         <RadioOption value='advertising'>Advertising</RadioOption>
         <RadioOption value='other'>Other</RadioOption> 
      </RadioGroup>
-     <button disabled={!selected}>Submit</button>
+     <button 
+        disabled={!selected} onClick={() => {alert("Thank you for submitting your choice")}}>Submit</button>
     </div>
   );
 }
