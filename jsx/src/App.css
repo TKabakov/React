@@ -1,3 +1,7 @@
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable color-hex-length */
+/* stylelint-disable selector-class-pattern */
 .App {
   display: flex;
   flex: 1;
