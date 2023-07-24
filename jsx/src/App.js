@@ -1,7 +1,7 @@
 import './App.css';
 import { RadioGroup, RadioOption } from './Radio';
-import { useState } from 'react';
-import { Fragment } from 'react'
+import { useState, Fragment } from 'react';
+
 function App() {
 
   const [selected, setSelected] = useState('');
