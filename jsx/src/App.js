@@ -1,6 +1,7 @@
 import './App.css';
 import { RadioGroup, RadioOption } from './Radio';
 import { useState, Fragment } from 'react';
+import Blog from './components/Blog';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
      </RadioGroup>
      <button 
         disabled={!selected} onClick={() => {alert("Thank you for submitting your choice")}}>Submit</button>
+    <Blog />
     </Fragment>
   );
 }
