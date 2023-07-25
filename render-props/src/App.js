@@ -25,24 +25,44 @@ const MousePosition = ({ render }) => {
     // What should be returned here?
     return render (mousePosition);
 };
+// This component should not receive any props
+const PanelMouseLogger = () => {
+  // The below if statement can be removed after the render props pattern is implemented
+
+  return (
+    <MousePosition
+      render={(mousePosition) => 
+        <div className="BasicTracker">
+        <p>Mouse position:</p>
+        <div className="Row">
+          <span>x: {mousePosition.x}</span>
+          <span>y: {mousePosition.y}</span>
+        </div>
+      </div>
+      }
+   />
+  );
+};
+
+// This component should not receive any props
+const PointMouseLogger = ({mousePosition}) => {
+  // The below if statement can be removed after the render props pattern is implemented
+  if (!mousePosition) {
+    return null;
+  }
+  return (
+    <p>
+      ({mousePosition.x}, {mousePosition.y})
+    </p>
+  )
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="Header">Little Lemon Restaurant 🍕</header>
+      <PanelMouseLogger />
+      <PointMouseLogger />
     </div>
   );
 }
