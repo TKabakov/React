@@ -1,5 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+
+const MousePosition = ({ render }) => {
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  })
+}
 
 function App() {
   return (
