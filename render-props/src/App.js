@@ -5,7 +5,22 @@ const MousePosition = ({ render }) => {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
-  })
+  });
+
+  useEffect(() => {
+    const handleMousePositionChange = ( e ) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener("mouseover", handleMousePositionChange);
+
+    return () => {
+      window.addEventListener("mouseover", handleMousePositionChange);
+    };
+  }, []);
 }
 
 function App() {
