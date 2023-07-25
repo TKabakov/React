@@ -22,33 +22,33 @@ const MousePosition = ({ render }) => {
     };
   }, []);
 
-    return render (mousePosition);
+    return render ({mousePosition});
 };
 
 const PanelMouseLogger = () => {
   return (
-    <MousePosition
-      render={(mousePosition) => 
-        <div className="BasicTracker">
-          <p>Mouse position:</p>
-          <div className="Row">
-            <span>x: {mousePosition.x}</span>
-            <span>y: {mousePosition.y}</span>
-          </div>
-      </div>
-      }
-   />
+    <div className="BasicTracker">
+      <p>Mouse position:</p>
+        <MousePosition
+          render={({mousePosition}) => ( 
+            <div className="Row">
+              <span>x: {mousePosition.x}</span>
+              <span>y: {mousePosition.y}</span>
+            </div>
+          )}
+        />
+    </div>
   );
 };
 
 const PointMouseLogger = () => {
   return (
     <MousePosition
-      render={(mousePosition) =>
+      render={({mousePosition}) => (
         <p>
           ({mousePosition.x}, {mousePosition.y})
         </p>
-      }
+      )}
     />
   );
 };
