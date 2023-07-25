@@ -21,7 +21,10 @@ const MousePosition = ({ render }) => {
       window.addEventListener("mouseover", handleMousePositionChange);
     };
   }, []);
-}
+
+    // What should be returned here?
+    return render (mousePosition);
+};
 
 function App() {
   return (
