@@ -15,15 +15,6 @@ export default function Blog() {
         );
   }
   
-  function Post({ title, body }) {
-    return (
-      <>
-        <PostTitle title={title} />
-        <PostBody body={body} />
-      </>
-    );
-  }
-  
   function PostTitle({ title }) {
     return <h1>{title}</h1>
   }
