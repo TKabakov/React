@@ -2,6 +2,10 @@ import './App.css';
 import { RadioGroup, RadioOption } from './Radio';
 import { useState, Fragment } from 'react';
 import Blog from './components/Blog';
+import User from './components/User';
+import withLoader from './components/withLoader';
+
+const UserWithLoader = withLoader(User);
 
 function App() {
 
@@ -19,6 +23,7 @@ function App() {
      <button 
         disabled={!selected} onClick={() => {alert("Thank you for submitting your choice")}}>Submit</button>
     <Blog />
+    <UserWithLoader />
     </Fragment>
   );
 }

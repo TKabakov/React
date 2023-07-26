@@ -14,4 +14,6 @@ const withLoader = (WrappedComponent) => {
             </div>
         )
     }
-} 
+}
+
+export default withLoader;
