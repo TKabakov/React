@@ -1,3 +1,5 @@
+import { useState} from 'react';
+
 function HooverIncrease() {
     const [fontSize, setFontSize] = useState(10);
     
