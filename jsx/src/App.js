@@ -4,6 +4,8 @@ import { useState, Fragment } from 'react';
 import Blog from './components/Blog';
 import User from './components/User';
 import withLoader from './components/withLoader';
+import ClickIncrease from './components/ClickIncrease';
+import HooverIncrease from './components/HooverIncrease';
 
 const UserWithLoader = withLoader(User);
 
@@ -22,8 +24,10 @@ function App() {
      </RadioGroup>
      <button 
         disabled={!selected} onClick={() => {alert("Thank you for submitting your choice")}}>Submit</button>
-    <Blog />
-    <UserWithLoader />
+      <Blog />
+      <UserWithLoader />
+      <ClickIncrease />
+      <HooverIncrease />
     </Fragment>
   );
 }
