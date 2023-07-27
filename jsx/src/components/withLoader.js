@@ -10,7 +10,7 @@ const withLoader = (WrappedComponent) => {
 
         return (
             <div>
-                {loading ? <p>Loading</p> : WrappedComponent (props)}
+                {loading ? <p>Loading</p> : WrappedComponent(props)}
             </div>
         );
     };
