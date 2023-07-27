@@ -9,3 +9,7 @@ This is my work during week 3 "JSX and testing" of Meta course "Advanced React".
 
 3. A simple HOC is created(User.js and withLoader.js)
 ![Alt text](image-2.png)
+
+4. An example of font increase with click and on mouse hoover by using HOC (ClickIncrease.js and HooverIncrease.js)
+![Alt text](image-4.png)
+![Alt text](image-5.png)

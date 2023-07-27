@@ -26,6 +26,7 @@ function App() {
         disabled={!selected} onClick={() => {alert("Thank you for submitting your choice")}}>Submit</button>
       <Blog />
       <UserWithLoader />
+      <h1>Font Increase</h1>
       <ClickIncrease />
       <HooverIncrease />
     </Fragment>
