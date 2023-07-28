@@ -1,4 +1,5 @@
 import { useState} from 'react';
+import withCounter from "./withCounter.js"
 
 function HooverIncrease() {
     const [fontSize, setFontSize] = useState(10);
@@ -16,4 +17,4 @@ function HooverIncrease() {
       );
   }
   
-  export default HooverIncrease;
+  export default withCounter(HooverIncrease);
