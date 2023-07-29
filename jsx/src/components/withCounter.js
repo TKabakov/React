@@ -8,7 +8,7 @@ const UpdatedComponent = (OriginalComponent) => {
         name="LogRocket"
         counter ={counter}
         incrementCounter={
-          () => setCounte((count) => count +1)
+          () => setCounter((count) => count +1)
         }
         />
       );
