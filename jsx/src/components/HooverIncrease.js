@@ -13,7 +13,9 @@ function HooverIncrease(props) {
                 Size of font in onMouseOver function: 
                 {fontSize}
             </p>
-            <p> The value of 'name' in HooverIncrease: {props.name}</p>
+            <p>
+              The value of 'name' in HooverIncrease: {props.name}
+            </p>
           </div>
       );
   }

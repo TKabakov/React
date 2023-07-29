@@ -1,6 +1,6 @@
 import { useState} from 'react';
 import withCounter from "./withCounter.js"
-function ClickIncrease() {
+function ClickIncrease(props) {
   const [fontSize, setFontSize] = useState(10);
   
   return(
@@ -11,6 +11,9 @@ function ClickIncrease() {
           <p style={{ fontSize }}>
             Size of font in onClick function: 
             {fontSize}
+          </p>
+          <p> 
+            The value of 'name' in HooverIncrease: {props.name}
           </p>
         </div>
     );
