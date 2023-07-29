@@ -1,6 +1,6 @@
 const UpdatedComponent = (OriginalComponent) => {
   function NewComponent(props){
-    return <OriginalComponent />
+    return <OriginalComponent name="LogRocket"/>
   }
   return NewComponent;
 };
