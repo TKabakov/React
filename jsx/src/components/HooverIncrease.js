@@ -1,7 +1,7 @@
 import { useState} from 'react';
 import withCounter from "./withCounter.js"
 
-function HooverIncrease() {
+function HooverIncrease(props) {
     const [fontSize, setFontSize] = useState(10);
     
     return(
@@ -13,8 +13,10 @@ function HooverIncrease() {
                 Size of font in onMouseOver function: 
                 {fontSize}
             </p>
+            <p> The value of 'name' in HooverIncrease: {props.name}</p>
           </div>
       );
   }
   
   export default withCounter(HooverIncrease);
+  
