@@ -1,3 +1,5 @@
+import {useState} from 'react';
+
 const UpdatedComponent = (OriginalComponent) => {
   function NewComponent(props){
     const [counter, setCounter] = useState(10)

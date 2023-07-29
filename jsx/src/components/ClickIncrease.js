@@ -2,6 +2,7 @@ import { useState} from 'react';
 import withCounter from "./withCounter.js"
 function ClickIncrease(props) {
   const [fontSize, setFontSize] = useState(10);
+  const { counter, setCounter } = props;
   
   return(
       	<div>
@@ -13,8 +14,10 @@ function ClickIncrease(props) {
             {fontSize}
           </p>
           <p> 
-            The value of 'name' in HooverIncrease: {props.name}
+            The value of 'name' in ClickIncrease: {props.name}
           </p>
+          <button onClick={() => incrementCounter()}>incrementCounter</button>
+          <p>The value of 'counter'in ClickIncrease :{counter} </p>
         </div>
     );
 }
