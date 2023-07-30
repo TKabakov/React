@@ -3,7 +3,7 @@ import withCounter from "./withCounter.js"
 
 function HooverIncrease(props) {
     const [fontSize, setFontSize] = useState(10);
-    const { counter, setCounter } = props;
+    const { counter, incrementCounter } = props;
     return(
             <div>
             <button onMouseOver={() => setFontSize((size) => size + 1)}>
