@@ -16,7 +16,7 @@ function HooverIncrease(props) {
             <p>
               The value of 'name' in HooverIncrease: {props.name}
             </p>
-            <button onClick={() => incrementCounter()}>incrementCounter</button>
+            <button onClick={() => incrementCounter()}>Increment counter</button>
             <p>The value of 'counter'in HooverIncrease :{counter} </p>
           </div>
       );

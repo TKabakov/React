@@ -17,7 +17,7 @@ function ClickIncrease(props) {
           <p> 
             The value of 'name' in ClickIncrease: {props.name}
           </p>
-          <button onClick={() => incrementCounter()}>incrementCounter</button>
+          <button onClick={() => incrementCounter()}>Increment counter</button>
           <p>The value of 'counter'in ClickIncrease :{counter} </p>
         </div>
     );
