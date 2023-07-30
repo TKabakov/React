@@ -3,7 +3,7 @@ import withCounter from "./withCounter.js"
 function ClickIncrease(props) {
   const [fontSize, setFontSize] = useState(10);
   //I'm not sure that %his is the right place
-  const { counter, setCounter } = props;
+  const { counter, incrementCounter } = props;
   
   return(
       	<div>
