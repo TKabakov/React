@@ -1,7 +1,7 @@
-import ".App.css";
+import "./App.css";
 import { useState } from 'react';
 
-function FeedbackForm(){
+function FeedbackForm(onSubmit){
 const [score, setScore] = useState("10");
 const [comment, setComment] = useState("");
 
