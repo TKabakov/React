@@ -16,7 +16,38 @@ const handleSubmit = (e) => {
     onSubmit({score, comment});
 };
 
-    return
+    return(
+        <div class="App">
+            <form onSubmit={handleSubmit}>
+                <fieldset>
+                    <h2>Feedback form</h2>
+                    <div>
+                        <label>Score: {score}</label>
+                        <input
+                            value={score}
+                            onChange={(e) => {
+                                setScore(e.target.value);
+                            }}
+                            type="range"
+                            min="0"
+                            max="10"
+                        />
+                    </div>
+                    <div>
+                        <label>Comments:</label>
+                        <textarea
+                            placeholder={textAreaPlaceholder}
+                            name="comment"
+                            value={comment}
+                            onChange={(e) =>{
+                                setComment(e.target.value);
+                            }}
+                        />
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    )
 }
 
 export default FeedbackForm;
