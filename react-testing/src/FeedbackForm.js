@@ -44,6 +44,9 @@ const handleSubmit = (e) => {
                             }}
                         />
                     </div>
+                    <div>
+                        <input type='submit'/>
+                    </div>     
                 </fieldset>
             </form>
         </div>
