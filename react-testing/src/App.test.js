@@ -11,8 +11,11 @@ descibe('Feedback Form', () => {
     const rangeInput = screen.getByLabelText(/Score:/);
     fireEvent.change(rangeInput, { target: { value: "4" }});
 
-    const linkElement = screen.getByText(/Score:/);
-  expect(linkElement).toBeInTheDocument();
+    const submitButton = screen.getByRole("button");
+    fireEvent.click(submitButton);
+
+    expect(handleSubmit).not.toHaveBeenCalled();
+    expect(submitButton).toHaveAttribute("disabled");
   });
 });
 
