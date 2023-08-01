@@ -45,7 +45,11 @@ const handleSubmit = (e) => {
                         />
                     </div>
                     <div>
-                        <input type='submit'/>
+                        <button
+                            type="submit"
+                            disabled={isDisabled}>
+                        submit
+                        </button>
                     </div>     
                 </fieldset>
             </form>
