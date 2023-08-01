@@ -8,7 +8,7 @@ const [comment, setComment] = useState("");
 const isDisabled = Number(score) < 5 && comment.length <= 10;
 
 const textAreaPlaceholder = isDisabled
-    ? "Please, provide a comment explaining why the experience was not good. Minimum length is 10 characters"
+    ? "Please, provide a comment explaining why the experience was not good. Minimum length is 10 characters."
     : "Optional feedback";
 
 const handleSubmit = (e) => {
@@ -21,9 +21,10 @@ const handleSubmit = (e) => {
             <form onSubmit={handleSubmit}>
                 <fieldset>
                     <h2>Feedback form</h2>
-                    <div>
-                        <label>Score: {score}</label>
+                    <div className="Field">
+                        <label htmlFor="score">Score: {score}⭐</label>
                         <input
+                        id="score"
                             value={score}
                             onChange={(e) => {
                                 setScore(e.target.value);
@@ -33,9 +34,10 @@ const handleSubmit = (e) => {
                             max="10"
                         />
                     </div>
-                    <div>
-                        <label>Comments:</label>
+                    <div className="Field">
+                        <label htmlFor="comment">Comments:</label>
                         <textarea
+                            id="comment"
                             placeholder={textAreaPlaceholder}
                             name="comment"
                             value={comment}
@@ -44,17 +46,15 @@ const handleSubmit = (e) => {
                             }}
                         />
                     </div>
-                    <div>
-                        <button
-                            type="submit"
-                            disabled={isDisabled}>
+                    <button
+                        type="submit"
+                        disabled={isDisabled}>
                         submit
-                        </button>
-                    </div>     
+                    </button>    
                 </fieldset>
             </form>
         </div>
-    )
+    );
 }
 
 export default FeedbackForm;
