@@ -4,18 +4,34 @@ import FeedbackForm from './FeedbackForm';
 
 descibe('Feedback Form', () => {
   
-  test('Submission is diabled, if score is lower than 5 and there is no feedback', () => {
+  test('User is able to submit the form if the score is lower than 5 and additional feedback is provided ', () => {
+    const score = "3";
+    const comment = "The pizza crust was too thick";
     const handleSubmit = jest.fn();
     render(<FeedbackForm onSubmit={handleSubmit} />);
 
-    const rangeInput = screen.getByLabelText(/Score:/);
-    fireEvent.change(rangeInput, { target: { value: "4" }});
+    fireEvent.change(score);
+    fireEvent.change(comment);
 
-    const submitButton = screen.getByRole("button");
-    fireEvent.click(submitButton);
+    expect(handleSubmit).toHaveBeenCalledWith ({
+      score,
+      comment,
+    });
+  });
 
-    expect(handleSubmit).not.toHaveBeenCalled();
-    expect(submitButton).toHaveAttribute("disabled");
+  test('User is able to submit the form if the score is higher than 5, without additional feedback', () => {
+    const score = "9";
+    const comment = "";
+    const handleSubmit = jest.fn();
+    render(<FeedbackForm onSubmit={handleSubmit} />);
+
+    fireEvent.change(score);
+    fireEvent.change(comment);
+
+    expect(handleSubmit).toHaveBeenCalledWith ({
+      score,
+      comment,
+    });
   });
 });
 
