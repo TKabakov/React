@@ -14,7 +14,7 @@ describe('Feedback Form', () => {
     fireEvent.change(rangeInput, {target:{value: "3"}});
 
     const textArea = screen.getByLabelText(/Comments:/)
-    fireEvent.change(textArea, {target: {value: "The pizza crust was too thick"}});
+    fireEvent.change(textArea, {target: {value:"The pizza crust was too thick"}});
 
     const submitButton = screen.getByRole("button");
     fireEvent.click(submitButton);
