@@ -11,10 +11,10 @@ describe('Feedback Form', () => {
     render(<FeedbackForm onSubmit={handleSubmit} />);
 
     const rangeInput = screen.getByLabelText(/Score:/);
-    fireEvent.change(rangeInput, {target:{value: score}});
+    fireEvent.change(rangeInput, {target:{value: "3"}});
 
     const textArea = screen.getByLabelText(/Comments:/)
-    fireEvent.change(textArea, {target: {value: comment}});
+    fireEvent.change(textArea, {target: {value: "The pizza crust was too thick"}});
 
     const submitButton = screen.getByRole("button");
     fireEvent.click(submitButton);
