@@ -15,9 +15,9 @@ describe('Feedback Form', () => {
 
     const textArea = screen.getByLabelText(/Comments:/)
     fireEvent.change(textArea, {target: {value: comment}});
-    
-    const submitBitton = screen.getByRole("button");
-    fireEvent.click(submitBitton);
+
+    const submitButton = screen.getByRole("button");
+    fireEvent.click(submitButton);
 
     expect(handleSubmit).toHaveBeenCalledWith ({
       score,
@@ -37,12 +37,12 @@ describe('Feedback Form', () => {
     const textArea = screen.getByLabelText(/Comments:/)
     fireEvent.change(textArea, {target: {value: comment}});
 
-    const submitBitton = screen.getByRole("button");
-    fireEvent.click(submitBitton);
+    const submitButton = screen.getByRole("button");
+    fireEvent.click(submitButton);
 
     expect(handleSubmit).toHaveBeenCalledWith ({
       score,
-      comment:"",
+      comment,
     });
   });
 });
