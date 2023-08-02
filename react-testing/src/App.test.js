@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 import FeedbackForm from './FeedbackForm';
 
-descibe('Feedback Form', () => {
+describe('Feedback Form', () => {
   
   test('User is able to submit the form if the score is lower than 5 and additional feedback is provided ', () => {
     const score = "3";
@@ -10,8 +10,14 @@ descibe('Feedback Form', () => {
     const handleSubmit = jest.fn();
     render(<FeedbackForm onSubmit={handleSubmit} />);
 
-    fireEvent.change(score);
-    fireEvent.change(comment);
+    const rangeInput = screen.getByLabelText(/Score:/);
+    fireEvent.change(rangeInput, {target:{value: score}});
+
+    const textArea = screen.getByLabelText(/Comments:/)
+    fireEvent.change(textArea, {target: {value: comment}});
+    
+    const submitBitton = screen.getByRole("button");
+    fireEvent.click(submitBitton);
 
     expect(handleSubmit).toHaveBeenCalledWith ({
       score,
@@ -25,12 +31,18 @@ descibe('Feedback Form', () => {
     const handleSubmit = jest.fn();
     render(<FeedbackForm onSubmit={handleSubmit} />);
 
-    fireEvent.change(score);
-    fireEvent.change(comment);
+    const rangeInput = screen.getByLabelText(/Score:/);
+    fireEvent.change(rangeInput, {target:{value: score}});
+
+    const textArea = screen.getByLabelText(/Comments:/)
+    fireEvent.change(textArea, {target: {value: comment}});
+
+    const submitBitton = screen.getByRole("button");
+    fireEvent.click(submitBitton);
 
     expect(handleSubmit).toHaveBeenCalledWith ({
       score,
-      comment,
+      comment:"",
     });
   });
 });
