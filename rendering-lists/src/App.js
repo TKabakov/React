@@ -9,9 +9,8 @@ import RegForm from "./components/RegForm";
 import MyForm from "./components/MyForm";
 import Input from "./components/Input";
 import Sculpture from "./components/Sculpture";
-import ToDo from "./components"
+import ToDoList from "./components/ToDo"
 import './App.css';
-import { useState } from "react";
 
 function App() {
  
@@ -28,7 +27,7 @@ function App() {
     <MyForm />
     <Input />
     <Sculpture />
-    <ToDo />
+    <ToDoList />
     </div>
   );
 }
