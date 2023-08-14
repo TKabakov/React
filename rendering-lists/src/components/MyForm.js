@@ -10,9 +10,9 @@ function MyForm() {
         <input name="myInput" defaultValue="Some initial value"/>
       </label>
       <hr />
-      <lablel>
+      <label>
         Checkbox: <input type="checkbox" name="myChenckbox" defaultChecked={ true } />
-      </lablel>
+      </label>
       <hr />
       <p>
         Radio buttons:

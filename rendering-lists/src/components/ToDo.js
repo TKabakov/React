@@ -12,7 +12,7 @@ const ToDo = props => (
             <label>{props.createdAt}</label>
         </td>
     </tr>
-);
+)
 
 function ToDoList (){
     const [todos, setTodos] = useState([
@@ -29,7 +29,7 @@ function ToDoList (){
 
     const reverseOrder = () => {
         setTodos([...todos].reverse());
-    };
+    }
 
     return (
         <div>
@@ -37,7 +37,7 @@ function ToDoList (){
             <table>
                 <tbody>
                     {todos.map((todo, index) => (
-                        <ToDo id={todo.id} createdAt={todo.createdAt} />
+                        <ToDo key={index} id={todo.id} createdAt={todo.createdAt} />
                     ))}
                 </tbody>
             </table>
