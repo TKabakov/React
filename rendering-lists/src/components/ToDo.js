@@ -28,6 +28,19 @@ function ToDoList (){
     ]);
 
     const reverseOrder = () => {
-        setTodos([...todos].reberse());
+        setTodos([...todos].reverse());
     }
+
+    return (
+        <div>
+            <button onClick={reverseOrder}>Reverse</button>
+            <table>
+                <tbody>
+                    {todos.map((todo, index) => (
+                        
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    )
 }
