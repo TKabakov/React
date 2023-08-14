@@ -16,18 +16,18 @@ function App() {
  
   return (
     <div className="App">
-    <Recipes />
-    <RecipeList />
-    <Recipe />
-    <List />
-    <Form />
-    <FormControlled />
-    <Feedback />
-    <RegForm />
-    <MyForm />
-    <Input />
-    <Sculpture />
-    <ToDoList />
+      <Recipes />
+      <RecipeList />
+      <Recipe />
+      <List />
+      <Form />
+      <FormControlled />
+      <Feedback />
+      <RegForm />
+      <MyForm />
+      <Input />
+      <Sculpture />
+      <ToDoList />
     </div>
   );
 }
