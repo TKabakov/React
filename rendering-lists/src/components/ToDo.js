@@ -37,7 +37,7 @@ function ToDoList (){
             <table>
                 <tbody>
                     {todos.map((todo, index) => (
-                        <ToDo key={index} id={todo.id} createdAt={todo.createdAt} />
+                        <ToDo key={todo.id} id={todo.id} createdAt={todo.createdAt} />
                     ))}
                 </tbody>
             </table>
