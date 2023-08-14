@@ -19,11 +19,15 @@ function ToDoList (){
         {
         id: 'todo1',
         createdAt: '18:00',
-      }
+      },
     
         {
           id: 'todo2',
           createdAt: '20:00'
         }
     ]);
+
+    const reverseOrder = () => {
+        setTodos([...todos].reberse());
+    }
 }
