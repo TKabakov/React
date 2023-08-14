@@ -14,17 +14,7 @@ import './App.css';
 import { useState } from "react";
 
 function App() {
-  const [todo, setTodo] = useState([
-    {
-    id: 'todo1',
-    createdAt: '18:00',
-  }
-
-    {
-      id: 'todo2',
-      createdAt: '20:00'
-    }
-])
+ 
   return (
     <div className="App">
     <Recipes />

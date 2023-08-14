@@ -13,3 +13,17 @@ const ToDo = props => (
         </td>
     </tr>
 )
+
+function ToDoList (){
+    const [todos, setTodos] = useState([
+        {
+        id: 'todo1',
+        createdAt: '18:00',
+      }
+    
+        {
+          id: 'todo2',
+          createdAt: '20:00'
+        }
+    ]);
+}
