@@ -2,7 +2,9 @@
 /* stylelint-disable selector-class-pattern */
 /* stylelint-disable keyframes-name-pattern */
 .App {
-  text-align: center;
+  text-align: left;
+  margin-left: 10px;
+  padding: 10px;
 }
 
 .App-logo {
