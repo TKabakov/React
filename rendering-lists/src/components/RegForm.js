@@ -25,7 +25,7 @@ function App() {
         firstName &&
         validateEmail &&
         password.value.length >= 8 &&
-        role !== 'role'
+        role !== "role"
     );
   };
 
@@ -60,7 +60,7 @@ function App() {
                 value={firstName}
                 onChange = { (e) => {
                     setFirstName(e.target.value);
-            }}
+                }}
             />
           </div>
           <div className="Field">
@@ -93,10 +93,10 @@ function App() {
               type="password"
               onChange = { (e) => {
                 setPassword({...password, value: e.target.value});
-            }}
-            onBlur={() => {
+              }}
+              onBlur={() => {
                 setPassword({...password, isTouched: true});
-            }}
+              }}
             />
             {password.isTouched && password.value.length < 8 ? (
                 <PasswordErrorMessage />
