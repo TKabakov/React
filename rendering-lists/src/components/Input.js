@@ -9,10 +9,10 @@ function Input(){
     <>
       <label>
         Firts name:
-    <input
-      value={firstName}
-      onChange={e => setFirstName(e.target.value)}
-      />
+        <input
+          value={firstName}
+          onChange={e => setFirstName(e.target.value)}
+        />
       </label>
 
       <label>
@@ -22,10 +22,12 @@ function Input(){
           onChange={e => setAge(e.target.value)}
           type="number"
           />
-          <button onClick={() => setAge(ageAsNumber + 10)}>
+            
+        <button onClick={() => setAge(ageAsNumber + 10)}>
             Add 10 years
-          </button>
-      </label>
+        </button>
+        </label>
+      
       {firstName !== "" && 
         <p> Your name is {firstName}.</p>
       }
