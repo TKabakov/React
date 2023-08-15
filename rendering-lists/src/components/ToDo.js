@@ -36,7 +36,7 @@ function ToDoList (){
             <button onClick={reverseOrder}>Reverse</button>
             <table>
                 <tbody>
-                    {todos.map((todo, index) => (
+                    {todos.map((todo) => (
                         <ToDo key={todo.id} id={todo.id} createdAt={todo.createdAt} />
                     ))}
                 </tbody>
