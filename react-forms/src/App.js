@@ -11,8 +11,11 @@ function App() {
  
   return (
     <div className="App">
-      <Form />
-      <FormControlled />
+      <h2>Uncontrolled forms</h2>
+        <Form />
+      <h2>Controlled forms</h2>
+      <p>the form accepts its value as a prop and a callback to change that value. The input value is saved as a state</p>
+        <FormControlled />
       <Feedback />
       <RegForm />
       <MyForm />
