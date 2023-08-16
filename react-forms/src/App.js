@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import Form from "./components/Form";
+import FormControlled from "./components/FormControlled";
+import Feedback from "./components/Feedback";
+import RegForm from "./components/RegForm";
+import MyForm from "./components/MyForm";
+import Input from "./components/Input";
+import ToDoList from "./components/ToDo"
 import './App.css';
 
 function App() {
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form />
+      <FormControlled />
+      <Feedback />
+      <RegForm />
+      <MyForm />
+      <Input />
+      <ToDoList />
     </div>
   );
 }
