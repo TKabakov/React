@@ -6,7 +6,7 @@ function Form() {
 
     const handleSubmit = () => {
         const inputValue = inputRef.current.value;
-    }
+    };
 
   return (
     <div>
