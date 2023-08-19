@@ -9,3 +9,5 @@ This app demonstrate some features of Forms in React.
     -radio input;
     -initial values by defaultValue and defaultChecked;
     -usedId hook for ID and htmlFor;
+    ![Alt text](image-5.png)
+6. There is a cottrolled forn in Form2.js.![Alt text](image-4.png)

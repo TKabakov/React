@@ -69,28 +69,13 @@ export default function Form2(){
             <button type="submit">Submit form</button>
             <hr />
             <label>
-                Your first name:
-                <input name="firstName" />
-                </label>
-             <hr />
-            <label htmlFor={ageInputId}>
-                Your age:
-                <input
-                    id={ageInputId}
-                    name="age"
-                    type="number"
-                />
-            </label>
-            <hr />
-            <label>
                 First name:
                 <input
                     value={firstName}
                     onChange={e => setFirstName(e.target.value)}
                 />
             </label>
-
-            <label>
+            <label htmlFor={ageInputId}>
                 Age:
                 <input
                     value={age}
