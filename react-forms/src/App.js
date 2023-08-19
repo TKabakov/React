@@ -5,6 +5,7 @@ import RegForm from "./components/RegForm";
 import MyForm from "./components/MyForm";
 import Input from "./components/Input";
 import ToDoList from "./components/ToDo";
+import Form2 from "./components/Form2";
 import './App.css';
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
       <MyForm />
       <Input />
       <ToDoList />
+      <h2> Text input, checkbox input and radio buttons input with a default values</h2>
+        <Form2 />
     </div>
   );
 }
