@@ -3,6 +3,18 @@ import {useId} from "react";
 export default function Form2(){
  const ageInputId =useId();
  
+ function handleSubmit(e){
+    //Prevent the browser from reloading the page
+    e.preventDefault();
+
+    //Read the form data
+    const form = e.target;
+    const formData = new FormData(form);
+
+    //You can workt with the formData as a plain object:
+    const formJson = Object.fromEntries(formData.entries());
+    console.log(formJson);
+ }
   return (
     <div>
         <form onSubmit={handleSubmit} method="post">
