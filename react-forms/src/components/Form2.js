@@ -80,3 +80,7 @@ export default function Form2(){
     </div>
   );
 };
+
+//By default, any <button> inside a <form> will submit it.
+// If you have your own custom Button React component, consider returning <button type="button"> 
+//instead of <button>
