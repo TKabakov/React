@@ -1,7 +1,12 @@
-import {useId} from "react";
+import {useId, useState} from "react";
+
 
 export default function Form2(){
  const ageInputId =useId();
+
+ const [firstName, setFirstName] = useState('');
+ const [age, setAge] = useState('20');
+ const ageAsNumber = Number(age);
  
  function handleSubmit(e){
     //Prevent the browser from reloading the page
@@ -60,6 +65,9 @@ export default function Form2(){
                 </label>
                 <hr />
             </p>
+            <button type="reset">Reset form</button>
+            <button type="submit">Submit form</button>
+            <hr />
             <label>
                 Your first name:
                 <input name="firstName" />
@@ -74,8 +82,31 @@ export default function Form2(){
                 />
             </label>
             <hr />
-            <button type="reset">Reset form</button>
-            <button type="submit">Submit form</button>
+            <label>
+                First name:
+                <input
+                    value={firstName}
+                    onChange={e => setFirstName(e.target.value)}
+                />
+            </label>
+
+            <label>
+                Age:
+                <input
+                    value={age}
+                    onChange={e => setAge(e.target.value)}
+                    type="number"
+                />
+                <button onClick={() => setAge(ageAsNumber + 10)}>
+                    Add 10 years
+                </button>
+            </label>
+            {firstName !== "" &&
+                <p>Your name is {firstName}.</p>
+            }
+            {ageAsNumber > 0 &&
+                <p>Your age is {ageAsNumber}.</p>
+            }
         </form>
     </div>
   );
