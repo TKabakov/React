@@ -8,7 +8,7 @@ export default function Form2(){
         <hr />
         <label>
             Checkbox:
-            <input type="checkbox" name="myCheckbox" />
+            <input type="checkbox" name="myCheckbox" defaultChecked={true} />
         </label>
         <hr />
         <label>
@@ -16,17 +16,30 @@ export default function Form2(){
                 Radio buttons:
                 <hr />
                 <label>  
-                    <input type="radio" name="myRadio" value="optipn 1" />
+                    <input 
+                      type="radio" 
+                      name="myRadio" 
+                      value="optipn 1"
+                    />
                     Option 1
                 </label>
                 <hr />                
                 <label>
-                    <input type="radio" name="myRadio" value="optipn 2" />
+                    <input 
+                      type="radio" 
+                      name="myRadio" 
+                      value="optipn 2"
+                      defaultChecked={true}
+                    />
                     Option 2
                 </label>
                 <hr />              
                 <label>
-                    <input type="radio" name="myRadio" value="optipn 3" />
+                    <input 
+                      type="radio" 
+                      name="myRadio" 
+                      value="optipn 3"
+                    />
                     Optipn 3
                 </label>
                 <hr />
