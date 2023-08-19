@@ -1,7 +1,7 @@
 import {useId} from "react";
 
 export default function Form2(){
- consr ageInputId =useId();
+ const ageInputId =useId();
  
   return (
     <div>
@@ -15,7 +15,6 @@ export default function Form2(){
             <input type="checkbox" name="myCheckbox" defaultChecked={true} />
         </label>
         <hr />
-        <label>
             <p>
                 Radio buttons:
                 <hr />
@@ -48,18 +47,18 @@ export default function Form2(){
                 </label>
                 <hr />
             </p>
-        </label>
-        <label>
-          Your first name:
-          <input name="firstName" />
-        </label>
-        <hr />
-        <label htmlFor={ageInputId}>
-          <input
-            id={ageInputId}
-            name="age"
-            type="number"
-          />
+            <label>
+                Your first name:
+                <input name="firstName" />
+                </label>
+             <hr />
+            <label htmlFor={ageInputId}>
+                <input
+                    id={ageInputId}
+                    name="age"
+                    type="number"
+                />
+            </label>
     </div>
-  )
-}
+  );
+};
