@@ -66,12 +66,16 @@ export default function Form2(){
                 </label>
              <hr />
             <label htmlFor={ageInputId}>
+                Your age:
                 <input
                     id={ageInputId}
                     name="age"
                     type="number"
                 />
             </label>
+            <hr />
+            <button type="reset">Reset form</button>
+            <button type="submit">Submit form</button>
         </form>
     </div>
   );
