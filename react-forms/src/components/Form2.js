@@ -1,6 +1,7 @@
 export default function Form2(){
   return (
     <div>
+        <form onSubmit={handleSubmit} method="post">
         <lable>
             Text input:
             <input name="myInput" defaultValue="Some initial value" placeholder="More value"/>
@@ -32,6 +33,7 @@ export default function Form2(){
                 <hr />
             </p>
         </label>
+    </form>
     </div>
   )
 }
