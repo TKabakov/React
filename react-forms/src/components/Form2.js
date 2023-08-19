@@ -1,4 +1,8 @@
+import {useId} from "react";
+
 export default function Form2(){
+ consr ageInputId =useId();
+ 
   return (
     <div>
         <lable>
@@ -45,6 +49,17 @@ export default function Form2(){
                 <hr />
             </p>
         </label>
+        <label>
+          Your first name:
+          <input name="firstName" />
+        </label>
+        <hr />
+        <label htmlFor={ageInputId}>
+          <input
+            id={ageInputId}
+            name="age"
+            type="number"
+          />
     </div>
   )
 }
