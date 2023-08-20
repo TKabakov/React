@@ -23,10 +23,10 @@ export default function Form2(){
   return (
     <div>
         <form onSubmit={handleSubmit} method="post">
-        <lable>
+        <label>
             Text input:
             <input name="myInput" defaultValue="Some initial value" placeholder="More value"/>
-        </lable>
+        </label>
         <hr />
         <label>
             Checkbox:
