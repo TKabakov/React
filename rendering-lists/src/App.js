@@ -3,6 +3,7 @@ import RecipeList from "./components/Recipe";
 import Recipe from "./components/Recipe2";
 import List from "./components/Scientists";
 import Sculpture from "./components/Sculpture";
+import ShoppingList from "./components/ShoppingList";
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Recipe />
       <List />
       <Sculpture />
+      <ShoppingList />
     </div>
   );
 }
