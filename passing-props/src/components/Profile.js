@@ -9,7 +9,7 @@ function Data({person,size}){
             src={getImageUrl(person.imageId)}
             alt={person.name}
             width={size}
-            height={70}
+            height={size}
          />
         <ul>
         <li>
@@ -17,8 +17,8 @@ function Data({person,size}){
             {person.profession}
         </li>
         <li>
-            <b>Awards:{person.awardNumber}</b> 
-            {person.awardText}
+            <b>Awards: {person.awards.length} </b> 
+             ({person.awards.join(', ')})
         </li>
         <li>
             <b>Discovered: </b>
@@ -39,8 +39,12 @@ export default function Gallery() {
             name:"Maria Skłodowska-Curie",
             imageId:'szV5sdG',
             profession:"physicist and chemist",
-            awardNumber:4 ,
-            awardText:"(Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)",
+            awards: [
+                "Nobel Prize in Physics",
+                "Nobel Prize in Chemistry",
+                "Davy Medal",
+                "Matteucci Medal"
+            ],
             discovered:"polonium (element)",
         }}
     />
@@ -50,8 +54,10 @@ export default function Gallery() {
             name:"Katsuko Saruhashi",
             imageId:'YfeOqp2',
             profession:"geochemist",
-            awardNumber:2 ,
-            awardText:"(Miyake Prize for geochemistry, Tanaka Prize)",
+            awards:[
+                "Miyake Prize for geochemistry", 
+                "Tanaka Prize"
+            ],
             discovered:"a method for measuring carbon dioxide in seawater",
         }}
     />
