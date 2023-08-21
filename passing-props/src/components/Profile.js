@@ -6,7 +6,7 @@ function Data({person,size}){
         <h2>{person.name}</h2>
          <img
             className="avatar"
-            src={getImageUrl(person)}
+            src={getImageUrl(person.imageId)}
             alt={person.name}
             width={size}
             height={70}
