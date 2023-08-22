@@ -1,5 +1,6 @@
 import Heading from "./components/Heading";
 import Gallery from "./components/Profile";
+import Profile from "./components/Avatar";
 
 function App() {
     return (
@@ -7,6 +8,7 @@ function App() {
             <Heading firstName="Bob" lastName="Doe"/>
             <Heading firstName="Teo"/>
             <Gallery />
+            <Profile />
         </div>
     );
 };
