@@ -13,7 +13,7 @@ function Avatar({ person, size }) {
 }
 
 export default function Profile() {
-    let imageSize=60gg;
+    let imageSize=60;
   return (
     <div>
     <Avatar
