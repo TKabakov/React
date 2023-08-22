@@ -1,58 +1,49 @@
+import { getImageUrl } from "./utils";
+
 //Extract a Card component from the markup below, and use the children prop to pass different JSX to it:
-function Avatar(){
+
+function Avatar(person,size){
     return(
-        <div>
+        <div className="card">
             <div className="card-content">
                 <h1>Photo</h1>
                 <img
                     className="avatar"
-                    src="https://i.imgur.com/OKS67lhm.jpg"
-                    alt="Aklilu Lemma"
-                    width={70}
-                    height={70}
+                    src={getImageUrl(person.imageId, size < 90 ? 's' : 'b')}
+                    alt={person.name}
+                    width={size}
+                    height={size}
                 />
             </div>
             <div className="card-content">
-            <h1>About</h1>
-            <p>Aklilu Lemma was a distinguished Ethiopian scientist who discovered a natural treatment to schistosomiasis.</p>
+                <h1>About</h1>
+                    <p>{person.discovery}</p>
           </div>
         </div>
     )
-
-}
+};
 
 function Card(children){
     return(
-        <div>
+        <div className="card">
             {children}
         </div>
     )
-}
+};
 
-export default function Profile2() {
+export default function Profile2(person, size) {
     return (
       <div>
         <Card>
-            <Avatar/>
-        </Card>
-        <div className="card">
-          <div className="card-content">
-            <h1>Photo</h1>
-            <img
-              className="avatar"
-              src="https://i.imgur.com/OKS67lhm.jpg"
-              alt="Aklilu Lemma"
-              width={70}
-              height={70}
+            <Avatar
+                person={{
+                    name: "Aklilu Lemma",
+                    imageId:"https://i.imgur.com/OKS67lhm.jpg",
+                    discovery:"Aklilu Lemma was a distinguished Ethiopian scientist who discovered a natural treatment to schistosomiasis.",
+                }}
+                size={70}
             />
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-content">
-            <h1>About</h1>
-            <p>Aklilu Lemma was a distinguished Ethiopian scientist who discovered a natural treatment to schistosomiasis.</p>
-          </div>
-        </div>
+        </Card>
       </div>
     );
-  }
+  };
