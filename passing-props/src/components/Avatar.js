@@ -13,13 +13,24 @@ function Avatar({ person, size }) {
 }
 
 export default function Profile() {
+    let imageSize=60gg;
   return (
+    <div>
     <Avatar
-      size={60}
+      size={imageSize}
       person={{ 
         name: 'Gregorio Y. Zara', 
         imageId: '7vQD0fP'
       }}
     />
+    <Avatar
+    size={imageSize + 50}
+    person={{ 
+      name: 'Gregorio Y. Zara', 
+      imageId: '7vQD0fP'
+    }}
+  /> 
+    </div>
+
   );
 }
