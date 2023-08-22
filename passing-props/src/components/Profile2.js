@@ -1,57 +1,24 @@
-import { getImageUrl } from './utils.js';
-
-export default function Gallery() {
-  return (
-    <div>
-      <h1>Notable Scientists</h1>
-      <section className="profile">
-        <h2>Maria Skłodowska-Curie</h2>
-        <img
-          className="avatar"
-          src={getImageUrl('szV5sdG')}
-          alt="Maria Skłodowska-Curie"
-          width={70}
-          height={70}
-        />
-        <ul>
-          <li>
-            <b>Profession: </b> 
-            physicist and chemist
-          </li>
-          <li>
-            <b>Awards: 4 </b> 
-            (Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)
-          </li>
-          <li>
-            <b>Discovered: </b>
-            polonium (element)
-          </li>
-        </ul>
-      </section>
-      <section className="profile">
-        <h2>Katsuko Saruhashi</h2>
-        <img
-          className="avatar"
-          src={getImageUrl('YfeOqp2')}
-          alt="Katsuko Saruhashi"
-          width={70}
-          height={70}
-        />
-        <ul>
-          <li>
-            <b>Profession: </b> 
-            geochemist
-          </li>
-          <li>
-            <b>Awards: 2 </b> 
-            (Miyake Prize for geochemistry, Tanaka Prize)
-          </li>
-          <li>
-            <b>Discovered: </b>
-            a method for measuring carbon dioxide in seawater
-          </li>
-        </ul>
-      </section>
-    </div>
-  );
-}
+export default function Profile() {
+    return (
+      <div>
+        <div className="card">
+          <div className="card-content">
+            <h1>Photo</h1>
+            <img
+              className="avatar"
+              src="https://i.imgur.com/OKS67lhm.jpg"
+              alt="Aklilu Lemma"
+              width={70}
+              height={70}
+            />
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-content">
+            <h1>About</h1>
+            <p>Aklilu Lemma was a distinguished Ethiopian scientist who discovered a natural treatment to schistosomiasis.</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
