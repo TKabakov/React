@@ -2,7 +2,7 @@ import { getImageUrl } from "./utils";
 
 //Extract a Card component from the markup below, and use the children prop to pass different JSX to it:
 
-function Avatar(person,size){
+function Avatar({person,size }){
     return(
         <div className="card">
             <div className="card-content">
@@ -23,7 +23,7 @@ function Avatar(person,size){
     )
 };
 
-function Card(children){
+function Card({children}){
     return(
         <div className="card">
             {children}
@@ -33,17 +33,15 @@ function Card(children){
 
 export default function Profile2(person, size) {
     return (
-      <div>
         <Card>
             <Avatar
                 person={{
                     name: "Aklilu Lemma",
-                    imageId:"https://i.imgur.com/OKS67lhm.jpg",
+                    imageId:"OKS67lh",
                     discovery:"Aklilu Lemma was a distinguished Ethiopian scientist who discovered a natural treatment to schistosomiasis.",
                 }}
-                size={70}
+                size={100}
             />
         </Card>
-      </div>
     );
   };
