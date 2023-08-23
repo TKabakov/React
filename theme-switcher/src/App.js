@@ -15,7 +15,6 @@ const Title = ({ children }) => {
   );
 };
 
-
 const Paragraph = ({ children }) => {
   const { theme } = useTheme();
   return (
