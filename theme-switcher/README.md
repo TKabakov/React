@@ -5,3 +5,5 @@
  ![Alt text](image-1.png)
  Step 3. The ThemeCOntext.Provider render and wrap the children it the return statement:
  ![Alt text](image-2.png)
+ Step 4. The value prop object of ThemeContext.Provider is recalled with two values - theme and toggleTheme. theme is the ligth-dark string value, whereas toggleTheme is a function that toggles the theme from ligth to dark and vise versa:
+ 
