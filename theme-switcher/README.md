@@ -7,6 +7,10 @@
  ![Alt text](image-2.png)
  Step 4. The value prop object of ThemeContext.Provider is recalled with two values - theme and toggleTheme. theme is the ligth-dark string value, whereas toggleTheme is a function that toggles the theme from ligth to dark and vise versa:
  ![Alt text](image-3.png)
+ Step 5. The useContext created a custom hook named useTheme:
+ ![Alt text](image-6.png)
+ Step 6. To implement the useTheme custon hood, it is imported and destructed:
+ ![Alt text](image-7.png)
  This is how the page looks the light mode:
  ![Alt text](image-4.png)
  and this is in the dark mode:
