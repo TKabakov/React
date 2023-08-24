@@ -4,4 +4,4 @@
  Step 2. A new piece of local state is defined (inside ThemeProvider):
  ![Alt text](image-1.png)
  Step 3. The ThemeCOntext.Provider render and wrap the children it the return statement:
- 
+ ![Alt text](image-2.png)
