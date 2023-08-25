@@ -19,7 +19,8 @@ function GoalForm(props) {
             <h1>My Little Lemon Goals</h1>
             <form onSubmit={submitHandler}>
                 <input type='text' name='goal' placeholder='Goal' value={formData.goal} onChange={chageHandler}/>
-                <input type='text' name='by' placeholder='By' value={formData.by} onChange={chageHandler}/>            </form>
+                <input type='text' name='by' placeholder='By' value={formData.by} onChange={chageHandler}/>            
+            </form>
         </>
     )
 }
