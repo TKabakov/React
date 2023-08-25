@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 
-
 function Objects() {
     const [greeting, setGreeting] = useState(
         { 
@@ -25,4 +24,4 @@ function Objects() {
   );
 }
 
-export default Objects
+export default Objects;
