@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { places } from './data.js';
 import { getImageUrl } from './utils.js';
-
 import { createContext, useContext } from 'react';
 
 const ImageContext = createContext(null);
