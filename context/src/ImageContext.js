@@ -7,15 +7,11 @@ const ImageContext = createContext(null);
 
 export default function Image() {
   const [isLarge, setIsLarge] = useState(false);
-
   const imageSize = isLarge ? 250 : 150;
-
   return (
     <>
     <ImageContext.Provider
-        value={
-            imageSize
-        }
+        value={imageSize}
     >
       <label>
         <input
@@ -35,7 +31,6 @@ export default function Image() {
 }
 
 function List({ children }) {
-
   const listItems = places.map(place =>
     <li key={place.id}>
       <Place
@@ -48,7 +43,6 @@ function List({ children }) {
 }
 
 function Place({place, children}) {
-
   return (
     <>
       <PlaceImage
@@ -65,7 +59,6 @@ function Place({place, children}) {
 
 function PlaceImage({ place, children }) {
     const imageSize = useContext(ImageContext);
-    
   return (
     <img
       src={getImageUrl(place)}
