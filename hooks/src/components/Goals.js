@@ -7,6 +7,7 @@ function GoalForm(props) {
     function chageHandler(e){
         setFormData({ ...formData, [e.target.name]: e.target.value});
     }
+//The bracket notation of e.target.name allows us to use it dynamicaly
 
     function submitHandler(e){
         e.preventDefault();
@@ -51,5 +52,4 @@ export default function Goals() {
             <ListOfGoals allGoals={allGoals} />  
         </div>      
     );
-
 }
