@@ -15,7 +15,7 @@ export default function GiftCard() {
   function spendGiftCard() {
     setGiftCard(prevState =>{
         return{
-            ...prevState,
+          ...prevState,
           text: "Your coupon has been used",
           valid: false, //this will make the button to disappear after it is clicked
           instructions: "Please visit our restaurant to renew your gift card.",
