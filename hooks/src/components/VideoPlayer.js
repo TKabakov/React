@@ -10,7 +10,10 @@ export default VideoPlayer(){
 
     return(
         <div>
-            <button onClick = {() => setIsPlaying(!isPlaying)}/>
+            <button onClick = {() => setIsPlaying(!isPlaying)}>
+                {isPlaying ? 'Pause' : 'Play'}
+            </button>
+            
         </div>
     )
 
