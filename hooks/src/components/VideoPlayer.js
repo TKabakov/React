@@ -1,6 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 
 function Player ({ src, isPlaying }){
+    const ref = useRef (null);
+
+    useEffect(() => {
+        if (isPlaying) {
+            ref.current.play();
+        }
+    })
 
 
 }
