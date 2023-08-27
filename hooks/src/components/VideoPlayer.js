@@ -1,5 +1,17 @@
 import { useState, useRef, useEffect } from 'react';
 
+function Player ({ src, isPlaying }){
+
+
+}
+
 export default VideoPlayer(){
-    return 
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    return(
+        <div>
+            <button onClick = {() => setIsPlaying(!isPlaying)}/>
+        </div>
+    )
+
 }
