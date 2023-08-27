@@ -12,7 +12,7 @@ import CustomerData from './components/CustomerData';
 import NextDay from './NextDay';
 import Form from './components/Form';
 import TaskApp from './components/TaskApp';
-
+import VideoPlayer from './components/VideoPlayer';
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
       <NextDay />
       <Form />
       <TaskApp />
+      <VideoPlayer />
     </div>
   );
 }
