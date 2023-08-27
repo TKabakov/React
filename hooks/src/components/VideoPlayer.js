@@ -7,8 +7,10 @@ function Player ({ src, isPlaying }){
         if (isPlaying) {
             ref.current.play();
         }
-    })
-
+        else {
+            ref.current.pause();
+        }
+    });
 
 }
 
