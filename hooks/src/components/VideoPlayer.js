@@ -1,20 +1,22 @@
 import { useState, useRef, useEffect } from 'react';
 
-function Player ({ src, isPlaying }){
-    const ref = useRef (null);
+function Player({ src, isPlaying }) {
+    const ref = useRef(null);
 
     useEffect(() => {
         if (isPlaying) {
-            ref.current.play();
-        }
-        else {
-            ref.current.pause();
+          ref.current.play();
+        } else {
+          ref.current.pause();
         }
     });
 
+    return (
+        <video ref={ref} src={src} loop playsInline />
+    )
 }
 
-export default VideoPlayer(){
+export default function VideoPlayer(){
     const [isPlaying, setIsPlaying] = useState(false);
 
     return(
@@ -28,5 +30,4 @@ export default VideoPlayer(){
             />
         </div>
     );
-
 }
