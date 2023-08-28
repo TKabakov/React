@@ -9,7 +9,7 @@ import Artwork from './components/Artwork';
 import Bitcoin from './components/Bitcoin';
 import Track from './components/Track';
 import CustomerData from './components/CustomerData';
-import NextDay from './NextDay';
+import NextDay from './components/NextDay';
 import Form from './components/Form';
 import TaskApp from './components/TaskApp';
 import VideoPlayer from './components/VideoPlayer';
