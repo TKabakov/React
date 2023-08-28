@@ -9,12 +9,13 @@ function Player({ src, isPlaying }) {
         } else {
           ref.current.pause();
         }
-    }, [isPlaying]
+    }, [isPlaying] // ref and setIsPlaying are omitted,
+    //because they are stable (alway return the same result)
     );
 
     return (
         <video ref={ref} src={src} loop playsInline />
-    )
+    );
 }
 
 export default function VideoPlayer(){
