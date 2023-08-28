@@ -9,7 +9,7 @@ function Player({ src, isPlaying }) {
         } else {
           ref.current.pause();
         }
-    }, [isPlaying] // ref and setIsPlaying are omitted,
+    }, [isPlaying] // ref and setIsPlaying are omitted in dipendancy arrey,
     //because they are stable (alway return the same result)
     );
 
