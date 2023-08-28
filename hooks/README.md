@@ -32,3 +32,6 @@ After you type name "Teodor" and click on the button 4 times:
 ![Alt text](image-8.png)
 ![Alt text](image-9.png)
 ![Alt text](image-10.png)
+
+11. Fatching a video player (VideoPlayer.js) 
+![Alt text](image-12.png)
