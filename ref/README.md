@@ -1,0 +1,2 @@
+There are some examples and practices of using ref and useRef:
+1. The Counter.js component uses a ref to keep track of how many times the button was clicked. Note that it’s okay to use a ref instead of state here because the click count is only read and written in an event handler.
