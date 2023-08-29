@@ -10,9 +10,9 @@ function App() {
     alert('You clicked ' + ref.current + ' times!');
   }
   return (
-    <div className="App">
-        <Counter />
-    </div>
+    <button onClick={handleClick}>
+      Click me!
+    </button>
   );
 }
 
