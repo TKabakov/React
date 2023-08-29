@@ -14,6 +14,8 @@ function Counter() {
     </button>
   );
 }
- 
+//f you show {ref.current} in the JSX, the number won’t update on click. 
+//This is because setting ref.current does not trigger a re-render. 
+//Information that’s used for rendering should be state instead.
 
 export default Counter
