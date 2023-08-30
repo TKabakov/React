@@ -4,31 +4,47 @@ import { sculptureList } from './sculptureList';
 
 export default function Sculpture() {
 
-  const [index, setIndex]=useState(0);
+  const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false); 
+  const hasNext = index < sculptureList.length - 1;
+  
+  function handleClick() {
+    if (hasNext) {
+      setIndex(index + 1);
+    } else {
+      setIndex(0);
+    }
+  }
 
-  function handleClick(){
-    setIndex( index + 1);
+  function handleMoreClick(){
+    setShowMore(!showMore);
   }
 
   let sculpture = sculptureList[index];
+
   return (
     <div>
+     n
       <button onClick={handleClick}>
         Next
       </button>
       <h2>
-        <i>{sculpture.name}</i> by {sculpture.artist}
+        <i>{sculpture.name}</i> 
+        by {sculpture.artist}
       </h2>
       <h3>
         ({index + 1} of {sculptureList.length})
       </h3>
+      <button onClick={handleMoreClick}>
+        {showMore ? 'Hide' : 'Show'} details
+      </button>
       <img
         src={sculpture.url}
         alt={sculpture.alt}
       />
       <p>
-        {sculpture.description}
+        {showMore && sculpture.description}
       </p>
     </div>
-  )
+  );
 }
