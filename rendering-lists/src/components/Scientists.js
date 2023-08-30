@@ -35,7 +35,6 @@ export default function List() {
 
   return (
     <article>
-      <h1>Scientists</h1>
       <h2>Chemists</h2>
         <ul>{Chemists}</ul>
       <h2>Everyone Else</h2>
