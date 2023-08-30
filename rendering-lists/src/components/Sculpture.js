@@ -24,7 +24,7 @@ export default function Sculpture() {
 
   return (
     <div>
-     
+     n
       <button onClick={handleClick}>
         Next
       </button>

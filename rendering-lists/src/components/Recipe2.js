@@ -20,7 +20,6 @@ function RecipeList({ name, ingredients }){
 export default function Recipe (){
     return (
         <div>
-            <h1>Recipes</h1>
             {recipes.map(recipe =>
                 <RecipeList {...recipe} key={recipe.id} />
                 )}

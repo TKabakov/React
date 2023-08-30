@@ -10,10 +10,14 @@ function App() {
  
   return (
     <div className="App">
-      <Recipes />
-      <RecipeList />
-      <Recipe />
-      <List />
+      <h1>Recipe 1</h1>
+        <Recipes />
+      <h1>Recipe 2 </h1>
+        <RecipeList />
+      <h1>Recipe 3</h1>
+        <Recipe />
+      <h1>Scientists</h1>
+        <List />
       <h1>Sculptures</h1>
         <Sculpture />
       <h1>ShoppingList</h1>
