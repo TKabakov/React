@@ -14,7 +14,9 @@ function App() {
       <RecipeList />
       <Recipe />
       <List />
-      <Sculpture />
+      <h1>Sculptures</h1>
+        <Sculpture />
+      <h1>ShoppingList</h1>
       <ShoppingList />
     </div>
   );

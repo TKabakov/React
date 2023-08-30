@@ -4,23 +4,27 @@ import { sculptureList } from './sculptureList';
 
 export default function Sculpture() {
 
-  const [index, setIndex]=useState(0);
-
-  function handleClick(){
-    if(hasNext){
-      setIndex( index + 1);
-    }else{
-    setIndex(0);
+  const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false); 
+  const hasNext = index < sculptureList.length - 1;
+  
+  function handleClick() {
+    if (hasNext) {
+      setIndex(index + 1);
+    } else {
+      setIndex(0);
+    }
   }
 
   function handleMoreClick(){
     setShowMore(!showMore);
   }
-  
+
   let sculpture = sculptureList[index];
 
   return (
     <div>
+     
       <button onClick={handleClick}>
         Next
       </button>
@@ -43,4 +47,4 @@ export default function Sculpture() {
       </p>
     </div>
   );
-};
+}
