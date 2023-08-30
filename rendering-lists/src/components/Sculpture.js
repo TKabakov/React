@@ -9,10 +9,14 @@ export default function Sculpture() {
   function handleClick(){
     if(hasNext){
       setIndex( index + 1);
-  }else{
+    }else{
     setIndex(0);
   }
 
+  function handleMoreClick(){
+    setShowMore(!showMore);
+  }
+  
   let sculpture = sculptureList[index];
 
   return (
