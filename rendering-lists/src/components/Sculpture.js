@@ -7,10 +7,14 @@ export default function Sculpture() {
   const [index, setIndex]=useState(0);
 
   function handleClick(){
-    setIndex( index + 1);
+    if(hasNext){
+      setIndex( index + 1);
+  }else{
+    setIndex(0);
   }
 
   let sculpture = sculptureList[index];
+
   return (
     <div>
       <button onClick={handleClick}>
