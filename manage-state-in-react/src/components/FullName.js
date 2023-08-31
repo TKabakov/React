@@ -15,6 +15,9 @@ export default function Form() {
   //  setFullName(firstName + ' ' + e.target.value);
   }
 
+//fullName is redundant. You can always calculate fullName 
+//from firstName and lastName during render, so remove it from state.
+
   return (
     <>
       <h2>Let’s check you in</h2>
