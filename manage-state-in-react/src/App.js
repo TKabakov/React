@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Fruits from './components/Fruits';
 import FruitsCounter from './components/FruitsCounter';
+import FeedbackForm from './components/BookingHotel';
+import Form from './components/FullName';
 
 function App() {
       const [fruits] = React.useState([
