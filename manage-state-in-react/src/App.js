@@ -17,7 +17,10 @@ function App() {
       <h1>Where should the state go?</h1>
       <Fruits fruits={fruits}/>
       <FruitsCounter fruits={fruits}/>
-      <FeedbackForm />
+      <h2>Booking Form</h2>
+        <FeedbackForm />
+      <h2>Full name form</h2>
+        <Form />
     </div>
   );
 }
