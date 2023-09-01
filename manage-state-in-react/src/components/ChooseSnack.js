@@ -1,3 +1,4 @@
+//Avoid duplication in state
 import { useState } from 'react';
 
 const initialItems = [
@@ -12,6 +13,19 @@ export default function Menu() {
     items[0]
   );
 
+  function handleChange(id, e) {
+    setItems(items.map(item => {
+        if(item.id === id) {
+        
+        return {
+            ...item,
+            title: e.target.value,
+        };
+        } else {
+            return item;
+        }
+    }));
+  }
   return (
     <>
       <h2>What's your travel snack?</h2>
