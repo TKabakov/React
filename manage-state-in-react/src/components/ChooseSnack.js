@@ -30,9 +30,14 @@ export default function Menu() {
     <>
       <h2>What's your travel snack?</h2>
       <ul>
-        {items.map(item => (
+        {items.map((item, index) => (
           <li key={item.id}>
-            {item.title}
+            <input
+                value={item.title}
+                onChange={e =>{
+                    handleChange(item.id, e)
+                }}
+            />
             {' '}
             <button onClick={() => {
               setSelectedItem(item);
