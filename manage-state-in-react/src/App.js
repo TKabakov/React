@@ -5,6 +5,7 @@ import FruitsCounter from './components/FruitsCounter';
 import FeedbackForm from './components/BookingHotel';
 import Form from './components/FullName';
 import TravalPlan from './components/TravalPlan';
+
 function App() {
       const [fruits] = React.useState([
         {fruitName: 'apple', id: 1},
@@ -21,6 +22,8 @@ function App() {
         <FeedbackForm />
       <h2>Full name form</h2>
         <Form />
+      <h2>TravalPlan<h2>
+        <TravalPlan />
     </div>
   );
 }
