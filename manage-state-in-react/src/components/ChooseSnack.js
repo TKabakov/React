@@ -9,10 +9,14 @@ const initialItems = [
 
 export default function Menu() {
   const [items, setItems] = useState(initialItems);
-  const [selectedItem, setSelectedItem] = useState(
+  const [selectedId, setSelectedId] = useState(
     items[0]
   );
-
+  
+const selectedItem = items.find(item =>
+    item.id === selectedId
+  );
+  
   function handleChange(id, e) {
     setItems(items.map(item => {
         if(item.id === id) {
@@ -40,7 +44,7 @@ export default function Menu() {
             />
             {' '}
             <button onClick={() => {
-              setSelectedItem(item);
+              setSelectedId(item.id);
             }}>Choose</button>
           </li>
         ))}
