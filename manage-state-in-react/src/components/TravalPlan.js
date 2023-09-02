@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { initialTravelPlan } from './places.js';
 
+//Avoid deeply nested state
+//If the state is too nested to update easily, consider making it “flat”.
+
 function PlaceTree({ id, placesById }) {
   const place = placesById[id];
   const childIds = place.childIds;
