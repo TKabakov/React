@@ -1,3 +1,8 @@
+//Avoid redundant state
+//If you can calculate some information from the component’s props 
+//or its existing state variables during rendering, 
+//you should not put that information into that component’s state.
+
 import { useState } from 'react';
 
 export default function Form() {

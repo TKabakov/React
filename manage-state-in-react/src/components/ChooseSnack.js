@@ -1,4 +1,10 @@
 //Avoid duplication in state
+
+//instead of a selectedItem object 
+//(which creates a duplication with objects inside items), 
+//you hold the selectedId in state, 
+//and then get the selectedItem 
+//by searching the items array for an item with that ID:
 import { useState } from 'react';
 
 const initialItems = [
