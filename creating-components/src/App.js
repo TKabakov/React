@@ -1,5 +1,5 @@
 import './App.css';
-import Expression from './components/Expression';
+import Expression from '../../passing-props/src/components/Expression';
 import Expression2 from './components/Expression2';
 
 function Header () {
