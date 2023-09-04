@@ -1,0 +1,2 @@
+The goal is to use as much as many React concepts as possible with this porfolio.
+
