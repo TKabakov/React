@@ -2,6 +2,7 @@ import './App.css';
 import { RadioGroup, RadioOption } from './Radio';
 import { useState, Fragment } from 'react';
 import Bio from './components/Bio';
+import TodoList from './components/ToDo';
 import Blog from './components/Blog';
 import User from './components/User';
 import withLoader from './components/withLoader';
@@ -31,6 +32,7 @@ function App() {
       <ClickIncrease />
       <HooverIncrease />
       <Bio />
+      <TodoList />
     </Fragment>
   );
 }
