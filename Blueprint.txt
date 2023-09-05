@@ -24,3 +24,18 @@ The creteria for Portfolio page assessment:
     - Was the header hidden/shown depending on the scroll direction? Did it happen with a smooth transition animation?
 
     - Can you suggest any improvements for the portfolio app?
+Wat you've learned (and should be included):
+    components
+    Render list 
+    Form (control)
+    Context
+    Hooks
+    Fatching data
+    useReducer
+    JSX
+    testing
+    Children
+    Spread attribute
+    render props
+    JEST
+
