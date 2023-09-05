@@ -1,6 +1,7 @@
 import './App.css';
 import { RadioGroup, RadioOption } from './Radio';
 import { useState, Fragment } from 'react';
+import Bio from './components/Bio';
 import Blog from './components/Blog';
 import User from './components/User';
 import withLoader from './components/withLoader';
@@ -29,6 +30,7 @@ function App() {
       <h1>Font Increase</h1>
       <ClickIncrease />
       <HooverIncrease />
+      <Bio />
     </Fragment>
   );
 }
