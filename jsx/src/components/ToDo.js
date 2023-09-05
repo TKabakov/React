@@ -1,3 +1,4 @@
+const baseUrl = 'https://i.imgur.com/';
 const person = {
     name: 'Gregorio Y. Zara',
     theme: {
@@ -5,6 +6,8 @@ const person = {
       color: 'pink',
     },
     src: "https://i.imgur.com/7vQD0fPs.jpg",
+    imageId: '7vQD0fP',
+    imageSize: 's',
   };
   
   export default function TodoList() {
@@ -21,6 +24,11 @@ const person = {
           <li>Prepare aeronautics lectures</li>
           <li>Work on the alcohol-fuelled engine</li>
         </ul>
+        <img
+          className="avatar"
+          src={baseUrl + person.imageId + person.imageSize + ".jpg"}
+          alt={person.name}
+        />
       </div>
     );
   }
