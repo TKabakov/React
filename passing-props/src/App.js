@@ -4,7 +4,7 @@ import Profile from "./components/Avatar";
 import Profile2 from "./components/Profile2";
 import Expression from "./components/Expression";
 import Expression2 from "./components/Expression2";
-
+import "./App.css"
 function Header () {
     return <h1>Hello world</h1>
   }

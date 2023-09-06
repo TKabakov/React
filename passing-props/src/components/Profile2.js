@@ -5,6 +5,7 @@ import { getImageUrl } from "./utils";
 function Avatar({person,size=150}){
     //default value for props
     return(
+    <div>
         <div className="card">
             <div className="card-content">
                 <h3>Photo</h3>
@@ -21,6 +22,7 @@ function Avatar({person,size=150}){
                     <p>{person.discovery}</p>
           </div>
         </div>
+    </div>
     )
 };
 
