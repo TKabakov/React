@@ -18,9 +18,13 @@ function App() {
         <div className="App">
             <Heading firstName="Bob" lastName="Doe"/>
             <Heading firstName="Teo"/>
+            <h2>Gallery</h2>
             <Gallery />
+            <h2>Profile</h2>
             <Profile />
+            <h2>Profile2</h2>
             <Profile2 />
+            <h2>Header</h2>
             <Header />
             <Expression
                 toggleBoolean={!bool}
