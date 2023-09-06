@@ -13,14 +13,14 @@
 //   );
 //};
 
-function Expression2 ({toggleBoolean}) {
+function Expression2 ({toggleBoolean, math, str}) {
     return (
         <div>
             <h2>
                 The value of the toggleBoolean prop is: {toggleBoolean.toString()}
             </h2>
-                <p>The value of the main prop is: <em>{toggleBoolean.math}</em></p>
-                <p>The value of str is: <em>{toggleBoolean.str}</em></p>
+                <p>The value of the main prop is: <em>{math}</em></p>
+                <p>The value of str is: <em>{str}</em></p>
         </div>
     );
 };
