@@ -1,8 +1,8 @@
-function Heading({firstName, lastName}) {
+function Heading(props) {
     return (
         <>
-        <h1>Hello, {firstName} {lastName} !</h1>
-        <p>You are so great man, {firstName} !</p>
+        <h1>Hello, {props.firstName} {props.lastName} !</h1>
+        <p>You are so great man, {props.firstName} !</p>
         </>
     )
 }
