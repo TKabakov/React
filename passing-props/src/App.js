@@ -6,6 +6,8 @@ import Expression from "./components/Expression";
 import Expression2 from "./components/Expression2";
 import "./App.css"
 import PackingList from "./components/PackingList";
+import DrinkList from "./components/DrinkList";
+
 function Header () {
     return <h1>Hello world</h1>
   }
@@ -37,6 +39,9 @@ function App() {
             />
             <h2>PackingList</h2>
             <PackingList />
+            <h2>Drink list</h2>
+            <DrinkList />
+
         </div>
     );
 };
