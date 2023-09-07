@@ -1,6 +1,7 @@
 function Item({ name, isPacked }) {
   return (
-<li className="item">{isPacked ? name + "✔": name}</li>
+<li className="item">{name}{isPacked && "✔"}</li>
+//<li className="item">{isPacked ? name + "✔": name}</li>
 // isPacked&&<li className="item">{name}✔</li>;
 // {!isPacked}&&<li className="item">{name}</li>;
 
