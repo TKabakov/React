@@ -35,7 +35,7 @@ function App() {
             <Expression2
                 toggleBoolean={!bool}
                 math = {(20 + 30) / 10}
-                str = {str1+" another "+"string"}
+                str = {str1 + " another " + "string"}
             />
             <h2>PackingList</h2>
             <PackingList />
