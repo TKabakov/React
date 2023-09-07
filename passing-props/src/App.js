@@ -5,6 +5,7 @@ import Profile2 from "./components/Profile2";
 import Expression from "./components/Expression";
 import Expression2 from "./components/Expression2";
 import "./App.css"
+import PackingList from "./components/PackingList";
 function Header () {
     return <h1>Hello world</h1>
   }
@@ -34,6 +35,8 @@ function App() {
                 math = {(20 + 30) / 10}
                 str = {str1+" another "+"string"}
             />
+            <h2>PackingList</h2>
+            <PackingList />
         </div>
     );
 };
