@@ -1,7 +1,8 @@
 function Item({ name, isPacked }) {
   return (
-  isPacked&&<li className="item">{name}✔</li>;
- {!isPacked}&&<li className="item">{name}</li>;
+<li className="item">{isPacked ? name + "✔": name}</li>
+// isPacked&&<li className="item">{name}✔</li>;
+// {!isPacked}&&<li className="item">{name}</li>;
 
 }
 
@@ -14,6 +15,7 @@ export default function PackingList() {
           isPacked={true} 
           name="Space suit" 
         />
+        <Item 
         <Item 
           isPacked={true} 
           name="Helmet with a golden leaf" 
