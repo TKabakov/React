@@ -30,8 +30,8 @@ function Drink({ name }) {
   export default function DrinkList() {
     return (
       <div>
-        <Drink name="tea" />
-        <Drink name="coffee" />
+        <Drink name="Tea" />
+        <Drink name="Coffee" />
       </div>
     );
   }

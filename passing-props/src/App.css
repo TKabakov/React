@@ -62,3 +62,10 @@ ul {
   border-radius: 50%;
 }
 
+dt::after {
+  content: " : ";
+}
+
+dd::after {
+  content: ";";
+}
