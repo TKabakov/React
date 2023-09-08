@@ -1,15 +1,23 @@
-import { recipes } from './data.js';
+//the code is very similar to Recipe.js;
 
-export default function RecipeList() {
-  const recipe = recipes.map((item)=>{
-    return(
-    <li key={item.id}>{item}</li>
-      );
-  }
+import { recipes } from "./SaladsData";
+
+export default function NewRecipe() {
   return (
     <div>
-      <h1>Recipes</h1>
-      <ul>{recipe}</ul>
+      {recipes.map(item=>
+        <ul key={item.id}>
+          <h2>{item.name}</h2>
+            <ul>
+              {item.ingredients.map(ingredient =>
+                <li key={ingredient}>
+                  <p>{ingredient}</p>
+                </li>
+              )}
+            </ul>
+        </ul>
+        )
+      }   
     </div>
   );
 }
