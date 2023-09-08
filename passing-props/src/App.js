@@ -6,6 +6,8 @@ import Expression from "./components/Expression";
 import Expression2 from "./components/Expression2";
 import "./App.css"
 import PackingList from "./components/PackingList";
+import DrinkList from "./components/DrinkList";
+
 function Header () {
     return <h1>Hello world</h1>
   }
@@ -33,10 +35,13 @@ function App() {
             <Expression2
                 toggleBoolean={!bool}
                 math = {(20 + 30) / 10}
-                str = {str1+" another "+"string"}
+                str = {str1 + " another " + "string"}
             />
             <h2>PackingList</h2>
             <PackingList />
+            <h2>Drink list</h2>
+            <DrinkList />
+
         </div>
     );
 };
