@@ -14,14 +14,14 @@ function Header({person}) {
   return <h1>{person.name}</h1>;
 }
 
-function Avatar({person}) {
+function Avatar({person, size=100}) {
   return (
     <img
       className="avatar"
       src={getImageUrl(person)}
       alt={person.name}
-      width={50}
-      height={50}
+      width={size}
+      height={size}
     />
   );
 }
