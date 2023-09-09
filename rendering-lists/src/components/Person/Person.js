@@ -12,5 +12,5 @@ export default function App() {
         name: 'Creola Katherine Johnson',
       }} />
     </>
-  )
+  );
 }
