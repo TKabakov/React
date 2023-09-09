@@ -1,7 +1,6 @@
-export default function Clock() {
+export default function Clock({time}) {
     let className = "";
-    let date = Date.now();
-    let hours = date.getHours();
+    let hours = time.getHours();
    
     if (hours >= 0 && hours <= 6) {
       className="nigt";
@@ -10,7 +9,7 @@ export default function Clock() {
     }
     return (
       <h1 className={className} >
-        {hours.toLocaleTimeString()}
+        {time.toLocaleTimeString()}
       </h1>
     );
   }
