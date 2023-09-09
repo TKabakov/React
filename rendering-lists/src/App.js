@@ -8,6 +8,8 @@ import NewRecipe from "./components/Recipe3";
 import './App.css';
 import TeaSet from "./components/Cups";
 import Clock from "./components/Clock";
+import Person from "./components/Person/Person";
+
 
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
       <NewRecipe />
       <TeaSet />
       <Clock />
+      <Person />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import Profile from './Profile.js';
 
-export default function App() {
+export default function Person() {
   return (
     <>
       <Profile person={{
