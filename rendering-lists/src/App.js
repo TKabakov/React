@@ -6,6 +6,8 @@ import Sculpture from "./components/Sculpture";
 import ShoppingList from "./components/ShoppingList";
 import NewRecipe from "./components/Recipe3";
 import './App.css';
+import TeaSet from "./components/Cups";
+
 
 function App() {
  
@@ -25,6 +27,7 @@ function App() {
       <ShoppingList />
       <h1>Recipe4</h1>
       <NewRecipe />
+      <TeaSet />
     </div>
   );
 }
