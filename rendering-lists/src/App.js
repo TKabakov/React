@@ -8,8 +8,7 @@ import NewRecipe from "./components/Recipe3";
 import './App.css';
 import TeaSet from "./components/Cups";
 import Person from "./components/Person/Person";
-
-
+import Story from "./components/Story"
 
 function App() {
  
