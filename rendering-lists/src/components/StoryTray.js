@@ -6,7 +6,7 @@ export default function StoryTray({ stories }) {
   return (
     <ul>
       {newStory.map(story => (
-        <li key={story.id}>
+        <li key={story.id} className="li">
           {story.label}
         </li>
       ))}
