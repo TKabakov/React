@@ -6,7 +6,7 @@ let initialStories = [
   {id: 1, label: "Taylor's Story" },
 ];
 
-export default function App() {
+export default function Story() {
   let [stories, setStories] = useState([...initialStories])
   let time = useTime();
 
