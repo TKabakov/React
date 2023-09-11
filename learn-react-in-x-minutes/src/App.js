@@ -1,12 +1,11 @@
-import Header from './Header';
-import Main from './Main';
-import Sidebar from './Sidebar';
+import Header from './components/Header'
+import Main from './components/Main';
+import Sidebar from './components/Sidebar';
 import Hello from "./components/Hello";
 import Example from "./components/Example";
 import Example2 from "./components/Example2";
 import Example3 from "./components/Example3";
 import './App.css';
-import CurrentMessage from './components/CurrentMessage';
 import LogicalAndExample from './components/LogicalAndExample';
 
 
