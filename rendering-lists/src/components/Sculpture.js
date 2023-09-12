@@ -6,10 +6,9 @@ export default function Sculpture() {
 
   const [index, setIndex] = useState(0);
   const [showMore, setShowMore] = useState(false); 
-  const hasNext = index < sculptureList.length - 1;
   
   function handleClick() {
-    if (hasNext) {
+    if (index < sculptureList.length - 1) {
       setIndex(index + 1);
     } else {
       setIndex(0);
