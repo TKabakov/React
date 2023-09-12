@@ -6,6 +6,8 @@ export default function Gallery() {
   const [showMore, setShowMore] = useState(false);
   const hasNext = item < sculptureList.length - 1;
 
+  let sculpture = sculptureList[item];
+
   function handleNextClick() {
     if (hasNext) {
       setItem(item + 1);
@@ -18,7 +20,6 @@ export default function Gallery() {
     setShowMore(!showMore);
   }
 
-  let sculpture = sculptureList[item];
   return (
     <>
       <button onClick={handleNextClick}>
