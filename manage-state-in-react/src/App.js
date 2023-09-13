@@ -5,6 +5,7 @@ import FruitsCounter from './components/FruitsCounter';
 import FeedbackForm from './components/BookingHotel';
 import Form from './components/FullName';
 import TravalPlan from './components/TravalPlan';
+import Counter from './components/Counter';
 
 function App() {
       const [fruits] = React.useState([
@@ -24,6 +25,8 @@ function App() {
         <Form />
       <h2>TravalPlan</h2>
         <TravalPlan />
+      <h2>Counter</h2>
+        <Counter />
     </div>
   );
 }
