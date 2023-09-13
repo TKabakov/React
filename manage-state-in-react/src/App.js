@@ -22,10 +22,10 @@ function App() {
         <FeedbackForm />
       <h2>Full name form</h2>
         <Form />
-      <h2>TravalPlan<h2>
+      <h2>TravalPlan</h2>
         <TravalPlan />
     </div>
   );
 }
 
-export default App;
+export default App
