@@ -15,7 +15,8 @@ export default function Counter() {
         increment();
         increment();
         increment();
-      }}>+3</button>
+        increment();
+      }}>+4</button>
       <h1>Score: {score}</h1>
     </>
   )
