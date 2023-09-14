@@ -1,9 +1,7 @@
+import { useState } from 'react';
 
-import { useImmer } from 'use-immer';
-//use Immer to reduce repetitive code
-
-export default function Object() {
-  const [person, updatePerson] = useImmer({
+export default function Form() {
+  const [person, setPerson] = useState({
     name: 'Niki de Saint Phalle',
     artwork: {
       title: 'Blue Nana',
@@ -13,27 +11,40 @@ export default function Object() {
   });
 
   function handleNameChange(e) {
-    updatePerson(draft => {
-      draft.name= e.target.value
+    setPerson({
+      ...person,
+      name: e.target.value
     });
   }
 
   function handleTitleChange(e) {
-    updatePerson(draft=>{
-      draft.artwork.title= e.target.value
-      });
+    setPerson({
+      ...person,
+      artwork: {
+        ...person.artwork,
+        title: e.target.value
+      }
+    });
   }
 
   function handleCityChange(e) {
-    updatePerson(draft=>{
-      draft.artwork.city= e.target.value
-      });
+    setPerson({
+      ...person,
+      artwork: {
+        ...person.artwork,
+        city: e.target.value
+      }
+    });
   }
 
   function handleImageChange(e) {
-    updatePerson(draft=>{
-      draft.artwork.image= e.target.value
-      });
+    setPerson({
+      ...person,
+      artwork: {
+        ...person.artwork,
+        image: e.target.value
+      }
+    });
   }
 
   return (
