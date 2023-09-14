@@ -9,16 +9,24 @@ export default function Data(){
     });
 
     function handleFirstNameChange(e){
-        person.firstName=e.target.value
-        }
+        setPerson({
+            ...person,
+            firstName: e.target.value
+        });
     }
 
     function handleLastNameChange(e){
-        person.lastName=e.target.value
+        setPerson({
+            ...person,
+            lastName: e.target.value
+        });
     }
 
     function handleEmailChange(e){
-        person.email=e.target.value
+        setPerson({
+            ...person,
+            email: e.target.value
+        });
     }
 
     return(
@@ -27,23 +35,22 @@ export default function Data(){
             First Name:
             <input
                 value={person.firstName}
-                onChange={handleFirstNameChange}>
-            </input>
+                onChange={handleFirstNameChange}
+            />
         </label>
         <label>
             Last Name:
             <input
                 value={person.lasttName}
-                onChange={handleLastNameChange}>                </input>
+                onChange={handleLastNameChange}/>
         </label>
         <label>
             Email:
             <input
                 value={person.email}
-                onChange={handleEmailChange}>
-            </input>
+                onChange={handleEmailChange}
+            />
         </label>
         </div>
- >
-    )
+    );
 }
