@@ -6,6 +6,7 @@ import FeedbackForm from './components/BookingHotel';
 import Form from './components/FullName';
 import TravalPlan from './components/TravalPlan';
 import Counter from './components/Counter';
+import Object from './components/ObjectUpdate';
 
 function App() {
       const [fruits] = React.useState([
@@ -27,6 +28,8 @@ function App() {
         <TravalPlan />
       <h2>Counter</h2>
         <Counter />
+      <h2>Object Update:</h2>
+        <Object />
     </div>
   );
 }
