@@ -41,7 +41,7 @@ export default function Data(){
         <label>
             Last Name:
             <input
-                value={person.lasttName}
+                value={person.lastName}
                 onChange={handleLastNameChange}/>
         </label>
         <label>
