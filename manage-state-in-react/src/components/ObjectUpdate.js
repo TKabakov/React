@@ -10,6 +10,9 @@ export default function Form() {
     }
   });
 
+//Notice that one state is for all inputs
+//for large forms to keep all data grouped in an object is very convenient
+
   function handleNameChange(e) {
     setPerson({
       ...person,
