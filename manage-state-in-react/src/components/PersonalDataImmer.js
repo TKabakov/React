@@ -20,41 +20,31 @@ export default function DataImmer(){
     }
 
     function handleLastNameChange(e){
-        setPerson({
-            ...person,
-            lastName: e.target.value
+        updatePerson(draft=>{ 
+            draft.lastName= e.target.value
         });
     }
 
     function handleEmailChange(e){
-        setPerson({
-            ...person,
-            email: e.target.value
+        updatePerson(draft=>{
+            draft.email= e.target.value
         });
     }
 
     function handleTitleChange(e){
-        setPerson({
-            ...person,
-            artwork:{
-                ...person.artwork,
-                title: e.target.value
-            }
-        })
+        updatePerson(draft=>{
+            draft.artwork.title= e.target.value
+            });
     }
 
     function handleCityChange(e){
-        setPerson({
-            ...person,
-            artwork:{
-                ...person.artwork,
-                city: e.target.value
-            }
+        updatePerson(draft=>{
+            draft.artwork.city=e.target.value
         })
     }
 
     function handleImageChange(e){
-        setPerson({
+        updatePerson({
             ...person,
             artwork:{
                 ...person.artwork,
