@@ -7,6 +7,7 @@ import Form from './components/FullName';
 import TravalPlan from './components/TravalPlan';
 import Counter from './components/Counter';
 import Object from './components/ObjectUpdate';
+import Data from './components/PersonalData';
 
 function App() {
       const [fruits] = React.useState([
@@ -30,6 +31,8 @@ function App() {
         <Counter />
       <h2>Object Update:</h2>
         <Object />
+      <h2>Personal Data:</h2>
+        <Data />
     </div>
   );
 }
