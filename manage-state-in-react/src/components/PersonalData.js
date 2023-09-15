@@ -5,7 +5,12 @@ export default function Data(){
     const [person, setPerson] = useState({
         firstName: "Barbara" ,
         lastName: "Hpworth",
-        email:"bhepworth@sculpture.com"
+        email:"bhepworth@sculpture.com",
+        artwork: {
+            title: 'Blue Nana',
+            city: 'Hamburg',
+            image: 'https://i.imgur.com/Sd1AgUOm.jpg',
+          }
     });
 
     function handleFirstNameChange(e){
@@ -28,6 +33,28 @@ export default function Data(){
             email: e.target.value
         });
     }
+
+    function handleTitleChange(e){
+        setPerson({
+            ...person,
+            artwork:{
+                ...person.artwork,
+                title: e.target.value
+            }
+        })
+    }
+
+    function handleCityChange(e){
+        setPerson({
+            ...person,
+            artwork:{
+                ...person.artwork,
+                city:e.target.value
+            }
+        })
+    }
+
+    
 
     return(
         <div>
