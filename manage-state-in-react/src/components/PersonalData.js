@@ -49,12 +49,21 @@ export default function Data(){
             ...person,
             artwork:{
                 ...person.artwork,
-                city:e.target.value
+                city: e.target.value
             }
         })
     }
 
-    
+    function handleImageChange(e){
+        setPerson({
+            ...person,
+            artwork:{
+                ...person.artwork,
+                image: e.target.value
+            }
+        })
+
+    }
 
     return(
         <div>
@@ -76,6 +85,27 @@ export default function Data(){
             <input
                 value={person.email}
                 onChange={handleEmailChange}
+            />
+        </label>
+        <label>
+            Artwork Title:
+            <input
+                value={person.artwork.title}
+                onChange={handleTitleChange}
+            />
+        </label>
+        <label>
+            City:
+            <input
+                value={person.artwork.city}
+                onChange={handleCityChange}
+            />
+        </label>
+        <label>
+            Image:
+            <input
+                value={person.artwork.image}
+                onChange={handleImageChange}
             />
         </label>
         </div>
