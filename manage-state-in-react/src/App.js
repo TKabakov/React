@@ -8,7 +8,7 @@ import TravalPlan from './components/TravalPlan';
 import Counter from './components/Counter';
 import Object from './components/ObjectUpdate';
 import Data from './components/PersonalData';
-
+import DataImmer from './components/PersonalDataImmer';
 function App() {
       const [fruits] = React.useState([
         {fruitName: 'apple', id: 1},
@@ -33,6 +33,8 @@ function App() {
         <Object />
       <h2>Personal Data:</h2>
         <Data />
+      <h2>Personal Data (with Immer library)</h2>
+        <DataImmer />
     </div>
   );
 }
