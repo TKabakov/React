@@ -108,6 +108,17 @@ export default function Data(){
                 onChange={handleImageChange}
             />
         </label>
+        <p>
+            <i>{person.artwork.title}</i>
+            {" by "}
+            {person.firstName}{" "}{person.lastName}
+            <br />
+            (located in {person.artwork.city})
+        </p>
+        <img
+            src={person.artwork.image}
+            alt={person.artwork.title}
+        />
         </div>
     );
 }
