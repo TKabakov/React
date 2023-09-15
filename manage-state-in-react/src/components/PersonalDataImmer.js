@@ -44,14 +44,9 @@ export default function DataImmer(){
     }
 
     function handleImageChange(e){
-        updatePerson({
-            ...person,
-            artwork:{
-                ...person.artwork,
-                image: e.target.value
-            }
+        updatePerson(draft=>{
+            draft.artwork.image=e.target.value
         })
-
     }
 
     return(

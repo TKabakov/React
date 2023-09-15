@@ -9,6 +9,7 @@ import Counter from './components/Counter';
 import Object from './components/ObjectUpdate';
 import Data from './components/PersonalData';
 import DataImmer from './components/PersonalDataImmer';
+
 function App() {
       const [fruits] = React.useState([
         {fruitName: 'apple', id: 1},
