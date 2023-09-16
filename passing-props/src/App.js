@@ -9,6 +9,7 @@ import Expression2 from "./components/Expression2";
 import "./App.css"
 import PackingList from "./components/PackingList";
 import DrinkList from "./components/DrinkList";
+import { useState } from 'react';
 
 function Header () {
     return <h1>Hello world</h1>
@@ -18,9 +19,9 @@ const bool=true;
 const str1="just";
 
 function App() {
-    const [fruits] = React.useState([
+    const [fruits, setFruits] = useState([
         {fruitName: 'apple', id: 1},
-        {fruitName: 'apple', id: 2},
+        {fruitName: 'banana', id: 2},
         {fruitName: 'plum', id: 3},
       ]);
     return (
