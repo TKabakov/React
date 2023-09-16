@@ -1,5 +1,5 @@
 import Fruits from './components/Fruits';
-import FruitsCounter from '../../manage-state-in-react/src/components/FruitsCounter';
+import FruitsCounter from './components/FruitsCounter';
 import Heading from "./components/Heading";
 import Gallery from "./components/Profile";
 import Profile from "./components/Avatar";
