@@ -1,3 +1,5 @@
+import Fruits from './components/Fruits';
+import FruitsCounter from './components/FruitsCounter';
 import Heading from "./components/Heading";
 import Gallery from "./components/Profile";
 import Profile from "./components/Avatar";
