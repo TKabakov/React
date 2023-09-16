@@ -1,5 +1,5 @@
 import Fruits from './components/Fruits';
-import FruitsCounter from './components/FruitsCounter';
+import FruitsCounter from '../../manage-state-in-react/src/components/FruitsCounter';
 import Heading from "./components/Heading";
 import Gallery from "./components/Profile";
 import Profile from "./components/Avatar";
@@ -18,9 +18,17 @@ const bool=true;
 const str1="just";
 
 function App() {
-
+    const [fruits] = React.useState([
+        {fruitName: 'apple', id: 1},
+        {fruitName: 'apple', id: 2},
+        {fruitName: 'plum', id: 3},
+      ]);
     return (
         <div className="App">
+            <h2>Where should the state go?</h2>
+                <Fruits fruits={fruits}/>
+                <FruitsCounter fruits={fruits}/>
+            
             <Heading firstName="Bob" lastName="Doe"/>
             <Heading firstName="Teo"/>
             <h2>Gallery</h2>
