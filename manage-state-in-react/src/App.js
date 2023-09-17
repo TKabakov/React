@@ -6,6 +6,8 @@ import TravalPlan from './components/TravalPlan';
 import Counter from './components/Counter';
 import Object from './components/ObjectUpdate';
 import Data from './components/PersonalData';
+import Scoreboard from './components/Scoreboard';
+import Canvas from './components/Canvas';
 
 function App() {
   return (
@@ -23,6 +25,10 @@ function App() {
         <Object />
       <h2>Personal Data:</h2>
         <Data />
+      <h2>Scoreboard:</h2>
+        <Scoreboard />
+      <h2>Canvas:</h2>
+        <Canvas />
     </div>
   );
 }
