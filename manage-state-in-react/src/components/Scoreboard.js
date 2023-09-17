@@ -12,7 +12,7 @@ export default function Scoreboard() {
   function handlePlusClick(e) {
     setPlayer({
       ...player,
-      score: s + 1,
+      score: player.score + 1,
     });
   }
 
