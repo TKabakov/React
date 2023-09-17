@@ -7,8 +7,6 @@ export default function Scoreboard() {
     score: 10,
   });
 
-  let s = player.score
-
   function handlePlusClick(e) {
     setPlayer({
       ...player,

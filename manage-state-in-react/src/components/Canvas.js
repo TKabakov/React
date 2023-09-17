@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Background from './Background.js';
-import Box from './Box.js';
+import Background from './components 2/Background.js';
+import Box from './components 2/Box.js';
 
 const initialPosition = {
   x: 0,
@@ -18,8 +18,8 @@ export default function Canvas() {
       ...shape,
       position:{
         ...shape.position,
-        x:position.x += dx,
-        y:position.y += dy,
+        x:shape.position.x += dx,
+        y:shape.position.y += dy,
       }
   });
   }
