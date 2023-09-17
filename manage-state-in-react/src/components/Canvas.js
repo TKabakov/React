@@ -19,7 +19,7 @@ export default function Canvas() {
       position:{
         ...shape.position,
         x:position.x += dx,
-        y:position.y += dy
+        y:position.y += dy,
       }
   });
   }
