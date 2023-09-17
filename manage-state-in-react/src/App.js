@@ -6,7 +6,7 @@ import TravalPlan from './components/TravalPlan';
 import Counter from './components/Counter';
 import Object from './components/ObjectUpdate';
 import Data from './components/PersonalData';
-
+import Scoreboard from './components/Scoreboard';
 function App() {
   return (
     <div className="App">
@@ -23,6 +23,8 @@ function App() {
         <Object />
       <h2>Personal Data:</h2>
         <Data />
+      <h2>Scoreboard:</h2>
+        <Scoreboard />
     </div>
   );
 }
