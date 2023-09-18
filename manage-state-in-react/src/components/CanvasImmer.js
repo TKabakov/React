@@ -10,24 +10,28 @@ const initialPosition = {
 };
 
 export default function Canvas() {
-  const [shape, setShape] = useState({
+  const [shape, updateShape] = useImmer({
     color: 'orange',
     position: initialPosition
   });
-
+// use updateShape and useImmer
   function handleMove(dx, dy) {
-    setShape(draft =>{
+    updateShape(draft =>{
       draft.position.x += dx;
       draftcposition.y += dy;
   });
   }
+//add draftr, delete ...position, replace position with draft.position.x 
+//and draft.position.y and
+// replace : with = operatator
 
   function handleColorChange(e) {
-    setShape(draft =>{
+    updateShape(draft =>{
       draft.color = e.target.value;
     });
   }
-
+//add draftr, delete ...shape, replace color with draft.color
+// replace : with = operatator
   return (
     <>
       <select
