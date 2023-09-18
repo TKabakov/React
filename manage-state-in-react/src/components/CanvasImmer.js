@@ -16,20 +16,15 @@ export default function Canvas() {
   });
 
   function handleMove(dx, dy) {
-    setShape({
-      ...shape,
-      position:{
-        ...shape.position,
-        x:shape.position.x += dx,
-        y:shape.position.y += dy,
-      }
+    setShape(draft =>{
+      draft.position.x += dx;
+      draftcposition.y += dy;
   });
   }
 
   function handleColorChange(e) {
-    setShape({
-      ...shape,
-      color: e.target.value
+    setShape(draft =>{
+      draft.color = e.target.value;
     });
   }
 
