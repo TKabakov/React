@@ -1,5 +1,4 @@
 import './App.css';
-import AboutPage from './components/AboutPage';
 import MyButton from './components/MyButton';
 import Profile from './components/Profile';
 import ShoppingList from './components/ShoppingList';
@@ -18,7 +17,6 @@ function handleClick () {
       <h1>Werlcome to my app</h1>
       <MyButton />
       <MyButton />
-      <AboutPage />
       <Profile />
       <ShoppingList />
       <h1>Counters that update separately</h1>
