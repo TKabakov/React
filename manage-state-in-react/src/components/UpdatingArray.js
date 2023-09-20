@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 let nextId = 0;
 
-export default function List() {
+export default function UpdateArray() {
   const [name, setName] = useState('');
   const [artists, setArtists] = useState([]);
 
@@ -15,7 +15,6 @@ export default function List() {
       />
       <button onClick={() => {
         setArtists([
-      
           { id: nextId++, name: name },
           ...artists
         ]);

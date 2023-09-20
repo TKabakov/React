@@ -3,7 +3,7 @@ export default function Background({
   }) {
     return (
       <div style={{
-        position: 'absolute',
+        position: 'realtive',
         transform: `translate(
           ${position.x}px,
           ${position.y}px

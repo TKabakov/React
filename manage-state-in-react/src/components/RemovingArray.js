@@ -7,7 +7,7 @@ let initialArtists = [
   { id: 3, name: 'Teo Kabakov'},
 ];
 
-export default function List() {
+export default function RemoveArray() {
   const [artists, setArtists] = useState(
     initialArtists
   );

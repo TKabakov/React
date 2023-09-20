@@ -8,11 +8,11 @@ import Object from './components/ObjectUpdate';
 import Data from './components/PersonalData';
 import Scoreboard from './components/Scoreboard';
 import Canvas from './components/Canvas';
+import UpdateArray from './components/UpdatingArray';
 
 function App() {
   return (
     <div className="App">
-
       <h2>Booking Form</h2>
         <FeedbackForm />
       <h2>Full name form</h2>
@@ -29,6 +29,8 @@ function App() {
         <Scoreboard />
       <h2>Canvas:</h2>
         <Canvas />
+      <h2>Updating an Array</h2>
+        <UpdateArray />
     </div>
   );
 }

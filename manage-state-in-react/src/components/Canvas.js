@@ -32,7 +32,7 @@ export default function Canvas() {
   }
 
   return (
-    <>
+    <div className='canvas'>
       <select
         value={shape.color}
         onChange={handleColorChange}
@@ -51,6 +51,6 @@ export default function Canvas() {
       >
         Drag me!
       </Box>
-    </>
+    </div>
   );
 }
