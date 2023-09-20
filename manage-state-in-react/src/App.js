@@ -27,9 +27,9 @@ function App() {
         <Data />
       <h2>Scoreboard:</h2>
         <Scoreboard />
-      <h2>Canvas:</h2>
+      <h2>"Deep" state update of nested objects:</h2>
         <Canvas />
-      <h2>Updating an Array</h2>
+      <h2>Updating an Array using spread sintax:</h2>
         <UpdateArray />
     </div>
   );
