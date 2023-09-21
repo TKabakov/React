@@ -4,7 +4,7 @@ import FeedbackForm from './components/BookingHotel';
 import Form from './components/FullName';
 import TravalPlan from './components/TravalPlan';
 import Counter from './components/Counter';
-import Object from './components/ObjectUpdate';
+import ObjectUpdate from './components/ObjectUpdate';
 import Data from './components/PersonalData';
 import Scoreboard from './components/Scoreboard';
 import Canvas from './components/Canvas';
@@ -23,7 +23,7 @@ function App() {
       <h2>Counter</h2>
         <Counter />
       <h2>Object Update:</h2>
-        <Object />
+        <ObjectUpdate />
       <h2>Personal Data:</h2>
         <Data />
       <h2>Scoreboard:</h2>
