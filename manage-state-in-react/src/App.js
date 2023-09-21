@@ -4,12 +4,14 @@ import FeedbackForm from './components/BookingHotel';
 import Form from './components/FullName';
 import TravalPlan from './components/TravalPlan';
 import Counter from './components/Counter';
-import Object from './components/ObjectUpdate';
+import ObjectUpdate from './components/ObjectUpdate';
 import Data from './components/PersonalData';
 import Scoreboard from './components/Scoreboard';
 import Canvas from './components/Canvas';
 import UpdateArray from './components/UpdatingArray';
 import RemoveArray from './components/RemovingArray';
+import InsertArray from './components/InsertArray';
+import CounterList from './components/RemovingArray';
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
       <h2>Counter</h2>
         <Counter />
       <h2>Object Update:</h2>
-        <Object />
+        <ObjectUpdate />
       <h2>Personal Data:</h2>
         <Data />
       <h2>Scoreboard:</h2>
