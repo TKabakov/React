@@ -10,6 +10,8 @@ import Scoreboard from './components/Scoreboard';
 import Canvas from './components/Canvas';
 import UpdateArray from './components/UpdatingArray';
 import RemoveArray from './components/RemovingArray';
+import InsertArray from './components/InsertArray';
+import CounterList from './components/RemovingArray';
 
 function App() {
   return (
