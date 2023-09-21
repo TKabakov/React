@@ -7,7 +7,7 @@ const initialArtists = [
   { id: 2, name: 'Louise Nevelson'},
 ];
 
-export default function List() {
+export default function InsertArray() {
   const [name, setName] = useState('');
   const [artists, setArtists] = useState(
     initialArtists
