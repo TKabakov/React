@@ -4,7 +4,9 @@ function DessertsList(props) {
 
     const sortItems = filterItems.sort((a,b) => a.calories-b.calories);
     */
-
+  const maped=props.data.map((dessert) =>{
+    return<li key={dessert.name}>{`${dessert.name} - ${dessert.calories}cal`}</li>
+  })
     const filterAndSort = props.data.filter(item => item.calories < 400)
     .sort((a,b) => a.calories-b.calories)
     .map((dessert) => {
@@ -14,8 +16,13 @@ function DessertsList(props) {
     //map chained
 
     return (
-      <div>
-        <h2>List of low calories desserts:</h2>
+      <div className="App">
+        <h2>Dessert List:</h2>
+        <ul>
+          { maped }
+        </ul>
+        <h2>Sort and Filtered</h2>
+        <h3>List of low calories desserts:</h3>
         <ul>
             { filterAndSort }
         </ul>
