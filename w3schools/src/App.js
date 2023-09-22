@@ -41,7 +41,7 @@ function App() {
   ];
   
   return (
-    <>
+    <div className='App'>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
@@ -63,7 +63,7 @@ function App() {
     <h1>Sort, filter and map an array</h1>
     <DessertsList data={desserts} />
     <NameList />
-    </>
+    </div>
     )
 }
 

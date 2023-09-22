@@ -16,7 +16,7 @@ function DessertsList(props) {
     //map chained
 
     return (
-      <div>
+      <div className="App">
         <h2>Dessert List:</h2>
         <ul>
           { maped }
