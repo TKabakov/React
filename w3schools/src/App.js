@@ -60,6 +60,7 @@ function App() {
     < MyCar />
     <Timer />
     <Counter />
+    <h2>Sort, filter and map an array</h2>
     <DessertsList data={desserts} />
     <NameList />
     </>
