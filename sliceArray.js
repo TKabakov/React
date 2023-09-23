@@ -1,12 +1,13 @@
 // Using slice, create newCar from myCar.
 const myHonda = {
-  color: "red",
+  color: "silver",
   wheels: 4,
   engine: { cylinders: 4, size: 2.2 },
 };
 const myCar = [myHonda, 2, "cherry condition", "purchased 1997"];
 const newCar = myCar.slice(0, 2);
 
+console.log("My car is", myHonda);
 console.log("myCar =", myCar);
 console.log("newCar =", newCar);
 console.log("myCar[0].color =", myCar[0].color);
