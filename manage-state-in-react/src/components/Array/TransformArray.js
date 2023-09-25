@@ -38,7 +38,7 @@ export default function ShapeEditor() {
           key={shape.id}
           style={{
           background: 'purple',
-          position: 'absolute',
+          position: 'relative',
           left: shape.x,
           top: shape.y,
           borderRadius:

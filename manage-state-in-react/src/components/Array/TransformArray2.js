@@ -6,7 +6,7 @@ let initialShapes = [
   { id: 2, type: 'circle', x: 250, y: 100 },
 ];
 
-export default function ShapeEditor() {
+export default function ShapeEditor2() {
   const [shapes, setShapes] = useState(
     initialShapes
   );
@@ -37,7 +37,6 @@ const moveShape ={
               ? '50%' : '',
           width: 20,
           height: 20 };
-
   return (
     <>
       <button onClick={handleClick}>

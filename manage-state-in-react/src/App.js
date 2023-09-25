@@ -12,6 +12,7 @@ import UpdateArray from './components/Array/UpdatingArray';
 import RemoveArray from './components/Array/RemovingArray';
 import InsertArray from './components/Array/InsertArray';
 import CounterList from './components/Array/ReplacingArray';
+import ShapeEditor from './components/Array/TransformArray';
 
 function App() {
   return (
@@ -42,6 +43,8 @@ function App() {
         <InsertArray />
       <h2>Replacing items from an Array</h2>
         <CounterList />
+      <h2>Transforming an array</h2>
+        <ShapeEditor />
     </div>
   );
 }
