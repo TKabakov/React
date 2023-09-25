@@ -43,6 +43,11 @@ function App() {
         <InsertArray />
       <h2>Replacing items from an Array</h2>
         <CounterList />
+        <p>To replace an item, create a new array with map. 
+          <br/>
+          Inside your map call, you will receive the item index as the second argument. 
+          <br/>
+          Use it to decide whether to return the original item (the first argument) or something else.</p>
       <h2>Transforming an array using map function</h2>
         <ShapeEditor />
         <p>In this example, an array holds coordinates of two circles and a square.
