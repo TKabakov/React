@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 let initialShapes = [
-  { id: 0, type: 'circle', x: 50, y: 100 },
-  { id: 1, type: 'square', x: 150, y: 100 },
-  { id: 2, type: 'circle', x: 250, y: 100 },
+  { id: 0, type: 'circle', x: 50, y: 150 },
+  { id: 1, type: 'square', x: 150, y: 150 },
+  { id: 2, type: 'circle', x: 250, y: 150 },
 ];
 
 export default function ShapeEditor() {
@@ -29,7 +29,7 @@ export default function ShapeEditor() {
   }
 
   return (
-    <>
+    <div>
       <button onClick={handleClick}>
         Move circles down!
       </button>
@@ -48,6 +48,6 @@ export default function ShapeEditor() {
           height: 20,
         }} />
       ))}
-    </>
+    </div>
   );
 }
