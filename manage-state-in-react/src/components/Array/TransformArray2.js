@@ -6,7 +6,7 @@ let initialShapes = [
   { id: 2, type: 'circle', x: 250, y: 100 },
 ];
 
-export default function ShapeEditor() {
+export default function ShapeEditor2() {
   const [shapes, setShapes] = useState(
     initialShapes
   );
@@ -27,7 +27,16 @@ export default function ShapeEditor() {
     // Re-render with the new array
     setShapes(nextShapes);
   }
-
+const moveShape ={
+          background: 'purple',
+          position: 'absolute',
+          left: shape.x,
+          top: shape.y,
+          borderRadius:
+            shape.type === 'circle'
+              ? '50%' : '',
+          width: 20,
+          height: 20 };
   return (
     <>
       <button onClick={handleClick}>
@@ -37,16 +46,8 @@ export default function ShapeEditor() {
         <div
           key={shape.id}
           style={{
-          background: 'purple',
-          position: 'absolute',
-          left: shape.x,
-          top: shape.y,
-          borderRadius:
-            shape.type === 'circle'
-              ? '50%' : '',
-          width: 20,
-          height: 20,
-        }} />
+            moveShape
+          }} />
       ))}
     </>
   );

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 let initialShapes = [
-  { id: 0, type: 'circle', x: 50, y: 100 },
-  { id: 1, type: 'square', x: 150, y: 100 },
-  { id: 2, type: 'circle', x: 250, y: 100 },
+  { id: 0, type: 'circle', x: 50, y: 150 },
+  { id: 1, type: 'square', x: 150, y: 150 },
+  { id: 2, type: 'circle', x: 250, y: 150 },
 ];
 
 export default function ShapeEditor() {
@@ -27,19 +27,9 @@ export default function ShapeEditor() {
     // Re-render with the new array
     setShapes(nextShapes);
   }
-const moveShape ={
-          background: 'purple',
-          position: 'absolute',
-          left: shape.x,
-          top: shape.y,
-          borderRadius:
-            shape.type === 'circle'
-              ? '50%' : '',
-          width: 20,
-          height: 20 };
 
   return (
-    <>
+    <div>
       <button onClick={handleClick}>
         Move circles down!
       </button>
@@ -47,9 +37,17 @@ const moveShape ={
         <div
           key={shape.id}
           style={{
-            moveShape
-        j} />
+          background: 'purple',
+          position: 'relative',
+          left: shape.x,
+          top: shape.y,
+          borderRadius:
+            shape.type === 'circle'
+              ? '50%' : '',
+          width: 20,
+          height: 20,
+        }} />
       ))}
-    </>
+    </div>
   );
 }
