@@ -48,7 +48,7 @@ const moveShape ={
           key={shape.id}
           style={{
             moveShape
-        j} />
+          }} />
       ))}
     </>
   );

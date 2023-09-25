@@ -8,10 +8,10 @@ import ObjectUpdate from './components/ObjectUpdate';
 import Data from './components/PersonalData';
 import Scoreboard from './components/Scoreboard';
 import Canvas from './components/Canvas';
-import UpdateArray from './components/UpdatingArray';
-import RemoveArray from './components/RemovingArray';
-import InsertArray from './components/InsertArray';
-import CounterList from './components/RemovingArray';
+import UpdateArray from './components/Array/UpdatingArray';
+import RemoveArray from './components/Array/RemovingArray';
+import InsertArray from './components/Array/InsertArray';
+import CounterList from './components/Array/RemovingArray';
 
 function App() {
   return (
