@@ -29,7 +29,7 @@ export default function ShapeEditor() {
   }
 
   return (
-    <div>
+    <div style={{display:'flex'}}>
       <button onClick={handleClick}>
         Move circles down!
       </button>
