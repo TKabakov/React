@@ -43,8 +43,9 @@ function App() {
         <InsertArray />
       <h2>Replacing items from an Array</h2>
         <CounterList />
-      <h2>Transforming an array</h2>
+      <h2>Transforming an array using map function</h2>
         <ShapeEditor />
+        <p>In this example, an array holds coordinates of two circles and a square. When you press the button, it moves only the circles down by 50 pixels. It does this by producing a new array of data using map()</p>
     </div>
   );
 }
