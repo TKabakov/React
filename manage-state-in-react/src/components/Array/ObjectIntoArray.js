@@ -19,10 +19,11 @@ export default function BucketList() {
         return {
           ...artwork, seen:nextSeen
         };
+      }
       else {
        return artwork;
       }
-      }});
+      });
     setMyList(myNextList);
   }
 
@@ -32,10 +33,11 @@ export default function BucketList() {
         return {
           ...artwork, seen:nextSeen
         };
+      }
       else {
        return artwork;
       }
-      }});
+      });
       setYourList(yourNextList);
 
   return (
@@ -75,4 +77,4 @@ function ItemList({ artworks, onToggle }) {
       ))}
     </ul>
   );
-}
+}}
