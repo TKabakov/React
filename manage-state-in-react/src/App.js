@@ -14,7 +14,7 @@ import InsertArray from './components/Array/InsertArray';
 import CounterList from './components/Array/ReplacingArray';
 import ShapeEditor from './components/Array/TransformArray';
 import ReverseList from './components/Array/ReverseArray';
-import BucketList from './components/Array/ObjectIntoArray';
+import BucketList from './components/Array/ObjectIsideArray';
 
 function App() {
   return (
