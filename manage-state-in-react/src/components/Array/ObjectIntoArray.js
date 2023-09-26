@@ -31,7 +31,7 @@ export default function BucketList() {
     const yourNextList = yourList.map((artwork) => {
       if(artwork.id === artworkId){
         return {
-          ...artwork, seen:nextSeen
+          ...artwork, seen: nextSeen
         };
       }
       else {
