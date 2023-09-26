@@ -7,7 +7,7 @@ const initialList = [
   { id: 2, title: 'Terracotta Army' },
 ];
 
-export default function List() {
+export default function ReverseList() {
   const [list, setList] = useState(initialList);
 
   function handleClick() {
