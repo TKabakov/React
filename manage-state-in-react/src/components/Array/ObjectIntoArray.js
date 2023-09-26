@@ -14,22 +14,28 @@ export default function BucketList() {
   );
 
   function handleToggleMyList(artworkId, nextSeen) {
-    const myNextList = [...myList];
-    const artwork = myNextList.find(
-      a => a.id === artworkId
-    );
-    artwork.seen = nextSeen;
+    const myNextList = myList.map((artwork) => {
+      if(artwork.id === artworkId){
+        return {
+          ...artwork, seen:nextSeen
+        };
+      else {
+       return artwork;
+      }
+      }});
     setMyList(myNextList);
   }
 
   function handleToggleYourList(artworkId, nextSeen) {
-    const yourNextList = [...yourList];
-    const artwork = yourNextList.find(
-      a => a.id === artworkId
-    );
-    artwork.seen = nextSeen;
-    setYourList(yourNextList);
-  }
+    const yourNextList = List.map((artwork) => {
+      if(artwork.id === artworkId){
+        return {
+          ...artwork, seen:nextSeen
+        };
+      else {
+       return artwork;
+      }
+      }});
 
   return (
     <>
