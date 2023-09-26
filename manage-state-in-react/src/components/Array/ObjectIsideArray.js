@@ -8,9 +8,7 @@ const initialList = [
 
 export default function BucketList() {
   const [myList, setMyList] = useState(initialList);
-  const [yourList, setYourList] = useState(
-    initialList
-  );
+  const [yourList, setYourList] = useState(initialList);
 
   function handleToggleMyList(artworkId, nextSeen) {
     const myNextList = myList.map((artwork) => {
@@ -21,8 +19,8 @@ export default function BucketList() {
       }
       else {
        return artwork;
-      }
-      });
+      }});
+
     setMyList(myNextList);
   }
 
@@ -35,10 +33,10 @@ export default function BucketList() {
       }
       else {
        return artwork;
-      }
-      });
+      }});
+
       setYourList(yourNextList);
-    };
+    }
 
   return (
     <>
