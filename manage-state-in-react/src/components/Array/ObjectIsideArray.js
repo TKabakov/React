@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-let nextId = 3;
 const initialList = [
   { id: 0, title: 'Big Bellies', seen: false },
   { id: 1, title: 'Lunar Landscape', seen: false },
@@ -9,9 +8,7 @@ const initialList = [
 
 export default function BucketList() {
   const [myList, setMyList] = useState(initialList);
-  const [yourList, setYourList] = useState(
-    initialList
-  );
+  const [yourList, setYourList] = useState(initialList);
 
   function handleToggleMyList(artworkId, nextSeen) {
     const myNextList = myList.map((artwork) => {
@@ -19,10 +16,11 @@ export default function BucketList() {
         return {
           ...artwork, seen:nextSeen
         };
+      }
       else {
        return artwork;
-      }
       }});
+
     setMyList(myNextList);
   }
 
@@ -30,22 +28,24 @@ export default function BucketList() {
     const yourNextList = yourList.map((artwork) => {
       if(artwork.id === artworkId){
         return {
-          ...artwork, seen:nextSeen
+          ...artwork, seen: nextSeen
         };
+      }
       else {
        return artwork;
-      }
       }});
+
       setYourList(yourNextList);
+    }
 
   return (
     <>
-      <h1>Art Bucket List</h1>
-      <h2>My list of art to see:</h2>
+      <h2>Art Bucket List</h2>
+      <h3>My list of art to see:</h3>
       <ItemList
         artworks={myList}
         onToggle={handleToggleMyList} />
-      <h2>Your list of art to see:</h2>
+      <h3>Your list of art to see:</h3>
       <ItemList
         artworks={yourList}
         onToggle={handleToggleYourList} />
@@ -76,3 +76,4 @@ function ItemList({ artworks, onToggle }) {
     </ul>
   );
 }
+

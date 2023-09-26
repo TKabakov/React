@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-let nextId = 3;
 const initialList = [
   { id: 0, title: 'Big Bellies' },
   { id: 1, title: 'Lunar Landscape' },

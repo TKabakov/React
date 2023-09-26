@@ -14,6 +14,7 @@ import InsertArray from './components/Array/InsertArray';
 import CounterList from './components/Array/ReplacingArray';
 import ShapeEditor from './components/Array/TransformArray';
 import ReverseList from './components/Array/ReverseArray';
+import BucketList from './components/Array/ObjectIsideArray';
 
 function App() {
   return (
@@ -70,6 +71,8 @@ function App() {
         <ReverseList/>
         <p>The JavaScript reverse() and sort() methods are mutating the original array, so you can’t use them directly.
           However, you can copy the array first, and then make changes to it.</p>
+      <h2>Updating Objects inside an Array</h2>
+        <BucketList/>
     </div>
   );
 }
