@@ -39,6 +39,7 @@ export default function BucketList() {
       }
       });
       setYourList(yourNextList);
+    };
 
   return (
     <>
@@ -77,4 +78,5 @@ function ItemList({ artworks, onToggle }) {
       ))}
     </ul>
   );
-}}
+}
+
