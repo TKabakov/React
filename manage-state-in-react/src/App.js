@@ -13,6 +13,7 @@ import RemoveArray from './components/Array/RemovingArray';
 import InsertArray from './components/Array/InsertArray';
 import CounterList from './components/Array/ReplacingArray';
 import ShapeEditor from './components/Array/TransformArray';
+import ReverseList from './components/Array/ReverseArray';
 
 function App() {
   return (
@@ -65,6 +66,10 @@ function App() {
           When you press the button, it moves only the circles down by 50 pixels. 
           <br/>
           It does this by producing a new array of data using map()</p>
+      <h2>Using reverse and/or sort functions</h2>
+        <ReverseList/>
+        <p>The JavaScript reverse() and sort() methods are mutating the original array, so you can’t use them directly.
+          However, you can copy the array first, and then make changes to it.</p>
     </div>
   );
 }
