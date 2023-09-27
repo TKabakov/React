@@ -20,13 +20,15 @@ export default function ShoppingCart() {
     setProducts
   ] = useState(initialProducts)
 
-  function handleIncreaseClick(productId, productName, productCount) {
+  function handleIncreaseClick(productId, productName) {
     const nextProducts = products.map((p) => {
       if (p.id === productId ) {
         return {
           ...p,
+          //changing products.name by parameter productName
           name: "delicious " + productName,
-          count: productCount + 1
+          //another aproach to change products.count without using parameter 
+          count: p.count + 1
       };
     }
       else {
