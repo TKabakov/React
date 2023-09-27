@@ -24,7 +24,7 @@ export default function ShoppingCart() {
     const nextProducts = products.map((p,i) =>{
       if (p.id === productId ) {
         return {
-          ...p, p.count = p.count + 1;
+          ...p, p.count: {p.count + 1};
       }
       else {
         return {
@@ -32,19 +32,6 @@ export default function ShoppingCart() {
       }
     });
     setProducts(nextProducts);
-  }
-
-function handleIncrementClick(index) {
-    const nextCounters = counters.map((c, i) => {
-      if (i === index) {
-        // Increment the clicked counter
-        return c + 1;
-      } else {
-        // The rest haven't changed
-        return c;
-      }
-    });
-    setCounters(nextCounters);
   }
 
   return (
