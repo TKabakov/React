@@ -22,11 +22,13 @@ export default function ShoppingCart() {
 
   function handleIncreaseClick(productId) {
     const nextProducts = products.map((p,i) =>{
-      if (i === productId ) {
-        return p.count + 1;
+      if (p.id === productId ) {
+        return {
+          ...p, p.count = p.count + 1;
       }
       else {
-        return p.count;
+        return {
+          p.count;
       }
     });
     setProducts(nextProducts);
