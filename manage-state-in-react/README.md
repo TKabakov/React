@@ -8,3 +8,4 @@
 6. Replacing items from an array with map() and item index as second arrgument.
 7. You can transform(change) an array with map().![Alt text](image-12.png)![Alt text](image-13.png)
 8. Updating Objects inside an Array(ObjectInsideArray.js)![Alt text](image-14.png)
+9. Update an item in the shopping cart (ShoppingCart.js)![Alt text](image-15.png)![Alt text](image-16.png)
