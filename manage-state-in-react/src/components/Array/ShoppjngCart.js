@@ -20,15 +20,15 @@ export default function ShoppingCart() {
     setProducts
   ] = useState(initialProducts)
 
-  function handleIncreaseClick(productId) {
-    const nextProducts = products.map((p) =>{
-      if (p.id === productId ) {
+  function handleIncreaseClick(productId, productCount) {
+    const nextProducts = products.map((product, count) => {
+      if (product.id === productId ) {
         return {
-          ...p, count: 1
+          ...product, count: productCount + 1
       };
     }
       else {
-        return count;
+        return product;
     }});
     setProducts(nextProducts);
   }
@@ -41,7 +41,7 @@ export default function ShoppingCart() {
           {' '}
           (<b>{product.count}</b>)
           <button onClick={() => {
-            handleIncreaseClick(product.id);
+            handleIncreaseClick(product.id, product.count);
           }}>
             +
           </button>

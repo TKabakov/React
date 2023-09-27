@@ -15,6 +15,7 @@ import CounterList from './components/Array/ReplacingArray';
 import ShapeEditor from './components/Array/TransformArray';
 import ReverseList from './components/Array/ReverseArray';
 import BucketList from './components/Array/ObjectIsideArray';
+import ShoppingCart from './components/Array/ShoppjngCart';
 
 function App() {
   return (
@@ -73,6 +74,8 @@ function App() {
           However, you can copy the array first, and then make changes to it.</p>
       <h2>Updating Objects inside an Array</h2>
         <BucketList/>
+      <h2>ShoppingCart</h2>
+        <ShoppingCart/>
     </div>
   );
 }
