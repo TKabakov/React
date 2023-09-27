@@ -21,16 +21,15 @@ export default function ShoppingCart() {
   ] = useState(initialProducts)
 
   function handleIncreaseClick(productId) {
-    const nextProducts = products.map((p,i) =>{
+    const nextProducts = products.map((p) =>{
       if (p.id === productId ) {
         return {
-          ...p, p.count: {p.count + 1};
-      }
+          ...p, count: 1
+      };
+    }
       else {
-        return {
-          p.count;
-      }
-    });
+        return count;
+    }});
     setProducts(nextProducts);
   }
 
