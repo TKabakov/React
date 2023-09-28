@@ -50,7 +50,7 @@ function handleDecreaseClick(productId, productName,productCount) {
       else {
         return p;
     }});
-    setProducts(nextProducts);
+    setProducts(deleteProducts);
   }
   
   
