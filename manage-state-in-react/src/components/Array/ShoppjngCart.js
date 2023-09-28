@@ -22,7 +22,7 @@ export default function ShoppingCart() {
 
   function handleIncreaseClick(productId, productName) {
     const nextProducts = products.map((p) => {
-      if (p.id === productId ) {
+      if ((p.id === productId)&& ( p.id === productId) ) {
         return {
           ...p,
           //changing products.name by parameter productName
@@ -36,6 +36,24 @@ export default function ShoppingCart() {
     }});
     setProducts(nextProducts);
   }
+function handleDecreaseClick(productId, productName,productCount) {
+    const deleteProducts = products.map((p) => {
+      if (p.count === p) {
+        return {
+          ...p,
+          //changing products.name by parameter productName
+          name: "delicious " + productName,
+          //another aproach to change products.count without using parameter 
+          count: p.count + 1
+      };
+    }
+      else {
+        return p;
+    }});
+    setProducts(nextProducts);
+  }
+  
+  
 
   return (
     <ul>
