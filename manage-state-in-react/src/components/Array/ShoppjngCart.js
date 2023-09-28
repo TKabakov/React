@@ -49,6 +49,11 @@ export default function ShoppingCart() {
           }}>
             +
           </button>
+          <button onClick={() => {
+            handleDecreaseClick(product.id);
+          }}>
+          -
+          </button>
         </li>
       ))}
     </ul>
