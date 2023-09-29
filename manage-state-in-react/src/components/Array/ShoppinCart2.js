@@ -40,7 +40,12 @@ export default function ShoppingCart() {
           ...product,
           count: product.count - 1
         };
-      } else {
+      } else if(product.count === 0){
+        return (product.filter(a =>
+          a.id !== product.id
+        ));
+      }
+      else {
         return product;
       }
     }))
