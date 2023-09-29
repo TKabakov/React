@@ -16,7 +16,6 @@ import ShapeEditor from './components/Array/TransformArray';
 import ReverseList from './components/Array/ReverseArray';
 import BucketList from './components/Array/ObjectIsideArray';
 import ShoppingCart from './components/Array/ShoppingCart';
-import ShoppingCart2 from './components/Array/ShoppinCart2';
 
 function App() {
   return (
@@ -76,7 +75,7 @@ function App() {
       <h2>Updating Objects inside an Array</h2>
         <BucketList/>
       <h2>Increasing, decreading and deleting the number of products in a ShoppingCart</h2>
-        <ShoppingCart2/>
+        <ShoppingCart/>
     </div>
   );
 }

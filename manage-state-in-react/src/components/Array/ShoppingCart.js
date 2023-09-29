@@ -20,15 +20,36 @@ export default function ShoppingCart() {
     setProducts
   ] = useState(initialProducts)
 
-  function handleIncreaseClick(productId, productName) {
+  function handleIncreaseClick(productId) {
+    setProducts(products.map(product => {
+      if (product.id === productId) {
+        return {
+          ...product,
+          count: product.count + 1
+        };
+      } else {
+        return product;
+      }
+    }))
+  }
+
+  /*
+  Another approach using expression instead of statement
+  and more parameters:
+
+   function handleIncreaseClick(productId, productName, productCount) {
     const nextProducts = products.map((p) => {
       if (p.id === productId) {
         return {
           ...p,
-          //changing products.name by parameter productName
+
+          //changing products.name by the parameter called productName
+
           name: "delicious " + productName,
+
           //another aproach to change products.count without using parameter 
-          count: p.count - 1
+
+          count: p.count + 1
       };
     }
       else {
@@ -36,21 +57,64 @@ export default function ShoppingCart() {
     }});
     setProducts(nextProducts);
   }
-  
-function handleDecreaseClick(nextProducts, productId) {
-    const deleteProducts = nextProducts.map((p) => {
-      if (p.productId === productId) {
+  */
+
+  function handleDeleteClick(productId){
+    const deleteProducts = products
+    .map(product => {
+      if (product.id === productId){
         return {
-          ...p,
-          count: p.count - 1
-      };
-    }
+          ...product,
+          count: product.count - 1
+        };
+      } 
       else {
-        return p;
-    }});
+        return product;
+      }
+    })
+    .filter(product => product.count > 0);
+
     setProducts(deleteProducts);
   }
-  
+
+  /*
+  Another approach:
+  function handleDecreaseClick(productId) {
+    let nextProducts = products.map(product => {
+      if (product.id === productId) {
+        return {
+          ...product,
+          count: product.count - 1
+        };
+      } else {
+        return product;
+      }
+    });
+    nextProducts = nextProducts.filter(p =>
+      p.count > 0
+    );
+    setProducts(nextProducts)
+  }
+  */
+
+  /*
+  And using statement:
+    function handleDeleteClick(productId){
+    setProducts(products.filter(product => product.count > 0)
+    .map(product => {
+      if (product.id === productId){
+        return {
+          ...product,
+          count: product.count - 1
+        };
+      } 
+      else {
+        return product;
+      }
+    }));
+  }
+  */
+
   return (
     <ul>
       {products.map(product => (
@@ -64,9 +128,9 @@ function handleDecreaseClick(nextProducts, productId) {
             +
           </button>
           <button onClick={() => {
-            handleDecreaseClick(product.id);
+            handleDeleteClick(product.id);
           }}>
-          -
+            –
           </button>
         </li>
       ))}
