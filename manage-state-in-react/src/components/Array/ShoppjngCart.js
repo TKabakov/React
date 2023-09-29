@@ -28,7 +28,7 @@ export default function ShoppingCart() {
           //changing products.name by parameter productName
           name: "delicious " + productName,
           //another aproach to change products.count without using parameter 
-          count: p.count + 1
+          count: p.count - 1
       };
     }
       else {
@@ -38,13 +38,10 @@ export default function ShoppingCart() {
   }
 function handleDecreaseClick(productId, productName,productCount) {
     const deleteProducts = products.map((p) => {
-      if (p.count === p) {
+      if (p.productId === productId) {
         return {
           ...p,
-          //changing products.name by parameter productName
-          name: "delicious " + productName,
-          //another aproach to change products.count without using parameter 
-          count: p.count + 1
+          count: p.count - 1
       };
     }
       else {
