@@ -14,7 +14,7 @@ const initialProducts = [{
   count: 2,
 }];
 
-export default function ShoppingCart() {
+export default function ShoppingCart2() {
   const [
     products,
     setProducts
@@ -34,22 +34,23 @@ export default function ShoppingCart() {
   }
 
   function handleDeleteClick(productId){
-    setProducts(products.map(product => {
+    const deleteProducts = products
+    .map(product => {
       if (product.id === productId){
         return {
           ...product,
           count: product.count - 1
         };
-      } else if(product.count === 0){
-        return (product.filter(a =>
-          a.id !== product.id
-        ));
-      }
+      } 
       else {
         return product;
       }
-    }))
+    })
+    .filter(product => product.count > 0);
+    
+    setProducts(deleteProducts);
   }
+
   return (
     <ul>
       {products.map(product => (

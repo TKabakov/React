@@ -15,8 +15,8 @@ import CounterList from './components/Array/ReplacingArray';
 import ShapeEditor from './components/Array/TransformArray';
 import ReverseList from './components/Array/ReverseArray';
 import BucketList from './components/Array/ObjectIsideArray';
-import ShoppingCart from './components/Array/ShoppjngCart';
-
+import ShoppingCart from './components/Array/ShoppingCart';
+import ShoppingCart2 from './components/Array/ShoppinCart2';
 function App() {
   return (
     <div className="App">
@@ -76,6 +76,7 @@ function App() {
         <BucketList/>
       <h2>ShoppingCart</h2>
         <ShoppingCart/>
+        <ShoppingCart2/>
     </div>
   );
 }
