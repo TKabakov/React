@@ -75,7 +75,7 @@ function App() {
           However, you can copy the array first, and then make changes to it.</p>
       <h2>Updating Objects inside an Array</h2>
         <BucketList/>
-      <h2>Increasing, decreading and deleting the products in a ShoppingCart</h2>
+      <h2>Increasing, decreading and deleting the number of products in a ShoppingCart</h2>
         <ShoppingCart2/>
     </div>
   );
