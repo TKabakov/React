@@ -33,6 +33,31 @@ export default function ShoppingCart2() {
     }))
   }
 
+  /*
+  Another approach using expression instead of statement:
+
+   function handleIncreaseClick(productId, productName, productCount) {
+    const nextProducts = products.map((p) => {
+      if (p.id === productId) {
+        return {
+          ...p,
+
+          //changing products.name by the parameter called productName
+
+          name: "delicious " + productName,
+
+          //another aproach to change products.count without using parameter 
+
+          count: p.count + 1
+      };
+    }
+      else {
+        return p;
+    }});
+    setProducts(nextProducts);
+  }
+  */
+
   function handleDeleteClick(productId){
     const deleteProducts = products
     .map(product => {
@@ -70,7 +95,7 @@ export default function ShoppingCart2() {
     setProducts(nextProducts)
   }
   */
- 
+
   return (
     <ul>
       {products.map(product => (
@@ -79,7 +104,7 @@ export default function ShoppingCart2() {
           {' '}
           (<b>{product.count}</b>)
           <button onClick={() => {
-            handleIncreaseClick(product.id);
+            handleIncreaseClick(product.id, product.name, product.count);
           }}>
             +
           </button>
