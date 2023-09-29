@@ -34,7 +34,8 @@ export default function ShoppingCart2() {
   }
 
   /*
-  Another approach using expression instead of statement:
+  Another approach using expression instead of statement
+  and more parameters:
 
    function handleIncreaseClick(productId, productName, productCount) {
     const nextProducts = products.map((p) => {
