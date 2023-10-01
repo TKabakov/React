@@ -11,7 +11,8 @@ export default function BucketList() {
   const [yourList, setYourList] = useState(initialList);
 
   function handleToggleMyList(artworkId, nextSeen) {
-    //using an expression for the map function
+
+    //using an expression for the map functiongit 
     const myNextList = myList.map((artwork) => {
       if(artwork.id === artworkId){
         return {
@@ -26,6 +27,7 @@ export default function BucketList() {
   }
 
   function handleToggleYourList(artworkId, nextSeen) {
+
     //another approach with the use of a statement for map function
     setYourList(yourList.map((artwork) => {
       if(artwork.id === artworkId){
