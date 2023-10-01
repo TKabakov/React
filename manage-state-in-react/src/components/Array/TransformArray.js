@@ -14,16 +14,19 @@ export default function ShapeEditor() {
   function handleClick() {
     const nextShapes = shapes.map(shape => {
       if (shape.type === 'square') {
+
         // No change
         return shape;
       } else {
-        // Return a new circle 50px below
+
+        // Return a new circle and move it 50px below
         return {
           ...shape,
           y: shape.y + 50,
         };
       }
     });
+
     // Re-render with the new array
     setShapes(nextShapes);
   }

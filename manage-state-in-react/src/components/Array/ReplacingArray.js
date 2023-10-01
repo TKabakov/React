@@ -12,9 +12,11 @@ export default function CounterList() {
   function handleIncrementClick(index) {
     const nextCounters = counters.map((c, i) => {
       if (i === index) {
+
         // Increment the clicked counter
         return c + 1;
       } else {
+        
         // The rest haven't changed
         return c;
       }
