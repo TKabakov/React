@@ -4,7 +4,7 @@ import FeedbackForm from './components/BookingHotel';
 import Form from './components/FullName';
 import TravalPlan from './components/TravalPlan';
 import Counter from './components/Counter';
-import ObjectUpdate from './components/ObjectUpdate';
+import ObjectUpdate from './components/Object/ObjectUpdate';
 import Data from './components/PersonalData';
 import Scoreboard from './components/Scoreboard';
 import Canvas from './components/Canvas';
