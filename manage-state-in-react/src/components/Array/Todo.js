@@ -15,6 +15,7 @@ export default function TaskApp() {
   );
   const [title, setTitle] = useState('');
 
+  /*
   function handleAddTodo(title) {
     todos.push({
       id: nextId++,
@@ -22,6 +23,7 @@ export default function TaskApp() {
       done: false
     });
   }
+*/
 
   function handleAddTodo(title) {
     setTodos([
@@ -34,8 +36,9 @@ export default function TaskApp() {
     ]);
   }
 
+  /*
   function handleChangeTodo(nextTodo) {
-    setTodos(todos.map(t =>{
+    setTodos(todos.map(t => {
       if (t.id === nextTodo.id){
         return {
           ...p,
@@ -62,6 +65,7 @@ export default function TaskApp() {
     );
     todos.splice(index, 1);
   }
+*/
 
   return (
     <>
