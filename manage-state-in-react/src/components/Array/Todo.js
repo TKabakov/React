@@ -41,11 +41,11 @@ export default function TaskApp() {
   }
 
   function handleDeleteTodo(todoId) {
-    setTodos([
-      ...todos.slice(0, todoId - 1),
-      {id: todoId ++, title: title }
-    ]);
-    setTitle('');
+    setTodos(
+      todos.filter(t => 
+        t.id !== todoId
+        )
+    );
   }
 
   return (
