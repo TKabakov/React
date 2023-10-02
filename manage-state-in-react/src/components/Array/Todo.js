@@ -30,6 +30,17 @@ export default function TaskApp() {
     todo.done = nextTodo.done;
   }
 
+function handleAddTodo(title) {
+    setTodoes([
+      ...todoes,
+      {
+       id: nextId++,
+      title: title,
+      done: false       
+      }
+    ]);
+  }
+
   function handleDeleteTodo(todoId) {
     const index = todos.findIndex(t =>
       t.id === todoId
