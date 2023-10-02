@@ -13,6 +13,7 @@ export default function TaskApp() {
   const [todos, setTodos] = useState(
     initialTodos
   );
+  const [title, setTitle] = useState('');
 
   function handleAddTodo(title) {
     todos.push({
@@ -44,7 +45,13 @@ export default function TaskApp() {
     }));
   }
 
-
+  function handleDeleteTodo(todoId) {
+    setTodos([
+      ...todos.slice(0, todoId - 1),
+      {id: todoId ++, title: title }
+    ]);
+    setTitle('');
+  }
 
   function handleDeleteTodo(todoId) {
     const index = todos.findIndex(t =>
