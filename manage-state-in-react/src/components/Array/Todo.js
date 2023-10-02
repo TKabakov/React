@@ -33,11 +33,15 @@ export default function TaskApp() {
     ]);
   }
   function handleChangeTodo(nextTodo) {
-    const todo = todos.find(t =>
-      t.id === nextTodo.id
-    );
-    todo.title = nextTodo.title;
-    todo.done = nextTodo.done;
+    setTodos(todos.map(t =>{
+      if (t.id === nextTodo.id){
+        return {
+          ...p,
+          title: nextTodo.title,
+          done: nextTodo.done
+        }
+      }
+    }));
   }
 
 
