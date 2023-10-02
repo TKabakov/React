@@ -78,6 +78,7 @@ function App() {
       <h2>Increasing, decreading and deleting the number of products in a ShoppingCart</h2>
         <ShoppingCart/>
       <h2>ToDo list:</h2>
+        <TaskApp />
     </div>
   );
 }

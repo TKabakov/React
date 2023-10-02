@@ -15,16 +15,6 @@ export default function TaskApp() {
   );
   const [title, setTitle] = useState('');
 
-  /*
-  function handleAddTodo(title) {
-    todos.push({
-      id: nextId++,
-      title: title,
-      done: false
-    });
-  }
-*/
-
   function handleAddTodo(title) {
     setTodos([
       ...todos,
@@ -36,17 +26,16 @@ export default function TaskApp() {
     ]);
   }
 
-  /*
   function handleChangeTodo(nextTodo) {
     setTodos(todos.map(t => {
       if (t.id === nextTodo.id){
         return {
-          ...p,
+          ...t,
           title: nextTodo.title,
           done: nextTodo.done
         }}
       else {
-        return p
+        return t
       }
     }));
   }
@@ -58,14 +47,6 @@ export default function TaskApp() {
     ]);
     setTitle('');
   }
-
-  function handleDeleteTodo(todoId) {
-    const index = todos.findIndex(t =>
-      t.id === todoId
-    );
-    todos.splice(index, 1);
-  }
-*/
 
   return (
     <>
