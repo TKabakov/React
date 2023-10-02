@@ -16,6 +16,7 @@ import ShapeEditor from './components/Array/TransformArray';
 import ReverseList from './components/Array/ReverseArray';
 import BucketList from './components/Array/ObjectIsideArray';
 import ShoppingCart from './components/Array/ShoppingCart';
+import TaskApp from './components/Array/Todo';
 
 function App() {
   return (
@@ -76,6 +77,7 @@ function App() {
         <BucketList/>
       <h2>Increasing, decreading and deleting the number of products in a ShoppingCart</h2>
         <ShoppingCart/>
+      <h2>ToDo list:</h2>
     </div>
   );
 }
