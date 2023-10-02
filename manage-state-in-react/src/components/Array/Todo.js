@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import AddTodo from './AddTodo.js';
-import TaskList from './TaskList.js';
+import AddTodo from './ArrayComponents/AddToDo.js';
+import TaskList from './ArrayComponents/AddTask.js';
 
 let nextId = 3;
 const initialTodos = [
@@ -22,6 +22,16 @@ export default function TaskApp() {
     });
   }
 
+  function handleAddTodo(title) {
+    setTodos([
+      ...todos,
+      {
+       id: nextId++,
+      title: title,
+      done: false       
+      }
+    ]);
+  }
   function handleChangeTodo(nextTodo) {
     const todo = todos.find(t =>
       t.id === nextTodo.id
@@ -30,16 +40,7 @@ export default function TaskApp() {
     todo.done = nextTodo.done;
   }
 
-function handleAddTodo(title) {
-    setTodoes([
-      ...todoes,
-      {
-       id: nextId++,
-      title: title,
-      done: false       
-      }
-    ]);
-  }
+
 
   function handleDeleteTodo(todoId) {
     const index = todos.findIndex(t =>
