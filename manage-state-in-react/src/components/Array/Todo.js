@@ -33,6 +33,7 @@ export default function TaskApp() {
       }
     ]);
   }
+
   function handleChangeTodo(nextTodo) {
     setTodos(todos.map(t =>{
       if (t.id === nextTodo.id){
@@ -40,7 +41,9 @@ export default function TaskApp() {
           ...p,
           title: nextTodo.title,
           done: nextTodo.done
-        }
+        }}
+      else {
+        return p
       }
     }));
   }
