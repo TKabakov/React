@@ -13,6 +13,7 @@ export default function TaskApp() {
   const [todos, setTodos] = useState(
     initialTodos
   );
+  //consider this, there is the same state in AddToDo
   const [title, setTitle] = useState('');
 
   function handleAddTodo(title) {
@@ -35,7 +36,7 @@ export default function TaskApp() {
           done: nextTodo.done
         }}
       else {
-        return t
+        return t;
       }
     }));
   }
