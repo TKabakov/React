@@ -14,3 +14,4 @@
     -decreasing
     -deleting
     ![Alt text](image-17.png)![Alt text](image-19.png)![Alt text](image-18.png)
+11. Adding items to an array, edit and save items and deleting items(Todo.js, AddToDo.js and AddTask.js)
