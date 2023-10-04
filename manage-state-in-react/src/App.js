@@ -79,6 +79,7 @@ function App() {
         <ShoppingCart/>
       <h2>ToDo list:</h2>
         <TaskApp />
+        <p>The app uses three components. AddToDo create new todo and added it to the list. AppTask chose betweeen edit or save the array item. The same component delete the todo item. The  parant component ToDo.js creates handle functions for adding, transforming and deleting todo task.</p>
     </div>
   );
 }

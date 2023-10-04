@@ -34,7 +34,7 @@ export default function TaskApp() {
           done: nextTodo.done
         }}
       else {
-        return t
+        return t;
       }
     }));
   }
