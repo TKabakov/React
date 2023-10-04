@@ -13,7 +13,6 @@ export default function TaskApp() {
   const [todos, setTodos] = useState(
     initialTodos
   );
-  const [title, setTitle] = useState('');
 
   function handleAddTodo(title) {
     setTodos([

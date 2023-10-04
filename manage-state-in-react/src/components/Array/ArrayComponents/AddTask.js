@@ -49,7 +49,7 @@ function Task({ todo, onChange, onDelete }) {
       </>
     );
   }
-  return (
+  return (гит 
     <label>
       <input
         type="checkbox"
