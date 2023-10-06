@@ -63,23 +63,25 @@ const Header = () => {
           justifyContent="space-between"
           alignItems="center"
         >
-          <nav HStack spacing={2}>
+          <nav>
+          <HStack spacing={4}>
             {/* Add social media links based on the `socials` data */}
             <a href="mailto: hello@example.com">
-              <FontAwesomeIcon icon="faEnvelope" size="2x"/>
+              <FontAwesomeIcon icon={faEnvelope} size="2x"/>
             </a>
             <a href="https://github.com">
-              <FontAwesomeIcon icon="faGithub" size="2x"/>
+              <FontAwesomeIcon icon={faGithub} size="2x"/>
             </a>
             <a href="https://www.linkedin.com">
-              <FontAwesomeIcon icon="faLinkedin" size="2x"/>
+              <FontAwesomeIcon icon={faLinkedin} size="2x"/>
             </a>
             <a href="https://medium.com">
-              <FontAwesomeIcon icon="faMedium" size="2x"/>
+              <FontAwesomeIcon icon={faMedium} size="2x"/>
             </a>
             <a href="ttps://stackoverflow.com">
-              <FontAwesomeIcon icon="faStackOverflow" size="2x"/>
+              <FontAwesomeIcon icon="fa-StackOverflow" size="2x"/>
             </a>
+            </HStack>
           </nav>
           <nav>
             <HStack spacing={8}>
