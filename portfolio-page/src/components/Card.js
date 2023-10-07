@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
+/*
 const Card = ({ title, description, imageSrc }) => {
   // Implement the UI for the Card component according to the instructions.
   // You should be able to implement the component with the elements imported above.
@@ -21,3 +22,5 @@ const Card = ({ title, description, imageSrc }) => {
 };
 
 export default Card;
+*/
+export default function Card(){};

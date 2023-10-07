@@ -48,12 +48,16 @@ const ProjectsSection = () => {
         gridGap={8}
       >
         {projects.map((project) => (
-          <Card
+          <ul>
+          <li
             key={project.title}
             title={project.title}
             description={project.description}
             imageSrc={project.getImageSrc()}
           />
+          {project.title}
+          </ul>
+
         ))}
       </Box>
     </FullScreenSection>
