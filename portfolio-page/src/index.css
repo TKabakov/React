@@ -18,5 +18,6 @@ code {
 }
 
 h2{
-  font-size: 30px;
+  font-size:2rem;
+  font-weight: bold;
 }
