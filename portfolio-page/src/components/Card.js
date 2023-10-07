@@ -23,4 +23,8 @@ const Card = ({ title, description, imageSrc }) => {
 
 export default Card;
 */
-export default function Card(){};
+export default function Card({props}){
+  return (
+    <p>{props}</p>
+  )
+};
