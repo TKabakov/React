@@ -14,6 +14,7 @@ const Card = ({ title, description, imageSrc }) => {
     src={imageSrc}
     />
     <Heading>{title}</Heading>
+    <Text fontSize="md">{description}</Text>
 </VStack>
   return null;
 };
