@@ -1,6 +1,8 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Box, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Heading, Text, Image, HStack } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Card from "./Card";
 
 const projects = [
@@ -47,21 +49,54 @@ const ProjectsSection = () => {
         gridTemplateColumns="repeat(2,minmax(0,1fr))"
         gridGap={8}
       >
-        <img src={require('../images/image section 2 article 2.jpg')} />
-        <Image src={require('../images/photo1.jpg')}/>
-
         {projects.map((project) => (
           <ul>
             <li
             key={project.title}
-          >
-          {project.title}
-          {project.description}
-          {project.getImageSrc()}
+            >
+            <Box 
+              backgroundColor="white"
+              borderRadius="lg"
+              >
+              <Image 
+                borderRadius="lg"
+                src={project.getImageSrc()}></Image>
+              <Heading 
+                backgroundColor="white" 
+                color="black" 
+                size="lg">
+                  {project.title}  
+              </Heading>
+              <Text 
+                color="grey">
+                  {project.description}
+              </Text>
+              <HStack>
+              <Text 
+                color="black">
+                  See more
+              </Text>
+              <FontAwesomeIcon 
+                color="black" 
+                icon={faArrowRight} 
+                size="1x">
+              </FontAwesomeIcon>
+              </HStack>
+            </Box>  
             </li>
-            </ul>
+          </ul>
         ))}
+               
 
+
+        {projects.map((project) => (
+          <Card
+            key={projects.title}
+            title={projects.title}
+            description={projects.description}
+      
+          >hello</Card>
+        ))}
           <Card
             key={projects.title}
             title={projects.title}
