@@ -3,7 +3,7 @@ import FullScreenSection from "./FullScreenSection";
 import { Box, Heading, Text, Image, HStack } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import Card from "./Card2";
+import Card from "./Card";
 
 const projects = [
   {
