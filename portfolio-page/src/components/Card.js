@@ -34,8 +34,10 @@ export default function Card({props}){
       <HStack spacing={12}>
         <p>{props}</p>
         <p>{props}</p>
-        <Text fontSize="3xl">
-          <p>{props}</p>
+        <Text fontSize="3xl" noOfLines={2}>
+        <p>{props}</p>          
+        <p>{props}</p>          
+        <p>{props}</p>
         </Text>
 
 
