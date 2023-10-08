@@ -57,6 +57,7 @@ const ProjectsSection = () => {
             <Box 
               backgroundColor="white"
               borderRadius="lg"
+              minH="sm"
               >
               <Image 
                 borderRadius="lg"
@@ -86,27 +87,6 @@ const ProjectsSection = () => {
             </li>
           </ul>
         ))}
-               
-
-
-        {projects.map((project) => (
-          <Card
-            key={projects.title}
-            title={projects.title}
-            description={projects.description}
-      
-          >hello</Card>
-        ))}
-          <Card
-            key={projects.title}
-            title={projects.title}
-            description={projects.description}
-      
-          >hello</Card>
-          <Box>
-            Hello
-          </Box>
-       
       </Box>
     </FullScreenSection>
   );
