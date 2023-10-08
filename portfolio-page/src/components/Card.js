@@ -25,6 +25,22 @@ export default Card;
 */
 export default function Card({props}){
   return (
-    <p>{props}</p>
+    <VStack spacing={4}>
+      <Heading>
+        <p>{props}</p>
+      </Heading>
+        <p>{props}</p>
+        <p>{props}</p>
+      <HStack spacing={12}>
+        <p>{props}</p>
+        <p>{props}</p>
+        <Text fontSize="3xl">
+          <p>{props}</p>
+        </Text>
+
+
+      </HStack>
+    </VStack>
+
   )
 };
