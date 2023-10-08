@@ -26,7 +26,7 @@ export default Card;
 export default function Card({props}){
   return (
     <VStack spacing={4} >
-      <Heading as="h1" fontSize="4xl" >
+      <Heading mb={2} fontSize="4xl" >
         <p>{props}</p>
       </Heading >
         <p>{props}</p>
