@@ -1,4 +1,4 @@
-import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Heading, HStack, Image, StackDivider, Text, VStack } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
@@ -25,7 +25,14 @@ export default Card;
 */
 export default function Card({props}){
   return (
-    <VStack spacing={4} >
+    <>
+  
+    <img src="/photo1.jpg"></img>
+    <VStack 
+      spacing={4}
+      divider={<StackDivider borderColor="white"/>} 
+      align="stretch">
+      <Image src="photo1.jpg"></Image>
       <Heading mb={2} fontSize="4xl" >
         <p>{props}</p>
       </Heading >
@@ -46,6 +53,6 @@ export default function Card({props}){
 
       </HStack>
     </VStack>
-
+    </>
   )
 };
