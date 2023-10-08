@@ -24,16 +24,19 @@ const Card = ({ title, description, imageSrc }) => {
               <Heading 
                 backgroundColor="white" 
                 color="black" 
-                size="lg">
+                size="lg"
+                margin="2%">
                   {title}  
               </Heading>
               <Text 
-                color="grey">
+                color="grey"
+                margin="2%">
                   {description}
               </Text>
               <HStack>
               <Text 
-                color="black">
+                color="black"
+               >
                   See more
               </Text>
               <FontAwesomeIcon 
