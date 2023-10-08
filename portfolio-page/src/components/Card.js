@@ -25,16 +25,19 @@ export default Card;
 */
 export default function Card({props}){
   return (
-    <VStack spacing={4}>
-      <Heading>
+    <VStack spacing={4} >
+      <Heading as="h1" fontSize="4xl" >
         <p>{props}</p>
-      </Heading>
+      </Heading >
         <p>{props}</p>
         <p>{props}</p>
       <HStack spacing={12}>
         <p>{props}</p>
         <p>{props}</p>
-        <Text fontSize="3xl" noOfLines={2} color="tomato">
+        <Text as="i" fontSize="3xl" noOfLines={3} color="tomato">
+          <Text as="b">
+             <p>{props}</p> 
+          </Text>
         <p>{props}</p>          
         <p>{props}</p>          
         <p>{props}</p>
