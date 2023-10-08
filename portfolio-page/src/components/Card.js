@@ -27,12 +27,12 @@ export default function Card({props}){
   return (
     <>
   
-    <img src="/photo1.jpg"></img>
+    <img src="../images/photo1.jpg"></img>
     <VStack 
       spacing={4}
       divider={<StackDivider borderColor="white"/>} 
       align="stretch">
-      <Image src="photo1.jpg"></Image>
+      <Image src="/images/photo1.jpg"></Image>
       <Heading mb={2} fontSize="4xl" >
         <p>{props}</p>
       </Heading >
