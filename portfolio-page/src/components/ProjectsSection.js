@@ -67,7 +67,10 @@ const ProjectsSection = () => {
             title={projects.title}
             description={projects.description}
       
-          />
+          >hello</Card>
+          <Box>
+            Hello
+          </Box>
        
       </Box>
     </FullScreenSection>
