@@ -43,13 +43,7 @@ const LandingSection = () => {
     }),
   });
 
-  const [firstName, setFirstName] = useState(formik.initialValues.firstName);
-  const [email, setEmail] = useState(formik.initialValues.email);
-  const [type, setType] = useState(formik.initialValues.email);
-  const [comment, setComment] = useState(formik.initialValues.email);
-
-
-const isInvalidName = formik.touched.firstName && formik.errors.firstName && true;
+const isInvalidName = formik.errors.firstName && formik.touched.firstName;
 const isInvalidEmail = formik.touched.email && formik.errors.email && true;
 const isInvalidType = formik.touched.type && formik.errors.type && true;
 const isInvalidComment = formik.touched.comment && formik.errors.comment && true;
@@ -77,12 +71,11 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   name="firstName"
                   {...formik.getFieldProps('firstName')}
                 />
-                <FormHelperText></FormHelperText>
                 <FormErrorMessage>
-                  Required
+                  Text Required
                 </FormErrorMessage>
               </FormControl>
-              <FormControl isInvalid={false}>
+              <FormControl isInvalid={isInvalidEmail}>
                 <FormLabel htmlFor="email">Email Address</FormLabel>
                 <Input
                   id="email"
@@ -91,7 +84,7 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   {...formik.getFieldProps('email')}
                 />
                 <FormErrorMessage>
-
+                Email Required
                 </FormErrorMessage>
               </FormControl>
               <FormControl>
@@ -108,7 +101,7 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   <option value="other">Other</option>
                 </Select>
               </FormControl>
-              <FormControl isInvalid={false}>
+              <FormControl isInvalid={isInvalidComment}>
                 <FormLabel htmlFor="comment">Your message</FormLabel>
                 <Textarea
                   id="comment"
@@ -116,7 +109,9 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   height={250}
                   {...formik.getFieldProps('comment')}
                 />
-                <FormErrorMessage></FormErrorMessage>
+                <FormErrorMessage>
+                  Required
+                </FormErrorMessage>
               </FormControl>
               <Button type="submit" colorScheme="purple" width="full">
                 Submit
