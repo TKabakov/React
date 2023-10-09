@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { useFormik } from "formik";
 import {
   Box,
@@ -28,16 +28,25 @@ const LandingSection = () => {
       type: " ",
       comment: " "
     },
+
     onSubmit: (url, data) => {
-      useSubmit()
+      submit()
     },
-    validationSchema: Yup.object({
-      firstName: Yup.string().required(),
-      email: Yup.string().email().required(),
-      type: Yup.string().required(),
-      comment: Yup.string().required(),
+
+    validationSchema: 
+      Yup.object({
+        firstName: Yup.string().required(),
+        email: Yup.string().email().required(),
+        type: Yup.string().required(),
+        comment: Yup.string().required(),
     }),
   });
+
+  const [firstName, setFirstName] = useState(formik.initialValues.firstName);
+  const [email, setEmail] = useState(formik.initialValues.email);
+  const [type, setType] = useState(formik.initialValues.email);
+  const [comment, setComment] = useState(formik.initialValues.email);
+
 
   return (
     <FullScreenSection
@@ -58,9 +67,11 @@ const LandingSection = () => {
                 <Input
                   id="firstName"
                   name="firstName"
+                  value={firstName}
+                  onChange={(e)=>{setFirstName(e.target.value)}}
                 />
                 <FormErrorMessage>
-
+                  Required
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={false}>
@@ -69,6 +80,8 @@ const LandingSection = () => {
                   id="email"
                   name="email"
                   type="email"
+                  value={email}
+                  onChange={(e)=>{setEmail(e.target.value)}}
                 />
                 <FormErrorMessage>
 
@@ -90,6 +103,8 @@ const LandingSection = () => {
                   id="comment"
                   name="comment"
                   height={250}
+                  value={comment}
+                  onChange={(e)=>{setComment(e.target.value)}}
                 />
                 <FormErrorMessage></FormErrorMessage>
               </FormControl>
