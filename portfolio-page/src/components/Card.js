@@ -36,6 +36,7 @@ const Card = ({ title, description, imageSrc }) => {
               <HStack>
               <Text 
                 color="black"
+                marginLeft="2%"
                >
                   See more
               </Text>
