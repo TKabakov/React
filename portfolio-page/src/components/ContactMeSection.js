@@ -30,7 +30,7 @@ const LandingSection = () => {
     },
 
     onSubmit: (url, data) => {
-      submit()
+      submit();
     },
 
     validationSchema: 
@@ -60,15 +60,15 @@ const LandingSection = () => {
           Contact me
         </Heading>
         <Box p={6} rounded="md" w="100%">
-          <form>
+          <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
               <FormControl isInvalid={false}>
                 <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input
                   id="firstName"
                   name="firstName"
-                  value={firstName}
-                  onChange={(e)=>{setFirstName(e.target.value)}}
+                  onChange={formik.handleChange}
+                  value={formik.values.firstName}
                 />
                 <FormErrorMessage>
                   Required
@@ -80,8 +80,8 @@ const LandingSection = () => {
                   id="email"
                   name="email"
                   type="email"
-                  value={email}
-                  onChange={(e)=>{setEmail(e.target.value)}}
+                  onChange={formik.handleChange}
+                  value={formik.values.email}
                 />
                 <FormErrorMessage>
 
@@ -103,8 +103,8 @@ const LandingSection = () => {
                   id="comment"
                   name="comment"
                   height={250}
-                  value={comment}
-                  onChange={(e)=>{setComment(e.target.value)}}
+                  onChange={formik.handleChange}
+                  value={formik.values.comment}
                 />
                 <FormErrorMessage></FormErrorMessage>
               </FormControl>
