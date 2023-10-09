@@ -78,8 +78,8 @@ const Header = () => {
             <a href="https://medium.com">
               <FontAwesomeIcon icon={faMedium} size="2x"/>
             </a>
-            <a href="ttps://stackoverflow.com">
-              <FontAwesomeIcon icon="fa-StackOverflow" size="2x"/>
+            <a href="https://stackoverflow.com">
+              <FontAwesomeIcon icon={faStackOverflow} size="2x"/>
             </a>
             </HStack>
           </nav>
