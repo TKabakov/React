@@ -49,6 +49,11 @@ const LandingSection = () => {
   const [comment, setComment] = useState(formik.initialValues.email);
 
 
+const isInvalidName = formik.touched.firstName && formik.errors.firstName && true;
+const isInvalidEmail = formik.touched.email && formik.errors.email && true;
+const isInvalidType = formik.touched.type && formik.errors.type && true;
+const isInvalidComment = formik.touched.comment && formik.errors.comment && true;
+
   return (
     <FullScreenSection
       isDarkBackground
@@ -63,7 +68,9 @@ const LandingSection = () => {
         <Box p={6} rounded="md" w="100%">
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
-              <FormControl isInvalid={false}>
+              <FormControl 
+                isInvalid={isInvalidName}
+                  >
                 <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input
                   id="firstName"
