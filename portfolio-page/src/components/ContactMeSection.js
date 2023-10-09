@@ -5,6 +5,7 @@ import {
   Button,
   FormControl,
   FormErrorMessage,
+  FormHelperText,
   FormLabel,
   Heading,
   Input,
@@ -69,6 +70,7 @@ const LandingSection = () => {
                   name="firstName"
                   {...formik.getFieldProps('firstName')}
                 />
+                <FormHelperText></FormHelperText>
                 <FormErrorMessage>
                   Required
                 </FormErrorMessage>
