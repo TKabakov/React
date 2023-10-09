@@ -67,8 +67,7 @@ const LandingSection = () => {
                 <Input
                   id="firstName"
                   name="firstName"
-                  onChange={formik.handleChange}
-                  value={formik.values.firstName}
+                  {...formik.getFieldProps('firstName')}
                 />
                 <FormErrorMessage>
                   Required
@@ -80,8 +79,7 @@ const LandingSection = () => {
                   id="email"
                   name="email"
                   type="email"
-                  onChange={formik.handleChange}
-                  value={formik.values.email}
+                  {...formik.getFieldProps('email')}
                 />
                 <FormErrorMessage>
 
@@ -92,8 +90,7 @@ const LandingSection = () => {
                 <Select 
                   id="type" 
                   name="type"
-                  onChange={formik.handleChange}
-                  value={formik.values.type}
+                  {...formik.getFieldProps('type')}
                   >
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">
@@ -108,8 +105,7 @@ const LandingSection = () => {
                   id="comment"
                   name="comment"
                   height={250}
-                  onChange={formik.handleChange}
-                  value={formik.values.comment}
+                  {...formik.getFieldProps('comment')}
                 />
                 <FormErrorMessage></FormErrorMessage>
               </FormControl>
