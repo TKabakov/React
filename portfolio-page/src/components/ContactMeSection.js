@@ -22,9 +22,21 @@ const LandingSection = () => {
   const { onOpen } = useAlertContext();
 
   const formik = useFormik({
-    initialValues: {},
-    onSubmit: (values) => {},
-    validationSchema: Yup.object({}),
+    initialValues: {
+      firstName: " ",
+      email:" ",
+      type: " ",
+      comment: " "
+    },
+    onSubmit: (url, data) => {
+      useSubmit()
+    },
+    validationSchema: Yup.object({
+      firstName: Yup.string().required(),
+      email: Yup.string().email().required(),
+      type: Yup.string().required(),
+      comment: Yup.string().required(),
+    }),
   });
 
   return (
@@ -47,7 +59,9 @@ const LandingSection = () => {
                   id="firstName"
                   name="firstName"
                 />
-                <FormErrorMessage></FormErrorMessage>
+                <FormErrorMessage>
+
+                </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={false}>
                 <FormLabel htmlFor="email">Email Address</FormLabel>
@@ -56,7 +70,9 @@ const LandingSection = () => {
                   name="email"
                   type="email"
                 />
-                <FormErrorMessage></FormErrorMessage>
+                <FormErrorMessage>
+
+                </FormErrorMessage>
               </FormControl>
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
