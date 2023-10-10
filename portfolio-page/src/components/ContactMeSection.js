@@ -30,20 +30,20 @@ const LandingSection = () => {
       comment: " "
     },
 
-    onSubmit: (url, data) => {
+    onSubmit: (isLoading, response, submit) => {
       submit();
     },
 
     validationSchema: 
       Yup.object({
-        firstName: Yup.string().required(),
-        email: Yup.string().email().required(),
-        type: Yup.string().required(),
-        comment: Yup.string().required(),
+        firstName: Yup.string().required("Required"),
+        email: Yup.string().email().required("Required"),
+        type: Yup.string().required("Required"),
+        comment: Yup.string().required("Required"),
     }),
   });
 
-const isInvalidName = formik.errors.firstName && formik.touched.firstName;
+const isInvalidName = true && formik.errors.firstName && formik.touched.firstName;
 const isInvalidEmail = formik.touched.email && formik.errors.email && true;
 const isInvalidType = formik.touched.type && formik.errors.type && true;
 const isInvalidComment = formik.touched.comment && formik.errors.comment && true;
@@ -110,7 +110,7 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   {...formik.getFieldProps('comment')}
                 />
                 <FormErrorMessage>
-                  Required
+                Comment Required
                 </FormErrorMessage>
               </FormControl>
               <Button type="submit" colorScheme="purple" width="full">
