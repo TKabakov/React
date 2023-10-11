@@ -58,37 +58,37 @@ const LandingSection = () => {
                   onBlur={formik.handleBlur}
                   value={formik.values.firstName}
                 />
-                <FormErrorMessage>
-                  Text Required
-                </FormErrorMessage>
-              </FormControl>
-              <FormControl isInvalid={isInvalidEmail}>
-                <FormLabel htmlFor="email">Email Address</FormLabel>
-                <Input
+                {formik.touched.firstName && formik.errors.firstName ? (
+                    <div>{formik.errors.firstName}</div>
+                    ) : null}
+
+                <label htmlFor="email">Email Address</label>
+                <input
                   id="email"
                   name="email"
                   type="email"
-                  {...formik.getFieldProps('email')}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.email}
                 />
-                <FormErrorMessage>
-                Email Required
-                </FormErrorMessage>
-              </FormControl>
-              <FormControl>
-                <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select 
+                {formik.touched.email && formik.errors.email ? (
+                    <div>{formik.errors.email}</div>
+                    ) : null}
+                <label htmlFor="type">Type of enquiry</label>
+                <select 
                   id="type" 
                   name="type"
-                  {...formik.getFieldProps('type')}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.type}
                   >
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">
                     Open source consultancy session
                   </option>
                   <option value="other">Other</option>
-                </Select>
-              </FormControl>
-              <FormControl isInvalid={formik.touched.comment}>
+                </select>
+             
                 <FormLabel htmlFor="comment">Your message</FormLabel>
                 <Textarea
                   id="comment"
@@ -99,7 +99,7 @@ const LandingSection = () => {
                 <FormErrorMessage>
                 Comment Required
                 </FormErrorMessage>
-              </FormControl>
+
               <Button type="submit" colorScheme="purple" width="full">
                 Submit
               </Button>
