@@ -18,26 +18,30 @@ import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
 
+
 const LandingSection = () => {
-  const {isLoading, response, submit} = useSubmit();
-  const { onOpen } = useAlertContext();
+//  const {isLoading, response, submit} = useSubmit();
+//  const { onOpen } = useAlertContext();
 
   const formik = useFormik({
     initialValues: {
       firstName: " ",
       email:" ",
       type: " ",
-      comment: " "
+      comment: " ",
     },
 
     onSubmit: (values) => {
-      submit(values);
+        alert(JSON.stringify(values, null, 2));
     },
 
     validationSchema: 
       Yup.object({
-        firstName: Yup.string().required("Required"),
-        email: Yup.string().email().required("Required"),
+        firstName: Yup.string()
+        .max(15, "Must be 15 characters or less").
+        required("Required"),
+        email: Yup.string().
+        email("Invalid email address").required("Required"),
         type: Yup.string().required("Required"),
         comment: Yup.string().required("Required"),
     }),
