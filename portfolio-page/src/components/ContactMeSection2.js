@@ -40,10 +40,11 @@ const ContactMeSection = () => {
         firstName: Yup.string()
         .max(15, "Must be 15 characters or less").
         required("Required"),
-        email: Yup.string().
-        email("Invalid email address").required("Required"),
+        email: Yup.string()
+        .email("Invalid email address").required("Required"),
         type: Yup.string().required("Required"),
-        comment: Yup.string().required("Required"),
+        comment: Yup.string()
+        .required("Required"),
     }),
   });
 
