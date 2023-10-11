@@ -47,11 +47,6 @@ const LandingSection = () => {
     }),
   });
 
-const isInvalidName = formik.touched.firstName;
-const isInvalidEmail = formik.touched.email && formik.errors.email && true;
-const isInvalidType = formik.touched.type && formik.errors.type && true;
-const isInvalidComment = formik.touched.comment && formik.errors.comment && true;
-
   return (
     <FullScreenSection
       isDarkBackground
