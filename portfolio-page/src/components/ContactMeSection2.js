@@ -48,27 +48,15 @@ const LandingSection = () => {
   });
 
   return (
-    <FullScreenSection
-      isDarkBackground
-      backgroundColor="#512DA8"
-      py={16}
-      spacing={8}
-    >
-      <VStack w="1024px" p={32} alignItems="flex-start">
-        <Heading as="h1" id="contactme-section">
-          Contact me
-        </Heading>
-        <Box p={6} rounded="md" w="100%">
           <form onSubmit={formik.handleSubmit}>
-            <VStack spacing={4}>
-              <FormControl 
-                isInvalid={formik.touched.firstName}
-                  >
-                <FormLabel htmlFor="firstName">Name</FormLabel>
-                <Input
+            <label htmlFor="firstName">Name</label>
+                <input
                   id="firstName"
                   name="firstName"
-                  {...formik.getFieldProps('firstName')}
+                  type="text"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.firstName}
                 />
                 <FormErrorMessage>
                   Text Required
