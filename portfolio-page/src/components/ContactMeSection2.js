@@ -88,26 +88,26 @@ const LandingSection = () => {
                   </option>
                   <option value="other">Other</option>
                 </select>
-             
-                <FormLabel htmlFor="comment">Your message</FormLabel>
-                <Textarea
+                {formik.touched.type && formik.errors.type ? (
+                    <div>{formik.errors.type}</div>
+                    ) : null}
+                <label htmlFor="comment">Your message</label>
+                <textarea
                   id="comment"
                   name="comment"
                   height={250}
-                  {...formik.getFieldProps('comment')}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.comment}
                 />
-                <FormErrorMessage>
-                Comment Required
-                </FormErrorMessage>
+                {formik.touched.comment && formik.errors.comment ? (
+                    <div>{formik.errors.emailcomment}</div>
+                    ) : null}
 
-              <Button type="submit" colorScheme="purple" width="full">
+              <button type="submit" colorScheme="purple" width="full">
                 Submit
-              </Button>
-            </VStack>
+              </button>
           </form>
-        </Box>
-      </VStack>
-    </FullScreenSection>
   );
 };
 
