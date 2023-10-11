@@ -43,7 +43,7 @@ const LandingSection = () => {
     }),
   });
 
-const isInvalidName = true && formik.errors.firstName && formik.touched.firstName;
+const isInvalidName = formik.touched.firstName;
 const isInvalidEmail = formik.touched.email && formik.errors.email && true;
 const isInvalidType = formik.touched.type && formik.errors.type && true;
 const isInvalidComment = formik.touched.comment && formik.errors.comment && true;
@@ -63,7 +63,7 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
               <FormControl 
-                isInvalid={isInvalidName}
+                isInvalid={formik.touched.firstName}
                   >
                 <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input
@@ -101,7 +101,7 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   <option value="other">Other</option>
                 </Select>
               </FormControl>
-              <FormControl isInvalid={isInvalidComment}>
+              <FormControl isInvalid={formik.touched.comment}>
                 <FormLabel htmlFor="comment">Your message</FormLabel>
                 <Textarea
                   id="comment"
