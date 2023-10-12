@@ -32,11 +32,12 @@ const LandingSection = () => {
 
     onSubmit: (values) => {
       submit(values);
+      alert(JSON.stringify(values, null, 2));
     },
 
     validationSchema: 
       Yup.object({
-        firstName: Yup.string().max(15, "Must be 15 characters or less").required("Required"),
+        firstName: Yup.string().min(5, "Must be at least 5 characters").max(15, "Must be not more than 15 characters"). required("Required"),
         email: Yup.string().email().required("Required"),
         type: Yup.string().required("Required"),
         comment: Yup.string().min(20, "Must be 20 characters or more").required("Required"),
