@@ -39,7 +39,7 @@ const LandingSection = () => {
         firstName: Yup.string().max(15, "Must be 15 characters or less").required("Required"),
         email: Yup.string().email().required("Required"),
         type: Yup.string().required("Required"),
-        comment: Yup.string().required("Required"),
+        comment: Yup.string().min(20, "Must be 20 characters or more").required("Required"),
     }),
   });
 
@@ -72,7 +72,7 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   {...formik.getFieldProps('firstName')}
                 />
                 <FormErrorMessage>
-                  Text Required : {formik.errors.firstName}
+                  Text Required. {formik.errors.firstName}
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={isInvalidEmail}>
@@ -110,7 +110,7 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   {...formik.getFieldProps('comment')}
                 />
                 <FormErrorMessage>
-                Comment Required
+                Comment Required. {formik.errors.comment}
                 </FormErrorMessage>
               </FormControl>
               <Button type="submit" colorScheme="purple" width="full">
