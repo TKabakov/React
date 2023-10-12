@@ -36,14 +36,14 @@ const LandingSection = () => {
 
     validationSchema: 
       Yup.object({
-        firstName: Yup.string().required("Required"),
+        firstName: Yup.string().max(15, "Must be 15 characters or less").required("Required"),
         email: Yup.string().email().required("Required"),
         type: Yup.string().required("Required"),
         comment: Yup.string().required("Required"),
     }),
   });
 
-const isInvalidName = true && formik.errors.firstName && formik.touched.firstName;
+const isInvalidName = formik.touched.firstName && formik.errors.firstName;
 const isInvalidEmail = formik.touched.email && formik.errors.email && true;
 const isInvalidType = formik.touched.type && formik.errors.type && true;
 const isInvalidComment = formik.touched.comment && formik.errors.comment && true;
@@ -63,7 +63,7 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
               <FormControl 
-                isInvalid={isInvalidName}
+                isInvalid={formik.touched.firstName && formik.errors.firstName}
                   >
                 <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input
@@ -72,7 +72,7 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   {...formik.getFieldProps('firstName')}
                 />
                 <FormErrorMessage>
-                  Text Required
+                  Text Required : {formik.errors.firstName}
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={isInvalidEmail}>
