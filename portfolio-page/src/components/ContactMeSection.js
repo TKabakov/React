@@ -31,8 +31,8 @@ const LandingSection = () => {
     },
 
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-  },
+      submit(values);
+    },
 
     validationSchema: 
       Yup.object({
@@ -42,11 +42,6 @@ const LandingSection = () => {
         comment: Yup.string().min(20, "Must be 20 characters or more").required("Required"),
     }),
   });
-
-const isInvalidName = formik.touched.firstName && formik.errors.firstName;
-const isInvalidEmail = formik.touched.email && formik.errors.email && true;
-const isInvalidType = formik.touched.type && formik.errors.type && true;
-const isInvalidComment = formik.touched.comment && formik.errors.comment && true;
 
   return (
     <FullScreenSection
@@ -75,7 +70,7 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   Text Required. {formik.errors.firstName}
                 </FormErrorMessage>
               </FormControl>
-              <FormControl isInvalid={isInvalidEmail}>
+              <FormControl isInvalid={formik.touched.email && formik.errors.email}>
                 <FormLabel htmlFor="email">Email Address</FormLabel>
                 <Input
                   id="email"
@@ -84,10 +79,10 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   {...formik.getFieldProps('email')}
                 />
                 <FormErrorMessage>
-                Email Required
+                Email Required. {formik.errors.email}
                 </FormErrorMessage>
               </FormControl>
-              <FormControl>
+              <FormControl isInvalid={formik.touched.type && formik.errors.type}>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
                 <Select 
                   id="type" 
@@ -101,7 +96,7 @@ const isInvalidComment = formik.touched.comment && formik.errors.comment && true
                   <option value="other">Other</option>
                 </Select>
               </FormControl>
-              <FormControl isInvalid={isInvalidComment}>
+              <FormControl isInvalid={formik.touched.comment && formik.errors.comment}>
                 <FormLabel htmlFor="comment">Your message</FormLabel>
                 <Textarea
                   id="comment"
