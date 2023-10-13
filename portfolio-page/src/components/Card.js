@@ -29,7 +29,7 @@ const Card = ({ title, description, imageSrc }) => {
                   {title}  
               </Heading>
               <Text 
-                color="grey"
+                color="blue.600"
                 margin="2%">
                   {description}
               </Text>
