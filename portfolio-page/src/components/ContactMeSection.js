@@ -45,6 +45,12 @@ const LandingSection = () => {
   });
 
   return (
+    <>
+    {console.log(isLoading)};
+    {console.log(response)};
+    {console.log(submit)};
+    
+
     <FullScreenSection
       isDarkBackground
       backgroundColor="#512DA8"
@@ -68,7 +74,7 @@ const LandingSection = () => {
                   {...formik.getFieldProps('firstName')}
                 />
                 <FormErrorMessage>
-                  Text Required. {formik.errors.firstName}
+                  Text is required. {formik.errors.firstName}
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={formik.touched.email && formik.errors.email}>
@@ -80,7 +86,7 @@ const LandingSection = () => {
                   {...formik.getFieldProps('email')}
                 />
                 <FormErrorMessage>
-                Email Required. {formik.errors.email}
+                Email is required. The {formik.errors.email}
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={formik.touched.type && formik.errors.type}>
@@ -91,9 +97,7 @@ const LandingSection = () => {
                   {...formik.getFieldProps('type')}
                   >
                   <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
-                    Open source consultancy session
-                  </option>
+                  <option value="openSource">Open source consultancy sessiongi</option>
                   <option value="other">Other</option>
                 </Select>
               </FormControl>
@@ -106,7 +110,7 @@ const LandingSection = () => {
                   {...formik.getFieldProps('comment')}
                 />
                 <FormErrorMessage>
-                Comment Required. {formik.errors.comment}
+                Comment is required. {formik.errors.comment}
                 </FormErrorMessage>
               </FormControl>
               <Button type="submit" colorScheme="purple" width="full">
@@ -117,6 +121,7 @@ const LandingSection = () => {
         </Box>
       </VStack>
     </FullScreenSection>
+    </>
   );
 };
 
