@@ -46,11 +46,6 @@ const LandingSection = () => {
 
   return (
     <>
-    {console.log(isLoading)};
-    {console.log(response)};
-    {console.log(submit)};
-    
-
     <FullScreenSection
       isDarkBackground
       backgroundColor="#512DA8"
