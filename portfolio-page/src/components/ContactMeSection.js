@@ -31,7 +31,7 @@ const LandingSection = () => {
     },
 
     onSubmit: (values) => {
-      values.preventDefault()
+      values.preventDefault();
       submit(values);
     //  alert(JSON.stringify(values, null, 2));
     },
