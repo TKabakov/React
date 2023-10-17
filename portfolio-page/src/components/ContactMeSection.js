@@ -16,6 +16,7 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
+import { useContext } from "react";
 import {useAlertContext} from "../context/alertContext";
 
 const LandingSection = () => {
@@ -36,9 +37,8 @@ const LandingSection = () => {
     //  alert(JSON.stringify(values, null, 2));
     return(
       <div>
-       useAlertContext()   
+       useAlertContext();   
       </div>
-    
     )
     },
 
