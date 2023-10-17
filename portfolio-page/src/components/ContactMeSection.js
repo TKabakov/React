@@ -34,7 +34,12 @@ const LandingSection = () => {
       values.preventDefault();
       submit(values);
     //  alert(JSON.stringify(values, null, 2));
-    useAlertContext();
+    return(
+      <div>
+       useAlertContext()   
+      </div>
+    
+    )
     },
 
     validationSchema: 
