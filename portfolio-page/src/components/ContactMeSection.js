@@ -17,7 +17,7 @@ import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { useContext } from "react";
-import {useAlertContext} from "../context/alertContext";
+import {useAlertContext, AlertProvider} from "../context/alertContext";
 
 const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
