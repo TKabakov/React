@@ -6,6 +6,7 @@ import Image from './ImageContext';
 import MultipleContexts from './MultipleContexts';
 import Todo from './components/Todo';
 import { useAlertContext } from './alertContex';
+import AlertProvider from './alertContex';
 
 function App() {
   return (
@@ -14,8 +15,7 @@ function App() {
       <User />
       <Image />
       <MultipleContexts />
-      <Todo />
-      
+      <AlertProvider />
     </div>
   );
 }
