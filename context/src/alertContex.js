@@ -16,7 +16,7 @@ export default AlertProvider ({ children }) {
       value={{
         ...state,
         onOpen: (type, message) => setState({ isOpen: true, type: 'error', message:'Ops! Something get wrong, please try again later!'}),
-        onClose: () => setState({ isOpen: false, type: '', message: '' }),
+        onClose: () => setState({ isOpen: false, type: 'success', message: "All good! Thank you for submition, we'll get back to you shortly!" }),
       }}
     >
       {children}
