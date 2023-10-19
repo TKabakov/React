@@ -5,7 +5,6 @@ import {
   Button,
   FormControl,
   FormErrorMessage,
-  FormHelperText,
   FormLabel,
   Heading,
   Input,
@@ -16,8 +15,7 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import { useContext } from "react";
-import {useAlertContext, AlertProvider} from "../context/alertContext";
+import {useAlertContext, AlertProvider} from "../context/alertContext2";
 
 const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
@@ -35,19 +33,15 @@ const LandingSection = () => {
       values.preventDefault();
       submit(values);
     //  alert(JSON.stringify(values, null, 2));
-    return(
-      <div>
-       useAlertContext();   
-      </div>
-    )
+      alert(onOpen);
     },
 
     validationSchema: 
       Yup.object({
-        firstName: Yup.string().min(5, "Must be at least 5 characters").max(15, "Must be not more than 15 characters"). required("Required"),
+        firstName: Yup.string().min(5,"Must be at least 5 characters").max(15,"Must be not more than 15 characters").required("Required"),
         email: Yup.string().email().required("Required"),
-        type: Yup.string().required("Required"),
-        comment: Yup.string().min(20, "Must be 20 characters or more").required("Required"),
+        type:  Yup.string().required("Required"),
+        comment: Yup.string().min(20,"Must be 20 characters or more").required("Required"),
     }),
   });
 
