@@ -15,7 +15,7 @@ export default AlertProvider ({ children }) {
     <AlertContext.Provider
       value={{
         ...state,
-        onOpen: (type, message) => setState({ isOpen: true, type: 'error', message }),
+        onOpen: (type, message) => setState({ isOpen: true, type: 'error', message:'Ops! Something get wrong, please try again later!'}),
         onClose: () => setState({ isOpen: false, type: '', message: '' }),
       }}
     >
