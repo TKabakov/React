@@ -1,8 +1,15 @@
 import {createContext, useContext, useState} from "react";
+import LandingSection from "../components/ContactMeSection";
 
-const AlertContext = createContext(undefined);
+const AlertContext = createContext({
+  isOpen: false,
+  // Type can be either "success" or "error"
+  type: 'success',
+  // Message to be displayed, can be any string
+  message: 'All good! Thank you for submition',
+});
 
-export default function AlertProvider({ children }){
+export const AlertProvider = ({LandingSection}) => {
   const [state, setState] = useState({
     isOpen: false,
     // Type can be either "success" or "error"
@@ -15,13 +22,11 @@ export default function AlertProvider({ children }){
     <AlertContext.Provider
       value={{
         ...state,
-        onOpen: (type, message) => 
-            setState({ isOpen: true, type: 'error', message:'Ops! Something get wrong, please try again later!'}),
-        onClose: (type, message) => 
-            setState({ isOpen: false, type: 'success', message: "All good! Thank you for submition, we'll get back to you shortly!" }),
+        onOpen: (type, message) => setState({ isOpen: true, type, message }),
+        onClose: () => setState({ isOpen: false, type: '', message: '' }),
       }}
     >
-      {children}
+      <LandingSection/>
     </AlertContext.Provider>
   );
 };
