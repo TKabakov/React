@@ -1,6 +1,12 @@
 import {createContext, useContext, useState} from "react";
 
-const AlertContext = createContext(undefined);
+const AlertContext = createContext({
+  isOpen: false,
+  // Type can be either "success" or "error"
+  type: 'success',
+  // Message to be displayed, can be any string
+  message: 'All good! Thank you for submition',
+});
 
 export const AlertProvider = ({ children }) => {
   const [state, setState] = useState({
