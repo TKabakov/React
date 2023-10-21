@@ -31,10 +31,10 @@ const LandingSection = () => {
     },
 
     onSubmit: (values) => {
-   values.preventDefault();
-    submit(values, isLoading, response);
-    alert(JSON.stringify(values, null, 2));
-    //alert(onOpen);
+      values.preventDefault();
+      submit(values, isLoading, response);
+      alert(JSON.stringify(values, null, 2));
+      //alert(onOpen);
     },
 
     validationSchema: 
