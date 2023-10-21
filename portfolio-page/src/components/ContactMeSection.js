@@ -21,7 +21,7 @@ const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
   //const { onOpen, onClose } = useAlertContext();
  // const alert=useAlertContext()
- 
+
   const formik = useFormik({
     initialValues: {
       firstName: " ",
@@ -107,12 +107,14 @@ const LandingSection = () => {
                   {...formik.getFieldProps('comment')}
                 />
                 <FormErrorMessage>
-                Comment is required. {formik.errors.comment}
+                {response} {isLoading} Comment is required. {formik.errors.comment}
                 </FormErrorMessage>
               </FormControl>
               <Button type="submit" colorScheme="purple" width="full">
                 Submit
               </Button>
+              
+              
             </VStack>
           </form>
         </Box>
