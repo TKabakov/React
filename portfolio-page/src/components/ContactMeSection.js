@@ -31,9 +31,9 @@ const LandingSection = () => {
     },
 
     onSubmit: (values) => {
-      values.preventDefault();
-      submit(values, isLoading, response);
-    //  alert(JSON.stringify(values, null, 2));
+   values.preventDefault();
+    submit(values, isLoading, response);
+    alert(JSON.stringify(values, null, 2));
     //alert(onOpen);
     },
 
@@ -59,7 +59,7 @@ const LandingSection = () => {
           Contact me
         </Heading>
         <Box p={6} rounded="md" w="100%">
-          <form onSubmit={formik.handleSubmit}>
+          <form onSubmit>
             <VStack spacing={4}>
               <FormControl 
                 isInvalid={formik.touched.firstName && formik.errors.firstName}
@@ -107,7 +107,7 @@ const LandingSection = () => {
                   {...formik.getFieldProps('comment')}
                 />
                 <FormErrorMessage>
-                {response} {isLoading} Comment is required. {formik.errors.comment}
+                Comment is required. {formik.errors.comment}
                 </FormErrorMessage>
               </FormControl>
               <Button type="submit" colorScheme="purple" width="full">
