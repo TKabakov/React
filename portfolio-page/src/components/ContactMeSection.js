@@ -70,7 +70,7 @@ const LandingSection = () => {
                   {...formik.getFieldProps('firstName')}
                 />
                 <FormErrorMessage>
-                  Text is required. {formik.errors.firstName}
+                  {onOpen} Text is required. {formik.errors.firstName}
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={formik.touched.email && formik.errors.email}>
