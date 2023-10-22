@@ -15,7 +15,7 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import {useAlertContext} from "../context/alertContext2";
+import {useAlertContext} from "../context/alertContext";
 
 const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
@@ -70,7 +70,7 @@ const LandingSection = () => {
                   {...formik.getFieldProps('firstName')}
                 />
                 <FormErrorMessage>
-                  {onOpen} Text is required. {formik.errors.firstName}
+                  {onOpen}Text is required. {formik.errors.firstName}
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={formik.touched.email && formik.errors.email}>
