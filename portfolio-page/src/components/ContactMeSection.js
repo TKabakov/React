@@ -29,12 +29,16 @@ const LandingSection = () => {
       comment: " "
     },
 
-   onSubmit: (values, onOpen) => {
+   onSubmit: (values) => {
     //  values.preventDefault();
      // submit(values, isLoading, response);
      // alert(JSON.stringify(values, null, 2));
      //alert(values);
-     console.log(formik.values)
+     submit(values);
+     console.log(formik.values);
+     console.log(isLoading);
+    // console.log(response);
+     alert(response.message);
    },
 
     validationSchema: 
