@@ -19,21 +19,22 @@ import {useAlertContext} from "../context/alertContext";
 
 const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
-  const {state} = useAlertContext();
+  const {onOpen} = useAlertContext();
 
   const formik = useFormik({
     initialValues: {
       firstName: " ",
       email:" ",
-      type: " ",
+      type: "success ",
       comment: " "
     },
 
    onSubmit: (values, onOpen) => {
     //  values.preventDefault();
-      submit(values, isLoading, response);
+     // submit(values, isLoading, response);
      // alert(JSON.stringify(values, null, 2));
-     alert(state);
+     //alert(values);
+     console.log(formik.values)
    },
 
     validationSchema: 
