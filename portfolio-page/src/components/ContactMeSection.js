@@ -18,7 +18,7 @@ import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
 
 const LandingSection = () => {
-  const {isLoading, response, submit} = useSubmit();
+  const {isLoading, response, submit, random} = useSubmit();
   const {onOpen} = useAlertContext();
 
   const formik = useFormik({
@@ -34,11 +34,14 @@ const LandingSection = () => {
      // submit(values, isLoading, response);
      // alert(JSON.stringify(values, null, 2));
      //alert(values);
-     submit(values);
+     submit();
      console.log(formik.values);
-     console.log(isLoading);
-    // console.log(response);
-     alert(response.message);
+     console.log(isLoading, response.type, response.message, );
+     console.log(response.message);
+     console.log(response.type);
+     console.log(random);
+  
+     //alert(response.type);
    },
 
     validationSchema: 
