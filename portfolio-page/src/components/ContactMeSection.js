@@ -33,13 +33,14 @@ const LandingSection = () => {
     //  values.preventDefault();
      // alert(JSON.stringify(values, null, 2));
     submit();
-    console.log(state);
+    console.log(state);//undefined
      console.log(formik.values.email); //works
-     console.log(random); //works
+     console.log(random); //udefined
      console.log(formik.values); //works
      console.log(isLoading);
      //response dosn't work
-     console.log(response.type);
+     //console.log(response.type);'
+    console.log(response.message);
    },
 
     validationSchema: 
