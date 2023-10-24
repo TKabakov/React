@@ -19,7 +19,7 @@ import {useAlertContext} from "../context/alertContext";
 
 const LandingSection = () => {
   const {isLoading, response, submit, random} = useSubmit();
-  const {onOpen} = useAlertContext();
+  const {onOpen, state} = useAlertContext();
 
   const formik = useFormik({
     initialValues: {
@@ -32,7 +32,8 @@ const LandingSection = () => {
    onSubmit: (values) => {
     //  values.preventDefault();
      // alert(JSON.stringify(values, null, 2));
-  
+   
+    console.log(state);
      console.log(formik.values.email); //works
      console.log(random); //works
      console.log(formik.values); //works
@@ -43,7 +44,7 @@ const LandingSection = () => {
 
     validationSchema: 
       Yup.object({
-        firstName: Yup.string(). required("Required").min(5,"Must be at least 5 characters").max(20,"Must be not more than 20 characters"),
+        firstName: Yup.string().required("Required").min(5,"Must be at least 5 characters").max(20,"Must be not more than 20 characters"),
         email: Yup.string().email().required("Required"),
         type:  Yup.string().required("Required"),
         comment: Yup.string().required("Required").min(20,"Must be 20 characters or more"),
