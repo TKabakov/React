@@ -28,7 +28,7 @@ const useSubmit = () => {
         message: 'Something went wrong, please try again later!',
       })
     } finally {
-      setLoading(true);
+      setLoading(false);
     }
   };
 

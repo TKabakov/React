@@ -32,7 +32,7 @@ const LandingSection = () => {
    onSubmit: (values) => {
     //  values.preventDefault();
      // alert(JSON.stringify(values, null, 2));
-   
+    submit();
     console.log(state);
      console.log(formik.values.email); //works
      console.log(random); //works
