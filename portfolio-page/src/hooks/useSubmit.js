@@ -25,7 +25,7 @@ const useSubmit = () => {
     } catch (error) {
       setResponse({
         type: 'error',
-        message: 'Something went wrong, please try again later!',
+        message: 'Thanks for your submission',
       })
     } finally {
       setLoading(false);

@@ -41,6 +41,7 @@ const LandingSection = () => {
      //response dosn't work
      //console.log(response.type);'
     console.log(response.message);
+    console.log(response.type);
    },
 
     validationSchema: 
