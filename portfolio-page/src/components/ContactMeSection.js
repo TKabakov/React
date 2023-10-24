@@ -31,21 +31,14 @@ const LandingSection = () => {
 
    onSubmit: (values) => {
     //  values.preventDefault();
-     // submit(values, isLoading, response);
      // alert(JSON.stringify(values, null, 2));
-     // alert(values);
-    
-    
-     console.log(formik.errors);
-     console.log(random);
-     console.log(formik.values);
-     console.log(isLoading);
-     console.log(response.type);
-     
-   
-
   
-     //alert(response.type);
+     console.log(formik.values.email); //works
+     console.log(random); //works
+     console.log(formik.values); //works
+     console.log(isLoading);
+     //response dosn't work
+     console.log(response.type);
    },
 
     validationSchema: 
