@@ -33,13 +33,17 @@ const LandingSection = () => {
     //  values.preventDefault();
      // submit(values, isLoading, response);
      // alert(JSON.stringify(values, null, 2));
-     //alert(values);
-     submit();
-     console.log(formik.values);
-     console.log(isLoading, response.type, response.message, );
-     console.log(response.message);
-     console.log(response.type);
+     // alert(values);
+    
+    
+     console.log(formik.errors);
      console.log(random);
+     console.log(formik.values);
+     console.log(isLoading);
+     console.log(response.type);
+     
+   
+
   
      //alert(response.type);
    },
@@ -101,7 +105,7 @@ const LandingSection = () => {
                   {...formik.getFieldProps('type')}
                   >
                   <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">Open source consultancy sessiongi</option>
+                  <option value="openSource">Open source consultancy sessionly</option>
                   <option value="other">Other</option>
                 </Select>
               </FormControl>
