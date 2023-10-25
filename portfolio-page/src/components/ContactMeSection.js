@@ -15,11 +15,11 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-// import {useAlertContext} from "../context/alertContext";
+import {useAlertContext} from "../context/alertContext";
 
 const LandingSection = () => {
   const {isLoading, response, submit, random} = useSubmit();
-  // const {onOpen, state} = useAlertContext();
+  const {onOpen, state} = useAlertContext();
 
   const formik = useFormik({
     initialValues: {
