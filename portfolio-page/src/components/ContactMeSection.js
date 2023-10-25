@@ -19,7 +19,7 @@ import useSubmit from "../hooks/useSubmit";
 
 const LandingSection = () => {
   const {isLoading, response, submit, random} = useSubmit();
- // const {onOpen, state} = useAlertContext();
+  // const {onOpen, state} = useAlertContext();
 
   const formik = useFormik({
     initialValues: {
@@ -42,7 +42,6 @@ const LandingSection = () => {
      console.log(isLoading);
      //response dosn't work
      //console.log(response.type);'
-
    },
 
     validationSchema: 

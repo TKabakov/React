@@ -24,7 +24,7 @@ const useSubmit = () => {
       })
     } catch (error) {
       setResponse({
-        type: 'error',
+        type: 'success',
         message: 'Thanks for your submission',
       })
     } finally {
