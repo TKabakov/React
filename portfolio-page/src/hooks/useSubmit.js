@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const wait = (microseconds) => new Promise((resolve) => setTimeout(resolve, microseconds));
 
 /**
  * This is a custom hook that can be used to submit a form and simulate an API call
