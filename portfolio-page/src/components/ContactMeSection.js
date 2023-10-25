@@ -13,7 +13,9 @@ import {
   VStack,
   Stack,
   Alert,
-  AlertIcon
+  AlertIcon,
+  AlertTitle,
+  AlertDescription, 
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
@@ -36,7 +38,7 @@ const LandingSection = () => {
     //  values.preventDefault();
      // alert(JSON.stringify(values, null, 2));
     submit();
-    console.log(response.message);
+    alert(response.message);
     console.log(response.type);
   //  console.log(state);//undefined
      console.log(formik.values.email); //works
@@ -128,26 +130,13 @@ const LandingSection = () => {
         </Box>
       </VStack>
       <Stack spacing={3}>
-  <Alert status='success' variant='subtle'>
-    <AlertIcon />
-    Data uploaded to the server. Fire on!
-  </Alert>
-
-  <Alert status='success' variant='solid'>
-    <AlertIcon />
-    Data uploaded to the server. Fire on!
-  </Alert>
-
-  <Alert status='success' variant='left-accent'>
-    <AlertIcon />
-    Data uploaded to the server. Fire on!
-  </Alert>
-
-  <Alert status='success' variant='top-accent'>
-    <AlertIcon />
-    Data uploaded to the server. Fire on!
-  </Alert>
+      <Alert status='error'>
+  <AlertIcon />
+  <AlertTitle>Your browser is outdated!</AlertTitle>
+  <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
+</Alert>
 </Stack>
+alert(formik.values.email);
     </FullScreenSection>
     </>
   );
