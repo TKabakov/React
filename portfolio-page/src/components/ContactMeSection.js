@@ -11,6 +11,9 @@ import {
   Select,
   Textarea,
   VStack,
+  Stack,
+  Alert,
+  AlertIcon
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
@@ -124,6 +127,27 @@ const LandingSection = () => {
           </form>
         </Box>
       </VStack>
+      <Stack spacing={3}>
+  <Alert status='success' variant='subtle'>
+    <AlertIcon />
+    Data uploaded to the server. Fire on!
+  </Alert>
+
+  <Alert status='success' variant='solid'>
+    <AlertIcon />
+    Data uploaded to the server. Fire on!
+  </Alert>
+
+  <Alert status='success' variant='left-accent'>
+    <AlertIcon />
+    Data uploaded to the server. Fire on!
+  </Alert>
+
+  <Alert status='success' variant='top-accent'>
+    <AlertIcon />
+    Data uploaded to the server. Fire on!
+  </Alert>
+</Stack>
     </FullScreenSection>
     </>
   );
