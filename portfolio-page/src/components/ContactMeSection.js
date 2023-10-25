@@ -15,7 +15,8 @@ import {
   Alert,
   AlertIcon,
   AlertTitle,
-  AlertDescription, 
+  AlertDescription,
+  CloseButton, 
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
@@ -67,6 +68,12 @@ const LandingSection = () => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
+      <Alert status='error' display="response.message">
+  <AlertIcon />
+  <AlertTitle>Your browser is outdated!</AlertTitle>
+  <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
+    <CloseButton position="absolute" right='8px' top="8px"/>
+</Alert>
         <Heading as="h1" id="contactme-section">
           Contact me
         </Heading>
@@ -130,11 +137,7 @@ const LandingSection = () => {
         </Box>
       </VStack>
       <Stack spacing={3}>
-      <Alert status='error'>
-  <AlertIcon />
-  <AlertTitle>Your browser is outdated!</AlertTitle>
-  <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
-</Alert>
+
 </Stack>
 alert(formik.values.email);
     </FullScreenSection>
