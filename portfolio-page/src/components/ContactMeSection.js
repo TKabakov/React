@@ -15,11 +15,11 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import {useAlertContext} from "../context/alertContext";
+// import {useAlertContext} from "../context/alertContext";
 
 const LandingSection = () => {
   const {isLoading, response, submit, random} = useSubmit();
-  const {onOpen, state} = useAlertContext();
+ // const {onOpen, state} = useAlertContext();
 
   const formik = useFormik({
     initialValues: {
@@ -33,15 +33,16 @@ const LandingSection = () => {
     //  values.preventDefault();
      // alert(JSON.stringify(values, null, 2));
     submit();
-    console.log(state);//undefined
+    console.log(response.message);
+    console.log(response.type);
+  //  console.log(state);//undefined
      console.log(formik.values.email); //works
      console.log(random); //udefined
      console.log(formik.values); //works
      console.log(isLoading);
      //response dosn't work
      //console.log(response.type);'
-    console.log(response.message);
-    console.log(response.type);
+
    },
 
     validationSchema: 
