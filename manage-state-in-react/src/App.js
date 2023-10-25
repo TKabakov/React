@@ -17,6 +17,7 @@ import ReverseList from './components/Array/ReverseArray';
 import BucketList from './components/Array/ObjectIsideArray';
 import ShoppingCart from './components/Array/ShoppingCart';
 import TaskApp from './components/Array/Todo';
+import useSubmit from './components/useSubmit';
 
 function App() {
   return (
