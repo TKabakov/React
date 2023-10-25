@@ -24,8 +24,8 @@ const useSubmit = () => {
       })
     } catch (error) {
       setResponse({
-        type: 'success',
-        message: 'Thanks ! Thanks! ',
+        type: 'error',
+        message: 'Something went wrong, please try again later!',
       })
     } finally {
       setLoading(false);
