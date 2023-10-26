@@ -17,15 +17,15 @@ const useSubmit = () => {
       await wait(2000);
       if (random < 0.5) {
         throw new Error("Something went wrong");
-      }
+      } else{
       setResponse({
         type: 'success',
         message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!`,
-      })
+      })}
     } catch (error) {
       setResponse({
         type: 'error',
-        message: 'Something went wrong, please try again later!',
+        message: Error + ', please try again later!',
       })
     } finally {
       setLoading(false);
