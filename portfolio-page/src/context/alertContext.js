@@ -26,7 +26,7 @@ export const AlertProvider = ({children}) => {
         onClose: () => setState({ isOpen: false, type: '', message: '' }),
       }}
     >
-      <LandingSection/>
+      {children}
     </AlertContext.Provider>
   );
 };
