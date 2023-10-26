@@ -24,9 +24,9 @@ import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
 
 const LandingSection = () => {
-  const {isLoading, response, submit, random} = useSubmit();
+  const {isLoading, response, submit} = useSubmit();
   const {onOpen, state} = useAlertContext();
-
+  const {type, message} = response{};
   const formik = useFormik({
     initialValues: {
       firstName: " ",
@@ -43,7 +43,6 @@ const LandingSection = () => {
     console.log(response.type);
   //  console.log(state);//undefined
      console.log(formik.values.email); //works
-     console.log(random); //udefined
      console.log(formik.values); //works
      console.log(isLoading);
      //response dosn't work
@@ -68,12 +67,12 @@ const LandingSection = () => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-      <Alert status='error' display="response.message">
-  <AlertIcon />
-  <AlertTitle>Your browser is outdated!</AlertTitle>
-  <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
-    <CloseButton position="absolute" right='8px' top="8px"/>
-</Alert>
+        <Alert status='error' display="response.message">
+          <AlertIcon />
+          <AlertTitle>Ops!</AlertTitle>
+          <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
+          <CloseButton position="absolute" right='8px' top="8px"/>
+        </Alert>
         <Heading as="h1" id="contactme-section">
           Contact me
         </Heading>
