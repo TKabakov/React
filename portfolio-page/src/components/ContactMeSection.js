@@ -41,11 +41,13 @@ const LandingSection = () => {
      // alert(JSON.stringify(values, null, 2));
     submit();
     alert(response.message);
+    setDisplay('')
     console.log(response.type);
   //  console.log(state);//undefined
      console.log(formik.values.email); //works
      console.log(formik.values); //works
      console.log(isLoading);
+     console.log(onOpen);
      //response dosn't work
      //console.log(response.type);'
    },
