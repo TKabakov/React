@@ -26,6 +26,7 @@ import {useAlertContext} from "../context/alertContext";
 const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
   const {onOpen, state} = useAlertContext();
+  const [display, setDisplay] = useState('none');
   
   const formik = useFormik({
     initialValues: {
@@ -67,7 +68,10 @@ const LandingSection = () => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-        <Alert status='warning' display="response.message">
+        <Button onClick={() => setDisplay('')}>
+          See Alert
+        </Button>
+        <Alert status='success' display={display}>
           <AlertIcon />
           <AlertTitle>Ops!</AlertTitle>
           <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
