@@ -26,7 +26,7 @@ import {useAlertContext} from "../context/alertContext";
 const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
   const {onOpen, state} = useAlertContext();
-//  const [display, setDisplay] = useState('none');
+  const [display, setDisplay] = useState('none');
   
   const formik = useFormik({
     initialValues: {
@@ -40,14 +40,15 @@ const LandingSection = () => {
     //  values.preventDefault();
      // alert(JSON.stringify(values, null, 2));
     submit();
- //   console.log(response.message);
- //   setDisplay('')
- //   console.log(response.type);
+    console.log(response.type);
+    console.log(response.message);
+    setDisplay('')
+    
   //  console.log(state);//undefined
-  //   console.log(formik.values.email); //works
-  //   console.log(formik.values); //works
-  //   console.log(isLoading);
-  //   console.log(onOpen)
+     console.log(formik.values.email); //works
+     console.log(formik.values); //works
+     console.log(isLoading);
+     console.log(onOpen)
      //response dosn't work
      //console.log(response.type);'
    },
@@ -70,7 +71,15 @@ const LandingSection = () => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-
+        <Button onClick={() => setDisplay('')}>
+          See Alert
+        </Button>
+        <Alert status='success' display={display}>
+          <AlertIcon />
+          <AlertTitle>Ops!</AlertTitle>
+          <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
+          <CloseButton position="absolute" right='8px' top="8px"/>
+        </Alert>
         <Heading as="h1" id="contactme-section">
           Contact me
         </Heading>
