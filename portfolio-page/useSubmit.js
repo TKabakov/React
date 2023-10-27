@@ -17,12 +17,15 @@ function wait2(){
         })
 }
 
-function onSuccess(date){
+function onSuccess(data){
     console.log(data)
 }
 
-function onerror(errorCode){
-    console.log('ERROR: ${errorCode}')
+function onError(errorCode){
+    console.log(`ERROR: ${errorCode}`)
 }
 
 wait1()
+    .then(wait2)
+    .then(onSuccess)
+    .catch(onError)
