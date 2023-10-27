@@ -9,16 +9,17 @@ function wait1(){
 }
 
 function wait2(){
+    console.log('wait2');
     return new Promise(
         (resolve,reject) => {
             setTimeout(() => {
                 resolve("Hello!")
-            }, 2000)
+            }, 1000)
         })
 }
 
 function onSuccess(data){
-    console.log(data)
+    console.log(`Success: ${data}`)
 }
 
 function onError(errorCode){
@@ -26,6 +27,6 @@ function onError(errorCode){
 }
 
 wait1()
-    .then(wait2)
+    .then(wait2, onError)
     .then(onSuccess)
     .catch(onError)
