@@ -3,26 +3,34 @@ function wait1(){
     return new Promise(
         (resolve,reject) => {
             setTimeout(() => {
-                reject("404")
+                resolve("404")
             }, 2000)
         })
 }
 
 function wait2(){
+    console.log('wait2');
     return new Promise(
         (resolve,reject) => {
             setTimeout(() => {
                 resolve("Hello!")
-            }, 2000)
+            }, 1000)
         })
 }
 
-function onSuccess(date){
-    console.log(data)
+function onSuccess(data){
+    console.log(`Success: ${data}`)
 }
 
-function onerror(errorCode){
-    console.log('ERROR: ${errorCode}')
+function onError(errorCode){
+    console.log(`ERROR: ${errorCode}`)
 }
 
+function onFinally(){
+    console.log('Finally we be done yo!')
+}
 wait1()
+    .then(wait2, onError)
+    .then(onSuccess)
+    .catch(onError)
+    .finally(onFinally)
