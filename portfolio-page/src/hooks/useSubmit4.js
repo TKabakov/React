@@ -1,16 +1,17 @@
 const wait = new Promise((resolve, reject) => {
     var random = 0.6;
-    if (random > 0,5){
-        resolve();
+    if (random > 0.5){
+        resolve(random);
     } else {
-        reject();
+        reject(random);
     }  
 });
 
 wait
-.then(() => {
+.then((random) => {
+    console.log(random)
 
 })
-.catch(() => {
-    
+.catch((random) => {
+    console.log("Error")
 })
