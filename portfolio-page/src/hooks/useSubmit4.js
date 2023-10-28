@@ -1,5 +1,5 @@
 const wait = new Promise((resolve, reject) => {
-    var random = 0.2;
+    let random = 0.3;
     setTimeout(() => {
         if (random > 0.5){
         resolve(random);
@@ -10,10 +10,10 @@ const wait = new Promise((resolve, reject) => {
 });
 
 wait
-.then((random) => {
-    console.log(random)
+.then(() => {
+    console.log("Hello!")
 
 })
-.catch((random) => {
+.catch(() => {
     console.log("Error")
 })
