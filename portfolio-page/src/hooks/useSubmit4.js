@@ -1,10 +1,12 @@
 const wait = new Promise((resolve, reject) => {
-    var random = 0.6;
-    if (random > 0.5){
+    var random = 0.2;
+    setTimeout(() => {
+        if (random > 0.5){
         resolve(random);
-    } else {
+        } else {
         reject(random);
-    }  
+        }   
+    }, 2000)
 });
 
 wait
