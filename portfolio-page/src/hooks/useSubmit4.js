@@ -17,7 +17,7 @@ wait
     console.log(message)
 })
 .catch(() => {
-    message = "Something went wrong, please try again later"
+    message = "Something went wrong, please try again later";
     console.log(message)
 })
 .finally(() => {
