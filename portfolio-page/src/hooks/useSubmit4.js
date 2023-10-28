@@ -1,8 +1,10 @@
+
 const wait = new Promise((resolve, reject) => {
-    let random = 0.8;
+    let message = ""
+    let random = 0.3;
     setTimeout(() => {
         if (random > 0.5){
-        resolve(random);
+        resolve(random, message);
         } else {
         reject(random);
         }   
@@ -10,10 +12,14 @@ const wait = new Promise((resolve, reject) => {
 });
 
 wait
-.then(() => {
-    console.log("Thanks for your submission, we will get back to you shortly!")
-
+.then((message) => {
+    message = "Thanks for your submission, we will get back to you shortly!";
+    console.log(message)
 })
 .catch(() => {
-    console.log("Something went wrong, please try again later")
+    message = "Something went wrong, please try again later"
+    console.log(message)
+})
+.finally(() => {
+    console.log("All done");
 })
