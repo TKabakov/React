@@ -5,8 +5,6 @@ const useSubmit = () => {
     const [response, setResponse] = useState(null);
 
     const wait = new Promise((resolve, reject) => {
-    
-        let message = ""
         
         let random = Math.random();
         
@@ -14,15 +12,15 @@ const useSubmit = () => {
 
         setTimeout(() => {
             if (random > 0.5){
-            resolve(random, message);
+            resolve(random, response);
             } else {
-            reject(random, message);
+            reject(random, response);
             }   
         }, 2000)
     });
     
     wait
-    .then((message) => {
+    .then((response) => {
         setResponse({
             type: 'success',
             message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!`,    
