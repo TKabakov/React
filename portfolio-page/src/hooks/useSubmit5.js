@@ -1,3 +1,4 @@
+import {useState} from "react";
 
 const useSubmit = () => {
 
@@ -28,16 +29,16 @@ const useSubmit = () => {
             type: 'success',
             message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!`,    
         })
-        console.log(message)
+        console.log(response.message)
     })
-    .catch(() => {
+    .catch((response) => {
         setResponse({
             type: 'error',
             message: 'Something went wrong, please try again later!',
         })
-        console.log(message)
+        console.log(response.message)
     })
-    .finally(() => {
+    .finally((isLoading) => {
         setLoading(false);
     })
     
