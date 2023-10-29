@@ -2,7 +2,10 @@
 const useSubmit = () => {
 
     const [isLoading, setLoading] = useState(false);
-    const [response, setResponse] = useState(null);
+    const [response, setResponse] = useState({
+        type: "", 
+        message: "",
+    });
 
     const wait = new Promise((resolve, reject) => {
         
@@ -25,7 +28,6 @@ const useSubmit = () => {
             type: 'success',
             message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!`,    
         })
-        
         console.log(message)
     })
     .catch(() => {
