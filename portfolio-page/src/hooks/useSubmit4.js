@@ -1,7 +1,11 @@
 
 const wait = new Promise((resolve, reject) => {
-    let message = ""
+    
+    const [isLoading, setLoading] = useState(false);
+    const [response, setResponse] = useState(null);let message = ""
+    
     let random = Math.random();
+    
     setTimeout(() => {
         if (random > 0.5){
         resolve(random, message);
