@@ -42,6 +42,10 @@ const useSubmit = () => {
         setLoading(false);
     })
     
+    return(
+        {response, isLoading}
+    )
 
 }
 
+export default useSubmit;
