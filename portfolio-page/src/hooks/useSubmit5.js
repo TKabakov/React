@@ -31,11 +31,14 @@ const useSubmit = () => {
         console.log(message)
     })
     .catch(() => {
-        message = "Something went wrong, please try again later";
+        setResponse({
+            type: 'error',
+            message: 'Something went wrong, please try again later!',
+        })
         console.log(message)
     })
     .finally(() => {
-        console.log("All done");
+        setLoading(false);
     })
     
 
