@@ -38,7 +38,7 @@ const LandingSection = () => {
 
    onSubmit: (values) => {
     //  values.preventDefault();
-     // alert(JSON.stringify(values, null, 2));
+     // alert(JSON.stringify(values, null, 2));'
     submit();
     console.log(response.type);
     console.log(response.message);

@@ -8,10 +8,7 @@ const wait = (microseconds) => new Promise((resolve) => setTimeout(resolve, micr
  */
 const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
-  const [response, setResponse] = useState({
-    type: '',
-    message: '',
-  });
+  const [response, setResponse] = useState(null);
 
   const submit = async (url, data) => {
     const random = Math.random();
@@ -21,7 +18,7 @@ const useSubmit = () => {
       if (random < 0.5) {
       setResponse({
         type: 'success',
-        message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!`,
+        message: `Thanks for your submission, we will get back to you shortly!`,
       })}
       else{
         throw new Error("Something went wrong");

@@ -1,6 +1,7 @@
+let message = ""
 
 const wait = new Promise((resolve, reject) => {
-    let message = ""
+    
     let random = Math.random();
     setTimeout(() => {
         if (random > 0.5){
