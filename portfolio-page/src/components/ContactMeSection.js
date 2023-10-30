@@ -40,17 +40,12 @@ const LandingSection = () => {
     //  values.preventDefault();
      // alert(JSON.stringify(values, null, 2));'
     submit();
-    console.log(response.type);
-    console.log(response.message);
-    setDisplay('')
-    
-  //  console.log(state);//undefined
-     console.log(formik.values.email); //works
-     console.log(formik.values); //works
+      console.log(response.type);
+      console.log(response.message);
+    setDisplay('')    
      console.log(isLoading);
      console.log(onOpen)
-     //response dosn't work
-     //console.log(response.type);'
+
    },
 
     validationSchema: 
