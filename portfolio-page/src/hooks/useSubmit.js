@@ -9,7 +9,7 @@ const wait = (microseconds) => new Promise((resolve) => setTimeout(resolve, micr
 const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState({
-    type: "", 
+    type: "success", 
     message: "",
 });
 

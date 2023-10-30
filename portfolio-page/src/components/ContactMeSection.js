@@ -42,7 +42,7 @@ const LandingSection = () => {
     submit();
       console.log(response.type);
       console.log(response.message);
-    setDisplay('')    
+      setDisplay(response.message);    //might need an update
      console.log(isLoading);
      console.log(onOpen)
 
@@ -69,10 +69,10 @@ const LandingSection = () => {
         <Button onClick={() => setDisplay('')}>
           See Alert
         </Button>
-        <Alert status='success' display={display}>
+        <Alert status={response.type} display={display}>
           <AlertIcon />
           <AlertTitle>Ops!</AlertTitle>
-          <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
+          <AlertDescription>{response.message}</AlertDescription>
           <CloseButton position="absolute" right='8px' top="8px"/>
         </Alert>
         <Heading as="h1" id="contactme-section">

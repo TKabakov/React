@@ -1,13 +1,13 @@
-let message = ""
+
 
 const wait = new Promise((resolve, reject) => {
-    
+    let message = "";
     let random = Math.random();
     setTimeout(() => {
         if (random > 0.5){
-        resolve(random, message);
+        resolve(message);
         } else {
-        reject(random);
+        reject(message);
         }   
     }, 2000)
 });
