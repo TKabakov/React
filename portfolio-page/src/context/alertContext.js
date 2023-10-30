@@ -1,4 +1,5 @@
 import {createContext, useContext, useState} from "react";
+import useSubmit from "../hooks/useSubmit";
 
 const AlertContext = createContext(undefined);
 
@@ -15,11 +16,18 @@ export const AlertProvider = ({ children }) => {
     <AlertContext.Provider
       value={{
         ...state,
-        onOpen: (type, message) => setState({ isOpen: true, type, message }),
-        onClose: () => setState({ isOpen: false, type: '', message: '' }),
+        onOpen: (type, message) => setState({ 
+          isOpen: true, 
+          type: response.type, 
+          message: response.message}),
+        onClose: () => setState({ 
+          isOpen: false, 
+          type: '', 
+          message: '' }),
       }}
     >
       {children}
+      {console.log(response.message)}
     </AlertContext.Provider>
   );
 };
