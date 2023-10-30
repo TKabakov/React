@@ -67,8 +67,8 @@ const LandingSection = () => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-        <Box display="flex" justifyContent="center" width="60%" position="absolute">
-          <Alert status={response.type} display={display} justifyContent="center" borderRadius={14} width="60%" position="absolute">
+        <Box display="flex" justifyContent="center" margin="auto" w="800px" position="absolute" >
+          <Alert status={response.type} display={display} alignSelf="center" borderRadius={14} width="60%" position="absolute" margin="auto">
           <AlertIcon />
           <AlertTitle>
             {response.title}
