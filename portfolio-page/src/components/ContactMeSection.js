@@ -16,7 +16,8 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
-  CloseButton, 
+  CloseButton,
+  Center, 
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
@@ -66,7 +67,7 @@ const LandingSection = () => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-        <Alert status={response.type} display={display}>
+        <Alert status={response.type} display={display} borderRadius={14} margin="auto" width="60%">
           <AlertIcon />
           <AlertTitle>
             {response.title}
