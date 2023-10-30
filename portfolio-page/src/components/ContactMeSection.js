@@ -66,14 +66,11 @@ const LandingSection = () => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-        <Button onClick={() => setDisplay('')}>
-          See Alert
-        </Button>
         <Alert status={response.type} display={display}>
           <AlertIcon />
           <AlertTitle>Ops!</AlertTitle>
           <AlertDescription>{response.message}</AlertDescription>
-          <CloseButton position="absolute" right='8px' top="8px"/>
+          <CloseButton position="absolutegit" right='8px' top="8px"/>
         </Alert>
         <Heading as="h1" id="contactme-section">
           Contact me
