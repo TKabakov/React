@@ -67,7 +67,8 @@ const LandingSection = () => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-        <Alert status={response.type} display={display} borderRadius={14} margin="auto" width="60%">
+        <Box display="flex" justifyContent="center" width="60%" position="absolute">
+          <Alert status={response.type} display={display} justifyContent="center" borderRadius={14} width="60%" position="absolute">
           <AlertIcon />
           <AlertTitle>
             {response.title}
@@ -77,6 +78,7 @@ const LandingSection = () => {
           </AlertDescription>
           <CloseButton position="absolutegit" right='8px' top="8px"/>
         </Alert>
+        </Box>
         <Heading as="h1" id="contactme-section">
           Contact me
         </Heading>
