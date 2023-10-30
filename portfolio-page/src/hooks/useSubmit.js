@@ -9,9 +9,9 @@ const wait = (microseconds) => new Promise((resolve) => setTimeout(resolve, micr
 const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState({
-    type: "success",
+    type: "warning",
     title: "",
-    message: "",
+    message: "Your submission is loading",
 });
 
   const submit = async (url, data) => {
