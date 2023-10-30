@@ -41,6 +41,7 @@ const LandingSection = () => {
     //  values.preventDefault();
      // alert(JSON.stringify(values, null, 2));'
     submit();
+    console.log(formik.values.firstName)
       console.log(response.type);
       console.log(response.message);
       setDisplay(response.message);    //might need an update
