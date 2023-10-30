@@ -68,8 +68,12 @@ const LandingSection = () => {
       <VStack w="1024px" p={32} alignItems="flex-start">
         <Alert status={response.type} display={display}>
           <AlertIcon />
-          <AlertTitle>Ops!</AlertTitle>
-          <AlertDescription>{response.message}</AlertDescription>
+          <AlertTitle>
+            {response.title}
+          </AlertTitle>
+          <AlertDescription>
+            {response.message}
+          </AlertDescription>
           <CloseButton position="absolutegit" right='8px' top="8px"/>
         </Alert>
         <Heading as="h1" id="contactme-section">
@@ -120,7 +124,7 @@ const LandingSection = () => {
                 <Textarea
                   id="comment"
                   name="comment"
-                  height={250}
+                  height={50} //Need an update to 250
                   {...formik.getFieldProps('comment')}
                 />
                 <FormErrorMessage>

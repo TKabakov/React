@@ -9,7 +9,8 @@ const wait = (microseconds) => new Promise((resolve) => setTimeout(resolve, micr
 const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState({
-    type: "success", 
+    type: "success",
+    title: "",
     message: "",
 });
 
@@ -21,6 +22,7 @@ const useSubmit = () => {
       if (random < 0.5) {
       setResponse({
         type: 'success',
+        title: 'All is good!',
         message: `Thanks for your submission, we will get back to you shortly!`,
       })}
       else{
@@ -29,6 +31,7 @@ const useSubmit = () => {
     } catch (error) {
       setResponse({
         type: 'error',
+        title: 'Oops!',
         message: 'Something went wrong, please try again later!',
       })
     } finally {
