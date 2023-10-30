@@ -30,10 +30,10 @@ const LandingSection = () => {
   
   const formik = useFormik({
     initialValues: {
-      firstName: " ",
-      email:" ",
+      firstName: "Rere Jeans",
+      email:"a@g",
       type: "hireMe",
-      comment: " "
+      comment: "I'm a softweare engeneergit"
     },
 
    onSubmit: (values) => {

@@ -8,7 +8,10 @@ const wait = (microseconds) => new Promise((resolve) => setTimeout(resolve, micr
  */
 const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
-  const [response, setResponse] = useState(null);
+  const [response, setResponse] = useState({
+    type: "", 
+    message: "",
+});
 
   const submit = async (url, data) => {
     const random = Math.random();
