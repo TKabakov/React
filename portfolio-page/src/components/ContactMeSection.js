@@ -43,7 +43,7 @@ const LandingSection = () => {
       console.log(response.type);        //Update
       console.log(response.message);     //Upstae
       setDisplay(response.message);    //might need an update
-      console.log(onOpen)
+      console.log(onOpen.type)
    },
 
     validationSchema: 
