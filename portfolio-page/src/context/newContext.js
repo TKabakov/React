@@ -1,23 +1,24 @@
 import { useContext, Context, createContext } from "react";
 
-const Context = createContext();
+//1. Create Context
+const UserContext = createContext('Unknown');
 
+//2. Provide Context
 function Application() {
     const userName = "John SMith";
     return (
-    <Context.Provider value={userName}>
+    <UserContext.Provider value={userName}>
         <Layout>
-        Main content
-      </Layout> 
-    </Context.Provider>
-
+            Main content
+        </Layout> 
+    </UserContext.Provider>
     );
   }
-  //Up to here
-  function Layout({ children, userName }) {
+
+  function Layout({ children }) {
     return (
       <div>
-        <Header userName={userName} />
+        <Header/>
         <main>
           {children}
         </main>
@@ -25,14 +26,17 @@ function Application() {
     )
   }
   
-  function Header({ userName }) {
+  function Header() {
     return (
       <header>
-        <UserInfo userName={userName} />
+        <UserInfo/>
       </header>
     );
   }
   
-  function UserInfo({ userName }) {
+  //3. Use Context
+  function UserInfo() {
+    const userName= useContext(UserContext);
+
     return <span>{userName}</span>;
   }
