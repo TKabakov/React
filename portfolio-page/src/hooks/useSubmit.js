@@ -12,7 +12,7 @@ const useSubmit = () => {
   const [response, setResponse] = useState({
     type: "warning",
     title: "",
-    message: "Your submission is loading",
+    message: "Your submission is pending",
 });
 
   const submit = async (url, data) => {
