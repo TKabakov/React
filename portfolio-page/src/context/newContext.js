@@ -1,11 +1,19 @@
-import { useContext, Context, createContext } from "react";
+import { useState } from "react";
+import { useContext, Context, createContext, useEffect } from "react";
 
 //1. Create Context
 const UserContext = createContext('Unknown');
 
 //2. Provide Context
 function Application() {
-    const userName = "John SMith";
+    const [ userName, setUserName] = useState('John Smith');
+
+    useEffect(() => {
+        setTimeout(() => {
+            setUserName('Smith, John Smith');
+        }, 2000);
+    }, []);
+
     return (
     <UserContext.Provider value={userName}>
         <Layout>
