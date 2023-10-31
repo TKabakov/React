@@ -38,16 +38,12 @@ const LandingSection = () => {
     },
 
    onSubmit: (values) => {
-    //  values.preventDefault();
-     // alert(JSON.stringify(values, null, 2));'
     submit();
-    console.log(formik.values.firstName)
-      console.log(response.type);
-      console.log(response.message);
+    console.log(formik.values.firstName) //Update
+      console.log(response.type);        //Update
+      console.log(response.message);     //Upstae
       setDisplay(response.message);    //might need an update
-     console.log(isLoading);
-     console.log(onOpen)
-
+      console.log(onOpen)
    },
 
     validationSchema: 
@@ -68,8 +64,8 @@ const LandingSection = () => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-        <Box display="flex" justifyContent="center" margin="auto" w="800px" position="absolute" >
-          <Alert status={response.type} display={display} alignSelf="center" borderRadius={14} width="60%" position="absolute" margin="auto">
+        <Box display="flex" justifyContent="center" m="auto" w="800px" p="absolute" >
+          <Alert status={response.type} display={display} alignSelf="center" borderRadius={14} w="60%" p="absolute" m="auto">
           <AlertIcon />
           <AlertTitle>
             {response.title}

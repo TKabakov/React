@@ -24,7 +24,7 @@ const useSubmit = () => {
       setResponse({
         type: 'success',
         title: 'All is good!',
-        message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!`,
+        message: `Thanks for your submission, we will get back to you shortly!`,
       })}
       else{
         throw new Error("Something went wrong");

@@ -3,7 +3,7 @@ import useSubmit from "../hooks/useSubmit";
 
 const AlertContext = createContext(undefined);
 
-export const AlertProvider = ({ children }) => {
+export const AlertProvider = ({ children }, response) => {
   const [state, setState] = useState({
     isOpen: false,
     // Type can be either "success" or "error"
