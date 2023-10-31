@@ -16,8 +16,6 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
-  CloseButton,
-  Center, 
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
@@ -73,7 +71,6 @@ const LandingSection = () => {
           <AlertDescription>
             {response.message}
           </AlertDescription>
-          <CloseButton position="absolutegit" right='8px' top="8px"/>
         </Alert>
         </Box>
         <Heading as="h1" id="contactme-section">
