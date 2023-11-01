@@ -37,7 +37,7 @@ const LandingSection = () => {
 
    onSubmit: (values) => {
     submit();
-    setDisplay(response.message);
+      setDisplay(response.message);    //might need an update
    },
 
     validationSchema: 
@@ -49,14 +49,15 @@ const LandingSection = () => {
     }),
   });
 
-  const backgroundColor =() => {
+  const backgroundColor =() =>{
     if (response.type === 'success') {
     return '#81C784'
   } else if (response.type === 'error'){
     return '#FF8A65'
   } else {
     return '#FEF44C'
-  }}; 
+  }
+  } 
 
   return (
     <>
@@ -75,6 +76,7 @@ const LandingSection = () => {
             w="60%" p="absolute" 
             m="auto"
             backgroundColor={backgroundColor}
+            transform="translate(0px, 110px)"
             >
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
