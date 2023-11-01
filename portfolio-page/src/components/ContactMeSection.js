@@ -59,7 +59,15 @@ const LandingSection = () => {
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
        
-          <Alert status={response.type} display={display} alignSelf="center" borderRadius={14} w="60%" p="absolute" m="auto">
+          <Alert 
+            status={response.type} 
+            display={display} 
+            alignSelf="center" 
+            borderRadius={14} 
+            w="60%" p="absolute" 
+            m="auto"
+            backgroundColor={response.type === 'success' ? '#81C784' : '#FF8A65'}
+            >
           <AlertIcon />
           <AlertTitle>
             {response.title}
