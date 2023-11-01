@@ -49,6 +49,16 @@ const LandingSection = () => {
     }),
   });
 
+  const backgroundColor =() =>{
+    if (response.type === 'success') {
+    return '#81C784'
+  } else if (response.type === 'error'){
+    return '#FF8A65'
+  } else {
+    return '#FEF33F'
+  }
+  } 
+
   return (
     <>
     <FullScreenSection
@@ -66,7 +76,7 @@ const LandingSection = () => {
             borderRadius={14} 
             w="60%" p="absolute" 
             m="auto"
-            backgroundColor={response.type === 'success' ? '#81C784' : '#FF8A65'}
+            backgroundColor={backgroundColor}
             >
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
