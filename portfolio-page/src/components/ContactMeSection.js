@@ -73,10 +73,11 @@ const LandingSection = () => {
             display={display} 
             alignSelf="center" 
             borderRadius={14} 
-            w="60%" p="absolute" 
+            w="60%" 
+            p="absolute" 
             m="auto"
             backgroundColor={backgroundColor}
-            transform="translate(0px, 110px)"
+            transform="translate(0px, 105px)"
             >
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
