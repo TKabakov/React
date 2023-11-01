@@ -69,10 +69,10 @@ const LandingSection = () => {
             backgroundColor={response.type === 'success' ? '#81C784' : '#FF8A65'}
             >
           <AlertIcon />
-          <AlertTitle>
+          <AlertTitle fontSize="lg" paddingTop={2}>
             {response.title}
           </AlertTitle>
-          <AlertDescription>
+          <AlertDescription paddingTop={2}>
             {response.message}
           </AlertDescription>
         </Alert>
