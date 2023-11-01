@@ -37,11 +37,7 @@ const LandingSection = () => {
 
    onSubmit: (values) => {
     submit();
-    console.log(formik.values.firstName) //Update
-      console.log(response.type);        //Update
-      console.log(response.message);     //Upstae
       setDisplay(response.message);    //might need an update
-      console.log(onOpen.type)
    },
 
     validationSchema: 
@@ -62,7 +58,7 @@ const LandingSection = () => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-        <Box display="flex" justifyContent="center" m="auto" w="800px" p="absolute" >
+       
           <Alert status={response.type} display={display} alignSelf="center" borderRadius={14} w="60%" p="absolute" m="auto">
           <AlertIcon />
           <AlertTitle>
@@ -72,7 +68,7 @@ const LandingSection = () => {
             {response.message}
           </AlertDescription>
         </Alert>
-        </Box>
+        
         <Heading as="h1" id="contactme-section">
           Contact me
         </Heading>
