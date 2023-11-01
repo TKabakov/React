@@ -37,7 +37,7 @@ const LandingSection = () => {
 
    onSubmit: (values) => {
     submit();
-      setDisplay(response.message);    //might need an update
+    setDisplay(response.message);
    },
 
     validationSchema: 
@@ -49,15 +49,14 @@ const LandingSection = () => {
     }),
   });
 
-  const backgroundColor =() =>{
+  const backgroundColor =() => {
     if (response.type === 'success') {
     return '#81C784'
   } else if (response.type === 'error'){
     return '#FF8A65'
   } else {
-    return '#FEF33F'
-  }
-  } 
+    return '#FEF44C'
+  }}; 
 
   return (
     <>
@@ -67,8 +66,7 @@ const LandingSection = () => {
       py={16}
       spacing={8}
     >
-      <VStack w="1024px" p={32} alignItems="flex-start">
-       
+      <VStack w="1024px" p={32} alignItems="flex-start">    
           <Alert 
             status={response.type} 
             display={display} 
