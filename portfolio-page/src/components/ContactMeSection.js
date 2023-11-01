@@ -151,7 +151,6 @@ const LandingSection = () => {
         </Box>
       </VStack>
       <Stack spacing={3}>
-
 </Stack>
 alert(formik.values.email);
     </FullScreenSection>

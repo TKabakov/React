@@ -33,15 +33,16 @@ const socials = [
 ];
 
 const Header = () => {
-  const ref = useRef(null);
-
-  const handleClick = () => {
-
-      ref.current?.scrollIntoView({
+  const handleClick = (anchor) => () => {
+    const id = `${anchor}-section`;
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-    };
+    }
+  };
 
   return (
     <Box
