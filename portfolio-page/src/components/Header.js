@@ -32,7 +32,7 @@ const socials = [
   },
 ];
 
-const Header = ({projects, contactMe}) => {
+const Header = ({home, projects, contactMe}) => {
 
   return (
     <Box
@@ -76,6 +76,12 @@ const Header = ({projects, contactMe}) => {
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
+              <a onClick={() => home.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              })}>
+                Home
+              </a>
               <a onClick={() => projects.current.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
