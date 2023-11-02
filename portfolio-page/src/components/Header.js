@@ -96,18 +96,15 @@ const Header = ({scroll}) => {
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
-              <a href="/#projects-section" onClick={() => scroll.current.scrollIntoView({
+              <h1 onClick={() => scroll.current.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
               })}>
                 Projects
-              </a>
+              </h1>
               <a href="/#contactme-section" onClick={handleClick}>
                 Contact me
               </a>
-            <div ref={scrollRef}>
-              Hello
-            </div>
             </HStack>
           </nav>
         </HStack>

@@ -31,7 +31,7 @@ const projects = [
   },
 ];
 
-const ProjectsSection = forwardRef((ref) => {
+const ProjectsSection = forwardRef((props, ref) => {
   return (
     <FullScreenSection
       backgroundColor="#14532d"
