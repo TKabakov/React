@@ -12,14 +12,16 @@ function App() {
   //1. create scrollRef
   const scrollRef = useRef(null);
 
-  //2.create a prop to pass scrollRef
+  
   return (
     <ChakraProvider>
       <AlertProvider>
         <main>
+   {/*2.create a prop to pass scrollRef*/}
           <Header scroll={scrollRef}/>
           <LandingSection />
-          <ProjectsSection />
+    {/*3.asign ref to scrollRef for ProjectSectio*/}
+          <ProjectsSection ref={scrollRef} />
           <ContactMeSection />
           <Footer />
           <Alert />
