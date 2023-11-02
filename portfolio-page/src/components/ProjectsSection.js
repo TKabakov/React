@@ -1,8 +1,8 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
 import { Box, Heading, Text, Image, HStack } from "@chakra-ui/react";
-
 import Card from "./Card";
+import { forwardRef } from 'react';
 
 const projects = [
   {
@@ -31,7 +31,7 @@ const projects = [
   },
 ];
 
-const ProjectsSection = () => {
+const ProjectsSection = forwardRef((ref) => {
   return (
     <FullScreenSection
       backgroundColor="#14532d"
@@ -40,7 +40,7 @@ const ProjectsSection = () => {
       alignItems="flex-start"
       spacing={8}
     >
-      <Heading as="h1" id="projects-section">
+      <Heading ref={ref} as="h1" id="projects-section">
         Featured Projects
       </Heading>
       <Box
@@ -59,6 +59,6 @@ const ProjectsSection = () => {
       </Box>
     </FullScreenSection>
   );
-};
+});
 
 export default ProjectsSection;

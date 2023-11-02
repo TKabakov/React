@@ -32,7 +32,7 @@ const socials = [
   },
 ];
 
-const Header = (scroll) => {
+const Header = ({scroll}) => {
 //create a referenced object
   const scrollRef = useRef();
 
@@ -96,7 +96,10 @@ const Header = (scroll) => {
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
-              <a href="/#projects-section" onClick={handleClick}>
+              <a href="/#projects-section" onClick={() => scroll.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              })}>
                 Projects
               </a>
               <a href="/#contactme-section" onClick={handleClick}>
