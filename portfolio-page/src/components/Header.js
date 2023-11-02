@@ -32,7 +32,7 @@ const socials = [
   },
 ];
 
-const Header = ({scroll}) => {
+const Header = ({projects, contactMe}) => {
 //create a referenced object
   const scrollRef = useRef();
 
@@ -43,16 +43,16 @@ const Header = ({scroll}) => {
 //    })
 //  } 
 
-  const handleClick = () => {
-    const id = "projects-section";
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
+const handleClick = (anchor) => () => {
+  const id = `${anchor}-section`;
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
 
   return (
     <Box
@@ -96,13 +96,16 @@ const Header = ({scroll}) => {
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
-              <h1 onClick={() => scroll.current.scrollIntoView({
+              <a onClick={() => projects.current.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
               })}>
                 Projects
-              </h1>
-              <a href="/#contactme-section" onClick={handleClick}>
+              </a>
+              <a onClick={() => contactMe.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              })}>
                 Contact me
               </a>
             </HStack>

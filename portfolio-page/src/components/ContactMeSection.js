@@ -21,8 +21,9 @@ import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
+import {forwardRef} from 'react';
 
-const LandingSection = () => {
+const LandingSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
   const {onOpen } = useAlertContext();
   const [display, setDisplay] = useState('none');
@@ -88,7 +89,7 @@ const LandingSection = () => {
           </AlertDescription>
         </Alert>
         
-        <Heading as="h1" id="contactme-section">
+        <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
         </Heading>
         <Box p={6} rounded="md" w="100%">
@@ -156,6 +157,6 @@ alert(formik.values.email);
     </FullScreenSection>
     </>
   );
-};
+});
 
 export default LandingSection;

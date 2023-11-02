@@ -10,19 +10,22 @@ import { useRef } from 'react';
 
 function App() {
   //1. create scrollRef
-  const scrollRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactsRef = useRef(null);
 
-  
   return (
     <ChakraProvider>
       <AlertProvider>
         <main>
    {/*2.create a prop to pass scrollRef*/}
-          <Header scroll={scrollRef}/>
+          <Header
+            projects ={projectsRef}
+            contactMe = {contactsRef}
+            />
           <LandingSection />
     {/*3.asign ref to scrollRef for ProjectSectio*/}
-          <ProjectsSection ref={scrollRef} />
-          <ContactMeSection />
+          <ProjectsSection ref={projectsRef} />
+          <ContactMeSection ref={contactsRef}/>
           <Footer />
           <Alert />
         </main>
