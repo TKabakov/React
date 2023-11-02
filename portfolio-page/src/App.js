@@ -6,8 +6,11 @@ import ContactMeSection from "./components/ContactMeSection";
 import Footer from "./components/Footer";
 import { AlertProvider } from "./context/alertContext"
 import Alert from "./components/Alert";
+import { useRef } from 'react';
 
 function App() {
+  const scrollRef = useRef();
+
   return (
     <ChakraProvider>
       <AlertProvider>
