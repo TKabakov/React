@@ -9,13 +9,15 @@ import Alert from "./components/Alert";
 import { useRef } from 'react';
 
 function App() {
-  const scrollRef = useRef();
+  //1. create scrollRef
+  const scrollRef = useRef(null);
 
+  //2.create a prop to pass scrollRef
   return (
     <ChakraProvider>
       <AlertProvider>
         <main>
-          <Header />
+          <Header scroll={scrollRef}/>
           <LandingSection />
           <ProjectsSection />
           <ContactMeSection />

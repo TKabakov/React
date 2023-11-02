@@ -32,7 +32,7 @@ const socials = [
   },
 ];
 
-const Header = () => {
+const Header = (scroll) => {
 //create a referenced object
   const scrollRef = useRef();
 
