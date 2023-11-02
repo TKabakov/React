@@ -23,7 +23,7 @@ import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
 import {forwardRef} from 'react';
 
-const LandingSection = forwardRef((props, ref) => {
+const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
   const {onOpen } = useAlertContext();
   const [display, setDisplay] = useState('none');
@@ -38,7 +38,7 @@ const LandingSection = forwardRef((props, ref) => {
 
    onSubmit: (values) => {
     submit();
-      setDisplay(response.message);    //might need an update
+    setDisplay(response.message);    //might need an update
    },
 
     validationSchema: 
@@ -159,4 +159,4 @@ alert(formik.values.email);
   );
 });
 
-export default LandingSection;
+export default ContactMeSection;
