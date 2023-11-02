@@ -45,13 +45,14 @@ const Header = () => {
 
   const handleClick = () => {
     const id = "projects-section";
-    const element = document.getElementById("projects-section");
+    const element = document.getElementById(id);
+    if (element) {
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     }
-//  };
+  };
 
   return (
     <Box
@@ -75,20 +76,20 @@ const Header = () => {
           <nav>
           <HStack spacing={4}>
             {/* Add social media links based on the `socials` data */}
-            <a href="mailto: hello@example.com">
-              <FontAwesomeIcon icon={faEnvelope} size="2x"/>
+            <a href={socials[0].url}>
+              <FontAwesomeIcon icon={socials[0].icon} size="2x"/>
             </a>
-            <a href="https://github.com">
-              <FontAwesomeIcon icon={faGithub} size="2x"/>
+            <a href={socials[1].url}>
+              <FontAwesomeIcon icon={socials[1].icon} size="2x"/>
             </a>
-            <a href="https://www.linkedin.com">
-              <FontAwesomeIcon icon={faLinkedin} size="2x"/>
+            <a href={socials[2].url}>
+              <FontAwesomeIcon icon={socials[2].icon} size="2x"/>
             </a>
-            <a href="https://medium.com">
-              <FontAwesomeIcon icon={faMedium} size="2x"/>
+            <a href={socials[3].url}>
+              <FontAwesomeIcon icon={socials[3].icon} size="2x"/>
             </a>
-            <a href="https://stackoverflow.com">
-              <FontAwesomeIcon icon={faStackOverflow} size="2x"/>
+            <a href={socials[4].url}>
+              <FontAwesomeIcon icon={socials[4].icon} size="2x"/>
             </a>
             </HStack>
           </nav>
