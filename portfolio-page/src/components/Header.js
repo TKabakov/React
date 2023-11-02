@@ -33,26 +33,6 @@ const socials = [
 ];
 
 const Header = ({projects, contactMe}) => {
-//create a referenced object
-  const scrollRef = useRef();
-
-//create handleClick
-//  const handleClick = () => {
-//    scrollRef.current?.scrollIntoView({
-//      behavior: 'smooth'
-//    })
-//  } 
-
-const handleClick = (anchor) => () => {
-  const id = `${anchor}-section`;
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-};
 
   return (
     <Box

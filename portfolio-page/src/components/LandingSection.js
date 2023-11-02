@@ -27,16 +27,9 @@ const LandingSection = () => {
     backgroundColor="#2A4365"
   >
     <Avatar name="Pete" src="https://i.pravatar.cc/150?img=7 "></Avatar>
-      <button onClick={handleClick}>Scroll</button>
       <p>{greeting}</p>
-      <h2 
-      style={{height:"500px"}}>
-        {bio1}
-        </h2>
-      <h2 ref={scrollRef}
-      style={{height:"500px"}}>
-        {bio2}
-        </h2>
+      <h2>{bio1}</h2>
+      <h2>{bio2}</h2>
   </FullScreenSection>
   )
 
