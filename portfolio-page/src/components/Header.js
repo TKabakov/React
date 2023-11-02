@@ -37,21 +37,20 @@ const Header = () => {
   const scrollRef = useRef();
 
 //create handleClick
-  const handleClick = () => {
-    scrollRef.current?.scrollIntoView({
-      behavior: 'smooth'
-    })
-  } 
+//  const handleClick = () => {
+//    scrollRef.current?.scrollIntoView({
+//      behavior: 'smooth'
+//    })
+//  } 
 
-//  const handleClick = (anchor) => () => {
-//    const id = `${anchor}-section`;
-//    const element = document.getElementById(id);
-//    if (element) {
-//      element.scrollIntoView({
-//        behavior: "smooth",
-//        block: "start",
-//      });
-//    }
+  const handleClick = () => {
+    const id = "projects-section";
+    const element = document.getElementById("projects-section");
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
 //  };
 
   return (
