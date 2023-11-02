@@ -8,8 +8,9 @@ const bio2 = "specialised in React";
 
 // Implement the UI for the LandingSection component according to the instructions.
 // Use a combination of Avatar, Heading and VStack components.
-const LandingSection = () => (
-  <FullScreenSection
+const LandingSection = () => {
+  return(
+        <FullScreenSection
     justifyContent="center"
     alignItems="center"
     isDarkBackground
@@ -20,6 +21,8 @@ const LandingSection = () => (
       <h2>{bio1}</h2>
       <h2>{bio2}</h2>
   </FullScreenSection>
-);
+  )
+
+};
 
 export default LandingSection;
