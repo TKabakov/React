@@ -17,11 +17,11 @@ const LandingSection = forwardRef((props,ref) => {
     isDarkBackground
     backgroundColor="#2A4365"
   >
-  <div ref={ref} style={{marginBottom:"50px"}}>hello</div>
-    <Avatar name="Pete" src="https://i.pravatar.cc/150?img=7 " style={{marginTop:"120px"}}></Avatar>
+  <div ref={ref} style={{marginBottom:"70px"}}></div>
+    <Avatar name="Pete" src="https://i.pravatar.cc/150?img=7 " style={{marginTop:"180px"}}></Avatar>
       <p>{greeting}</p>
       <h2>{bio1}</h2>
-      <h2 style={{marginBottom:"200px"}}>{bio2}</h2>
+      <h2 style={{marginBottom:"230px"}}>{bio2}</h2>
   </FullScreenSection>
   )
 });
