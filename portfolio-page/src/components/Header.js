@@ -7,7 +7,7 @@ import {
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, Button, HStack } from "@chakra-ui/react";
 
 const socials = [
   {
@@ -40,8 +40,11 @@ const Header = ({home, projects, contactMe}) => {
       top={0}
       left={0}
       right={0}
+      marginTop="50px"
       translateY={0}
+      transition=" width 2s "
       transitionProperty="transform"
+      transform= "scaleY(0.5)"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
@@ -98,6 +101,9 @@ const Header = ({home, projects, contactMe}) => {
           </nav>
         </HStack>
       </Box>
+      <Button onClick={}>
+        Slide Me
+      </Button>
     </Box>
   );
 };
