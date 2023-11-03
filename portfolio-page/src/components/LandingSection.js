@@ -11,16 +11,17 @@ const bio2 = "specialised in React";
 const LandingSection = forwardRef((props,ref) => {
 
   return(
-        <FullScreenSection
+  <FullScreenSection
     justifyContent="center"
     alignItems="center"
     isDarkBackground
     backgroundColor="#2A4365"
   >
-    <Avatar ref={ref} name="Pete" src="https://i.pravatar.cc/150?img=7 "></Avatar>
+  <div ref={ref} style={{marginBottom:"50px"}}>hello</div>
+    <Avatar name="Pete" src="https://i.pravatar.cc/150?img=7 " style={{marginTop:"120px"}}></Avatar>
       <p>{greeting}</p>
       <h2>{bio1}</h2>
-      <h2>{bio2}</h2>
+      <h2 style={{marginBottom:"200px"}}>{bio2}</h2>
   </FullScreenSection>
   )
 });

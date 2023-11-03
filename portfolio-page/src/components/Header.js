@@ -7,7 +7,7 @@ import {
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack, useDisclosure, Button, Slide } from "@chakra-ui/react";
+import { Box, HStack } from "@chakra-ui/react";
 
 const socials = [
   {
@@ -33,18 +33,9 @@ const socials = [
 ];
 
 const Header = ({home, projects, contactMe}) => {
-  const { isOpen, onToggle } = useDisclosure()
 
-    return (
-    <> 
-    <Button onClick = { onToggle } >
-      Slide me
-    </Button>   
-    <Slide 
-      direction="up" 
-      in={ isOpen }
-      style={{ zIndex: 10 }}>
- <Box
+  return (
+    <Box
       position="fixed"
       top={0}
       left={0}
@@ -108,11 +99,6 @@ const Header = ({home, projects, contactMe}) => {
         </HStack>
       </Box>
     </Box>
-    </Slide>
-
-
-   
-    </>
   );
 };
 export default Header;
