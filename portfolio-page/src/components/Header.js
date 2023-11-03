@@ -34,8 +34,15 @@ const socials = [
 
 const Header = ({home, projects, contactMe}) => {
   const { isOpen, onToggle } = useDisclosure()
-  
+
     return (
+    <>
+    
+    <Button onClick = { onToggle } >
+      Slide me
+    </Button>
+
+    
     <Box
       position="fixed"
       top={0}
@@ -100,6 +107,7 @@ const Header = ({home, projects, contactMe}) => {
         </HStack>
       </Box>
     </Box>
+    </>
   );
 };
 export default Header;
