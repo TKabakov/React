@@ -57,8 +57,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FF8A65'
   } else {
     return '#FEF44C'
-  }
-  } 
+  }} 
 
   return (
     <>
