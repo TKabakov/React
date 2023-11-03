@@ -41,8 +41,15 @@ const Header = ({home, projects, contactMe}) => {
     <Button onClick = { onToggle } >
       Slide me
     </Button>
-
     
+    <Slide 
+      direction="up" 
+      in={ isOpen }
+      style={{ zIndex: 10 }}>
+
+    </Slide>
+
+
     <Box
       position="fixed"
       top={0}
