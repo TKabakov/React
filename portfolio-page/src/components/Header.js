@@ -7,7 +7,7 @@ import {
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, useDisclosure } from "@chakra-ui/react";
 
 const socials = [
   {
@@ -33,8 +33,9 @@ const socials = [
 ];
 
 const Header = ({home, projects, contactMe}) => {
-
-  return (
+  const { isOpen, onToggle } = useDisclosure()
+  
+    return (
     <Box
       position="fixed"
       top={0}
