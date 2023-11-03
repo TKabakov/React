@@ -53,37 +53,3 @@ const Card = ({ title, description, imageSrc }) => {
 };
 
 export default Card;
-
-/*p
-export default function Card({props}){
-  return (
-    <>
-    <VStack 
-      spacing={4}
-      divider={<StackDivider borderColor="white"/>} 
-      align="stretch">
-    
-      <Heading mb={2} fontSize="4xl" >
-        <p>{props}</p>
-      </Heading >
-        <p>{props}</p>
-        <p>{props}</p>
-      <HStack spacing={12}>
-        <p>{props}</p>
-        <p>{props}</p>
-        <Text as="i" fontSize="3xl" noOfLines={3} color="tomato">
-          <Text as="b">
-             <p>{props}</p> 
-          </Text>
-        <p>{props}</p>          
-        <p>{props}</p>          
-        <p>{props}</p>
-        </Text>
-
-
-      </HStack>
-    </VStack>
-    </>
-  )
-};
-*/
