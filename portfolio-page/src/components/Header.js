@@ -33,6 +33,11 @@ const socials = [
 ];
 
 const Header = ({home, projects, contactMe}) => {
+  const slideRef = useRef(null);
+
+  const handleClick = () => {
+      
+  }
 
   return (
     <Box
@@ -40,7 +45,7 @@ const Header = ({home, projects, contactMe}) => {
       top={0}
       left={0}
       right={0}
-      marginTop="50px"
+      marginTop="-10px"
       translateY={0}
       transition=" width 2s "
       transitionProperty="transform"
@@ -101,9 +106,9 @@ const Header = ({home, projects, contactMe}) => {
           </nav>
         </HStack>
       </Box>
-      <Button onClick={}>
+      {/*<Button onClick={handleClick}>
         Slide Me
-      </Button>
+            </Button>*/}
     </Box>
   );
 };
