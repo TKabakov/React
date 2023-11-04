@@ -39,21 +39,21 @@ const Header = ({home, projects, contactMe}) => {
   const handleChange = () => {
     setToggle(!toggle);
     if(toggle){
-      setChangeMargin("200px");
+      setChangeMargin("-200px");
     }else setChangeMargin("0px")
     
   }
 
   return (
     <>
-        <Box
+    <Box
       position="fixed"
       top={0}
       left={0}
       right={0}
       marginTop={changeMargin}
       translateY={0}
-      transition=" marginTop 2s"
+      transition="marginTop 2s"
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
