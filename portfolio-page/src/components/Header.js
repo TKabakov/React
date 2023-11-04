@@ -89,19 +89,22 @@ const Header = ({home, projects, contactMe}) => {
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
-              <a onClick={() => home.current.scrollIntoView({
+              <a
+                onClick={() => home.current.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
               })}>
                 Home
               </a>
-              <a onClick={() => projects.current.scrollIntoView({
+              <a
+                onClick={() => projects.current.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
               })}>
                 Projects
               </a>
-              <a onClick={() => contactMe.current.scrollIntoView({
+              <a
+                onClick={() => contactMe.current.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
               })}>
