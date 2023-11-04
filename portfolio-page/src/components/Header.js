@@ -8,7 +8,7 @@ import {
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, Button, HStack } from "@chakra-ui/react";
-import { useState } from 'react';
+import { useState } from "react";
 
 const socials = [
   {
@@ -34,11 +34,19 @@ const socials = [
 ];
 
 const Header = ({home, projects, contactMe}) => {
-
-  const changeMargin = "50px";
+  const [ changeMargin, setChangeMargin] = useState("0px")
+  const [ toggle, setToggle ] = useState(false);
+  const handleChange = () => {
+    setToggle(!toggle);
+    if(toggle){
+      setChangeMargin("200px");
+    }else setChangeMargin("0px")
+    
+  }
 
   return (
-    <Box
+    <>
+        <Box
       position="fixed"
       top={0}
       left={0}
@@ -104,6 +112,9 @@ const Header = ({home, projects, contactMe}) => {
         </HStack>
       </Box>
     </Box>
+    <Button onClick={handleChange}>Slide Me</Button>
+    </>
+
   );
 };
 export default Header;
