@@ -35,8 +35,8 @@ const socials = [
 
 const Header = ({home, projects, contactMe}) => {
 
-  const changeMargin = "300px";
-  
+  const changeMargin = "50px";
+
   return (
     <Box
       position="fixed"
@@ -47,7 +47,6 @@ const Header = ({home, projects, contactMe}) => {
       translateY={0}
       transition=" marginTop 2s"
       transitionProperty="transform"
-      transform= "scaleY(0.5)"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
