@@ -39,6 +39,7 @@ const ContactMeSection = forwardRef((props, ref) => {
    onSubmit: (values) => {
     submit();
     setDisplay(response.message);    //might need an update
+    console.log(isLoading);
    },
 
     validationSchema: 
@@ -147,18 +148,15 @@ const ContactMeSection = forwardRef((props, ref) => {
                 type="submit" 
                 colorScheme="purple" 
                 width="full"
-                isLoading
+                isLoading={isLoading}
                 loadingText='Submitting'
-                variant='outline'>
+             >
                 Submit
               </Button>
             </VStack>
           </form>
         </Box>
       </VStack>
-      <Stack spacing={3}>
-</Stack>
-alert(formik.values.email);
     </FullScreenSection>
     </>
   );
