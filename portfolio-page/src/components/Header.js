@@ -111,8 +111,9 @@ const Header = ({home, projects, contactMe}) => {
           </nav>
         </HStack>
       </Box>
+      <Button onClick={handleChange}>Slide Me</Button>
     </Box>
-    <Button onClick={handleChange}>Slide Me</Button>
+    
     </>
 
   );
