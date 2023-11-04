@@ -143,7 +143,13 @@ const ContactMeSection = forwardRef((props, ref) => {
                 Comment is required. {formik.errors.comment}
                 </FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="purple" width="full">
+              <Button 
+                type="submit" 
+                colorScheme="purple" 
+                width="full"
+                isLoading
+                loadingText='Submitting'
+                variant='outline'>
                 Submit
               </Button>
             </VStack>

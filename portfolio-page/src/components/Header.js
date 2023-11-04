@@ -8,6 +8,7 @@ import {
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, Button, HStack } from "@chakra-ui/react";
+import { useState } from 'react';
 
 const socials = [
   {
@@ -33,25 +34,18 @@ const socials = [
 ];
 
 const Header = ({home, projects, contactMe}) => {
-  const slideRef = useRef(null);
 
-  const handleClick = () => {
-    slideRef.current(
-      transition=
-      {martinTop: -50px }
-    )
-  }
-
+  const changeMargin = "300px";
+  
   return (
     <Box
-      ref={slideRef}
       position="fixed"
       top={0}
       left={0}
       right={0}
-      marginTop="0px"
+      marginTop={changeMargin}
       translateY={0}
-      transition=" marginTop 2s "
+      transition=" marginTop 2s"
       transitionProperty="transform"
       transform= "scaleY(0.5)"
       transitionDuration=".3s"
@@ -110,9 +104,6 @@ const Header = ({home, projects, contactMe}) => {
           </nav>
         </HStack>
       </Box>
-      <Button onClick={handleClick}>
-        Slide Me
-            </Button>
     </Box>
   );
 };
