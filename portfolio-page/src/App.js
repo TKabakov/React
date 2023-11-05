@@ -9,7 +9,7 @@ import Alert from "./components/Alert";
 import { useRef } from 'react';
 
 function App() {
-  //1. create scrollRef
+  //1. create projectsRef, contatctRef, home
   const projectsRef = useRef(null);
   const contactsRef = useRef(null);
   const home = useRef(null);

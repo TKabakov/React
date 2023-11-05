@@ -35,24 +35,22 @@ const socials = [
 ];
 
 const Header = ({home, projects, contactMe}) => {
-  const [ changeMargin, setChangeMargin] = useState("0px")
-  const [ toggle, setToggle ] = useState(false);
-  const handleChange = () => {
-    setToggle(!toggle);
-    if(toggle){
-      setChangeMargin("-200px");
-    }else setChangeMargin("0px")
-    
+  const wrapperRef = useRef(null);
+
+  const handleClick = () => {
+      const wrapper = wrapperRef.current;
+      wrapper.classList.toggle('is-nav-open')
   }
 
   return (
     <>
+    <div ref={wrapperRef} className="wrapper">
     <Box
       position="fixed"
       top={0}
       left={0}
       right={0}
-      marginTop={changeMargin}
+      marginTop="0px"
       translateY={0}
       transition="marginTop 2s"
       transitionProperty="transform"
@@ -115,11 +113,12 @@ const Header = ({home, projects, contactMe}) => {
           </nav>
         </HStack>
       </Box>
-      <Button onClick={handleChange}>Slide Me</Button>
     </Box>
-    
+    </div>
+    <Button onClick={handleClick}>
+      Slide In
+    </Button>
     </>
-
   );
 };
 export default Header;
