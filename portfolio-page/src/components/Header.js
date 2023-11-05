@@ -35,28 +35,16 @@ const socials = [
 ];
 
 const Header = ({home, projects, contactMe}) => {
-  const wrapperRef = useRef(null);
+  let [ mode, setMode ] = useState("light");
 
   const handleClick = () => {
-      const wrapper = wrapperRef.current;
-      wrapper.classList.toggle('is-nav-open')
+    setMode(mode == "light" ? "dark" : "light");
   }
 
   return (
     <>
-    <div ref={wrapperRef} className="wrapper">
+    <div className={'app' + mode}>
     <Box
-      position="fixed"
-      top={0}
-      left={0}
-      right={0}
-      marginTop="0px"
-      translateY={0}
-      transition="marginTop 2s"
-      transitionProperty="transform"
-      transitionDuration=".3s"
-      transitionTimingFunction="ease-in-out"
-      backgroundColor="#18181b"
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
