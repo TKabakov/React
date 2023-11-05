@@ -45,8 +45,8 @@ const Header = ({home, projects, contactMe}) => {
   }
 */
 
-const [ onOff, setOnOff ] = useState(true);
-const { stage, shouldMount } = useTransition(onOff, 300)
+const [ onOff, setOnOff ] = useState(false);
+const { stage, shouldMount } = useTransition(onOff, 300);
    return (
     <>
     {shouldMount && (
@@ -55,7 +55,7 @@ const { stage, shouldMount } = useTransition(onOff, 300)
       top={0}
       left={0}
       right={0}
-      marginTop={changeMargin}
+      marginTop={ stage === 'enter' ? "300px" : "100px"}
       translateY={0}
       transition="marginTop 2s"
       transitionProperty="transform"
@@ -118,11 +118,10 @@ const { stage, shouldMount } = useTransition(onOff, 300)
           </nav>
         </HStack>
       </Box>
- 
-  <Button onClick={() => setOnOff(!onOff)}>Slide Me</Button>
 </Box>
+
    )}
-   
+   <Button onClick={() => setOnOff(!onOff)}>Slide Me</Button>
     
     </>
 
