@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -8,8 +8,6 @@ import {
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, Button, HStack } from "@chakra-ui/react";
-import { useState } from "react";
-
 
 const socials = [
   {
@@ -35,16 +33,22 @@ const socials = [
 ];
 
 const Header = ({home, projects, contactMe}) => {
-  let [ mode, setMode ] = useState("light");
-
-  const handleClick = () => {
-    setMode(mode == "light" ? "dark" : "light");
-  }
 
   return (
     <>
-    <div className={'app' + mode}>
+    <div className="div">
     <Box
+      className="div"
+      position="fixed"
+      top={0}
+      left={0}
+      right={0}
+      translateY={0}
+      transition="marginTop 2s"
+      transitionProperty="transform"
+      transitionDuration=".3s"
+      transitionTimingFunction="ease-in-out"
+      backgroundColor="#18181b"
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
@@ -103,9 +107,6 @@ const Header = ({home, projects, contactMe}) => {
       </Box>
     </Box>
     </div>
-    <Button onClick={handleClick}>
-      Slide In
-    </Button>
     </>
   );
 };
