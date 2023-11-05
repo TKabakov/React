@@ -8,7 +8,8 @@ import {
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, Button, HStack } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useTransition } from "react";
+
 
 const socials = [
   {
@@ -34,19 +35,22 @@ const socials = [
 ];
 
 const Header = ({home, projects, contactMe}) => {
-  const [ changeMargin, setChangeMargin] = useState("0px")
+/*  const [ changeMargin, setChangeMargin] = useState("0px")
   const [ toggle, setToggle ] = useState(false);
   const handleChange = () => {
     setToggle(!toggle);
     if(toggle){
       setChangeMargin("-200px");
-    }else setChangeMargin("0px")
-    
+    }else setChangeMargin("0px")   
   }
+*/
 
-  return (
+const [ onOff, setOnOff ] = useState(true);
+const { stage, shouldMount } = useTransition(onOff, 300)
+   return (
     <>
-    <Box
+    {shouldMount && (
+      <Box
       position="fixed"
       top={0}
       left={0}
@@ -58,7 +62,7 @@ const Header = ({home, projects, contactMe}) => {
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
-    >
+      >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
           px={16}
@@ -114,8 +118,11 @@ const Header = ({home, projects, contactMe}) => {
           </nav>
         </HStack>
       </Box>
-      <Button onClick={handleChange}>Slide Me</Button>
-    </Box>
+ 
+  <Button onClick={() => setOnOff(!onOff)}>Slide Me</Button>
+</Box>
+   )}
+   
     
     </>
 
