@@ -38,13 +38,11 @@ const Header = ({home, projects, contactMe}) => {
     <>
     <div className="div">
     <Box
-      className="div"
       position="fixed"
       top={0}
       left={0}
       right={0}
-      translateY={0}
-      transition="marginTop 2s"
+      translateY={"-200px"}
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
