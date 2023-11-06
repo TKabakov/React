@@ -37,20 +37,20 @@ const { isOpen, onToggle } = useDisclosure();
 
   return (
     <>
-    <Box>
-         <Button onClick={onToggle}>
+    <Button onClick={onToggle}>
       Slide Me Down
     </Button> 
-    </Box>
-<Box>
-  
-</Box>
     <Slide in={isOpen} direction="bottom" style={{ zIndex: 10 }}>
-
     <Box
       p= "40px"
       mt= "10"
-
+      top={0}
+      left={0}
+      right={0}
+      translateY={0}
+      transitionProperty="transform"
+      transitionDuration=".3s"
+      transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
