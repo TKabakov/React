@@ -36,13 +36,12 @@ const Header = ({home, projects, contactMe}) => {
 
   return (
     <>
-    <div className="div">
     <Box
       position="fixed"
       top={0}
       left={0}
       right={0}
-      translateY={"-200px"}
+      translateY={0}
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
@@ -104,7 +103,6 @@ const Header = ({home, projects, contactMe}) => {
         </HStack>
       </Box>
     </Box>
-    </div>
     </>
   );
 };
