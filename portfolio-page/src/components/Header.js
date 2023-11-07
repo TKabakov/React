@@ -37,6 +37,14 @@ const { isOpen, onToggle } = useDisclosure();
 
   return (
     <>
+    {/*
+      1. state scrollYbefore
+      2. state scrollYafter
+      3. addEventlistener for scrollYbefore
+      4. update srollafter
+      5. let scroll = scrollYafter - scrollYbefore
+      6. At the end update scrollYafter  
+  */}
     <Button onClick={onToggle}>
       Slide Me Down
     </Button> 
