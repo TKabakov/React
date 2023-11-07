@@ -33,7 +33,10 @@ const socials = [
 ];
 
 const Header = ({home, projects, contactMe}) => {
-const { isOpen, onToggle } = useDisclosure();
+
+  const { isOpen, onToggle } = useDisclosure();
+  
+  const animatio = { transform : translate3d(0, 100 px, 0)
 
   return (
     <>
