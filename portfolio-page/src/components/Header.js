@@ -34,9 +34,10 @@ const socials = [
 
 const Header = ({home, projects, contactMe}) => {
 
+  const [scrollDirection, setScrollDirection] = useState(null);
+  
   function useScrollDirection() {
-    const [scrollDirection, setScrollDirection] = useState(null);
-
+    
     useEffect(() => {
         let lastScrollY = window.scrollY;
         // function to run on scroll
@@ -57,31 +58,10 @@ const Header = ({home, projects, contactMe}) => {
     return scrollDirection;
 };
 
-
   return (
     <>
-    {/*
-      1. state scrollYbefore
-      2. state scrollYafter
-      3. addEventlistener for scrollYbefore
-      4. update srollafter
-      5. let scroll = scrollYafter - scrollYbefore
-      6. At the end update scrollYafter  
-  */}
-    <Button onClick={onToggle}>
-      Slide Me Down
-    </Button> 
-    <Slide in={isOpen} direction="bottom" style={{ zIndex: 10 }}>
+    <Slide in={useScrollDirection(scrollDirection)} direction="top" style={{ zIndex: 10 }}>
     <Box
-      p= "40px"
-      mt= "10"
-      top={0}
-      left={0}
-      right={0}
-      translateY={0}
-      transitionProperty="transform"
-      transitionDuration=".3s"
-      transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
