@@ -40,11 +40,11 @@ const Header = ({home, projects, contactMe}) => {
     const [scrollDirection, setScrollDirection] = useState(null);
 
     useEffect(() => {
-        let lastScrollY = window.pageYOffset;
+        let lastScrollY = window.scrollY;
         // function to run on scroll
         const updateScrollDirection = () => {
-            const scrollY = window.pageYOffset;
-            const direction = scrollY > lastScrollY ? "down" : "up";
+            const scrollY = window.scrollY;
+            const direction = scrollY > lastScrollY ? true : false;
             if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
               setScrollDirection(direction);
             }
