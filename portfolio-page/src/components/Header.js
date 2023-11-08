@@ -34,8 +34,6 @@ const socials = [
 
 const Header = ({home, projects, contactMe}) => {
 
-  const { isOpen, onToggle } = useDisclosure();
-
   function useScrollDirection() {
     const [scrollDirection, setScrollDirection] = useState(null);
 
