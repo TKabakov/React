@@ -35,8 +35,8 @@ const socials = [
 const Header = ({home, projects, contactMe}) => {
 
   const { isOpen, onToggle } = useDisclosure();
+
   
-  const animation = { transform : translate3d(0, 100 px, 0)
 
   return (
     <>
@@ -55,7 +55,7 @@ const Header = ({home, projects, contactMe}) => {
     <Box
       p= "40px"
       mt= "10"
-      top={animation}
+      top={0}
       left={0}
       right={0}
       translateY={0}
