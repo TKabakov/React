@@ -1,4 +1,4 @@
-import React, {forwardRef }from "react";
+import React, { forwardRef }from "react";
 import { Avatar } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
@@ -8,7 +8,7 @@ const bio2 = "specialised in React";
 
 // Implement the UI for the LandingSection component according to the instructions.
 // Use a combination of Avatar, Heading and VStack components.
-const LandingSection = forwardRef((ref) => {
+const LandingSection = forwardRef((props, ref) => {
 
   return(
   <FullScreenSection

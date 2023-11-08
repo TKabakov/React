@@ -11,7 +11,6 @@ import {
   Select,
   Textarea,
   VStack,
-  Stack,
   Alert,
   AlertIcon,
   AlertTitle,
@@ -38,7 +37,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
    onSubmit: (values) => {
     submit();
-    setDisplay(response.message);    //might need an update
+    setDisplay(response.message);
     console.log(isLoading);
    },
 
