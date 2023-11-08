@@ -29,23 +29,23 @@ const ContactMeSection = forwardRef((props, ref) => {
   
   const formik = useFormik({
     initialValues: {
-      firstName: "Pepe Jeans",
-      email:"a@g",
-      type: "hireMe",
-      comment: "I'm a softweare engeneergit"
+      firstName: "",
+      email:"",
+      type: "",
+      comment: ""
     },
 
-   onSubmit: (values) => {
+   onSubmit: () => {
     submit();
     setDisplay(response.message);
-    console.log(isLoading);
+    formik.resetForm();
    },
 
     validationSchema: 
       Yup.object({
         firstName: Yup.string().required("Required").min(5,"Must be at least 5 characters").max(20,"Must be not more than 20 characters"),
         email: Yup.string().email().required("Required"),
-        type:  Yup.string().required("Required"),
+        type:  Yup.string(),
         comment: Yup.string().required("Required").min(20,"Must be 20 characters or more"),
     }),
   });
@@ -152,6 +152,7 @@ const ContactMeSection = forwardRef((props, ref) => {
              >
                 Submit
               </Button>
+              
             </VStack>
           </form>
         </Box>
