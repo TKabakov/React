@@ -43,10 +43,10 @@ const ContactMeSection = forwardRef((props, ref) => {
 
     validationSchema: 
       Yup.object({
-        firstName: Yup.string().required("Required").min(5,"Must be at least 5 characters").max(20,"Must be not more than 20 characters"),
+        firstName: Yup.string().required("Required"),
         email: Yup.string().email().required("Required"),
         type:  Yup.string(),
-        comment: Yup.string().required("Required").min(20,"Must be 20 characters or more"),
+        comment: Yup.string().required("Required").min(20,"Must be at least 25 characters"),
     }),
   });
 
@@ -104,7 +104,7 @@ const ContactMeSection = forwardRef((props, ref) => {
                   {...formik.getFieldProps('firstName')}
                 />
                 <FormErrorMessage>
-                  Text is required. {formik.errors.firstName}
+                  {formik.errors.firstName}
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={formik.touched.email && formik.errors.email}>
@@ -116,7 +116,7 @@ const ContactMeSection = forwardRef((props, ref) => {
                   {...formik.getFieldProps('email')}
                 />
                 <FormErrorMessage>
-                Email is required. The {formik.errors.email}
+                  {formik.errors.email}
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={formik.touched.type && formik.errors.type}>
@@ -140,7 +140,7 @@ const ContactMeSection = forwardRef((props, ref) => {
                   {...formik.getFieldProps('comment')}
                 />
                 <FormErrorMessage>
-                Comment is required. {formik.errors.comment}
+                  {formik.errors.comment}
                 </FormErrorMessage>
               </FormControl>
               <Button 
