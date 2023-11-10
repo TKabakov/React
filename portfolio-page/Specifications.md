@@ -9,7 +9,7 @@
 
 2. Header - internal links
     - links to "Projects" Section and to "Contact Me" Section
-    - when click on link the url should show the corresponding section
+    - **when click on link the url should show the corresponding section**
     - the click should scroll with smooth animation
       - avoid any key related warnings when opening the console.
 
