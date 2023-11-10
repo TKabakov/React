@@ -36,14 +36,11 @@ Before you begin, if you run `npm start` and view the app in the browser, you'll
 The app outputs a page with an empty header, 3 different full-height sections and a footer.
 Every section has a different background color. The first 2 sections will be empty and the third section will contain all the UI elements for the Contact Me form.
 
-<img src="screenshots/initial_app.png" alt="drawing" width="1024"/>
-
 ## Steps
 
 Once you open the code lab, you need to install the *Chakra UI* and other referenced libraries by running the `npm install` command from the built-in terminal in the code lab. To toggle the built-in terminal, you need to click the View menu item, then choose the Terminal in the dropdown.
 
 Once the terminal is open (visible), you can run the `npm install` command. This will install all the required missing dependencies, so that you can begin working on the task.
-
 
 ### **Step 1**
 
@@ -57,6 +54,7 @@ Use the `HStack` component to stack the links horizontally.
 Each social should be a `a` tag with a `href` attribute pointing to the corresponding social media page. The `a` tag should have as children a `FontAwesomeIcon` component, which is already imported for you.
 
 The `FontAwesomeIcon` component takes 2 props:
+
 - `icon`: The icon to be displayed. In this case, you should use the `icon` prop from the `social` object.
 - `size`: The size of the icon. You can use the `2x` value.
 
@@ -75,16 +73,12 @@ Avoid any key related warnings when opening the console.
 
 The final header UI should look like below:
 
-<img src="screenshots/image8.png" alt="drawing" width="1024"/>
-
 ### **Step 2**
 
 Open the `LandingSection.js` file. Implement the below UI to provide a landing section for the app with an avatar, a greeting and a brief role description.
 For the data, use the variables provided at the top of the file (`greeting`, `bio1` and `bio2`) and not personal data.
 For the avatar you can use the next url: `https://i.pravatar.cc/150?img=7`
 All the components you need have been already imported for you.
-
-<img src="screenshots/image3.png" alt="drawing" width="1024"/>
 
 ### **Step 3**
 
@@ -93,9 +87,8 @@ The `ProjectsSection` component already defines a `projects` array with the data
 
 Open the `Card.js` component and implement the UI for the card. Each card should look like the image below:
 
-<img src="screenshots/image2.png" alt="drawing" width="1024"/>
-
 You can use the following components from Chakra UI that have been already imported for you:
+
 - HStack,
 - VStack,
 - Image,
@@ -115,20 +108,20 @@ The form contains 4 input fields: name, email address, type of enquiry and messa
 
 The whole UI of the form is defined for you. You need to implement some missing business logic.
 
-<img src="screenshots/image4.png" alt="drawing" width="1024"/>
-
-a) **Add the proper configuration to the `useFormik` hook, passing an object with 3 properties**: `initialValues`, `onSubmit` and `validationSchema`. 
+a) **Add the proper configuration to the `useFormik` hook, passing an object with 3 properties**: `initialValues`, `onSubmit` and `validationSchema`.
 
 The `initialValues` object should have the following fields:
+
 - `firstName`: The name of the user
 - `email`: The email of the user
 - `type`: 'hireMe' | 'openSource' | 'other'
 - `comment`: A message from the user
 
-The `onSubmit` function should perform an API call by using the `submit` helper from `useSubmit` hook. 
+The `onSubmit` function should perform an API call by using the `submit` helper from `useSubmit` hook.
 Inspect the `useSubmit` custom hook to see the arguments the `submit` function expects.
 
 The `validationSchema` should be a Yup schema that validates the form fields. The validation rules are as follows:
+
 - `firstName`: required field. Otherwise, the error message should be "Required".
 - `email`: required field and a valid email. If empty, the error message should be "Required". If not a valid email, the error message should be "Invalid email address".
 - `type`: Optional field
@@ -138,7 +131,7 @@ b) **Make the `Input` components from Chakra UI controlled components**.
 
 `useFormik` hook returns an object with a function called `getFieldProps` that when called, returns an object with the necessary props to make the input controlled.
 
-c) **Show the error messages for each field when the field is touched and the validation fails**. 
+c) **Show the error messages for each field when the field is touched and the validation fails**.
 
 Each field is grouped in a `FormControl` component. The `FormControl` component takes a `isInvalid` prop that you can use to show the error message.
 
@@ -147,8 +140,6 @@ The `isInvalid` prop should be `true` when the field is touched and the validati
 The `FormErrorMessage` component from Chakra UI should display the corresponding error message if the `isInvalid` prop from the parent `FormControl` component is true.
 
 Below is an example of how the UI should look like when the validation fails for the `firstName` field:
-
-<img src="screenshots/image5.png" alt="drawing" width="1024"/>
 
 d) **Connect the `form` onSubmit prop with Formik's `handleSubmit` function.**
 
@@ -161,6 +152,7 @@ You need to listen to changes in the `response` object from the `useSubmit` hook
 The `useSubmit` hook is implemented in a way that 50% of the times it will return a successful response and 50% of the times it will return an error response.
 
 The `response` object from the API has 2 properties:
+
 - `type`: 'success' | 'error'
 - `message`: Extra contextual information about the response
 
@@ -174,10 +166,6 @@ In addition, the form has to be reset if the response is successful. For that us
 
 This is how the UI should look for both cases:
 
-<img src="screenshots/image6.png" alt="drawing" width="1024"/>
-
-<img src="screenshots/image7.png" alt="drawing" width="1024"/>
-
 ### **Step 5 (bonus)**
 
 Implement a header show/hide animation depending on the scroll direction.
@@ -190,11 +178,9 @@ When scrolling up, the `transform` style property from the `Box` DOM element sho
 When scrolling down, the `transform` style property from the `Box` DOM element should be `translateY(-200px)`.
 
 Here are some of the elements you may need for the implementation:
+
 - The `useEffect` hook
 - The `useRef` hook
 - Setting up listeners for the scroll event `window.addEventListener('scroll', handleScroll)`
 - Removing listeners for the scroll event: `window.removeEventListener('scroll', handleScroll)`
 - Keeping track of the previous scroll position in a variable
-
-![](screenshots/header_animation.gif)
-
