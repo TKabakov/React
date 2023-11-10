@@ -44,3 +44,30 @@
         = `email`: required field and a valid email. If empty, the error message should be "Required". If not a valid email, the error message should be "Invalid email address"
         = `type`: Optional field
         = `comment`: required field and with a minimum of 25 characters. If empty, the error message should be "Required". If less than 25 characters, the error message should be "Must be at least 25 characters"
+
+6. `Input` components
+    - should be controlled by the use of `getFieldProps`
+    - show the error messages for each field (when the field is touched and the validation fails)
+    - the `isInvalid` prop should be `true` when the field is touched and the validation fails
+    - the `FormErrorMessage` component from Chakra UI should display the corresponding error message if the `isInvalid` prop from the parent `FormControl` component is true
+    - conenct the  `form` onSubmit prop with Formik's `handleSubmit` function
+    - make sure the default HTML form behaviour is prevented when a submission occurs
+
+7. An Alert
+    - show an alert when the form is submitted successfully
+    - listen to changes in the `response` object from the `useSubmit` hook
+    - a loading indicator should be shown in the Submit button, when the form is submitted
+    - you can use the provided `useAlertContext` hook to show the alert
+    - you can call `onOpen` function to display the `useAlertContext` hook
+    - If the response is successful, the alert **should display  the first name of the user**, according to the value typed in the form 1st field
+    - In addition, the form has to be reset if the response is successful (use the `resetForm` function from the `useFormik` hook)
+
+8. A header show/hide animation depending on the scroll direction
+    - the header should slide up with some animation and be hidden when scrolling down the page
+    - when scrolling up, the header should slide down and be visible
+    - you can use:
+        = `useEffect` hook
+        = `useRef` hook
+        = `window.addEventListener('scroll', handleScroll)`
+        = `window.removeEventListener('scroll', handleScroll)`
+        = keeping track of the previous scroll position in a variable
