@@ -38,7 +38,7 @@ const ContactMeSection = forwardRef((props, ref) => {
    onSubmit: () => {
     submit();
     setDisplay(response.message);
-    formik.resetForm();
+    if(response.type == "success"){formik.resetForm();}
    },
 
     validationSchema: 
