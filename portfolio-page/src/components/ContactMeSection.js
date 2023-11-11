@@ -59,6 +59,12 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FEF44C'
   }} 
 
+
+  {/*Roadmap
+  1. create state that takes the response object
+  2. create state that takes inputs
+  3. update 'response' state with input object
+ */}
   return (
     <>
     <FullScreenSection
