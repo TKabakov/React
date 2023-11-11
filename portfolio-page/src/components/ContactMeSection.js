@@ -61,9 +61,11 @@ const ContactMeSection = forwardRef((props, ref) => {
 
 
   {/*Roadmap
-  1. create state that takes the response object
-  2. create state that takes inputs
-  3. update 'response' state with input object
+  1. create new function
+  2. create state that takes the response object
+  3. create state that takes inputs
+  4. update 'response' state with input object
+
  */}
   return (
     <>
