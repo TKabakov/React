@@ -37,6 +37,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
    onSubmit: () => {
     submit();
+    console.log(formik.firstName)
     setDisplay(response.message);
     if(response.type === "success"){formik.resetForm();}
    },
@@ -247,7 +248,7 @@ export default function Form() {
             >
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
-            {response.title}
+            {response.title}{formik.firstName}
           </AlertTitle>
           <AlertDescription paddingTop={2}>
             {response.message}
