@@ -23,14 +23,9 @@ import {useAlertContext} from "../context/alertContext";
 import {forwardRef} from 'react';
 
 const ContactMeSection = forwardRef((props, ref) => {
-  const {isLoading, response, submit} = useSubmit();
+  const {isLoading, response, setResponse, submit} = useSubmit();
   const {onOpen } = useAlertContext();
   const [display, setDisplay] = useState('none');
-  const [ responseObject, setResponseObject ] = useState({
-    type: "",
-    title: "",
-    message: "",
-});
   
   const formik = useFormik({
     initialValues: {
@@ -42,7 +37,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
    onSubmit: () => {
     submit();
-    setDisplay(responseObject.message);
+    setDisplay(response.message);
     if(response.type === "success"){formik.resetForm();}
    },
 
@@ -55,11 +50,11 @@ const ContactMeSection = forwardRef((props, ref) => {
     }),
   });
 
-  const response2 = ({response}, {values}) => {
+  const response2 = ({response}, setResponse, {values}) => {
     if (
       response.type === 'success'
     ){
-    setResponseObject({
+    setResponse({
       ...response,
       message: `Thanks for your submission ${values.firstName}, we will get back to you shortly!`
     }) 
@@ -70,13 +65,13 @@ const ContactMeSection = forwardRef((props, ref) => {
   }
 
  
-  console.log(responseObject.type);
+  console.log(response.type);
 
 
   const backgroundColor =() =>{
-    if (responseObject.type === 'success') {
+    if (response.type === 'success') {
     return '#81C784'
-  } else if (responseObject.type === 'error'){
+  } else if (response.type === 'error'){
     return '#FF8A65'
   } else {
     return '#FEF44C'
@@ -269,10 +264,10 @@ export default function Form() {
             >
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
-            {responseObject.title}{formik.values.firstName}
+            {response.title}{formik.values.firstName}
           </AlertTitle>
           <AlertDescription paddingTop={2}>
-            {responseObject.message}
+            {response.message}
           </AlertDescription>
         </Alert>
         
