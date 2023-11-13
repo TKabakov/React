@@ -26,7 +26,7 @@ const useSubmit = () => {
         type: 'success',
         title: 'All is good!',
         message1: `Thanks for your submission `,
-        message2: ` , we will get back to you shortly!`,
+        message2: `, we will get back to you shortly!`,
       })}
       else{
         throw new Error("Something went wrong");
@@ -36,7 +36,7 @@ const useSubmit = () => {
         type: 'error',
         title: 'Oops!',
         message1: 'Something went wrong ',
-        message1: ' , please try again later!',
+        message2: ', please try again later!',
       })
     } finally {
       setLoading(false);

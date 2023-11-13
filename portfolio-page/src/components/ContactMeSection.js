@@ -52,6 +52,20 @@ const ContactMeSection = forwardRef((props, ref) => {
  
   console.log(response.type);
 
+const name = (values) => {
+  let first;
+  if (response.type === 'success') {
+    return (
+      first = values.firstName
+    )
+  }
+  else {
+    return (
+      first = ''
+    );
+  }
+}
+
   const backgroundColor =() =>{
     if (response.type === 'success') {
     return '#81C784'
@@ -251,7 +265,7 @@ export default function Form() {
             {response.title}
           </AlertTitle>
           <AlertDescription paddingTop={2}>
-            {response.message1}{formik.values.firstName}{response.message2}
+            {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
           </AlertDescription>
         </Alert>
         
