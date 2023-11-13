@@ -26,6 +26,7 @@ const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
   const {onOpen } = useAlertContext();
   const [display, setDisplay] = useState('none');
+  const [ responseObject, setResponseObject ] = useState(response);
   
   const formik = useFormik({
     initialValues: {
@@ -37,8 +38,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
    onSubmit: () => {
     submit();
-    console.log(formik.firstName)
-    setDisplay(response.message);
+    setDisplay(responseObject.message);
     if(response.type === "success"){formik.resetForm();}
    },
 
@@ -52,15 +52,13 @@ const ContactMeSection = forwardRef((props, ref) => {
   });
 
   const backgroundColor =() =>{
-    if (response.type === 'success') {
+    if (responseObject.type === 'success') {
     return '#81C784'
-  } else if (response.type === 'error'){
+  } else if (responseObject.type === 'error'){
     return '#FF8A65'
   } else {
     return '#FEF44C'
   }} 
-
-  console.log(formik.firstName)
 
   {/*Roadmap
   1. create new function
@@ -249,10 +247,10 @@ export default function Form() {
             >
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
-            {response.title}{formik.values.firstName}
+            {responseObject.title}{formik.values.firstName}
           </AlertTitle>
           <AlertDescription paddingTop={2}>
-            {response.message}
+            {responseObject.message}
           </AlertDescription>
         </Alert>
         
@@ -320,7 +318,6 @@ export default function Form() {
              >
                 Submit
               </Button>
-              {console.log(formik.firstName)}
             </VStack>
           </form>
         </Box>
