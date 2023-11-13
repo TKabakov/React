@@ -52,7 +52,6 @@ const ContactMeSection = forwardRef((props, ref) => {
  
   console.log(response.type);
 
-
   const backgroundColor =() =>{
     if (response.type === 'success') {
     return '#81C784'
