@@ -12,7 +12,8 @@ const useSubmit = () => {
   const [response, setResponse] = useState({
     type: "warning",
     title: "",
-    message: "Your submission is pending",
+    message1: "Your submission is pending",
+    message2:"".
 });
 
   const submit = async (url, data) => {
@@ -24,7 +25,8 @@ const useSubmit = () => {
       setResponse({
         type: 'success',
         title: 'All is good!',
-        message: `Thanks for your submission, we will get back to you shortly!`,
+        message1: `Thanks for your submission, `,
+        message2: ` we will get back to you shortly!`,
       })}
       else{
         throw new Error("Something went wrong");
@@ -33,7 +35,8 @@ const useSubmit = () => {
       setResponse({
         type: 'error',
         title: 'Oops!',
-        message: 'Something went wrong, please try again later!',
+        message1: 'Something went wrong,',
+        message1: 'please try again later!',
       })
     } finally {
       setLoading(false);
