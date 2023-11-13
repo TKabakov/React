@@ -26,7 +26,11 @@ const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
   const {onOpen } = useAlertContext();
   const [display, setDisplay] = useState('none');
-  const [ responseObject, setResponseObject ] = useState(response);
+  const [ responseObject, setResponseObject ] = useState({
+    type: "",
+    title: "",
+    message: "",
+});
   
   const formik = useFormik({
     initialValues: {
@@ -50,6 +54,8 @@ const ContactMeSection = forwardRef((props, ref) => {
         comment: Yup.string().required("Required").min(20,"Must be at least 25 characters"),
     }),
   });
+
+  setResponseObject(response);
 
   const backgroundColor =() =>{
     if (responseObject.type === 'success') {
