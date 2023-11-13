@@ -26,7 +26,7 @@ import {forwardRef} from 'react';
 
 const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
-//  const {onOpen } = useAlertContext();
+  const {onOpen,type } = useAlertContext();
   const [display, setDisplay] = useState('none');
   
   const formik = useFormik({
@@ -64,7 +64,6 @@ const ContactMeSection = forwardRef((props, ref) => {
   const {
     isOpen: isVisible,
     onClose,
-    onOpen,
   } = useDisclosure({ defaultIsOpen: true })
 
   return (
