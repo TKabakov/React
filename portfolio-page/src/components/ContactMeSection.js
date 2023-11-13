@@ -249,7 +249,7 @@ export default function Form() {
             >
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
-            {response.title}{formik.firstName}
+            {response.title}{formik.values.firstName}
           </AlertTitle>
           <AlertDescription paddingTop={2}>
             {response.message}
