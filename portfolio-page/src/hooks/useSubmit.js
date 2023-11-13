@@ -13,7 +13,7 @@ const useSubmit = () => {
     type: "warning",
     title: "",
     message1: "Your submission is pending",
-    message2:"".
+    message2:"",
 });
 
   const submit = async (url, data) => {

@@ -37,7 +37,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
    onSubmit: () => {
     submit();
-    setDisplay(response.message);
+    setDisplay(response.message1, response.message2);
     if(response.type === "success"){formik.resetForm();}
    },
 
@@ -49,21 +49,6 @@ const ContactMeSection = forwardRef((props, ref) => {
         comment: Yup.string().required("Required").min(20,"Must be at least 25 characters"),
     }),
   });
-
-  const response2 = ({response}, setResponse, {values}) => {
-    if (
-      response.type === 'success'
-    ){
-    setResponse({
-      ...response,
-      message: `Thanks for your submission ${values.firstName}, we will get back to you shortly!`
-    }) 
-    }
-    else {
-      return response
-    }
-  }
-
  
   console.log(response.type);
 
@@ -264,10 +249,10 @@ export default function Form() {
             >
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
-            {response.title}{formik.values.firstName}
+            {response.title}
           </AlertTitle>
           <AlertDescription paddingTop={2}>
-            {response.message}
+            {response.message1}{formik.values.firstName}{response.message2}
           </AlertDescription>
         </Alert>
         
