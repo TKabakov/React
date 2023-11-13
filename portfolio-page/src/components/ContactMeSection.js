@@ -15,6 +15,8 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
+  CloseButton,
+  useDisclosure
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
@@ -24,7 +26,7 @@ import {forwardRef} from 'react';
 
 const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
-  const {onOpen } = useAlertContext();
+//  const {onOpen } = useAlertContext();
   const [display, setDisplay] = useState('none');
   
   const formik = useFormik({
@@ -57,7 +59,13 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FF8A65'
   } else {
     return '#FEF44C'
-  }} 
+  }}
+
+  const {
+    isOpen: isVisible,
+    onClose,
+    onOpen,
+  } = useDisclosure({ defaultIsOpen: true })
 
   return (
     <>
@@ -86,6 +94,13 @@ const ContactMeSection = forwardRef((props, ref) => {
           <AlertDescription paddingTop={2}>
             {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
           </AlertDescription>
+          <CloseButton
+        alignSelf='flex-start'
+        position='relative'
+        right={-1}
+        top={-1}
+        onClick={onClose}
+      />
         </Alert>
         
         <Heading ref={ref} as="h1" id="contactme-section">
