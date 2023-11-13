@@ -66,9 +66,6 @@ const ContactMeSection = forwardRef((props, ref) => {
     onClose,
   } = useDisclosure({ defaultIsOpen: true })
 
-  console.log(onOpen.type);
-  console.log(type);
-
   return (
     <>
     <FullScreenSection

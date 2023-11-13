@@ -12,12 +12,14 @@ export const AlertProvider = ({ children }) => {
   const [state, setState] = useState({
     isOpen: false,
     // Type can be either "success" or "error"
-    type: response.type,
+    type: "",
     // Message to be displayed, can be any string
-    title: response.title,
-    message1: response.message1,
-    message2: response.message2,
+    title: "",
+    message1: "",
+    message2: "",
   });
+
+  console.log(state.type);
 
   return (
     <AlertContext.Provider
