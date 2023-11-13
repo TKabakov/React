@@ -60,6 +60,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FEF44C'
   }} 
 
+  console.log(formik.firstName)
 
   {/*Roadmap
   1. create new function
@@ -319,7 +320,7 @@ export default function Form() {
              >
                 Submit
               </Button>
-              
+              {console.log(formik.firstName)}
             </VStack>
           </form>
         </Box>
