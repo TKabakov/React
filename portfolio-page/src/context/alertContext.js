@@ -19,7 +19,6 @@ export const AlertProvider = ({ children }) => {
     message2: response.message2,
   });
 
-  console.log(state.type);
   return (
     <AlertContext.Provider
       value={{
@@ -29,7 +28,7 @@ export const AlertProvider = ({ children }) => {
       }}
     >
       {children}
-      console.log(state.onOpen.type)
+
     </AlertContext.Provider>
   );
 };
