@@ -55,7 +55,23 @@ const ContactMeSection = forwardRef((props, ref) => {
     }),
   });
 
-  setResponseObject(response);
+  const response2 = ({response}, {values}) => {
+    if (
+      response.type === 'success'
+    ){
+    setResponseObject({
+      ...response,
+      message: `Thanks for your submission ${values.firstName}, we will get back to you shortly!`
+    }) 
+    }
+    else {
+      return response
+    }
+  }
+
+ 
+  console.log(responseObject.type);
+
 
   const backgroundColor =() =>{
     if (responseObject.type === 'success') {
