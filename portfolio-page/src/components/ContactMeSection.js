@@ -23,7 +23,7 @@ import {useAlertContext} from "../context/alertContext";
 import {forwardRef} from 'react';
 
 const ContactMeSection = forwardRef((props, ref) => {
-  const {isLoading, response, setResponse, submit} = useSubmit();
+  const {isLoading, response, submit} = useSubmit();
   const {onOpen } = useAlertContext();
   const [display, setDisplay] = useState('none');
   
@@ -36,9 +36,9 @@ const ContactMeSection = forwardRef((props, ref) => {
     },
 
    onSubmit: () => {
+    if(response.type === "success"){formik.resetForm()};
     submit();
     setDisplay(response.message1, response.message2);
-    if(response.type === "success"){formik.resetForm();}
    },
 
     validationSchema: 
@@ -49,22 +49,6 @@ const ContactMeSection = forwardRef((props, ref) => {
         comment: Yup.string().required("Required").min(20,"Must be at least 25 characters"),
     }),
   });
- 
-  console.log(response.type);
-
-const name = (values) => {
-  let first;
-  if (response.type === 'success') {
-    return (
-      first = values.firstName
-    )
-  }
-  else {
-    return (
-      first = ''
-    );
-  }
-}
 
   const backgroundColor =() =>{
     if (response.type === 'success') {
@@ -75,171 +59,6 @@ const name = (values) => {
     return '#FEF44C'
   }} 
 
-  {/*Roadmap
-  1. create new function
-  2. create state that takes the response object
-  3. create state that takes inputs
-  4. update 'response' state with input object
-*/}
-
-{/*Updtae object
-
-export default function Form() {
-  const [person, setPerson] = useState({
-    firstName: 'Barbara',
-    lastName: 'Hepworth',
-    email: 'bhepworth@sculpture.com'
-  });
-
-  function handleFirstNameChange(e) {
-    setPerson({
-      ...person,
-      firstName: e.target.value
-    });
-  }
-
-  function handleLastNameChange(e) {
-    setPerson({
-      ...person,
-      lastName: e.target.value
-    });
-  }
-
-  function handleEmailChange(e) {
-    setPerson({
-      ...person,
-      email: e.target.value
-    });
-  }
-
-  return (
-    <>
-      <label>
-        First name:
-        <input
-          value={person.firstName}
-          onChange={handleFirstNameChange}
-        />
-      </label>
-      <label>
-        Last name:
-        <input
-          value={person.lastName}
-          onChange={handleLastNameChange}
-        />
-      </label>
-      <label>
-        Email:
-        <input
-          value={person.email}
-          onChange={handleEmailChange}
-        />
-      </label>
-      <p>
-        {person.firstName}{' '}
-        {person.lastName}{' '}
-        ({person.email})
-      </p>
-    </>
-  );
-}
-*/}
-
-{/* Update nested object
-
-export default function Form() {
-  const [person, setPerson] = useState({
-    name: 'Niki de Saint Phalle',
-    artwork: {
-      title: 'Blue Nana',
-      city: 'Hamburg',
-      image: 'https://i.imgur.com/Sd1AgUOm.jpg',
-    }
-  });
-
-  function handleNameChange(e) {
-    setPerson({
-      ...person,
-      name: e.target.value
-    });
-  }
-
-  function handleTitleChange(e) {
-    setPerson({
-      ...person,
-      artwork: {
-        ...person.artwork,
-        title: e.target.value
-      }
-    });
-  }
-
-  function handleCityChange(e) {
-    setPerson({
-      ...person,
-      artwork: {
-        ...person.artwork,
-        city: e.target.value
-      }
-    });
-  }
-
-  function handleImageChange(e) {
-    setPerson({
-      ...person,
-      artwork: {
-        ...person.artwork,
-        image: e.target.value
-      }
-    });
-  }
-
-  return (
-    <>
-      <label>
-        Name:
-        <input
-          value={person.name}
-          onChange={handleNameChange}
-        />
-      </label>
-      <label>
-        Title:
-        <input
-          value={person.artwork.title}
-          onChange={handleTitleChange}
-        />
-      </label>
-      <label>
-        City:
-        <input
-          value={person.artwork.city}
-          onChange={handleCityChange}
-        />
-      </label>
-      <label>
-        Image:
-        <input
-          value={person.artwork.image}
-          onChange={handleImageChange}
-        />
-      </label>
-      <p>
-        <i>{person.artwork.title}</i>
-        {' by '}
-        {person.name}
-        <br />
-        (located in {person.artwork.city})
-      </p>
-      <img 
-        src={person.artwork.image} 
-        alt={person.artwork.title}
-      />
-    </>
-  );
-}
-
- */}
   return (
     <>
     <FullScreenSection
@@ -317,7 +136,7 @@ export default function Form() {
                 <Textarea
                   id="comment"
                   name="comment"
-                  height={50} //Need an update to 250
+                  height={250}
                   {...formik.getFieldProps('comment')}
                 />
                 <FormErrorMessage>
@@ -330,7 +149,7 @@ export default function Form() {
                 width="full"
                 isLoading={isLoading}
                 loadingText='Submitting'
-             >
+              >
                 Submit
               </Button>
             </VStack>
