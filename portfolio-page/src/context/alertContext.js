@@ -3,3 +3,4 @@ import useSubmit from "../hooks/useSubmit";
 
 export const AlertContext = createContext(undefined);
 
+//2. useContext

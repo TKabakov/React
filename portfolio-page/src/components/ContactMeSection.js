@@ -21,12 +21,12 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import {useAlertContext} from "../context/alertContext";
+// import {useAlertContext} from "../context/alertContext";
 import {forwardRef} from 'react';
 
 const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
-  const {onOpen,type, isOpen } = useAlertContext();
+//  const {onOpen,type, isOpen } = useAlertContext();
   const [display, setDisplay] = useState('none');
   
   const formik = useFormik({
