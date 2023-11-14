@@ -19,13 +19,21 @@ export const AlertProvider = ({ children }) => {
     message2: "",
   });
 
-  console.log(state.type);
+  const value = ({response}) => {
+    setState({
+      ...state,
+      type: response.type,
+    })
+  }
+
+  console.log(response.type);
+  console.log(state);
 
   return (
     <AlertContext.Provider
       value={{
         ...state,
-        onOpen: (type, message1) => {setState({ isOpen: true, type: response.type, message1:response.message1 })},
+        onOpen: (type, message1) => {setState({ isOpen: true, type: '', message1:'' })},
         onClose: () => setState({ isOpen: false, type: '', message: '' }),
       }}
     >
