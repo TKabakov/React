@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef, useContext } from "react";
 import { useFormik } from "formik";
 import {
   Box,
@@ -21,12 +21,13 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-// import {useAlertContext} from "../context/alertContext";
-import {forwardRef} from 'react';
+import {AlertContext} from "../context/alertContext";
 
 const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
 //  const {onOpen,type, isOpen } = useAlertContext();
+  const { isOpen, type, message, onClose } = useContext(AlertContext);
+
   const [display, setDisplay] = useState('none');
   
   const formik = useFormik({
@@ -63,7 +64,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   const {
     isOpen: isVisible,
-    onClose,
+
   } = useDisclosure({ defaultIsOpen: true })
 
   return (
