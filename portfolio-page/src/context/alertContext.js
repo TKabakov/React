@@ -1,6 +1,18 @@
 import {createContext, useContext, useState} from "react";
 import useSubmit from "../hooks/useSubmit";
 
-export const AlertContext = createContext(undefined);
+const AlertContext = createContext(undefined);
 
-//2. useContext
+export const AlertProvider = ({ children }) => {
+  
+
+  return (
+    <AlertContext.Provider
+      value={{
+        
+      }}
+    >
+      {children}
+    </AlertContext.Provider>
+  );
+};
