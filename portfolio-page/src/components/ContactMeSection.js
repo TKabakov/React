@@ -28,7 +28,9 @@ const ContactMeSection = forwardRef((props, ref) => {
 //  const {onOpen,type, isOpen } = useAlertContext();
   const { onOpen, isOpen, type, message, onClose } = useAlertContext();
 
-console.log(onOpen);
+console.log(isOpen);
+console.log(type);
+console.log(message);
 
   const [display, setDisplay] = useState('none');
   
