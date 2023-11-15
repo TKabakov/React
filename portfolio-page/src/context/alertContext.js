@@ -10,7 +10,7 @@ const { response } = useSubmit();
 const [state, setState] = useState({
   isOpen: false,
   // Type can be either "success" or "error"
-  type: response.type,
+  type: 'success',
   // Message to be displayed, can be any string
   message: response.message1,
 });
@@ -19,15 +19,22 @@ console.log(state.isOpen);
 console.log(state.type);
 console.log(state.message);
 
+const value = () => {
+   ...state,
+      onOpen: (type, message, response) => setState({ 
+        isOpen: 'hello', 
+        type: response.type, 
+        message: response.message1 }),
+      onClose: () => setState({ 
+        isOpen: 'hello', 
+        type: '', 
+        message: '' }),
+}
+
 return (
   <AlertContext.Provider
     value={{
-      ...state,
-      onOpen: (type, message, response) => setState({ 
-        isOpen: true, 
-        type: response.type, 
-        message: response.message1 }),
-      onClose: () => setState({ isOpen: false, type: '', message: '' }),
+     
     }}
   >
     {children}
