@@ -35,3 +35,4 @@ return (
 );
 };
 
+export const useAlertContext = () => useContext(AlertContext);

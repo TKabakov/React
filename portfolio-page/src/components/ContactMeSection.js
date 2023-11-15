@@ -21,12 +21,14 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import {AlertContext} from "../context/alertContext";
+import {useAlertContext} from "../context/alertContext";
 
 const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
 //  const {onOpen,type, isOpen } = useAlertContext();
-  const { isOpen, type, message, onClose } = useContext(AlertContext);
+  const { onOpen, isOpen, type, message, onClose } = useAlertContext();
+
+console.log(onOpen);
 
   const [display, setDisplay] = useState('none');
   
