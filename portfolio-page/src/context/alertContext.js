@@ -7,12 +7,16 @@ const { response } = useSubmit();
 
 export const AlertProvider = ({ children }, { response }) => {
 
-const [ state, setState] = useState(''); 
+const [state, setState] = useState({
+  isOpen: false,
+  // Type can be either "success" or "error"
+  type: 'success',
+  // Message to be displayed, can be any string
+  message: '',
+});
 
-  setState('Hello');
 
 
-console.log(state);
 
 return (
   <AlertContext.Provider
