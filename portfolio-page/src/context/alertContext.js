@@ -3,7 +3,9 @@ import useSubmit from "../hooks/useSubmit";
 
 export const AlertContext = createContext(undefined);
 
-export const AlertProvider = ({ children }) => {
+const { response } = useSubmit();
+
+export const AlertProvider = ({ children }, { response }) => {
 
 const [ state, setState] = useState(''); 
 
@@ -12,11 +14,15 @@ const [ state, setState] = useState('');
 
 console.log(state);
 
-  return (
-    <AlertContext.Provider
-      value={state}
-    >
-      {children}
-    </AlertContext.Provider>
-  );
+return (
+  <AlertContext.Provider
+    value={{
+      ...state,
+      onOpen: (type, message) => setState({ isOpen: true, type, message }),
+      onClose: () => setState({ isOpen: false, type: '', message: '' }),
+    }}
+  >
+    {children}
+  </AlertContext.Provider>
+);
 };
