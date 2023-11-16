@@ -19,7 +19,7 @@ console.log(state.isOpen);
 console.log(state.type);
 console.log(state.message);
 
-const value = () => {
+const value = (state,response) => {
   setState(
     ...state,
    onOpen: (type, message, response) => setState({ 
@@ -35,17 +35,7 @@ const value = () => {
 
 return (
   <AlertContext.Provider
-    value={{
-   ...state,
-   onOpen: (type, message, response) => setState({ 
-     isOpen: 'hello', 
-     type: "Teo", 
-     message: response.message1 }),
-   onClose: () => setState({ 
-     isOpen: 'hello', 
-     type: '', 
-     message: '' }),
-    }}
+    value={ value }
   >
     {children}
   </AlertContext.Provider>
