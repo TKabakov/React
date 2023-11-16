@@ -22,7 +22,7 @@ console.log(state.message);
 const value = () => {{
     setState(
     ...state,
-   onOpen: () => { 
+   onOpen = () => { 
     setState({
       isOpen: 'hello', 
       type: "Teo", 
