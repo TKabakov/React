@@ -19,18 +19,23 @@ console.log(state.isOpen);
 console.log(state.type);
 console.log(state.message);
 
-const value = () => {
-  setState(
+const value = () => {{
+    setState(
     ...state,
-   onOpen = { 
-     isOpen: 'hello', 
-     type: "Teo", 
-     message: response.message1 },
+   onOpen: () => { 
+    setState({
+      isOpen: 'hello', 
+      type: "Teo", 
+      message: response.message1,
+    })}
+,
    onClose= { 
      isOpen: 'hello', 
      type: '', 
      message: '' },
   )
+}
+
 }
 
 return (
