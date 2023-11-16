@@ -22,14 +22,14 @@ console.log(state.message);
 const value = () => {
   setState(
     ...state,
-   onOpen: (type, message, response) => setState({ 
+   onOpen = { 
      isOpen: 'hello', 
      type: "Teo", 
-     message: response.message1 }),
-   onClose: () => setState({ 
+     message: response.message1 },
+   onClose= { 
      isOpen: 'hello', 
      type: '', 
-     message: '' }),
+     message: '' },
   )
 }
 
