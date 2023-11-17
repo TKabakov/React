@@ -28,10 +28,6 @@ const ContactMeSection = forwardRef((props, ref) => {
 //  const {onOpen,type, isOpen } = useAlertContext();
   const { onOpen, isOpen, type, message, onClose } = useAlertContext();
 
-console.log(isOpen);
-console.log(type);
-console.log(message);
-
   const [display, setDisplay] = useState('none');
   
   const formik = useFormik({
@@ -80,7 +76,7 @@ console.log(message);
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">    
-          <Alert 
+          {/*<Alert 
             status={response.type} 
             display={display} 
             alignSelf="center" 
@@ -106,7 +102,7 @@ console.log(message);
         onClick={onClose}
       />
         </Alert>
-        
+  */}
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
         </Heading>

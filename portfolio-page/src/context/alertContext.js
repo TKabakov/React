@@ -19,38 +19,19 @@ console.log(state.isOpen);
 console.log(state.type);
 console.log(state.message);
 
-const value = () => {{
-    setState(
-    ...state,
-   onOpen = () => { 
+const handleAlert = () => {
+  e.prevntDefault();
+  if(isLoading){
     setState({
-      isOpen: 'hello', 
-      type: "Teo", 
-      message: response.message1,
-    })}
-,
-   onClose= { 
-     isOpen: 'hello', 
-     type: '', 
-     message: '' },
-  )
-}
+      
+    })
+  }
 
 }
 
 return (
   <AlertContext.Provider
-    value={{
-   ...state,
-   onOpen: (type, message, response) => setState({ 
-     isOpen: 'hello', 
-     type: "Teo", 
-     message: response.message1 }),
-   onClose: () => setState({ 
-     isOpen: 'hello', 
-     type: '', 
-     message: '' }),
-    }}
+    value={state}
   >
     {children}
   </AlertContext.Provider>
