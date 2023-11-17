@@ -1,7 +1,8 @@
 import Btn from "./Btn";
 import './App.css';
 
-function App() {
+function App() {`
+`
   function thirdExample() {
     console.log("third example");
   };
