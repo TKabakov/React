@@ -43,7 +43,7 @@ const handleAlert = (response, isLoading) => {
 
 return (
   <AlertContext.Provider
-    value={state, handleAlert}
+    value={state}
   >
     {children}
   </AlertContext.Provider>
