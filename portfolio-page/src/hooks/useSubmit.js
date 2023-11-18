@@ -12,7 +12,7 @@ const useSubmit = () => {
   const [response, setResponse] = useState({
     type: "",
     title: "",
-    message1: " ",
+    message1: "",
     message2:"",
 });
 
