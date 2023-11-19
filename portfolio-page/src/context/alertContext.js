@@ -15,6 +15,9 @@ const [state, setState] = useState({
   message: response.message1,
 });
 
+
+
+console.log(...state, setState({isOpen: false}))
 console.log(state.isOpen);
 console.log(state.type);
 console.log(state.message);
