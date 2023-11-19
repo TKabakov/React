@@ -5,7 +5,7 @@ const AlertContext = createContext(undefined);
 
 export const AlertProvider = ({ children }) => {
 
-const { response, isLoading } = useSubmit();
+const { response, isLoading, submit } = useSubmit();
 
 const [state, setState] = useState({
   isOpen: false,
@@ -15,12 +15,17 @@ const [state, setState] = useState({
   message: response.message1,
 });
 
+//call submit() ???
 
-
-console.log(...state, setState({isOpen: false}))
 console.log(state.isOpen);
-console.log(state.type);
-console.log(state.message);
+
+const update =(state) => {
+  setState({isOpen: true})
+}
+
+console.log(update);
+console.log(state.isOpen);
+
 
 const handleAlert = (response, isLoading) => {
   if(isLoading){
