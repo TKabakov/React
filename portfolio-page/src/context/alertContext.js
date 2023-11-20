@@ -41,8 +41,9 @@ function handleAlert (response, isLoading) {
   }
 }
 
-useEffect(
-  handleAlert(response, isLoading),[]
+useEffect(() => {
+  handleAlert(response, isLoading)
+},[]
 )
 
 console.log(state.isOpen);
