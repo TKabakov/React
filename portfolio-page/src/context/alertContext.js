@@ -16,16 +16,13 @@ const [state, setState] = useState({
 });
 
 //call submit() ???
+//useEffect may be used
 
 console.log(state.isOpen);
 
 const update =(state) => {
   setState({isOpen: true})
 }
-
-console.log(update);
-console.log(state.isOpen);
-
 
 const handleAlert = (response, isLoading) => {
   if(isLoading){
