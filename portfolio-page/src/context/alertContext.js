@@ -18,11 +18,7 @@ const [state, setState] = useState({
 //call submit() ???
 //useEffect may be used
 
-//console.log(state.isOpen);
-
-const update =(state) => {
-  setState({isOpen: true})
-}
+console.log(state.isOpen);
 
 function handleAlert (response, isLoading) {
   if(isLoading){
