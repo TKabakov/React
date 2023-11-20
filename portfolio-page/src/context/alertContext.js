@@ -18,7 +18,7 @@ const [state, setState] = useState({
 //call submit() ???
 //useEffect may be used
 
-console.log(state.isOpen);
+//console.log(state.isOpen);
 
 const update =(state) => {
   setState({isOpen: true})
@@ -39,12 +39,11 @@ const handleAlert = (response, isLoading) => {
         message: response.message1,
       }))
   }
-
-  console.log(state.isOpen);
-  console.log(state.type);
-  console.log(state.message)
-
 }
+
+console.log(state.isOpen);
+console.log(state.type);
+console.log(state.message)
 
 return (
   <AlertContext.Provider
