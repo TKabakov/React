@@ -1,4 +1,4 @@
-import {createContext, useContext, useState} from "react";
+import {createContext, useContext, useEffect, useState} from "react";
 import useSubmit from "../hooks/useSubmit";
 
 const AlertContext = createContext(undefined);
@@ -24,7 +24,7 @@ const update =(state) => {
   setState({isOpen: true})
 }
 
-const handleAlert = (response, isLoading) => {
+function handleAlert (response, isLoading) {
   if(isLoading){
     setState({
       isOpen: false,
@@ -40,6 +40,10 @@ const handleAlert = (response, isLoading) => {
       }))
   }
 }
+
+useEffect(
+  handleAlert(response, isLoading),[]
+)
 
 console.log(state.isOpen);
 console.log(state.type);
