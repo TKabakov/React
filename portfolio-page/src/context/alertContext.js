@@ -24,7 +24,7 @@ const update =(state) => {
   setState({isOpen: true})
 }
 
-const handleAlert = (response, isLoading) => {
+function handleAlert () {
   if(isLoading){
     setState({
       isOpen: false,
@@ -40,6 +40,8 @@ const handleAlert = (response, isLoading) => {
       }))
   }
 }
+
+handleAlert(response, isLoading);
 
 console.log(state.isOpen);
 console.log(state.type);
