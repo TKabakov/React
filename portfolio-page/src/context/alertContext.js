@@ -18,10 +18,10 @@ const [state, setState] = useState({
 //call submit() ???
 //useEffect may be used
 
-console.log(state.isOpen);
+console.log("isOpen is : " , state.isOpen);
 
 function handleAlert (response, isLoading) {
-  if(isLoading){
+  if(isLoading === false){
     setState({
       isOpen: false,
       type: response.type,
@@ -42,9 +42,9 @@ useEffect(() => {
 },[]
 )
 
-console.log(state.isOpen);
-console.log(state.type);
-console.log(state.message)
+console.log("isOpen becomes : ", state.isOpen);
+//console.log(state.type);
+//console.log(state.message)
 
 return (
   <AlertContext.Provider

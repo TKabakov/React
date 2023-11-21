@@ -53,8 +53,6 @@ const ContactMeSection = forwardRef((props, ref) => {
     }),
   });
 
-  console.log (response.message1);
-  
   const backgroundColor =() =>{
     if (response.type === 'success') {
     return '#81C784'
