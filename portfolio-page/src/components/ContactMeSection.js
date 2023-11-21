@@ -28,6 +28,8 @@ const ContactMeSection = forwardRef((props, ref) => {
 //  const {onOpen,type, isOpen } = useAlertContext();
   const { onOpen, isOpen, type, message, onClose } = useAlertContext();
 
+  console.log("type is : ", response.type);
+
   const [display, setDisplay] = useState('none');
   
   const formik = useFormik({
@@ -67,6 +69,8 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   } = useDisclosure({ defaultIsOpen: true })
 
+  console.log("type is : ", response.type);
+
   return (
     <>
     <FullScreenSection
@@ -76,7 +80,7 @@ const ContactMeSection = forwardRef((props, ref) => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">    
-          {/*<Alert 
+          <Alert 
             status={response.type} 
             display={display} 
             alignSelf="center" 
@@ -102,7 +106,7 @@ const ContactMeSection = forwardRef((props, ref) => {
         onClick={onClose}
       />
         </Alert>
-  */}
+  
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
         </Heading>

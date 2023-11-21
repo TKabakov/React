@@ -10,7 +10,7 @@ const useSubmit = () => {
 
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState({
-    type: "",
+    type: "warning",
     title: "",
     message1: "",
     message2:"",
