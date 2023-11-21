@@ -18,7 +18,7 @@ const useSubmit = () => {
 
   const submit = async (url, data) => {
     const random = Math.random();
-    setLoading(true);
+    setLoading(false);
     try {
       await wait(2000);
       if (random < 0.5) {

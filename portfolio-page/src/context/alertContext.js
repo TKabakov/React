@@ -19,9 +19,10 @@ const [state, setState] = useState({
 //useEffect may be used
 
 console.log("isOpen is : " , state.isOpen);
+console.log("isLoading is : " , isLoading);
 
 function handleAlert (response, isLoading) {
-  if(isLoading === false){
+  if(isLoading){
     setState({
       isOpen: false,
       type: response.type,
@@ -30,7 +31,7 @@ function handleAlert (response, isLoading) {
   }else {
     return(
       setState({
-        isOpen: true,
+        isOpen: false,
         type: response.type,
         message: response.message1,
       }))
@@ -43,6 +44,7 @@ useEffect(() => {
 )
 
 console.log("isOpen becomes : ", state.isOpen);
+console.log("isLoading becomes : " , isLoading);
 //console.log(state.type);
 //console.log(state.message)
 
