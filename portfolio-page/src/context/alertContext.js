@@ -20,6 +20,7 @@ const [state, setState] = useState({
 
 console.log("isOpen is : " , state.isOpen);
 console.log("isLoading is : " , isLoading);
+console.log("type is : ", state.type);
 
 function handleAlert (response, isLoading) {
   if(isLoading){
@@ -45,7 +46,7 @@ useEffect(() => {
 
 console.log("isOpen becomes : ", state.isOpen);
 console.log("isLoading becomes : " , isLoading);
-//console.log(state.type);
+console.log("type is : ", state.type);
 //console.log(state.message)
 
 return (
