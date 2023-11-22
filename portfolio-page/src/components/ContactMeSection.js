@@ -71,6 +71,12 @@ const ContactMeSection = forwardRef((props, ref) => {
  //   onOpen,
  // } = useDisclosure({ defaultIsOpen: true })
 
+ const {
+  isOpen: isVisible,
+  onClose,
+  onOpen,
+} = useDisclosure({ defaultIsOpen: true })
+
   return (
     <>
     <FullScreenSection
@@ -79,7 +85,29 @@ const ContactMeSection = forwardRef((props, ref) => {
       py={16}
       spacing={8}
     >
-      <VStack w="1024px" p={32} alignItems="flex-start">     
+      <VStack w="1024px" p={32} alignItems="flex-start">
+      {isVisible ? (
+    <Alert status='success'>
+      <AlertIcon />
+      <Box>
+        <AlertTitle>Success!</AlertTitle>
+        <AlertDescription>
+          Your application has been received. We will review your application
+          and respond within the next 48 hours.
+        </AlertDescription>
+      </Box>
+      <CloseButton
+        alignSelf='flex-start'
+        position='relative'
+        right={-1}
+        top={-1}
+        onClick={onClose}
+      />
+    </Alert>
+  ) : (
+    <Button onClick={onOpen}>Show Alert</Button>
+  )
+}    
         <Alert 
             status={response.type} 
             display={display} 
