@@ -2,10 +2,19 @@ import {createContext, useContext, useState} from "react";
 import useSubmit from "../hooks/useSubmit";
 
 const AlertContext = createContext(undefined);
+import {createContext, useContext, useEffect, useState} from "react";
+import useSubmit from "../hooks/useSubmit";
+import ContactMeSection from "../components/ContactMeSection";
+
+const AlertContext = createContext(undefined);
 
 export const AlertProvider = ({ children }) => {
 
-const { response } = useSubmit();
+//const { response, isLoading, submit } = useSubmit();
+console.log(ContactMeSection);
+
+const { response, isLoading, submit } = ContactMeSection;
+console.log(ContactMeSection.response.type);
 
 const [state, setState] = useState({
   isOpen: false,
@@ -15,27 +24,43 @@ const [state, setState] = useState({
   message: response.message1,
 });
 
-console.log(state.isOpen);
-console.log(state.type);
-console.log(state.message);
+//call submit() ???
+//useEffect may be used
 
-const value = (state,response) => {
-  setState(
-    ...state,
-   onOpen: (type, message, response) => setState({ 
-     isOpen: 'hello', 
-     type: "Teo", 
-     message: response.message1 }),
-   onClose: () => setState({ 
-     isOpen: 'hello', 
-     type: '', 
-     message: '' }),
-  )
+console.log("isOpen is : " , state.isOpen);
+console.log("isLoading is : " , isLoading);
+console.log("type is : ", state.type);
+
+function handleAlert (response, isLoading) {
+  if(isLoading){
+    setState({
+      isOpen: false,
+      type: response.type,
+      message: response.message1,
+    })
+  }else {
+    return(
+      setState({
+        isOpen: false,
+        type: response.type,
+        message: response.message1,
+      }))
+  }
 }
+
+useEffect(() => {
+  handleAlert(response, isLoading)
+},[]
+)
+
+console.log("isOpen becomes : ", state.isOpen);
+console.log("isLoading becomes : " , isLoading);
+console.log("type is : ", state.type);
+//console.log(state.message)
 
 return (
   <AlertContext.Provider
-    value={ value }
+    value={state}
   >
     {children}
   </AlertContext.Provider>

@@ -28,9 +28,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 //  const {onOpen,type, isOpen } = useAlertContext();
   const { onOpen, isOpen, type, message, onClose } = useAlertContext();
 
-console.log(isOpen);
-console.log(type);
-console.log(message);
+  console.log("type is : ", response.type);
 
   const [display, setDisplay] = useState('none');
   
@@ -71,6 +69,8 @@ console.log(message);
 
   } = useDisclosure({ defaultIsOpen: true })
 
+  console.log("type is : ", response.type);
+
   return (
     <>
     <FullScreenSection
@@ -106,7 +106,7 @@ console.log(message);
         onClick={onClose}
       />
         </Alert>
-        
+  
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
         </Heading>
