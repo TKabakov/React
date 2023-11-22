@@ -1,61 +1,27 @@
-import {createContext, useContext, useEffect, useState} from "react";
-import useSubmit from "../hooks/useSubmit";
+import {createContext, useContext, useState} from "react";
 
 const AlertContext = createContext(undefined);
 
 export const AlertProvider = ({ children }) => {
+  const [state, setState] = useState({
+    isOpen: false,
+    // Type can be either "success" or "error"
+    type: 'success',
+    // Message to be displayed, can be any string
+    message: '',
+  });
 
-const { response, isLoading, submit } = useSubmit();
-
-const [state, setState] = useState({
-  isOpen: false,
-  // Type can be either "success" or "error"
-  type: response.type,
-  // Message to be displayed, can be any string
-  message: response.message1,
-});
-
-//call submit() ???
-//useEffect may be used
-
-console.log("isOpen is : " , state.isOpen);
-console.log("isLoading is : " , isLoading);
-console.log("type is : ", state.type);
-
-function handleAlert (response, isLoading) {
-  if(isLoading){
-    setState({
-      isOpen: false,
-      type: response.type,
-      message: response.message1,
-    })
-  }else {
-    return(
-      setState({
-        isOpen: false,
-        type: response.type,
-        message: response.message1,
-      }))
-  }
-}
-
-useEffect(() => {
-  handleAlert(response, isLoading)
-},[]
-)
-
-console.log("isOpen becomes : ", state.isOpen);
-console.log("isLoading becomes : " , isLoading);
-console.log("type is : ", state.type);
-//console.log(state.message)
-
-return (
-  <AlertContext.Provider
-    value={state}
-  >
-    {children}
-  </AlertContext.Provider>
-);
+  return (
+    <AlertContext.Provider
+      value={{
+        ...state,
+        onOpen: (type, message) => setState({ isOpen: true, type, message }),
+        onClose: () => setState({ isOpen: false, type: '', message: '' }),
+      }}
+    >
+      {children}
+    </AlertContext.Provider>
+  );
 };
 
 export const useAlertContext = () => useContext(AlertContext);

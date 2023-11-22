@@ -89,7 +89,7 @@ const ContactMeSection = forwardRef((props, ref) => {
             p="absolute" 
             m="auto"
             backgroundColor={backgroundColor}
-            transform="translate(-20px, 150px)"
+            transform="translate(-20px, 300px)"
             >
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
