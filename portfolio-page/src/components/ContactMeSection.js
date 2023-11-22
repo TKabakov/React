@@ -65,13 +65,6 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FEF44C'
   }}
 
-  const {
-    isOpen: isVisible,
-
-  } = useDisclosure({ defaultIsOpen: true })
-
-  console.log("type is : ", response.type);
-
   return (
     <>
     <FullScreenSection
