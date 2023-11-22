@@ -1,11 +1,14 @@
 import {createContext, useContext, useEffect, useState} from "react";
 import useSubmit from "../hooks/useSubmit";
+import ContactMeSection from "../components/ContactMeSection";
 
 const AlertContext = createContext(undefined);
 
 export const AlertProvider = ({ children }) => {
 
-const { response, isLoading, submit } = useSubmit();
+//const { response, isLoading, submit } = useSubmit();
+ContactMeSection();
+const { response, isLoading } = ContactMeSection();
 
 const [state, setState] = useState({
   isOpen: false,
