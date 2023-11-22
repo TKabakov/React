@@ -11,13 +11,11 @@ export const AlertProvider = ({ children }) => {
     message: '',
   });
 
+  let value = 'hello';
+
   return (
     <AlertContext.Provider
-      value={{
-        ...state,
-        onOpen: (type, message) => setState({ isOpen: true, type, message }),
-        onClose: () => setState({ isOpen: false, type: '', message: '' }),
-      }}
+      value={value}
     >
       {children}
     </AlertContext.Provider>
