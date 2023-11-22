@@ -7,8 +7,10 @@ const AlertContext = createContext(undefined);
 export const AlertProvider = ({ children }) => {
 
 //const { response, isLoading, submit } = useSubmit();
-ContactMeSection();
-const { response, isLoading } = ContactMeSection();
+console.log(ContactMeSection);
+
+const { response, isLoading, submit } = ContactMeSection;
+console.log(ContactMeSection.response.type);
 
 const [state, setState] = useState({
   isOpen: false,
