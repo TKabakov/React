@@ -26,10 +26,10 @@ import {useAlertContext} from "../context/alertContext";
 const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
 //  const {onOpen,type, isOpen } = useAlertContext();
-  const { onOpen, isOpen, type, message, onClose } = useAlertContext();
+//  const { onOpen, isOpen, type, message, onClose } = useAlertContext();
 
   console.log("type is : ", response.type);
-  console.log(onClose);
+ // console.log(onClose);
 
   const [display, setDisplay] = useState('none');
   
@@ -65,6 +65,12 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FEF44C'
   }}
 
+  //const {
+  //  isOpen: isVisible,
+ //   onClose,
+ //   onOpen,
+ // } = useDisclosure({ defaultIsOpen: true })
+
   return (
     <>
     <FullScreenSection
@@ -74,32 +80,35 @@ const ContactMeSection = forwardRef((props, ref) => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">    
-          <Alert 
-            status={response.type} 
-            display={display} 
-            alignSelf="center" 
-            borderRadius={14} 
-            w="60%" 
-            p="absolute" 
-            m="auto"
-            backgroundColor={backgroundColor}
-            transform="translate(20px, 310px)"
-            opacity={1.0}>
-          <AlertIcon />
-          <AlertTitle fontSize="lg" paddingTop={2}>
-            {response.title}
-          </AlertTitle>
-          <AlertDescription paddingTop={2}>
-            {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
-          </AlertDescription>
-          <CloseButton
-        alignSelf='flex-start'
-        position='relative'
-        right={-1}
-        top={-1}
-        onClick={onClose}
-      />
-        </Alert>
+          
+                      <Alert 
+                      status={response.type} 
+                      display={display} 
+                      alignSelf="center" 
+                      borderRadius={14} 
+                      w="60%" 
+                      p="absolute" 
+                      m="auto"
+                      backgroundColor={backgroundColor}
+                      transform="translate(20px, 310px)">
+                    <AlertIcon />
+                    <AlertTitle fontSize="lg" paddingTop={2}>
+                      {response.title}
+                    </AlertTitle>
+                    <AlertDescription paddingTop={2}>
+                      {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
+                    </AlertDescription>
+                    <CloseButton
+                  alignSelf='flex-start'
+                  position='relative'
+                  right={-1}
+                  top={-1}
+                  
+                />
+                  </Alert>
+     
+
+
   
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
