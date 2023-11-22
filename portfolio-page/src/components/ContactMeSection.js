@@ -29,6 +29,7 @@ const ContactMeSection = forwardRef((props, ref) => {
   const { onOpen, isOpen, type, message, onClose } = useAlertContext();
 
   console.log("type is : ", response.type);
+  console.log(onClose);
 
   const [display, setDisplay] = useState('none');
   
@@ -89,8 +90,8 @@ const ContactMeSection = forwardRef((props, ref) => {
             p="absolute" 
             m="auto"
             backgroundColor={backgroundColor}
-            transform="translate(-20px, 300px)"
-            >
+            transform="translate(20px, 310px)"
+            opacity={1.0}>
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
             {response.title}
