@@ -94,6 +94,8 @@ let value={
   onClose: () => setState({ isOpen: false, type: '', message: '' }),
 };
 
+console.log(value);
+
   return (
     <>
     <Alert value={value}/>

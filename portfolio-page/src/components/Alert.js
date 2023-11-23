@@ -16,7 +16,7 @@ function Alert(value) {
   const cancelRef = useRef();
   const isSuccess = type === "success"
 
-  console.log(isOpen);
+  console.log(value);
   return (
     <AlertDialog
       isOpen={isOpen}
