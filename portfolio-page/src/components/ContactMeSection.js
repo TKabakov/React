@@ -55,6 +55,10 @@ const ContactMeSection = forwardRef((props, ref) => {
         comment: Yup.string().required("Required").min(20,"Must be at least 25 characters"),
     }),
   });
+  
+  // implement alert as children
+  //pass needed data as props
+  //implement code from alertContext
 
   const backgroundColor =() =>{
     if (response.type === 'success') {
