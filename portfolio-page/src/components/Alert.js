@@ -17,6 +17,7 @@ function Alert(hello) {
   const isSuccess = type === "success"
 
   console.log(hello);
+  console.log(type);
   return (
     <AlertDialog
       isOpen={isOpen}
