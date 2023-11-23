@@ -1,13 +1,6 @@
 import {createContext, useContext, useState} from "react";
-<<<<<<< HEAD
-import useSubmit from "../hooks/useSubmit";
 
-const AlertContext = createContext(undefined);
-import {createContext, useContext, useEffect, useState} from "react";
 import useSubmit from "../hooks/useSubmit";
-import ContactMeSection from "../components/ContactMeSection";
-=======
->>>>>>> 62bb0c45fc2f0e9eeab9981c02fe9bd4716704a1
 
 const AlertContext = createContext(undefined);
 
