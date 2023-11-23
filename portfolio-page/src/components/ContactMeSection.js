@@ -11,7 +11,7 @@ import {
   Select,
   Textarea,
   VStack,
-  Alert,
+
   AlertIcon,
   AlertTitle,
   AlertDescription,
@@ -22,6 +22,7 @@ import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
+import Alert from "./Alert";
 
 const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
@@ -77,8 +78,10 @@ const ContactMeSection = forwardRef((props, ref) => {
   onOpen,
 } = useDisclosure({ defaultIsOpen: true })
 
+let hello="Hello"
   return (
     <>
+    <Alert hello={hello}/>
     <FullScreenSection
       isDarkBackground
       backgroundColor="#512DA8"
