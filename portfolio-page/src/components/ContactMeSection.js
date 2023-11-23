@@ -88,10 +88,15 @@ const [state, setState] = useState({
   message: '',
 });
 
+let value={
+  ...state,
+  onOpen: (type, message) => setState({ isOpen: true, type, message }),
+  onClose: () => setState({ isOpen: false, type: '', message: '' }),
+};
 
   return (
     <>
-    <Alert hello={hello}/>
+    <Alert value={value}/>
     <FullScreenSection
       isDarkBackground
       backgroundColor="#512DA8"

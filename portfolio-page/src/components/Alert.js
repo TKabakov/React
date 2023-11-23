@@ -11,13 +11,12 @@ import { useRef } from "react";
 /**
  * This is a global component that uses context to display a global alert message.
  */
-function Alert(hello) {
-  const { isOpen, type, message, onClose } = useAlertContext();
+function Alert(value) {
+  const { isOpen, type, message, onClose } = value;
   const cancelRef = useRef();
   const isSuccess = type === "success"
 
-  console.log(hello);
-  console.log(type);
+  console.log(isOpen);
   return (
     <AlertDialog
       isOpen={isOpen}
