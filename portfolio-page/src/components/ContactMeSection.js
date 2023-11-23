@@ -32,7 +32,6 @@ const ContactMeSection = forwardRef((props, ref) => {
     // Message to be displayed, can be any string
     message: '',
   });
-  
 
   const {isLoading, response, submit} = useSubmit();
 //  const {onOpen,type, isOpen } = useAlertContext();
