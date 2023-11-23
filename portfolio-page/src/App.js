@@ -29,7 +29,6 @@ function App() {
           <ProjectsSection ref={projectsRef} />
           <ContactMeSection ref={contactsRef}/>
           <Footer />
-          <Alert />
         </main>
       </AlertProvider>
     </ChakraProvider>
