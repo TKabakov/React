@@ -11,7 +11,7 @@ import {
   Select,
   Textarea,
   VStack,
-
+  Alert,
   AlertIcon,
   AlertTitle,
   AlertDescription,
@@ -22,9 +22,18 @@ import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
-import Alert from "./Alert";
+import Warning from "./Alert";
 
 const ContactMeSection = forwardRef((props, ref) => {
+  const [state, setState] = useState({
+    isOpen: false,
+    // Type can be either "success" or "error"
+    type: 'success',
+    // Message to be displayed, can be any string
+    message: '',
+  });
+  
+
   const {isLoading, response, submit} = useSubmit();
 //  const {onOpen,type, isOpen } = useAlertContext();
 //  const { onOpen, isOpen, type, message, onClose } = useAlertContext();
@@ -80,13 +89,6 @@ const ContactMeSection = forwardRef((props, ref) => {
 
 let hello="Hello";
 
-const [state, setState] = useState({
-  isOpen: false,
-  // Type can be either "success" or "error"
-  type: 'success',
-  // Message to be displayed, can be any string
-  message: '',
-});
 
 let value={
   ...state,
@@ -98,7 +100,7 @@ console.log(value);
 
   return (
     <>
-    <Alert value={value}/>
+    <Warning value={value}/>
     <FullScreenSection
       isDarkBackground
       backgroundColor="#512DA8"
