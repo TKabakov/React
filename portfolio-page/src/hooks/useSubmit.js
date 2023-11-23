@@ -12,7 +12,7 @@ const useSubmit = () => {
   const [response, setResponse] = useState({
     type: "warning",
     title: "",
-    message1: "",
+    message1: "Your submission is pending",
     message2:"",
 });
 
@@ -35,7 +35,7 @@ const useSubmit = () => {
       setResponse({
         type: 'error',
         title: 'Oops!',
-        message1: 'Something went wrong ',
+        message1: 'Something went wrong',
         message2: ', please try again later!',
       })
     } finally {
