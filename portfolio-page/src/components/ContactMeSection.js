@@ -92,6 +92,15 @@ const ContactMeSection = forwardRef((props, ref) => {
 
 let hello="Hello";
 
+//update state object
+
+useState({
+    isOpen: false,
+    // Type can be either "success" or "error"
+    type: respond.type,
+    // Message to be displayed, can be any string
+    message: response.message1,
+});
 
 let value={
   ...state,
