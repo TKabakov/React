@@ -97,7 +97,7 @@ let hello="Hello";
 useState({
     isOpen: false,
     // Type can be either "success" or "error"
-    type: respond.type,
+    type: response.type,
     // Message to be displayed, can be any string
     message: response.message1,
 });
