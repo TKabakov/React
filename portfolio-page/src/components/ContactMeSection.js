@@ -35,11 +35,11 @@ const ContactMeSection = forwardRef((props, ref) => {
     message: response.message1,
   });
 
- 
 //  const {onOpen,type, isOpen } = useAlertContext();
 //  const { onOpen, isOpen, type, message, onClose } = useAlertContext();
 
   console.log("type is : ", response.type);
+
  // console.log(onClose);
 
   const [display, setDisplay] = useState('none');
@@ -56,10 +56,10 @@ const ContactMeSection = forwardRef((props, ref) => {
     if(response.type === "success"){formik.resetForm()};
     submit();
     setDisplay(response.message1, response.message2);
-    useState({
+    setState({
       ...state,
-  onOpen: (type, message) => setState({ isOpen: true, type, message }),
-  onClose: () => setState({ isOpen: false, type: '', message: '' }),
+      onOpen: (type, message) => setState({ isOpen: true, type, message }),
+      onClose: () => setState({ isOpen: false, type: '', message: '' }),
   });
    },
 
