@@ -108,7 +108,7 @@ console.log(value);
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-      {isVisible ? (
+   {/*   {isVisible ? (
     <Alert status='success'>
       <AlertIcon />
       <Box>
@@ -153,6 +153,7 @@ console.log(value);
                   right={-1}
                   top={-1}/>
         </Alert>
+*/}
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
         </Heading>

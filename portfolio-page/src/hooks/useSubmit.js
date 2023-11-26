@@ -10,9 +10,9 @@ const useSubmit = () => {
 
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState({
-    type: "warning",
+    type: "",
     title: "",
-    message1: "Your submission is pending",
+    message1: "",
     message2:"",
 });
 
