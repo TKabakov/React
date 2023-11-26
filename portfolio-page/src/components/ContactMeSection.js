@@ -56,6 +56,11 @@ const ContactMeSection = forwardRef((props, ref) => {
     if(response.type === "success"){formik.resetForm()};
     submit();
     setDisplay(response.message1, response.message2);
+    useState({
+      ...state,
+  onOpen: (type, message) => setState({ isOpen: true, type, message }),
+  onClose: () => setState({ isOpen: false, type: '', message: '' }),
+  });
    },
 
     validationSchema: 
@@ -82,25 +87,11 @@ const ContactMeSection = forwardRef((props, ref) => {
   onOpen,
 } = useDisclosure({ defaultIsOpen: true })
 
-useState({
-    isOpen: false,
-    // Type can be either "success" or "error"
-    type: response.type,
-    // Message to be displayed, can be any string
-    message: response.message1,
-});
-
-let value={
-  ...state,
-  onOpen: (type, message) => setState({ isOpen: true, type, message }),
-  onClose: () => setState({ isOpen: false, type: '', message: '' }),
-};
-
-console.log(value);
+console.log(state);
 
   return (
     <>
-    <Warning value={value}/>
+    <Warning value={state}/>
     <FullScreenSection
       isDarkBackground
       backgroundColor="#512DA8"
