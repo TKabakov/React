@@ -25,7 +25,9 @@ import {useAlertContext} from "../context/alertContext";
 import Warning from "./Alert";
 
 const ContactMeSection = forwardRef((props, ref) => {
-  const [state, setState] = useState({
+   const {isLoading, response, submit} = useSubmit();
+   
+   const [state, setState] = useState({
     isOpen: false,
     // Type can be either "success" or "error"
     type: 'success',
@@ -33,7 +35,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     message: '',
   });
 
-  const {isLoading, response, submit} = useSubmit();
+ 
 //  const {onOpen,type, isOpen } = useAlertContext();
 //  const { onOpen, isOpen, type, message, onClose } = useAlertContext();
 
@@ -64,10 +66,6 @@ const ContactMeSection = forwardRef((props, ref) => {
         comment: Yup.string().required("Required").min(20,"Must be at least 25 characters"),
     }),
   });
-  
-  // implement alert as children
-  //pass needed data as props
-  //implement code from alertContext
 
   const backgroundColor =() =>{
     if (response.type === 'success') {
@@ -78,21 +76,11 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FEF44C'
   }}
 
-  //const {
-  //  isOpen: isVisible,
- //   onClose,
- //   onOpen,
- // } = useDisclosure({ defaultIsOpen: true })
-
  const {
   isOpen: isVisible,
   onClose,
   onOpen,
 } = useDisclosure({ defaultIsOpen: true })
-
-let hello="Hello";
-
-//update state object
 
 useState({
     isOpen: false,
