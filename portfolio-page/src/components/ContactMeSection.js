@@ -21,7 +21,6 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import {useAlertContext} from "../context/alertContext";
 import Warning from "./Alert";
 
 const ContactMeSection = forwardRef((props, ref) => {
@@ -35,13 +34,8 @@ const ContactMeSection = forwardRef((props, ref) => {
     message: response.message1,
   });
 
-//  const {onOpen,type, isOpen } = useAlertContext();
-//  const { onOpen, isOpen, type, message, onClose } = useAlertContext();
-
   console.log(response)
   console.log("type is : ", response.type);
-
- // console.log(onClose);
 
   const [display, setDisplay] = useState('none');
   
@@ -59,6 +53,10 @@ const ContactMeSection = forwardRef((props, ref) => {
     setDisplay(response.message1, response.message2);
     setState({
       ...state,
+      type: response.type,
+    })
+    setState({
+      ...state,
       onOpen: (type, message) => setState({ isOpen: true, type, message }),
       onClose: () => setState({ isOpen: false, type: '', message: '' }),
   });
@@ -73,7 +71,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     }),
   });
 
-  console.log(display)
+console.log(display);
 console.log(state);
 
   return (
@@ -86,9 +84,7 @@ console.log(state);
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-   {/* 
-   
-*/}
+
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
         </Heading>
