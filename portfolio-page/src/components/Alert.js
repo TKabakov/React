@@ -16,7 +16,7 @@ function Warning({state}) {
   const cancelRef = useRef();
   const isSuccess = type === "success"
 
-  console.log(state.type);
+  console.log(type);
   return (
     <AlertDialog
       isOpen={isOpen}

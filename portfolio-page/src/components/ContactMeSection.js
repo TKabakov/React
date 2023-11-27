@@ -40,7 +40,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   console.log("type is : ", response.type);
 
- // console.log(onClose);
+ console.log(state);
 
   const [display, setDisplay] = useState('none');
   
