@@ -27,15 +27,12 @@ const ContactMeSection = forwardRef((props, ref) => {
    const {isLoading, response, submit} = useSubmit();
    
    const [state, setState] = useState({
-    isOpen: false,
-    // Type can be either "success" or "error"
     type: response.type,
-    // Message to be displayed, can be any string
-    message: response.message1,
   });
 
   console.log(response)
   console.log("type is : ", response.type);
+  console.log(state);
 
   const [display, setDisplay] = useState('none');
   
@@ -54,11 +51,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     setState({
       ...state,
       type: response.type,
-    })
-    setState({
-      ...state,
-      onOpen: (type, message) => setState({ isOpen: true, type, message }),
-      onClose: () => setState({ isOpen: false, type: '', message: '' }),
+      message: response.message1,
   });
    },
 
