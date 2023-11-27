@@ -13,7 +13,7 @@ import { useRef } from "react";
  */
  
  // use state.type, state.message
-function Warning({state}) {
+function Warning(state) {
   //you may cut this
   console.log(state);
   
