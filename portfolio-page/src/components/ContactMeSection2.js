@@ -72,21 +72,6 @@ const ContactMeSection = forwardRef((props, ref) => {
     }),
   });
 
-  const backgroundColor =() =>{
-    if (response.type === 'success') {
-    return '#81C784'
-  } else if (response.type === 'error'){
-    return '#FF8A65'
-  } else {
-    return '#FEF44C'
-  }}
-
- const {
-  isOpen: isVisible,
-  onClose,
-  onOpen,
-} = useDisclosure({ defaultIsOpen: true })
-
 console.log(state);
 
   return (
