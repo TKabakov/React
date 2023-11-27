@@ -99,51 +99,8 @@ console.log(state);
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-   {/*   {isVisible ? (
-    <Alert status='success'>
-      <AlertIcon />
-      <Box>
-        <AlertTitle>Success!</AlertTitle>
-        <AlertDescription>
-          Your application has been received. We will review your application
-          and respond within the next 48 hours.
-        </AlertDescription>
-      </Box>
-      <CloseButton
-        alignSelf='flex-start'
-        position='relative'
-        right={-1}
-        top={-1}
-        onClick={onClose}
-      />
-    </Alert>
-  ) : (
-    <Button onClick={onOpen}>Show Alert</Button>
-  )
+   {/* 
 }    
-        <Alert 
-            status={response.type} 
-            display={display} 
-            alignSelf="center" 
-            borderRadius={14} 
-            w="60%" 
-            p="absolute" 
-            m="auto"
-            backgroundColor={backgroundColor}
-            transform="translate(20px, 310px)">
-            <AlertIcon />
-              <AlertTitle fontSize="lg" paddingTop={2}>
-                {response.title}
-              </AlertTitle>
-              <AlertDescription paddingTop={2}>
-                {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
-              </AlertDescription>
-              <CloseButton
-                  alignSelf='flex-start'
-                  position='relative'
-                  right={-1}
-                  top={-1}/>
-        </Alert>
 */}
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
