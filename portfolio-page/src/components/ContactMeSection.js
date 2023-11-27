@@ -56,6 +56,7 @@ const ContactMeSection = forwardRef((props, ref) => {
       onClose: () => setState({ isOpen: false, type: '', message: '' }),
   });
    },
+// state is updated but it gives empty type and empty message
 
     validationSchema: 
       Yup.object({
