@@ -55,6 +55,12 @@ const ContactMeSection = forwardRef((props, ref) => {
       onOpen: (type, message) => setState({ isOpen: true, type:response.type, message:response.message1 }),
       onClose: () => setState({ isOpen: false, type: '', message: '' }),
   });
+    setState({
+      ...state,
+      onOpen.isOpen: true,
+      onOpen.type:response.type,
+      onOpen.message:response.message1,
+    })
    },
 // state is updated but it gives empty type and empty message
 
