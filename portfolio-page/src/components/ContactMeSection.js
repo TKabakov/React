@@ -68,6 +68,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     });
    },
 // state is updated but it gives empty type and empty message
+//the code doesn't work
 
     validationSchema: 
       Yup.object({
