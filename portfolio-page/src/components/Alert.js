@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import { useAlertContext } from "../context/alertContext";
 import { useRef } from "react";
+import ContactMeSection from "./ContactMeSection";
 
 /**
  * This is a global component that uses context to display a global alert message.
@@ -24,7 +25,7 @@ function Warning(state) {
   console.log(type);
   return (
     <AlertDialog
-      isOpen={isOpen}
+      isOpen={state.isOpen}
       leastDestructiveRef={cancelRef}
       onClose={onClose}
     >

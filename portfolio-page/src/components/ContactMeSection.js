@@ -27,8 +27,8 @@ const ContactMeSection = forwardRef((props, ref) => {
    const {isLoading, response, submit} = useSubmit();
    
    const [state, setState] = useState({
-    isOpen: false,
-    type: "",
+    isOpen: true,
+    type: response.type,
     message: response.message1,
   });
 
@@ -54,7 +54,6 @@ const ContactMeSection = forwardRef((props, ref) => {
       ...state,
       type: response.type,
       message: response.message1,
-      onOpen: (type, message) => setState({ isOpen: true, type, message }),
       });
    },
 // state is updated but it gives empty type and empty message
@@ -68,9 +67,6 @@ const ContactMeSection = forwardRef((props, ref) => {
         comment: Yup.string().required("Required").min(20,"Must be at least 25 characters"),
     }),
   });
-
-console.log(display);
-console.log(state);
 
   return (
     <>
