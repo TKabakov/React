@@ -28,7 +28,7 @@ const ContactMeSection = forwardRef((props, ref) => {
    
    const [state, setState] = useState({
     isOpen: false,
-    type: "",
+    type: response.type,
     message: response.message1,
   });
 
