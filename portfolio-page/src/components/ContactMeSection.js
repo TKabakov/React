@@ -23,11 +23,29 @@ import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import Warning from "./Alert";
 
+{/**
+You could setState using spread operator at each level like
+
+this.setState(prevState => ({
+    ...prevState,
+    someProperty: {
+        ...prevState.someProperty,
+        someOtherProperty: {
+            ...prevState.someProperty.someOtherProperty, 
+            anotherProperty: {
+               ...prevState.someProperty.someOtherProperty.anotherProperty,
+               flag: false
+            }
+        }
+    }
+}))
+
+*/}
 const ContactMeSection = forwardRef((props, ref) => {
    const {isLoading, response, submit} = useSubmit();
    
    const [state, setState] = useState({
-    isOpen: true,
+    isOpen: false,
     type: response.type,
     message: response.message1,
   });

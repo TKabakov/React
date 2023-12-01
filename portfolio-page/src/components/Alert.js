@@ -25,7 +25,7 @@ function Warning(state) {
   console.log(type);
   return (
     <AlertDialog
-      isOpen={true}
+      isOpen={isOpen}
       leastDestructiveRef={cancelRef}
       onClose={onClose}
     >
