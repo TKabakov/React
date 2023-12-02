@@ -13,7 +13,6 @@ import ContactMeSection from "./ContactMeSection";
  * This is a global component that uses context to display a global alert message.
  */
  
- // use state.type, state.message
 function Warning(state) {
   //you may cut this
   console.log(state);

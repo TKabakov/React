@@ -56,6 +56,12 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   const [display, setDisplay] = useState('none');
   
+  setState({
+    ...state,
+    type: response.type,
+    message: response.message1,
+    });
+    
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -68,11 +74,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     if(response.type === "success"){formik.resetForm()};
     submit();
     setDisplay(response.message1, response.message2);
-    setState({
-      ...state,
-      type: response.type,
-      message: response.message1,
-      });
+
    },
 // state is updated but it gives empty type and empty message
 //the code doesn't work
