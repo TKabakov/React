@@ -14,7 +14,7 @@ import ContactMeSection from "./ContactMeSection";
  */
  
 function Warning(state) {
-  //you may cut this
+
   console.log(state);
   
   const { isOpen, type, message, onClose } = state;
