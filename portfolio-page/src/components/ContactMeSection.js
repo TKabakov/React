@@ -37,7 +37,6 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   console.log("type is : ", response.type);
 
-
   const [display, setDisplay] = useState('none');
   
   const formik = useFormik({
@@ -87,7 +86,6 @@ console.log(state);
 
   return (
     <>
-    <Warning value={state}/>
     <FullScreenSection
       isDarkBackground
       backgroundColor="#512DA8"
@@ -116,9 +114,9 @@ console.log(state);
   ) : (
     <Button onClick={onOpen}>Show Alert</Button>
   )
-}    
+  */}    
         <Alert 
-            status={response.type} 
+            status={response.type===""?"warning":response.type}
             display={display} 
             alignSelf="center" 
             borderRadius={14} 
@@ -132,7 +130,9 @@ console.log(state);
                 {response.title}
               </AlertTitle>
               <AlertDescription paddingTop={2}>
-                {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
+                if (response.type===""){
+                  "your submission is pending"
+                }else{response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
               </AlertDescription>
               <CloseButton
                   alignSelf='flex-start'
@@ -140,7 +140,6 @@ console.log(state);
                   right={-1}
                   top={-1}/>
         </Alert>
-*/}
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
         </Heading>
