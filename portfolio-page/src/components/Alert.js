@@ -13,21 +13,13 @@ import ContactMeSection from "./ContactMeSection";
  * This is a global component that uses context to display a global alert message.
  */
  
-function Warning(state) {
+function Warning({isOpen, type, message}) {
 
-  console.log(state);
-  console.log(state.type);
-  
-  const { isOpen:isOpen, type:type, message:message } = state;
   const cancelRef = useRef();
   const isSuccess = type === "success"
 
-  const hello = state.type;
-  console.log(hello);
   console.log(isOpen);
   console.log(message);
-  console.log(state);
-
 
   return (
     <AlertDialog

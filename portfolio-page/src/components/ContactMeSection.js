@@ -50,6 +50,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     message: response.message1,
   });
 
+  const { isOpen, type, message } = state;
   console.log(response)
   console.log("type is : ", response.type);
   console.log(state);
@@ -86,7 +87,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   return (
     <>
-    <Warning value={state}/>
+    <Warning {...state}/>
     <FullScreenSection
       isDarkBackground
       backgroundColor="#512DA8"
