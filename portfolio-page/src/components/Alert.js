@@ -16,8 +16,9 @@ import ContactMeSection from "./ContactMeSection";
 function Warning(state) {
 
   console.log(state);
+  console.log(state.type);
   
-  const { isOpen, type, message, onClose } = state;
+  const { isOpen:isOpen, type:type, message:message } = state;
   const cancelRef = useRef();
   const isSuccess = type === "success"
 
@@ -25,13 +26,14 @@ function Warning(state) {
   console.log(hello);
   console.log(isOpen);
   console.log(message);
+  console.log(state);
 
 
   return (
     <AlertDialog
       isOpen={isOpen}
       leastDestructiveRef={cancelRef}
-      onClose={onClose}
+      onClose={false}
     >
       <AlertDialogOverlay>
         <AlertDialogContent py={4} backgroundColor={isSuccess ? '#81C784' : '#FF8A65'}>
