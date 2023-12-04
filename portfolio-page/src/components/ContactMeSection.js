@@ -70,10 +70,10 @@ const ContactMeSection = forwardRef((props, ref) => {
     submit();
     setDisplay(response.message1, response.message2);
     setState({
-      ...state,
-      onOpen: (type, message) => setState({ isOpen: true, type, message }),
+      ...state, 
+      type: response.type,
+      message: response.message1,
       });
-
    },
 
     validationSchema: 
