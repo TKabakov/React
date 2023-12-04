@@ -51,11 +51,6 @@ const ContactMeSection = forwardRef((props, ref) => {
     if(response.type === "success"){formik.resetForm()};
     submit();
     setDisplay(response.message1, response.message2);
-    setState({
-      ...state,
-      onOpen: (type, message) => setState({ isOpen: true,  type: response.type, message:response.message1 }),
-      onClose: () => setState({ isOpen: false, type: '', message: '' }),
-  });
    },
 
     validationSchema: 
@@ -76,14 +71,6 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FEF44C'
   }}
 
- const {
-  isOpen: isVisible,
-  onClose,
-  onOpen,
-} = useDisclosure({ defaultIsOpen: true })
-
-console.log(state);
-
   return (
     <>
     <FullScreenSection
@@ -93,7 +80,7 @@ console.log(state);
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-  isVisible ? (
+  
         <Alert 
             status={response.type===""?"warning":response.type}
             display={display} 
@@ -111,14 +98,7 @@ console.log(state);
               <AlertDescription paddingTop={2}>
                 {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
               </AlertDescription>
-              <Box/>
-              <CloseButton
-                  alignSelf='flex-start'
-                  position='relative'
-                  right={-1}
-                  top={-1}
-                  onClick={onClose}/>
-        </Alert>) : ""
+        </Alert>
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
         </Heading>
