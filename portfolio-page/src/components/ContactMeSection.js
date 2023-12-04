@@ -1,4 +1,4 @@
-import React, { useState, forwardRef, useContext } from "react";
+import React, { useState, forwardRef } from "react";
 import { useFormik } from "formik";
 import {
   Box,
@@ -15,27 +15,13 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
-  CloseButton,
-  useDisclosure
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import {useAlertContext} from "../context/alertContext";
-import Warning from "./Alert";
 
 const ContactMeSection = forwardRef((props, ref) => {
    const {isLoading, response, submit} = useSubmit();
-   
-   const [state, setState] = useState({
-    isOpen: false,
-    // Type can be either "success" or "error"
-    type: response.type,
-    // Message to be displayed, can be any string
-    message: response.message1,
-  });
-
-  console.log("type is : ", response.type);
 
   const [display, setDisplay] = useState('none');
   
@@ -48,9 +34,9 @@ const ContactMeSection = forwardRef((props, ref) => {
     },
 
    onSubmit: () => {
-    if(response.type === "success"){formik.resetForm()};
     submit();
     setDisplay(response.message1, response.message2);
+    if(response.type === "success"){formik.resetForm()};
    },
 
     validationSchema: 
