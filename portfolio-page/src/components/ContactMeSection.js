@@ -71,10 +71,11 @@ const ContactMeSection = forwardRef((props, ref) => {
     setDisplay(response.message1, response.message2);
     setState({
       ...state,
-      type: response.type,
-      message: response.message1,
+      onOpen: (type, message) => setState({ isOpen: true, type, message }),
       });
+
    },
+
 
     validationSchema: 
       Yup.object({
