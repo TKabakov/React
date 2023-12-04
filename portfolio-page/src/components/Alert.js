@@ -22,6 +22,10 @@ function Warning(state) {
   const isSuccess = type === "success"
 
   console.log(type);
+  console.log(isOpen);
+  console.log(message);
+
+
   return (
     <AlertDialog
       isOpen={isOpen}
