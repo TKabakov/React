@@ -21,7 +21,8 @@ function Warning(state) {
   const cancelRef = useRef();
   const isSuccess = type === "success"
 
-  console.log(type);
+  const hello = state.type;
+  console.log(hello);
   console.log(isOpen);
   console.log(message);
 
