@@ -21,42 +21,25 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
+import {useAlertContext} from "../context/alertContext";
 import Warning from "./Alert";
-
-{/**
-You could setState using spread operator at each level like
-
-this.setState(prevState => ({
-    ...prevState,
-    someProperty: {
-        ...prevState.someProperty,
-        someOtherProperty: {
-            ...prevState.someProperty.someOtherProperty, 
-            anotherProperty: {
-               ...prevState.someProperty.someOtherProperty.anotherProperty,
-               flag: false
-            }
-        }
-    }
-}))
-*/}
 
 const ContactMeSection = forwardRef((props, ref) => {
    const {isLoading, response, submit} = useSubmit();
    
    const [state, setState] = useState({
     isOpen: false,
+    // Type can be either "success" or "error"
     type: response.type,
+    // Message to be displayed, can be any string
     message: response.message1,
   });
 
-  const { isOpen, type, message } = state;
-  console.log(response)
   console.log("type is : ", response.type);
-  console.log(state);
+
 
   const [display, setDisplay] = useState('none');
-
+  
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -70,10 +53,10 @@ const ContactMeSection = forwardRef((props, ref) => {
     submit();
     setDisplay(response.message1, response.message2);
     setState({
-      ...state, 
-      type: response.type,
-      message: response.message1,
-      });
+      ...state,
+      onOpen: (type, message) => setState({ isOpen: true,  type: response.type, message:response.message1 }),
+      onClose: () => setState({ isOpen: false, type: '', message: '' }),
+  });
    },
 
     validationSchema: 
@@ -85,9 +68,26 @@ const ContactMeSection = forwardRef((props, ref) => {
     }),
   });
 
+  const backgroundColor =() =>{
+    if (response.type === 'success') {
+    return '#81C784'
+  } else if (response.type === 'error'){
+    return '#FF8A65'
+  } else {
+    return '#FEF44C'
+  }}
+
+ const {
+  isOpen: isVisible,
+  onClose,
+  onOpen,
+} = useDisclosure({ defaultIsOpen: true })
+
+console.log(state);
+
   return (
     <>
-    <Warning {...state}/>
+    <Warning value={state}/>
     <FullScreenSection
       isDarkBackground
       backgroundColor="#512DA8"
@@ -95,7 +95,52 @@ const ContactMeSection = forwardRef((props, ref) => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-
+   {/*   {isVisible ? (
+    <Alert status='success'>
+      <AlertIcon />
+      <Box>
+        <AlertTitle>Success!</AlertTitle>
+        <AlertDescription>
+          Your application has been received. We will review your application
+          and respond within the next 48 hours.
+        </AlertDescription>
+      </Box>
+      <CloseButton
+        alignSelf='flex-start'
+        position='relative'
+        right={-1}
+        top={-1}
+        onClick={onClose}
+      />
+    </Alert>
+  ) : (
+    <Button onClick={onOpen}>Show Alert</Button>
+  )
+}    
+        <Alert 
+            status={response.type} 
+            display={display} 
+            alignSelf="center" 
+            borderRadius={14} 
+            w="60%" 
+            p="absolute" 
+            m="auto"
+            backgroundColor={backgroundColor}
+            transform="translate(20px, 310px)">
+            <AlertIcon />
+              <AlertTitle fontSize="lg" paddingTop={2}>
+                {response.title}
+              </AlertTitle>
+              <AlertDescription paddingTop={2}>
+                {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
+              </AlertDescription>
+              <CloseButton
+                  alignSelf='flex-start'
+                  position='relative'
+                  right={-1}
+                  top={-1}/>
+        </Alert>
+*/}
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
         </Heading>
