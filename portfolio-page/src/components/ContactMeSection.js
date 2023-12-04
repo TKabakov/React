@@ -76,7 +76,6 @@ const ContactMeSection = forwardRef((props, ref) => {
 
    },
 
-
     validationSchema: 
       Yup.object({
         firstName: Yup.string().required("Required"),
