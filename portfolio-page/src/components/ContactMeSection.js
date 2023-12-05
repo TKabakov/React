@@ -15,6 +15,7 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
+  CloseButton
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
@@ -66,24 +67,30 @@ const ContactMeSection = forwardRef((props, ref) => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-  
         <Alert 
-            status={response.type===""?"warning":response.type}
-            display={display} 
-            alignSelf="center" 
-            borderRadius={14} 
-            w="60%" 
-            p="absolute" 
-            m="auto"
-            backgroundColor={backgroundColor}
-            transform="translate(20px, 310px)">
-            <AlertIcon />
-              <AlertTitle fontSize="lg" paddingTop={2}>
-                {response.title}
-              </AlertTitle>
-              <AlertDescription paddingTop={2}>
-                {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
-              </AlertDescription>
+          status={response.type===""?"warning":response.type}
+          display={display} 
+          alignSelf="center" 
+          borderRadius={14} 
+          w="60%" 
+          p="absolute" 
+          m="auto"
+          backgroundColor={backgroundColor}
+          transform="translate(20px, 310px)">
+          <AlertIcon />
+          <AlertTitle fontSize="lg" paddingTop={2}>
+            {response.title}
+          </AlertTitle>
+          <AlertDescription paddingTop={2}>
+            {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
+          </AlertDescription>
+          <CloseButton
+            alignSelf='flex-start'
+            position='relative'
+            right={-1}
+            top={-1}
+            onClick={formik.resetForm()}
+          />
         </Alert>
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
