@@ -89,7 +89,7 @@ const ContactMeSection = forwardRef((props, ref) => {
             position='relative'
             right={-1}
             top={-1}
-            onClick={formik.resetForm()}
+            onClick={onClose}
           />
         </Alert>
         <Heading ref={ref} as="h1" id="contactme-section">
