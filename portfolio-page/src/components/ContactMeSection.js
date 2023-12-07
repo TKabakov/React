@@ -15,7 +15,8 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
-  CloseButton
+  CloseButton,
+  useDisclosure
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
@@ -57,6 +58,8 @@ const ContactMeSection = forwardRef((props, ref) => {
   } else {
     return '#FEF44C'
   }}
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <>
