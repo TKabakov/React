@@ -78,6 +78,7 @@ const ContactMeSection = forwardRef((props, ref) => {
           w="60%" 
           p="absolute" 
           m="auto"
+          zIndex={10}
           backgroundColor={backgroundColor}
           transform="translate(20px, 310px)">
           <AlertIcon />
