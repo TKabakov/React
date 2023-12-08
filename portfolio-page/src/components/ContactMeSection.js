@@ -94,7 +94,7 @@ const ContactMeSection = forwardRef((props, ref) => {
             position='relative'
             right={-1}
             top={-1}
-            onClick={onClose}
+            onClick={true}
           />
         </Alert>
         <Heading ref={ref} as="h1" id="contactme-section">
