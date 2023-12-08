@@ -29,7 +29,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   const [display, setDisplay] = useState('none');
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   
   const formik = useFormik({
     initialValues: {
@@ -70,20 +70,6 @@ const ContactMeSection = forwardRef((props, ref) => {
     if (!open) return null;
     return(
       <div>
-        
-      </div>
-    );
-  };
-
-  return (
-    <>
-    <FullScreenSection
-      isDarkBackground
-      backgroundColor="#512DA8"
-      py={16}
-      spacing={8}
-    >
-      <VStack w="1024px" p={32} alignItems="flex-start">
         <Alert 
           status={response.type===""?"warning":response.type}
           display={display} 
@@ -109,6 +95,21 @@ const ContactMeSection = forwardRef((props, ref) => {
             onClick={onClose}
           />
         </Alert>
+      </div>
+    );
+  };
+
+  return (
+    <>
+    <FullScreenSection
+      isDarkBackground
+      backgroundColor="#512DA8"
+      py={16}
+      spacing={8}
+    >
+      <Warning />
+      <VStack w="1024px" p={32} alignItems="flex-start">
+        
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
         </Heading>
