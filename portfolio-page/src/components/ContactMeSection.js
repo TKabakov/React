@@ -29,7 +29,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   const [display, setDisplay] = useState('none');
 
-  const [openModal, setOpenModal] = useState(false);
+  const [open, setOpen] = useState(false);
   
   const formik = useFormik({
     initialValues: {
@@ -63,9 +63,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FEF44C'
   }}
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  
+ const onClose=() => setOpen(false);
 
   return (
     <>
