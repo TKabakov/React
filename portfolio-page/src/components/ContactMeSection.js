@@ -30,7 +30,8 @@ const ContactMeSection = forwardRef((props, ref) => {
   const [display, setDisplay] = useState('none');
 
   const [open, setOpen] = useState(true);
-  
+  console.log(open);
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -63,9 +64,6 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FEF44C'
   }}
 
-  const onClose=() => setOpen(false);
-  const onOpen=() => setOpen(true);
-
   const Warning = ({onOpen, onClose}) => {
     if (!open) return null;
     return(
@@ -80,7 +78,7 @@ const ContactMeSection = forwardRef((props, ref) => {
           m="auto"
           zIndex={10}
           backgroundColor={backgroundColor}
-          transform="translate(20px, 310px)">
+          transform="translate(20px, 510px)">
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
             {response.title}
@@ -99,7 +97,8 @@ const ContactMeSection = forwardRef((props, ref) => {
       </div>
     );
   };
-
+  console.log(open);
+  
   return (
     <>
     <FullScreenSection
@@ -108,7 +107,10 @@ const ContactMeSection = forwardRef((props, ref) => {
       py={16}
       spacing={8}
     >
-      <Warning />
+      <Warning 
+        open={open}
+        onClose={() => setOpen(false)}
+      />
       <VStack w="1024px" p={32} alignItems="flex-start">
         
         <Heading ref={ref} as="h1" id="contactme-section">
