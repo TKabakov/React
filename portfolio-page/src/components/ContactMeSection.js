@@ -28,6 +28,8 @@ const ContactMeSection = forwardRef((props, ref) => {
    const {isLoading, response, submit} = useSubmit();
 
   const [display, setDisplay] = useState('none');
+
+  const [openModal, setOpenModal] = useState(false);
   
   const formik = useFormik({
     initialValues: {
@@ -61,7 +63,9 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FEF44C'
   }}
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  
 
   return (
     <>
@@ -94,7 +98,7 @@ const ContactMeSection = forwardRef((props, ref) => {
             position='relative'
             right={-1}
             top={-1}
-            onClick={true}
+            onClick={onClose}
           />
         </Alert>
         <Heading ref={ref} as="h1" id="contactme-section">
