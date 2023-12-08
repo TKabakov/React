@@ -63,7 +63,8 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FEF44C'
   }}
 
- const onClose=() => setOpen(false);
+  const onClose=() => setOpen(false);
+  const onOpen=() => setOpen(true);
 
   return (
     <>
