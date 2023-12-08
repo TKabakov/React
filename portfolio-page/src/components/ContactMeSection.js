@@ -64,6 +64,12 @@ const ContactMeSection = forwardRef((props, ref) => {
     return '#FEF44C'
   }}
 
+  const onOpen = () => {
+    if(response.message1){
+      setOpen(true)
+    }
+  };
+
   const Warning = ({onOpen, onClose}) => {
     if (!open) return null;
     return(
@@ -98,7 +104,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     );
   };
   console.log(open);
-  
+
   return (
     <>
     <FullScreenSection
@@ -110,6 +116,7 @@ const ContactMeSection = forwardRef((props, ref) => {
       <Warning 
         open={open}
         onClose={() => setOpen(false)}
+        onOpen={() => setOpen(true)}
       />
       <VStack w="1024px" p={32} alignItems="flex-start">
         
