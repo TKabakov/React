@@ -66,6 +66,15 @@ const ContactMeSection = forwardRef((props, ref) => {
   const onClose=() => setOpen(false);
   const onOpen=() => setOpen(true);
 
+  const Warning = ({onOpen, onClose}) => {
+    if (!open) return null;
+    return(
+      <div>
+        
+      </div>
+    );
+  };
+
   return (
     <>
     <FullScreenSection
