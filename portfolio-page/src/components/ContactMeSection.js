@@ -16,22 +16,20 @@ import {
   AlertTitle,
   AlertDescription,
   CloseButton,
-  useDisclosure
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
+import { faDownLeftAndUpRightToCenter } from "@fortawesome/free-solid-svg-icons";
 
 //useModal
 
 const ContactMeSection = forwardRef((props, ref) => {
-   const {isLoading, response, submit} = useSubmit();
+  const {isLoading, response, submit} = useSubmit();
 
   const [display, setDisplay] = useState('none');
 
   const [open, setOpen] = useState(false);
-
-  const [backgroundColor, setBackgroundColor] = useState("#512DA8");
 
   console.log("open is", open);
   console.log("isLodaing is", isLoading);
@@ -49,8 +47,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     submit();
     setDisplay(response.message1, response.message2);
     setOpen(true);
-    setBackgroundColor("#6D58A3")
-    (response.type === "success")&&formik.resetForm();
+    formik.resetForm();
    },
 
     validationSchema: 
@@ -110,7 +107,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     <>
     <FullScreenSection
       isDarkBackground
-      backgroundColor={backgroundColor}
+      backgroundColor={"#512DA8"}
       py={16}
       spacing={8}
       onClick={() => setOpen(false)}
