@@ -31,7 +31,14 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   const [reset, setReset] = useState(true);
 
-  //set reset in condition 
+  function Reset (response){
+    if(response.type==='success'){
+      setReset(true);
+    } else {
+      setReset(false);
+    }
+    return reset;
+  };
 
   console.log("open is", open);
   console.log("isLodaing is", isLoading);
@@ -49,7 +56,8 @@ const ContactMeSection = forwardRef((props, ref) => {
     submit();
     setDisplay(response.message1, response.message2);
     setOpen(true);
-    formik.resetForm();
+    Reset();
+    reset&&formik.resetForm();
    },
 
     validationSchema: 
