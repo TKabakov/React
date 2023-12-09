@@ -116,6 +116,9 @@ const ContactMeSection = forwardRef((props, ref) => {
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
       />
+      {/*
+      a conditoon for resetForm can be added to onCLose
+      */}
       <VStack w="1024px" p={32} alignItems="flex-start">
         
         <Heading ref={ref} as="h1" id="contactme-section">
