@@ -45,7 +45,6 @@ const ContactMeSection = forwardRef((props, ref) => {
     submit();
     setDisplay(response.message1, response.message2);
     setOpen(true);
-    response.reset&&formik.resetForm();
    },
 
     validationSchema: 
@@ -112,7 +111,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     >
       <Warning 
         open={open}
-        onClose={() => setOpen(false)}
+        onClose={() => {if(response.reset === true) {formik.resetForm(); setOpen(false)} else {setOpen(false)}}}
         onOpen={() => setOpen(true)}
       />
       {/*
