@@ -22,14 +22,16 @@ import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { faDownLeftAndUpRightToCenter } from "@fortawesome/free-solid-svg-icons";
 
-//useModal
-
 const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
 
   const [display, setDisplay] = useState('none');
 
   const [open, setOpen] = useState(false);
+
+  const [reset, setReset] = useState(true);
+
+  //set reset in condition 
 
   console.log("open is", open);
   console.log("isLodaing is", isLoading);
