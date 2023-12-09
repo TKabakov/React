@@ -59,7 +59,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     }),
   });
 
-  const backgroundColor =() =>{
+  const alertBackgroundColor =() =>{
     if (response.type === 'success') {
     return '#81C784'
   } else if (response.type === 'error'){
@@ -78,11 +78,11 @@ const ContactMeSection = forwardRef((props, ref) => {
           display={display} 
           alignSelf="center" 
           borderRadius={14} 
-          w="60%" 
+          w="100%" 
           p="absolute" 
           m="auto"
           zIndex={10}
-          backgroundColor={backgroundColor}
+          backgroundColor={alertBackgroundColor}
           transform="translate(20px, 510px)">
           <AlertIcon />
           <AlertTitle fontSize="lg" paddingTop={2}>
