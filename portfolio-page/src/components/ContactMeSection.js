@@ -30,8 +30,8 @@ const ContactMeSection = forwardRef((props, ref) => {
   const [display, setDisplay] = useState('none');
 
   const [open, setOpen] = useState(true);
-  console.log(open);
-  console.log(isLoading);
+  console.log("open is", open);
+  console.log("isLodaing is", isLoading);
 
   const formik = useFormik({
     initialValues: {
@@ -44,6 +44,7 @@ const ContactMeSection = forwardRef((props, ref) => {
    onSubmit: () => {
     submit();
     setDisplay(response.message1, response.message2);
+    setOpen(true);
     if(response.type === "success"){formik.resetForm()};
    },
 
@@ -64,12 +65,6 @@ const ContactMeSection = forwardRef((props, ref) => {
   } else {
     return '#FEF44C'
   }}
-
-  const onOpen = () => {
-    if(response.message1){
-      setOpen(true)
-    }
-  };
 
   const Warning = ({onOpen, onClose}) => {
     if (!open) return null;
@@ -104,7 +99,7 @@ const ContactMeSection = forwardRef((props, ref) => {
       </div>
     );
   };
-  console.log(open);
+  console.log("open is", open);
 
   return (
     <>
