@@ -31,6 +31,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   const [open, setOpen] = useState(true);
   console.log(open);
+  console.log(isLoading);
 
   const formik = useFormik({
     initialValues: {
