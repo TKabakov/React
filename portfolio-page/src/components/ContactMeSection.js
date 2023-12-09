@@ -31,6 +31,8 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   const [open, setOpen] = useState(false);
 
+  const [backgroundColor, setBackgroundColor] = useState("#6D58A3");
+
   console.log("open is", open);
   console.log("isLodaing is", isLoading);
   console.log(response);
@@ -47,6 +49,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     submit();
     setDisplay(response.message1, response.message2);
     setOpen(true);
+    setBackgroundColor("#512DA8")
     (response.type === "success")&&formik.resetForm();
    },
 
@@ -107,7 +110,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     <>
     <FullScreenSection
       isDarkBackground
-      backgroundColor="#512DA8"
+      backgroundColor={backgroundColor}
       py={16}
       spacing={8}
     >
