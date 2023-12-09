@@ -11,6 +11,7 @@ const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState({
     type: "",
+    reset: "",
     title: "",
     message1: "",
     message2:"",
@@ -24,6 +25,7 @@ const useSubmit = () => {
       if (random < 0.5) {
       setResponse({
         type: 'success',
+        reset: true,
         title: 'All is good!',
         message1: `Thanks for your submission `,
         message2: `, we will get back to you shortly!`,
@@ -34,6 +36,7 @@ const useSubmit = () => {
     } catch (error) {
       setResponse({
         type: 'error',
+        reset: false,
         title: 'Oops!',
         message1: 'Something went wrong',
         message2: ', please try again later!',

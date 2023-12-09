@@ -45,7 +45,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     submit();
     setDisplay(response.message1, response.message2);
     setOpen(true);
-    formik.resetForm();
+    response.reset&&formik.resetForm();
    },
 
     validationSchema: 
