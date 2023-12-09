@@ -31,7 +31,7 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   const [open, setOpen] = useState(false);
 
-  const [backgroundColor, setBackgroundColor] = useState("#6D58A3");
+  const [backgroundColor, setBackgroundColor] = useState("#512DA8");
 
   console.log("open is", open);
   console.log("isLodaing is", isLoading);
@@ -49,7 +49,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     submit();
     setDisplay(response.message1, response.message2);
     setOpen(true);
-    setBackgroundColor("#512DA8")
+    setBackgroundColor("#6D58A3")
     (response.type === "success")&&formik.resetForm();
    },
 
@@ -113,6 +113,7 @@ const ContactMeSection = forwardRef((props, ref) => {
       backgroundColor={backgroundColor}
       py={16}
       spacing={8}
+      onClick={() => setOpen(false)}
     >
       <Warning 
         open={open}
