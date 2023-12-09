@@ -29,7 +29,8 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   const [display, setDisplay] = useState('none');
 
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
+  
   console.log("open is", open);
   console.log("isLodaing is", isLoading);
 
