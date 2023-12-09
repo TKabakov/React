@@ -30,9 +30,10 @@ const ContactMeSection = forwardRef((props, ref) => {
   const [display, setDisplay] = useState('none');
 
   const [open, setOpen] = useState(false);
-  
+
   console.log("open is", open);
   console.log("isLodaing is", isLoading);
+  console.log(response);
 
   const formik = useFormik({
     initialValues: {
@@ -68,6 +69,7 @@ const ContactMeSection = forwardRef((props, ref) => {
   }}
 
   const Warning = ({onOpen, onClose}) => {
+    if(isLoading) return null;
     if (!open) return null;
     return(
       <div>
@@ -100,7 +102,6 @@ const ContactMeSection = forwardRef((props, ref) => {
       </div>
     );
   };
-  console.log("open is", open);
 
   return (
     <>
