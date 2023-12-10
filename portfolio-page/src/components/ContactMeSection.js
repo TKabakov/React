@@ -64,6 +64,13 @@ const ContactMeSection = forwardRef((props, ref) => {
   } else {
     return '#FEF44C'
   }}
+  
+  const onClose=() => {
+    if(response.reset === true) 
+    {formik.resetForm(); 
+      setOpen(false)
+    } else {setOpen(false)}
+  }
 
   const Warning = ({ onClose}) => {
     if(isLoading) return null;
@@ -107,23 +114,11 @@ const ContactMeSection = forwardRef((props, ref) => {
       backgroundColor={"#512DA8"}
       py={16}
       spacing={8}
-      onClick={
-        (response) =>{ 
-          if(response.reset === true) 
-          {formik.resetForm(); 
-            setOpen(false)
-          } else {setOpen(false)}
-        }
-      }
+      onClick={onClose}
     >
       <Warning 
         open={open}
-        onClose={(response) =>{ 
-          if(response.reset === true) 
-          {formik.resetForm(); 
-            setOpen(false)
-          } else {setOpen(false)}
-        }}
+        onClose={onClose}
         onOpen={() => setOpen(true)}
       />
 
