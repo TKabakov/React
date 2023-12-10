@@ -64,8 +64,15 @@ const ContactMeSection = forwardRef((props, ref) => {
   } else {
     return '#FEF44C'
   }}
+  
+  const onClose=() => {
+    if(response.reset === true) 
+    {formik.resetForm(); 
+      setOpen(false)
+    } else {setOpen(false)}
+  }
 
-  const Warning = ({onOpen, onClose}) => {
+  const Warning = ({ onClose}) => {
     if(isLoading) return null;
     if (!open) return null;
     return(
@@ -111,12 +118,10 @@ const ContactMeSection = forwardRef((props, ref) => {
     >
       <Warning 
         open={open}
-        onClose={() => {if(response.reset === true) {formik.resetForm(); setOpen(false)} else {setOpen(false)}}}
+        onClose={onClose}
         onOpen={() => setOpen(true)}
       />
-      {/*
-      a conditoon for resetForm can be added to onCLose
-      */}
+
       <VStack w="1024px" p={32} alignItems="flex-start">
         
         <Heading ref={ref} as="h1" id="contactme-section">
