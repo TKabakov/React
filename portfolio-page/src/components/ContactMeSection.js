@@ -114,7 +114,7 @@ const ContactMeSection = forwardRef((props, ref) => {
       backgroundColor={"#512DA8"}
       py={16}
       spacing={8}
-      onClick={() => setOpen(false)}
+      onClick={onClose}
     >
       <Warning 
         open={open}
