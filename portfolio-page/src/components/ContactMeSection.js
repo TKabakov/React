@@ -41,10 +41,13 @@ const ContactMeSection = forwardRef((props, ref) => {
       comment: ""
     },
 
-   onSubmit: () => {
+   onSubmit: (values, actions) => {
     submit();
     setDisplay(response.message1, response.message2);
     setOpen(true);
+    if(response.reset === true){
+      actions.resetForm();
+    };
    },
 
     validationSchema: 
@@ -64,13 +67,6 @@ const ContactMeSection = forwardRef((props, ref) => {
   } else {
     return '#FEF44C'
   }}
-  
-  const onClose=() => {
-    if(response.reset === true) 
-    {formik.resetForm(); 
-      setOpen(false)
-    } else {setOpen(false)}
-  }
 
   const Warning = ({ onClose}) => {
     if(isLoading) return null;
@@ -114,11 +110,11 @@ const ContactMeSection = forwardRef((props, ref) => {
       backgroundColor={"#512DA8"}
       py={16}
       spacing={8}
-      onClick={onClose}
+      onClick={() => setOpen(false)}
     >
       <Warning 
         open={open}
-        onClose={onClose}
+        onClose={() => {if(response.reset === true) {formik.resetForm(); setOpen(false)} else {setOpen(false)}}}
         onOpen={() => setOpen(true)}
       />
 
