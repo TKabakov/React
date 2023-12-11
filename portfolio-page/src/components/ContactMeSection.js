@@ -48,6 +48,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     setDisplay(response.message1, response.message2);
     setOpen(true);
     setData(formik.values.firstName);
+    !isLoading && response.reset && values.resetForm();
    },
 
     validationSchema: 
