@@ -43,12 +43,11 @@ const ContactMeSection = forwardRef((props, ref) => {
       comment: ""
     },
 
-   onSubmit: (values,{resetForm}) => {
+   onSubmit: (values) => {
     submit();
     setDisplay(response.message1, response.message2);
     setOpen(true);
     setData(formik.values.firstName);
-    !isLoading && response.reset && values.resetForm();
    },
 
     validationSchema: 
@@ -113,7 +112,7 @@ const ContactMeSection = forwardRef((props, ref) => {
       backgroundColor={"#512DA8"}
       py={16}
       spacing={8}
-      onClick={() => {if(response.reset === true) {formik.resetForm(); setOpen(false)} else {setOpen(false)}}}
+      onClick={() => setOpen(false)}
     >
       <Warning 
         open={open}
