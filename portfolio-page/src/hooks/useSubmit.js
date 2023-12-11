@@ -43,13 +43,6 @@ const useSubmit = () => {
       })
     } finally {
       setLoading(false);
-      setResponse({
-        type: '',
-        reset: true,
-        title:'',
-        message1:'',
-        message2: ''
-      })
     }
   };
 
