@@ -29,6 +29,8 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   const [open, setOpen] = useState(false);
 
+  const [data, setData] = useState('');
+
   console.log("open is", open);
   console.log("isLodaing is", isLoading);
   console.log(response);
@@ -45,7 +47,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     submit();
     setDisplay(response.message1, response.message2);
     setOpen(true);
-    resetForm();
+    setData(formik.values.firstName);
    },
 
     validationSchema: 
@@ -56,6 +58,8 @@ const ContactMeSection = forwardRef((props, ref) => {
         comment: Yup.string().required("Required").min(20,"Must be at least 25 characters"),
     }),
   });
+
+  console.log(data);
 
   const alertBackgroundColor =() =>{
     if (response.type === 'success') {
@@ -87,7 +91,7 @@ const ContactMeSection = forwardRef((props, ref) => {
             {response.title}
           </AlertTitle>
           <AlertDescription paddingTop={2}>
-            {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
+            {response.message1}{response.type === 'success' ? data : ''}{response.message2}
           </AlertDescription>
           <CloseButton
             alignSelf='flex-start'
