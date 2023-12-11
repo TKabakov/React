@@ -45,9 +45,7 @@ const ContactMeSection = forwardRef((props, ref) => {
     submit();
     setDisplay(response.message1, response.message2);
     setOpen(true);
-    if(response.reset === true){
-      resetForm();
-    };
+    resetForm();
    },
 
     validationSchema: 
