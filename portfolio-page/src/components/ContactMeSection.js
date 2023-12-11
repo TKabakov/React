@@ -113,7 +113,7 @@ const ContactMeSection = forwardRef((props, ref) => {
       backgroundColor={"#512DA8"}
       py={16}
       spacing={8}
-      onClick={() => setOpen(false)}
+      onClick={() => {if(response.reset === true) {formik.resetForm(); setOpen(false)} else {setOpen(false)}}}
     >
       <Warning 
         open={open}
