@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, forwardRef, useContext } from "react";
 import { useFormik } from "formik";
 import {
   Box,
@@ -16,23 +16,27 @@ import {
   AlertTitle,
   AlertDescription,
   CloseButton,
+  useDisclosure
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import { faDownLeftAndUpRightToCenter } from "@fortawesome/free-solid-svg-icons";
+import Warning from "./Alert";
 
 const ContactMeSection = forwardRef((props, ref) => {
-  const {isLoading, response, submit} = useSubmit();
+   const {isLoading, response, submit} = useSubmit();
+   
+   const [state, setState] = useState({
+    type: response.type,
+    messaage: response.messaage1,
+  });
+
+  console.log(response)
+  console.log("type is : ", response.type);
+  console.log(state);
 
   const [display, setDisplay] = useState('none');
-
-  const [open, setOpen] = useState(false);
-
-  console.log("open is", open);
-  console.log("isLodaing is", isLoading);
-  console.log(response);
-
+  
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -41,14 +45,34 @@ const ContactMeSection = forwardRef((props, ref) => {
       comment: ""
     },
 
-   onSubmit: (values,{resetForm}) => {
+   onSubmit: () => {
+    if(response.type === "success"){formik.resetForm({
+firstName: "",
+      email:"",
+      type: "",
+      comment: ""
+    })};
     submit();
     setDisplay(response.message1, response.message2);
-    setOpen(true);
-    if(response.reset === true){
-      resetForm();
-    };
+    setState({
+      ...state,
+      type: response.type,
+      message: response.message1,
+      });
+    setState({
+      ...state,
+      onOpen.isOpen: true,
+      onOpen.type:response.type,
+      onOpen.message:response.message1,
+    });
+  setState({
+      ...state,
+      onClose.isOpen: false,
+      onClose.type:"",
+      onClose.message:"",
+    });
    },
+// state is updated but it gives empty type and empty message
 
     validationSchema: 
       Yup.object({
@@ -59,67 +83,20 @@ const ContactMeSection = forwardRef((props, ref) => {
     }),
   });
 
-  const alertBackgroundColor =() =>{
-    if (response.type === 'success') {
-    return '#81C784'
-  } else if (response.type === 'error'){
-    return '#FF8A65'
-  } else {
-    return '#FEF44C'
-  }}
-
-  const Warning = ({ onClose}) => {
-    if(isLoading) return null;
-    if (!open) return null;
-    return(
-      <div>
-        <Alert 
-          status={response.type===""?"warning":response.type}
-          display={display} 
-          alignSelf="center" 
-          borderRadius={14} 
-          w="100%" 
-          p="absolute" 
-          m="auto"
-          zIndex={10}
-          backgroundColor={alertBackgroundColor}
-          transform="translate(20px, 510px)">
-          <AlertIcon />
-          <AlertTitle fontSize="lg" paddingTop={2}>
-            {response.title}
-          </AlertTitle>
-          <AlertDescription paddingTop={2}>
-            {response.message1}{response.type === 'success' ? formik.values.firstName : ''}{response.message2}
-          </AlertDescription>
-          <CloseButton
-            alignSelf='flex-start'
-            position='relative'
-            right={-1}
-            top={-1}
-            onClick={onClose}
-          />
-        </Alert>
-      </div>
-    );
-  };
+console.log(display);
+console.log(state);
 
   return (
     <>
+    <Warning value={state}/>
     <FullScreenSection
       isDarkBackground
-      backgroundColor={"#512DA8"}
+      backgroundColor="#512DA8"
       py={16}
       spacing={8}
-      onClick={() => setOpen(false)}
     >
-      <Warning 
-        open={open}
-        onClose={() => {if(response.reset === true) {formik.resetForm(); setOpen(false)} else {setOpen(false)}}}
-        onOpen={() => setOpen(true)}
-      />
-
       <VStack w="1024px" p={32} alignItems="flex-start">
-        
+
         <Heading ref={ref} as="h1" id="contactme-section">
           Contact me
         </Heading>
