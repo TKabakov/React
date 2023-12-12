@@ -30,10 +30,6 @@ const ContactMeSection = forwardRef((props, ref) => {
 
   const [data, setData] = useState('');
 
-  console.log("open is", open);
-  console.log("isLodaing is", isLoading);
-  console.log(response);
-
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -57,8 +53,6 @@ const ContactMeSection = forwardRef((props, ref) => {
         comment: Yup.string().required("Required").min(20,"Must be at least 25 characters"),
     }),
   });
-
-  console.log(data);
 
   const alertBackgroundColor =() =>{
     if (response.type === 'success') {
