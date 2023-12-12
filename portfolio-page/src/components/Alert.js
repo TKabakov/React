@@ -11,7 +11,7 @@ import { useRef } from "react";
  * This is a global component that uses context to display a global alert message.
  */
  
-function Warning({isOpen, type, message}) {
+function Alert({isOpen, type, message}) {
 
   const cancelRef = useRef();
   const isSuccess = type === "success"
@@ -34,4 +34,4 @@ function Warning({isOpen, type, message}) {
   );
 }
 
-export default Warning;
+export default Alert;

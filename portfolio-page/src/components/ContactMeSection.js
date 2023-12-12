@@ -20,7 +20,6 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import { faDownLeftAndUpRightToCenter } from "@fortawesome/free-solid-svg-icons";
 
 const ContactMeSection = forwardRef((props, ref) => {
   const {isLoading, response, submit} = useSubmit();
