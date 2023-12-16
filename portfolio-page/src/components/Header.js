@@ -53,7 +53,7 @@ const Header = ({home, projects, contactMe}) => {
         return () => {
             window.removeEventListener("scroll", updateScrollDirection); // clean up
         }
-    }, [scrollDirection]); // run when scroll direction changes
+    }, scrollDirection); // run when scroll direction changes
 
     return scrollDirection;
 };
