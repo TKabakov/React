@@ -45,6 +45,8 @@ const LandingSection = () => {
     }
   }, [response]);
 
+  console.log(onOpen);
+
   return (
     <FullScreenSection
       // isDarkBackground
