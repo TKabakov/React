@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { ChakraProvider } from "@chakra-ui/react";
+import Header from "./components/Header";
+import LandingSection from "./components/LandingSection";
+import ProjectsSection from "./components/ProjectsSection";
+import ContactMeSection from "./components/ContactMeSection";
+import Footer from "./components/Footer";
+import { AlertProvider } from "./context/alertContext"
+import Alert from "./components/Alert";
+import { useRef } from 'react';
 
 function App() {
+  //1. create projectsRef, contatctRef, home
+  const projectsRef = useRef(null);
+  const contactsRef = useRef(null);
+  const home = useRef(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <AlertProvider>
+        <main>
+   {/*2.create a prop to pass scrollRef*/}
+          <Header
+            projects ={projectsRef}
+            contactMe = {contactsRef}
+            home = {home}
+            />
+          <LandingSection ref={home}/>
+    {/*3.asign ref to scrollRef for ProjectSectio*/}
+          <ProjectsSection ref={projectsRef} />
+          <ContactMeSection ref={contactsRef}/>
+          <Footer />
+          <Alert />
+        </main>
+      </AlertProvider>
+    </ChakraProvider>
   );
 }
 
